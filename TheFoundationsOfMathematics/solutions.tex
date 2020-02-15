@@ -40,7 +40,14 @@
 \begin{customthm}{I.6.11} Example 7 is the one. Example 1, 5 and 6 have pairwise unions. Example 2, 3 and 4 do not have empty sets hence cannot satisfy Comprehension.
 \end{customthm}
 
-\begin{customthm}{I.6.13} Example 1 is the one. The other ones do not satisfy $\forall x\neg\exists y[y \in x]$.
+\begin{customthm}{I.6.13} Example 1 is the one. The other ones do not satisfy $\forall x\neg\exists y[y\in x]$.
+\end{customthm}
+
+\begin{customthm}{I.6.15} Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
+  \begin{enumerate}
+  \item $x=y$. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
+  \item $x\neq y$. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
+  \end{enumerate}
 \end{customthm}
 
 \end{document}
