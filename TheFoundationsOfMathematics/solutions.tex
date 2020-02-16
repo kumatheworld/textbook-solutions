@@ -55,8 +55,8 @@
 
 \begin{customthm}{I.7.13} Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
   \begin{enumerate}
-  \item \underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from the transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
-  If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from the transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
+  \item \underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
+  If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
   \item \underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
   \item \underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preceq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preceq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preceq t]]$.
   Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
@@ -64,6 +64,10 @@
 \end{customthm}
 
 \begin{customthm}{I.7.15} Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\phi(t,x)=\exists y[t=[(x, y)]$ has the property that $\forall t\in R\exists!y\phi(t,y)$. Then the set $\{x:\exists y[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x[(x, y)\in R]\}$ is proved in the same way.
+\end{customthm}
+
+\begin{customthm}{I.7.17} Let $(A,\triangleleft_1),(B,\triangleleft_2),(C,\triangleleft_3)$ be arbitrary relations and $F:A\rightarrow B,G:B\rightarrow C$ be isomorphisms. Reflexivity of $\cong$ is easily checked by letting $(A,\triangleleft_1)=(B,\triangleleft_2)$ and $F$ be the identity map $\mathrm{id}_A$. Symmetry follows from taking $F^{-1}:B\rightarrow A$. Transitivity is proved by considering $G\circ F:A\rightarrow C$.
+Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
 \end{customthm}
 
 \end{document}
