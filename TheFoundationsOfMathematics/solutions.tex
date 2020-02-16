@@ -45,12 +45,22 @@
 
 \begin{customthm}{I.6.15} Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
   \begin{enumerate}
-  \item $x=y$. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
-  \item $x\neq y$. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
+  \item \underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
+  \item \underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
   \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.6.17} $\langle 0,1\rangle = \{\{0\}, \{0,1\}\} = \{1,2\}$. $\langle 1,0\rangle = \{\{1\}, \{1,0\}\} = \{\{1\}, 2\}$.
+\end{customthm}
+
+\begin{customthm}{I.7.13} Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
+  \begin{enumerate}
+  \item \underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from the transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
+  If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from the transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
+  \item \underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
+  \item \underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preceq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preceq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preceq t]]$.
+  Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
+  \end{enumerate}
 \end{customthm}
 
 \end{document}
