@@ -70,10 +70,15 @@
 Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
 \end{customthm}
 
-\begin{customthm}{I.7.21} Note that $R$ well-orders $A$ if and only if every non-empty subset of $A$ has the $R$-least element. If $R$ well-orders $A$, then it is obvious that $R$ well-orders every $X\subseteq A$ because every non-empty subset of $X$ is a non-empty subset of $A$ as well, which has the $R$-least element.
+\begin{customthm}{I.7.21} Note that $R$ well-orders $A$ if and only if every non-empty subset of $A$ has a $R$-least element. If $R$ well-orders $A$, then it is obvious that $R$ well-orders every $X\subseteq A$ because every non-empty subset of $X$ is a non-empty subset of $A$ as well, which has a $R$-least element.
 \end{customthm}
 
-\begin{customthm}{I.7.23} Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \mathrm{ran}(X)$. Then $Y$ is a non-empty subset of $S$ and it has the $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has the $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
+\begin{customthm}{I.7.23} Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \mathrm{ran}(X)$. Then $Y$ is a non-empty subset of $S$ and it has a $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has a $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
+\end{customthm}
+
+\begin{customthm}{I.8.11} Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious.
+Thus $\beta\subseteq\alpha\subseteq\alpha\cup\{\alpha\}=S(\alpha)$ holds in both cases, which proves $S(\alpha)$'s transitivity. To prove that $S(\alpha)$ is well-ordered, take a non-empty subset $X$ of $S(\alpha)$. If $X=\{\alpha\}$, then $\alpha$ is obviously the $\in$-least element of $X$. If not, $X\setminus\{\alpha\}$ is a non-empty subset of $\alpha$ and since $\alpha$ is well-ordered, $X\setminus\{\alpha\}$ has a $\in$-least element, which is also the least element of $X$.
+Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate when we replace "$<$" by "$\in$" and "$\leq$" by "$\in$" or "$=$".
 \end{customthm}
 
 \end{document}
