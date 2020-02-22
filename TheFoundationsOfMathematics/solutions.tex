@@ -55,10 +55,10 @@
 
 \begin{customthm}{I.7.13} Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
   \begin{enumerate}
-  \item \underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
+  \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
   If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
-  \item \underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
-  \item \underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preceq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preceq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preceq t]]$.
+  \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
+  \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preceq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preceq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preceq t]]$.
   Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
   \end{enumerate}
 \end{customthm}
@@ -74,6 +74,10 @@ Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
 \end{customthm}
 
 \begin{customthm}{I.7.23} Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \mathrm{ran}(X)$. Then $Y$ is a non-empty subset of $S$ and it has a $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has a $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
+\end{customthm}
+
+\begin{customthm}{I.8.10} Let $X$ be a non-empty set of ordinals. $\cap X$ is well-ordered since it is a set of ordinals and $ON$ is well-ordered by $\in$. Let $\alpha\in\cap X$. Then $\alpha\subseteq\beta$ holds for every $\beta\in X$ by transitivity of $\beta$ and hence $\alpha\subseteq\cap X$ holds, which proves that $\cap X$ is a transitive set. Thus $\cap X$ is an ordinal.
+Now let $\alpha=\min(X)$. $\alpha\subseteq\cap X$ follows from the fact that $\alpha\subseteq\beta(\leftrightarrow\alpha\leq\beta)$ for any $\beta\in X$. $\cap X\subseteq\alpha$ is obvious since every $\beta\in\cap X$ is also a member of $\alpha\in X$. Thus $\cap X=\min(X)$ holds. The fact that $\cup X$ is an ordinal with $\cup X=\sup(X)$ is proved in the same manner.
 \end{customthm}
 
 \begin{customthm}{I.8.11} Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious.
