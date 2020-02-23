@@ -92,7 +92,22 @@ Now let $\gamma\in n$. Then for every $\alpha\leq\gamma$, $\alpha$ is either 0 o
 \begin{customthm}{I.8.22} Since every well-ordered set is isomorphic to a unique ordinal, it is sufficient to prove the following; for any ordinal $\alpha$ and $X\subseteq\alpha$, it holds that $\mathrm{type}(X;\in)\leq\alpha$. Now assume $\alpha\in ON$ and  $X\subseteq\alpha$, and let $f$ be the order isomorphism from $X$ to $\mathrm{type}(X)$. Since $f$ is an order-isomorphism, it holds that $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$.
 Now let $\Xi = \{\xi\in X:\xi<f(\xi)\}$. Assume $\Xi\neq\emptyset$ and let $\xi$ be the least element of $\Xi$. From $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$ and $\xi\in\Xi$, we get $\xi=f(\mu)$ for some $\mu\in X$ such that $\mu<\xi$.
 Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\mu)\leq\mu$ holds. Then we have $\xi\leq f(\mu)\leq\mu$, which is a contradiction. Thus $\Xi=\emptyset$ and hence $\mathrm{type}(X)\subseteq\alpha$ holds.
+\end{customthm}
 
+\begin{customthm}{I.8.23} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.9.6} Let $x$ be a set.
+  \begin{enumerate}
+  \item $\mathrm{trcl}(x)\supseteq\cup^0x=x$.
+  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\cup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\cup^nx(z\in y)\}=\cup\cup^nx=\cup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
+  \item Let $t$ be a transitive set. Note that $\cup t\subseteq t$ holds by definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\cup^nx\subseteq\cup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
+  \item For $y\in x$, one can easily show that $\cup^ny\subseteq\cup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\cup^ny$. Then we get $z\in\cup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
+  \item We show the following proposition $P(n)$: $z\in\cup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\cup^{n+1}x=\{z:\exists y\in\cup^n x(z\in y)\}$ and $y\in\cup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+  Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
+  Thus $P(n+1)$ holds, and so does $\forall n\in\omega.P(n)$.
+  \end{enumerate}
 \end{customthm}
 
 \end{document}
