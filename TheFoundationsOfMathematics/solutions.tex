@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsthm}
+\usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{multirow}
 
@@ -117,6 +118,20 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 \begin{customthm}{I.11.3} $\mathbb{R}\times\mathbb{R}\approx(0,1)\times(0,1)$ holds because $f(x,y)=(\sigma(x),\sigma(y))$, where $\sigma(x)=(1+\exp(x))^{-1}$, is a bijection from $\mathbb{R}\times\mathbb{R}$ to $(0,1)\times(0,1)$.
 To prove $(0,1)\times(0,1)\preceq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$.
 Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preceq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
+\end{customthm}
+
+\begin{customthm}{I.11.6} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.11.12} Let $A,B,C,D$ be sets with $A\preceq B$, $C\preceq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preceq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preceq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$.
+We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
+\[F(f)(d)=
+  \begin{cases}
+    i(f(c)) & \mbox{if } d=j(c) \\
+    b & \mbox{if } d\not\in\mathrm{ran}(j)
+  \end{cases}
+\]
+One can easily check that this $F$ is injective and hence ${}^AC\preceq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preceq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preceq{}^BD$. Note that $\mathcal{P}(A)\preceq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
 \end{customthm}
 
 \end{document}
