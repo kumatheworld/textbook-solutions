@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsthm}
+\usepackage{amsfonts}
 \usepackage{multirow}
 
 \theoremstyle{definition}
@@ -111,6 +112,11 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 \end{customthm}
 
 \begin{customthm}{I.10.5} We can say that $A\times B=\{\{\{x\},\{x,y\}\}\in\mathcal{P(\mathcal{P(A\cup B)})}:x\in A,y\in B\}$ is a set, relying on the specific definition of pairs. $A/R=\{[x]_R\in\mathcal{P}(A):x\in A\}$, where $[x]_R=\{y\in A:yRx\}$, obviously forms a set.
+\end{customthm}
+
+\begin{customthm}{I.11.3} $\mathbb{R}\times\mathbb{R}\approx(0,1)\times(0,1)$ holds because $f(x,y)=(\sigma(x),\sigma(y))$, where $\sigma(x)=(1+\exp(x))^{-1}$, is a bijection from $\mathbb{R}\times\mathbb{R}$ to $(0,1)\times(0,1)$.
+To prove $(0,1)\times(0,1)\preceq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$.
+Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preceq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
 \end{customthm}
 
 \end{document}
