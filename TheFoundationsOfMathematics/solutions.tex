@@ -154,4 +154,14 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
   \]
 \end{customthm}
 
+\begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
+  \begin{enumerate}
+  \item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
+  \item \underline{$A\preceq B$ iff $|A|\leq|B|$}. Assume $A\preceq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$.
+  The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
+  \item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preceq B\wedge B\preceq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
+  \item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
+  \end{enumerate}
+\end{customthm}
+
 \end{document}
