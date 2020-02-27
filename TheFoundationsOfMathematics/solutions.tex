@@ -167,4 +167,9 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 \begin{customthm}{I.11.24} The 'if' part is obvious since $A\preceq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preceq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
 \end{customthm}
 
+\begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$.
+If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by induction hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$.
+This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega.P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
+\end{customthm}
+
 \end{document}
