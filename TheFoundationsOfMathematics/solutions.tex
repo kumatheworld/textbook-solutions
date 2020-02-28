@@ -172,4 +172,16 @@ If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by induction hypothesi
 This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega.P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
+\begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preceq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preceq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds.
+When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\omega$ turns out to be a cardinal and hence $\alpha^+=\alpha+1$. When $\alpha\geq\omega$, $\alpha+1$ is not a cardinal since we have an injection $i:\alpha+1\rightarrow\alpha$ defined as follows.
+\[i(x)=
+  \begin{cases}
+    0 & \mbox{if } x=\alpha \\
+    x+1 & \mbox{if } x\in\omega \\
+    x & \mbox{otherwise}
+  \end{cases}.
+\]
+Thus $\alpha^+>\alpha+1$ holds.
+\end{customthm}
+
 \end{document}
