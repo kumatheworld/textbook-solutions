@@ -104,7 +104,7 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
   \begin{enumerate}
   \item $\mathrm{trcl}(x)\supseteq\cup^0x=x$.
   \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\cup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\cup^nx(z\in y)\}=\cup\cup^nx=\cup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
-  \item Let $t$ be a transitive set. Note that $\cup t\subseteq t$ holds by definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\cup^nx\subseteq\cup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
+  \item Let $t$ be a transitive set. Note that $\cup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\cup^nx\subseteq\cup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
   \item For $y\in x$, one can easily show that $\cup^ny\subseteq\cup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\cup^ny$. Then we get $z\in\cup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
   \item We show the following proposition $P(n)$: $z\in\cup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\cup^{n+1}x=\{z:\exists y\in\cup^n x(z\in y)\}$ and $y\in\cup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
@@ -185,8 +185,17 @@ Thus $\alpha^+>\alpha+1$ holds.
 \end{customthm}
 
 \begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\mathrm{type}(X;R)+1$, which is equivalent to $\alpha\leq\mathrm{type}(X;R)$. Therefore $\alpha\preceq\mathrm{type}(X;R)\approx X\preceq A$ holds.
-If $\alpha\not\prec\beta$, we would have $\beta\preceq\alpha\preceq A$ and that contradicts $\beta\not\preceq A$. Hence $\alpha\prec\beta$ and $\beta$ turns out to be a cardinal.
+If $\alpha\not\prec\beta$, we would have $\beta\preceq\alpha\preceq A$ and that contradicts $\beta\not\preceq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal.
 $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preceq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
+\end{customthm}
+
+\begin{customthm}{I.11.30} Let $\xi,\zeta$ be ordinals. We prove $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ by induction on $\zeta$. If $\zeta=\xi+1$, which is the least ordinal greater than $\xi$, then $\aleph_\zeta=(\aleph_\xi)^+$ is greater than $\aleph_\xi$ by the definition of $\aleph$.
+If $\zeta=\eta+1$ and $\eta>\xi$, assuming the induction hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$.
+If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
+
+Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON.\kappa\neq\aleph_\xi$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON.\kappa\neq\aleph_\xi$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$.
+Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set.
+Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
 \end{customthm}
 
 \end{document}
