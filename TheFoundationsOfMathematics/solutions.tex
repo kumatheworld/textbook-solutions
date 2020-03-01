@@ -109,7 +109,7 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
   \item We show the following proposition $P(n)$: $z\in\cup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\cup^{n+1}x=\{z:\exists y\in\cup^n x(z\in y)\}$ and $y\in\cup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
-  Thus $P(n+1)$ holds, and so does $\forall n\in\omega.P(n)$.
+  Thus $P(n+1)$ holds, and so does $\forall n\in\omega~P(n)$.
   \end{enumerate}
 \end{customthm}
 
@@ -169,7 +169,7 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 
 \begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$.
 If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by induction hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$.
-This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega.P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
+This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega~P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
 \begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preceq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preceq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds.
@@ -193,9 +193,16 @@ $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preceq A$ from
 If $\zeta=\eta+1$ and $\eta>\xi$, assuming the induction hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$.
 If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
 
-Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON.\kappa\neq\aleph_\xi$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON.\kappa\neq\aleph_\xi$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$.
+Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$.
 Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set.
 Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
+\end{customthm}
+
+\begin{customthm}{I.11.33} We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma[\aleph_\xi\leq\gamma]$.
+Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds.
+$\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
+
+Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
 \end{customthm}
 
 \end{document}
