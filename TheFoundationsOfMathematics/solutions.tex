@@ -205,4 +205,13 @@ $\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega[\delta_n<\aleph_{\de
 Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
 \end{customthm}
 
+\begin{customthm}{I.11.34} Let us first note that $\max\{|\alpha|,|\beta|\}=|\max\{\alpha,\beta\}|$. For $|\alpha+\beta|$ and $|\alpha\cdot\beta|$, WLOG we can assume $\alpha\leq\beta$. Then we have $|\alpha+\beta|\leq|\beta+\beta|\leq|\beta\cdot\beta|=|\beta\times\beta|=|\beta|$.
+For $|\alpha^\beta|$, let $\gamma=\max\{\alpha,\beta\}$. We prove $|\alpha^\beta|\leq|\gamma|$ by induction on $\beta$. If $\beta=2$, then we have $\omega\leq\alpha$ and hence $|\alpha^\beta|=|\alpha\cdot\alpha|=|\alpha\times\alpha|=|\alpha|\leq|\gamma|$.
+Now assume that $|\alpha^\delta|\leq|\gamma|$ for any $\delta<\beta$.
+If $\beta=\delta+1$ for some $\delta\geq 2$, then $|\alpha^\beta|=|\alpha^\delta\cdot\alpha|=\max\{|\alpha^\delta|,|\alpha|\}\leq|\gamma|$.
+If $\beta$ is a limit ordinal, then $|\alpha^\beta|=|\beta\times\gamma|$ holds since we can define an injection $i:\alpha^\beta\rightarrow\beta\times\gamma$ as $i(\xi)=\langle\delta,i_\delta(\xi)\rangle$,
+where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of injections and $\delta$ is the least ordinal $\eta$ such that $\xi\leq\alpha^\eta$.
+Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$.
+\end{customthm}
+
 \end{document}
