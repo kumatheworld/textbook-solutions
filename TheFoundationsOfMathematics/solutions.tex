@@ -240,4 +240,16 @@ It is easy to see that this $f$ actually is an order-preserving injection.
 \begin{customthm}{I.12.6} Let $\mathcal{F}$ be of finite character, $X\in\mathcal{F}$, and $Y\subseteq X$. $Y\in\mathcal{F}$ holds because every finite subset of $Y$ is in $\mathcal{F}$ since it is a finite subset of $X\in\mathcal{F}$ as well.
 \end{customthm}
 
+\begin{customthm}{I.12.13} We define a function $f:\mathcal{P}(\omega\times\omega)\rightarrow\omega_1$ as follows.
+  \[f(R)=
+    \begin{cases}
+      \mathrm{type}(R) & \mbox{if } R \mbox{ well-orders } \omega \\
+      |R| & \mbox{if } R \mbox{ is finite} \\
+      0 & \mbox{otherwise}
+    \end{cases}.
+  \]
+This $f$ is surjective because $\mathrm{ran}(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preceq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12.
+Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
+\end{customthm}
+
 \end{document}
