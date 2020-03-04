@@ -219,4 +219,16 @@ It is easy to see that $\triangleleft$ is well-defined and it well-orders $B$. N
 Therefore if $B$ is countable, it is isomorphic to some $(X,R)\in W$ and is also isomorphic to a proper initial segment of itself (namely $B_{\triangleleft[(X,R)]}$), which is a contradiction. Thus $B$ is uncountable. Note that power sets and quotient sets can be constructed without Replacement by Exercise I.10.5 and hence we have an uncountable well-ordered set within $Z^-$.
 \end{customthm}
 
+\begin{customthm}{I.11.36} Let $(A,\triangleleft)$ be a total order with $A=\{a_n:n\in\omega\}$. For $n\in\omega$, let $L_n=\{m\in\omega:m<n\wedge a_m<a_n\}$ and $R_n=\{m\in\omega:m<n\wedge a_n<a_m\}$. we define $f:A\rightarrow\mathbb{Q}$ as follows.
+  \[f(a_n)=
+    \begin{cases}
+      0 & \mbox{if } n=0 \\
+      f(\min(R_n))-1 & \mbox{if } n>0 \mbox{ and } L_n=\emptyset \\
+      f(\max(L_n))+1 & \mbox{if } n>0 \mbox{ and } R_n=\emptyset \\
+      \frac{1}{2}(f(\max(L_n))+f(\min(R_n))) & \mbox{if } n>0 \mbox{, } L_n\neq\emptyset \mbox{ and } R_n\neq\emptyset
+    \end{cases}.
+  \]
+It is easy to see that this $f$ actually is an order-preserving injection.
+\end{customthm}
+
 \end{document}
