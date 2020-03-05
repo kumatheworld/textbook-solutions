@@ -79,8 +79,8 @@ Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
 \begin{customthm}{I.7.23} Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \mathrm{ran}(X)$. Then $Y$ is a non-empty subset of $S$ and it has a $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has a $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
 \end{customthm}
 
-\begin{customthm}{I.8.10} Let $X$ be a non-empty set of ordinals. $\cap X$ is well-ordered since it is a set of ordinals and $ON$ is well-ordered by $\in$. Let $\alpha\in\cap X$. Then $\alpha\subseteq\beta$ holds for every $\beta\in X$ by transitivity of $\beta$ and hence $\alpha\subseteq\cap X$ holds, which proves that $\cap X$ is a transitive set. Thus $\cap X$ is an ordinal.
-Now let $\alpha=\min(X)$. $\alpha\subseteq\cap X$ follows from the fact that $\alpha\subseteq\beta(\leftrightarrow\alpha\leq\beta)$ for any $\beta\in X$. $\cap X\subseteq\alpha$ is obvious since every $\beta\in\cap X$ is also a member of $\alpha\in X$. Thus $\cap X=\min(X)$ holds. The fact that $\cup X$ is an ordinal with $\cup X=\sup(X)$ is proved in the same manner.
+\begin{customthm}{I.8.10} Let $X$ be a non-empty set of ordinals. $\bigcap X$ is well-ordered since it is a set of ordinals and $ON$ is well-ordered by $\in$. Let $\alpha\in\bigcap X$. Then $\alpha\subseteq\beta$ holds for every $\beta\in X$ by transitivity of $\beta$ and hence $\alpha\subseteq\bigcap X$ holds, which proves that $\bigcap X$ is a transitive set. Thus $\bigcap X$ is an ordinal.
+Now let $\alpha=\min(X)$. $\alpha\subseteq\bigcap X$ follows from the fact that $\alpha\subseteq\beta(\leftrightarrow\alpha\leq\beta)$ for any $\beta\in X$. $\bigcap X\subseteq\alpha$ is obvious since every $\beta\in\bigcap X$ is also a member of $\alpha\in X$. Thus $\bigcap X=\min(X)$ holds. The fact that $\bigcup X$ is an ordinal with $\bigcup X=\sup(X)$ is proved in the same manner.
 \end{customthm}
 
 \begin{customthm}{I.8.11} Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious.
@@ -102,12 +102,12 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 
 \begin{customthm}{I.9.6} Let $x$ be a set.
   \begin{enumerate}
-  \item $\mathrm{trcl}(x)\supseteq\cup^0x=x$.
-  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\cup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\cup^nx(z\in y)\}=\cup\cup^nx=\cup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
-  \item Let $t$ be a transitive set. Note that $\cup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\cup^nx\subseteq\cup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
-  \item For $y\in x$, one can easily show that $\cup^ny\subseteq\cup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\cup^ny$. Then we get $z\in\cup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
-  \item We show the following proposition $P(n)$: $z\in\cup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
-  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\cup^{n+1}x=\{z:\exists y\in\cup^n x(z\in y)\}$ and $y\in\cup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+  \item $\mathrm{trcl}(x)\supseteq\bigcup^0x=x$.
+  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
+  \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
+  \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
+  \item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^n x(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
   Thus $P(n+1)$ holds, and so does $\forall n\in\omega~P(n)$.
   \end{enumerate}
@@ -250,6 +250,10 @@ It is easy to see that this $f$ actually is an order-preserving injection.
   \]
 This $f$ is surjective because $\mathrm{ran}(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preceq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12.
 Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
+\end{customthm}
+
+\begin{customthm}{I.12.14} For each $n\in\omega$, let $\mathcal{F}_n=\{Y\in\mathcal{P}(X):\forall x,y\in Y[x\neq y\rightarrow d(x,y)>2^{-n}]\}$. Then $\mathcal{F}_n$ is of finite character and hence it has a maximal element $E_n$ by Tukey's Lemma.
+Now let $E=\bigcup_n E_n$. If $E$ is not dense in $X$, there is $x\in X$ and $n\in\omega$ such that the ball of radius $2^{-n}$ centered at $x$ does not intersect $E$, which contradicts $E_n$'s maximality. Thus $E$ is dense and since $X$ is non-separable, $E$ is uncountable. Then there is some uncountable $E_n$ because countable union of countable sets would be countable. That $E_n$ with $\varepsilon=2^{-n}$ is what we want.
 \end{customthm}
 
 \end{document}
