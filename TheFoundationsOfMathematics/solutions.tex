@@ -61,7 +61,7 @@
   \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
   If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
   \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
-  \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preceq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preceq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preceq t]]$.
+  \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$.
   Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
   \end{enumerate}
 \end{customthm}
@@ -117,14 +117,14 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 \end{customthm}
 
 \begin{customthm}{I.11.3} $\mathbb{R}\times\mathbb{R}\approx(0,1)\times(0,1)$ holds because $f(x,y)=(\sigma(x),\sigma(y))$, where $\sigma(x)=(1+\exp(x))^{-1}$, is a bijection from $\mathbb{R}\times\mathbb{R}$ to $(0,1)\times(0,1)$.
-To prove $(0,1)\times(0,1)\preceq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$.
-Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preceq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
+To prove $(0,1)\times(0,1)\preccurlyeq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$.
+Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preccurlyeq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
 \end{customthm}
 
 \begin{customthm}{I.11.6} Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.11.12} Let $A,B,C,D$ be sets with $A\preceq B$, $C\preceq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preceq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preceq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$.
+\begin{customthm}{I.11.12} Let $A,B,C,D$ be sets with $A\preccurlyeq B$, $C\preccurlyeq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preccurlyeq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preccurlyeq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$.
 We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
 \[F(f)(d)=
   \begin{cases}
@@ -132,11 +132,11 @@ We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
     b & \mbox{if } d\not\in\mathrm{ran}(j)
   \end{cases}.
 \]
-One can easily check that this $F$ is injective and hence ${}^AC\preceq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preceq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preceq{}^BD$. Note that $\mathcal{P}(A)\preceq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
+One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preccurlyeq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preccurlyeq{}^BD$. Note that $\mathcal{P}(A)\preccurlyeq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
 \end{customthm}
 
 \begin{customthm}{I.11.15} (1) is obvious from Exercise I.8.22. (2) can be reduced to (1) if we replace $B$ by $i(B)$ where $i:B\rightarrow\alpha$ is an injection. To prove (3), let $\alpha,\beta,\gamma$ be ordinals with $\alpha\leq\beta\leq\gamma$, $\alpha\approx\gamma$ and let $f:\gamma\rightarrow\alpha$ be a bijection.
-Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ as well, and since $\beta\subseteq\gamma$, we have $f\upharpoonright\beta:\beta\rightarrow\alpha$. Both of those functions are injective and hence we get $\gamma\preceq\beta\preceq\alpha$. Combining these with $\alpha\leq\beta\leq\gamma$ and Schröder-Bernstein Theorem, we get $\alpha\approx\beta\approx\gamma$.
+Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ as well, and since $\beta\subseteq\gamma$, we have $f\upharpoonright\beta:\beta\rightarrow\alpha$. Both of those functions are injective and hence we get $\gamma\preccurlyeq\beta\preccurlyeq\alpha$. Combining these with $\alpha\leq\beta\leq\gamma$ and Schröder-Bernstein Theorem, we get $\alpha\approx\beta\approx\gamma$.
 \end{customthm}
 
 \begin{customthm}{I.11.19} The 'only if' part is obvious since any order isomorphism is a bijection. To prove the 'if' part, let $A$ be a set, $\alpha$ be an ordinal and $f:A\rightarrow\alpha$ be a bijection. Then the relation $R=\{\langle x,y\rangle\in A\times A:f(x)\leq f(y)\}$ well-orders $A$.
@@ -145,7 +145,7 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 \begin{customthm}{I.11.21} Let $A$ be a well-orderable set and $g:A\rightarrow|A|$ be a bijection. Let $B$ be a set and assume there is a surjection $f:A\rightarrow B$.  Since $f$ is surjective, we can define an injection $i:B\rightarrow|A|$ by $i(y)=\min\{g(x)\in|A|:x\in A\wedge y=f(x)\}$. Then by Exercise I.11.15(2) and Exercise I.11.19, we can say that $B$ is well-orderable and $|B|\leq|A|$.
 \end{customthm}
 
-\begin{customthm}{I.11.22} The 'if' part is obvious from Exercise I.11.21. To prove the converse, let $\kappa$ be a cardinal, $B$ be a non-empty set with $B\preceq\kappa$. For a fixed $b\in B$ and an injection $i:B\rightarrow\kappa$, we can define a surjection $f:\kappa\rightarrow B$ as follows.
+\begin{customthm}{I.11.22} The 'if' part is obvious from Exercise I.11.21. To prove the converse, let $\kappa$ be a cardinal, $B$ be a non-empty set with $B\preccurlyeq\kappa$. For a fixed $b\in B$ and an injection $i:B\rightarrow\kappa$, we can define a surjection $f:\kappa\rightarrow B$ as follows.
   \[f(\alpha)=
     \begin{cases}
       x & \mbox{if } \alpha=i(x) \\
@@ -157,14 +157,14 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 \begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
   \begin{enumerate}
   \item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
-  \item \underline{$A\preceq B$ iff $|A|\leq|B|$}. Assume $A\preceq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$.
+  \item \underline{$A\preccurlyeq B$ iff $|A|\leq|B|$}. Assume $A\preccurlyeq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$.
   The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
-  \item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preceq B\wedge B\preceq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
+  \item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preccurlyeq B\wedge B\preccurlyeq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
   \item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
   \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.11.24} The 'if' part is obvious since $A\preceq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preceq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
+\begin{customthm}{I.11.24} The 'if' part is obvious since $A\preccurlyeq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preccurlyeq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
 \end{customthm}
 
 \begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$.
@@ -172,7 +172,7 @@ If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by induction hypothesi
 This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega~P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
-\begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preceq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preceq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds.
+\begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preccurlyeq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preccurlyeq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds.
 When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\omega$ turns out to be a cardinal and hence $\alpha^+=\alpha+1$. When $\alpha\geq\omega$, $\alpha+1$ is not a cardinal since we have an injection $i:\alpha+1\rightarrow\alpha$ defined as follows.
 \[i(x)=
   \begin{cases}
@@ -184,9 +184,9 @@ When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\
 Thus $\alpha^+>\alpha+1$ holds.
 \end{customthm}
 
-\begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\mathrm{type}(X;R)+1$, which is equivalent to $\alpha\leq\mathrm{type}(X;R)$. Therefore $\alpha\preceq\mathrm{type}(X;R)\approx X\preceq A$ holds.
-If $\alpha\not\prec\beta$, we would have $\beta\preceq\alpha\preceq A$ and that contradicts $\beta\not\preceq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal.
-$\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preceq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
+\begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\mathrm{type}(X;R)+1$, which is equivalent to $\alpha\leq\mathrm{type}(X;R)$. Therefore $\alpha\preccurlyeq\mathrm{type}(X;R)\approx X\preccurlyeq A$ holds.
+If $\alpha\not\prec\beta$, we would have $\beta\preccurlyeq\alpha\preccurlyeq A$ and that contradicts $\beta\not\preccurlyeq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal.
+$\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preccurlyeq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
 \end{customthm}
 
 \begin{customthm}{I.11.30} Let $\xi,\zeta$ be ordinals. We prove $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ by induction on $\zeta$. If $\zeta=\xi+1$, which is the least ordinal greater than $\xi$, then $\aleph_\zeta=(\aleph_\xi)^+$ is greater than $\aleph_\xi$ by the definition of $\aleph$.
@@ -248,7 +248,7 @@ It is easy to see that this $f$ actually is an order-preserving injection.
       0 & \mbox{otherwise}
     \end{cases}.
   \]
-This $f$ is surjective because $\mathrm{ran}(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preceq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12.
+This $f$ is surjective because $\mathrm{ran}(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preccurlyeq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12.
 Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
 \end{customthm}
 
@@ -262,7 +262,7 @@ We can assume $Z_1\supseteq Z_2\supseteq~\ldots\supseteq Z_n$ since $C$ is a cha
 Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns out to have a maximal set $Z$ by Zorn's Lemma. Such $Z$ is what we want.
 \end{customthm}
 
-\begin{customthm}{I.12.17} Let $A$ be a set. To prove the 'only if' part, assume $\omega\preceq A$ and let $i:\omega\rightarrow A$ be an injection. Then we can define an injection $f:A\rightarrow A$ with $\mathrm{ran}(f)\neq A$ as follows.
+\begin{customthm}{I.12.17} Let $A$ be a set. To prove the 'only if' part, assume $\omega\preccurlyeq A$ and let $i:\omega\rightarrow A$ be an injection. Then we can define an injection $f:A\rightarrow A$ with $\mathrm{ran}(f)\neq A$ as follows.
   \[f(x)=
     \begin{cases}
       f(i(n+1)) & \mbox{if } x=i(n) \\
@@ -271,7 +271,7 @@ Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns
   \]
 This $f$ does not contain $i(0)\in A$ in its range. Hence $A$ is not Dedekind-finite.
 
-To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\mathrm{ran}(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^{n}(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preceq A$.
+To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\mathrm{ran}(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^{n}(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
 \end{customthm}
 
 \begin{customthm}{I.12.18} Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which gives rise to an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
