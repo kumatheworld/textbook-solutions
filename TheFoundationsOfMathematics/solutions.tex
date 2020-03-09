@@ -271,10 +271,16 @@ Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns
   \]
 This $f$ does not contain $i(0)\in A$ in its range. Hence $A$ is not Dedekind-finite.
 
-To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\mathrm{ran}(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^{n}(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
+To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\mathrm{ran}(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^n(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
 \end{customthm}
 
 \begin{customthm}{I.12.18} Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which gives rise to an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
+\end{customthm}
+
+\begin{customthm}{I.13.17} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.13.18} Let $\delta_0=0$, $\delta_{n+1}=\beth_{\delta_n}$ and $\gamma=\sup\{\delta_n:n\in\omega\}$. Then $\beth_\gamma=\gamma$ holds as is proved in Exercise I.11.33.
 \end{customthm}
 
 \end{document}
