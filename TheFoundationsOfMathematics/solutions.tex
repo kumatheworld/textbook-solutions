@@ -257,8 +257,8 @@ Now let $E=\bigcup_n E_n$. If $E$ is not dense in $X$, there is $x\in X$ and $n\
 \end{customthm}
 
 \begin{customthm}{I.12.16} Let $X,Y$ be compact Hausdorff spaces, $f:X\rightarrow Y$ be a continuous surjection, and $\mathcal{F}=\{Z\in\mathcal{P}(X):Z\text{ is closed and }f\upharpoonright Z\text{ is surjective}\}$. Let $C$ be a chain in $(\mathcal{F},\supsetneq)$. We prove $\bigcap C\in\mathcal{F}$. It is clear that $\bigcap C$ is closed because $C$ is the intersection of closed sets.
-Assume $f\upharpoonright\bigcap C$ is not surjective and let $y\in Y\setminus\bigcap C$. Since $f$ is continuous and any singleton in a Hausdorff space is closed, $f^{-1}(y)=\{x\in X:f(x)=y\}$ is a closed subset in $X$, which is compact since $X$ is compact. Then $X\setminus\bigcap C=\bigcup_{Z\in C}(X\setminus Z)$, an open cover of $f^{-1}(y)$, has a finite subcover $(X\setminus Z_1,X\setminus Z_2,~\ldots,X\setminus Z_n)$.
-We can assume $Z_1\supseteq Z_2\supseteq~\ldots\supseteq Z_n$ since $C$ is a chain. Then $X\setminus Z_n=\bigcup_{k=1,~\ldots,n}(X\setminus Z_k)\supseteq f^{-1}(y)$ holds. This means that $y\not\in\mathrm{ran}(f\upharpoonright Z_k)$, which contradicts $Z_n\in\mathcal{F}$. Hence $f\upharpoonright\bigcap C$ is surjective and $C\in\mathcal{F}$ holds.
+Assume $f\upharpoonright\bigcap C$ is not surjective and let $y\in Y\setminus\bigcap C$. Since $f$ is continuous and any singleton in a Hausdorff space is closed, $f^{-1}(y)=\{x\in X:f(x)=y\}$ is a closed subset in $X$, which is compact since $X$ is compact. Then $X\setminus\bigcap C=\bigcup_{Z\in C}(X\setminus Z)$, an open cover of $f^{-1}(y)$, has a finite subcover $(X\setminus Z_1,X\setminus Z_2,\ldots,X\setminus Z_n)$.
+We can assume $Z_1\supseteq Z_2\supseteq\ldots\supseteq Z_n$ since $C$ is a chain. Then $X\setminus Z_n=\bigcup_{k=1,\ldots,n}(X\setminus Z_k)\supseteq f^{-1}(y)$ holds. This means that $y\not\in\mathrm{ran}(f\upharpoonright Z_k)$, which contradicts $Z_n\in\mathcal{F}$. Hence $f\upharpoonright\bigcap C$ is surjective and $C\in\mathcal{F}$ holds.
 Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns out to have a maximal set $Z$ by Zorn's Lemma. Such $Z$ is what we want.
 \end{customthm}
 
@@ -281,6 +281,16 @@ To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarro
 \end{customthm}
 
 \begin{customthm}{I.13.18} Let $\delta_0=0$, $\delta_{n+1}=\beth_{\delta_n}$ and $\gamma=\sup\{\delta_n:n\in\omega\}$. Then $\beth_\gamma=\gamma$ holds as is proved in Exercise I.11.33.
+\end{customthm}
+
+\begin{customthm}{I.13.20} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.13.21} We can define an injection $i:A\rightarrow\bigcup_{n\in\omega}(K\times B)^n$ by $i(a_1v_1+\cdots+a_nv_n)=((a_1,v_1),\ldots(a_n,v_n))$. Since $\omega\leq\max(|K|,|B|)$ and $(K\times B)^n\approx\max(|K|,|B|)^n\approx\max(|K|,|B|)$ hold, we have $\bigcup_{n\in\omega}(K\times B)^n\approx\max(|K|,|B|)$ by Theorem I.12.11. Hence $|A|\leq\max(|K|,|B|)$ holds.
+On the other hand, $|B|\leq|A|$ is obvious from $B\subseteq A$ and so is $|K|\leq|A|$ because we can define an injection $i:K\rightarrow A$ by $i(a)=av$ for a fixed $v\in B$. Thus we have $|A|=\max(|K|,|B|)$.
+Now we view $\mathbb{R}$ and $\mathbb{C}$ as vector spaces over $\mathbb{Q}$ with bases $B_\mathbb{R}$ and $B_\mathbb{C}$ respectively. Then by the above, we have $|\mathbb{R}|=\max(|\mathbb{Q}|, |B_\mathbb{R}|)$.
+Since $|\mathbb{Q}|=\aleph_0<2^{\aleph_0}=|\mathbb{R}|$, we get $|B_\mathbb{R}|=2^{\aleph_0}$. The same argument goes for $\mathbb{C}$ and we get $|B_\mathbb{C}|=|B_\mathbb{R}|=2^{\aleph_0}$. Hence $\mathbb{R}$ and $\mathbb{C}$ have the same dimensionality as vector spaces over $Q$, which means they are isomorphic.
+Since isomorphisms between vector spaces are group isomorphisms as well, we can conclude that $\mathbb{R}$ and $\mathbb{C}$ are isomorphic as Abelian groups.
 \end{customthm}
 
 \end{document}
