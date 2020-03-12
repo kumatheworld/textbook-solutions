@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{multirow}
+\usepackage{url}
 
 \theoremstyle{definition}
 \newtheorem{innercustomthm}{Exercise}
@@ -12,6 +13,7 @@
   {\endinnercustomthm}
 
 \begin{document}
+\sloppy
 \title{
   The Foundations of Mathematics \\
   \large by Kenneth Kunen \\
@@ -291,6 +293,9 @@ On the other hand, $|B|\leq|A|$ is obvious from $B\subseteq A$ and so is $|K|\le
 Now we view $\mathbb{R}$ and $\mathbb{C}$ as vector spaces over $\mathbb{Q}$ with bases $B_\mathbb{R}$ and $B_\mathbb{C}$ respectively. Then by the above, we have $|\mathbb{R}|=\max(|\mathbb{Q}|, |B_\mathbb{R}|)$.
 Since $|\mathbb{Q}|=\aleph_0<2^{\aleph_0}=|\mathbb{R}|$, we get $|B_\mathbb{R}|=2^{\aleph_0}$. The same argument goes for $\mathbb{C}$ and we get $|B_\mathbb{C}|=|B_\mathbb{R}|=2^{\aleph_0}$. Hence $\mathbb{R}$ and $\mathbb{C}$ have the same dimensionality as vector spaces over $Q$, which means they are isomorphic.
 Since isomorphisms between vector spaces are group isomorphisms as well, we can conclude that $\mathbb{R}$ and $\mathbb{C}$ are isomorphic as Abelian groups.
+\end{customthm}
+
+\begin{customthm}{I.14.4} The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
 \end{customthm}
 
 \end{document}
