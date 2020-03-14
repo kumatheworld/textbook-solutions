@@ -298,4 +298,13 @@ Since isomorphisms between vector spaces are group isomorphisms as well, we can 
 \begin{customthm}{I.14.4} The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
 \end{customthm}
 
+\begin{customthm}{I.14.9} Let $x\in WF$,  $\beta=\mathrm{rank}(x)$ and $\gamma=\mathrm{rank}(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
+  \begin{enumerate}
+  \item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$.
+  Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\mathrm{rank}(y)\geq\xi+1$ and $z\in y$ such that $\mathrm{rank}(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\mathrm{rank}(z)+1>\xi$. Thus $\gamma=\beta$ holds.
+  \item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\mathrm{rank}(z)<\mathrm{rank}(y)<\mathrm{rank}(x)=\alpha+1$ holds, which means $\mathrm{rank}(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$.
+  On the other hand, there exists $y\in z$ such that $\mathrm{rank}(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
+  \end{enumerate}
+\end{customthm}
+
 \end{document}
