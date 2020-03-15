@@ -321,4 +321,11 @@ Since isomorphisms between vector spaces are group isomorphisms as well, we can 
 \begin{customthm}{I.14.15} Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\mathrm{rank}(y)<\mathrm{rank}(x)$ hold, which contradicts the minimality of $\mathrm{rank}(x)$. Thus $WF\subseteq K$ holds.
 \end{customthm}
 
+\begin{customthm}{I.14.16} We show $|R(\omega+\xi)|=\beth_\xi$ by induction. The equation holds when $\xi=0$ because we have $|R(\omega)|=\omega$ from Exercise I.14.14.
+When $\xi$ is a successor, let $\xi=\eta+1$ and assume $|R(\omega+\eta)|=\beth_\eta$. Then we have $|R(\omega+\xi)|=|2^{R(\omega+\eta)}|=2^{|R(\omega+\eta)|}=2^{\beth_\eta}=\beth_\xi$.
+Now assume $\xi$ is a limit ordinal and $|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. It is obvious that $|R(\omega+\xi)|\geq\beth_\xi=\sup\{\beth_\eta:\eta<\xi\}$ because $|R(\omega+\xi)|\geq|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$.
+To see $|R(\omega+\xi)|\leq\beth_\xi$, we first note that $R(\omega+\xi)=\bigcup_{\zeta<\omega+\xi}R(\zeta)=\bigcup_{\eta<\xi}R(\omega+\eta)$ holds since $\omega+\xi$ is a limit ordinal as well. The last equality follows from $R(n)\subseteq R(\omega)$ for all $n<\omega$.
+On the other hand, $\omega+\xi\leq\beth_\xi$ and $R(\omega+\eta)\leq\beth_\xi$ hold for any $\xi\in ON$. One can easily show the first inequality by induction and the second one is obvious from our induction hypothesis. Then by Theorem I.12.11, we get $|R(\omega+\xi)|=|\bigcup_{\eta<\xi}R(\omega+\eta)|\leq\beth_\xi$. Thus $|R(\omega+\xi)|=\beth_\xi$ holds for all ordinals $\xi$.
+\end{customthm}
+
 \end{document}
