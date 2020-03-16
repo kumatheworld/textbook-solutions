@@ -41,13 +41,13 @@
   \end{center}
 \end{customthm}
 
-\begin{customthm}{I.6.3} Example 2, 3 and 4 are the ones. Those are the ones that satisfy $\neg[\exists x~\mathrm{emp}(x)]$, which also satisfy Extensionality.
+\begin{customthm}{I.6.3} Example 2, 3 and 4 are the ones. Those are the ones that satisfy $\neg[\exists x\,\mathrm{emp}(x)]$, which also satisfy Extensionality.
 \end{customthm}
 
 \begin{customthm}{I.6.11} Example 7 is the one. Example 1, 5 and 6 have pairwise unions. Example 2, 3 and 4 do not have empty sets hence cannot satisfy Comprehension.
 \end{customthm}
 
-\begin{customthm}{I.6.13} Example 1 is the one. The other ones do not satisfy $\forall x\neg\exists y[y\in x]$.
+\begin{customthm}{I.6.13} Example 1 is the one. The other ones do not satisfy $\forall x\,\neg\exists y\,[y\in x]$.
 \end{customthm}
 
 \begin{customthm}{I.6.15} Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
@@ -70,7 +70,7 @@
   \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.7.15} Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\phi(t,x)=\exists y[t=[(x, y)]$ has the property that $\forall t\in R\exists!y\phi(t,y)$. Then the set $\{x:\exists y[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x[(x, y)\in R]\}$ is proved in the same way.
+\begin{customthm}{I.7.15} Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x, y)]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x, y)\in R]\}$ is proved in the same way.
 \end{customthm}
 
 \begin{customthm}{I.7.17} Let $(A,\triangleleft_1),(B,\triangleleft_2),(C,\triangleleft_3)$ be arbitrary relations and $F:A\rightarrow B,G:B\rightarrow C$ be isomorphisms. Reflexivity of $\cong$ is easily checked by letting $(A,\triangleleft_1)=(B,\triangleleft_2)$ and $F$ be the identity map $\mathrm{id}_A$. Symmetry follows from taking $F^{-1}:B\rightarrow A$. Transitivity is proved by considering $G\circ F:A\rightarrow C$.
@@ -107,13 +107,13 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 \begin{customthm}{I.9.6} Let $x$ be a set.
   \begin{enumerate}
   \item $\mathrm{trcl}(x)\supseteq\bigcup^0x=x$.
-  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
+  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
   \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
   \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
   \item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
-  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^n x(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
-  Thus $P(n+1)$ holds, and so does $\forall n\in\omega~P(n)$.
+  Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
   \end{enumerate}
 \end{customthm}
 
@@ -173,7 +173,7 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 
 \begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$.
 If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by induction hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$.
-This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega~P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
+This is a bijection if $i$ is a bijection, which is by induction hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega\,P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
 \begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preccurlyeq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preccurlyeq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds.
@@ -197,16 +197,16 @@ $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preccurlyeq A$
 If $\zeta=\eta+1$ and $\eta>\xi$, assuming the induction hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$.
 If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
 
-Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$.
+Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$.
 Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set.
 Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
 \end{customthm}
 
-\begin{customthm}{I.11.33} We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma[\aleph_\xi\leq\gamma]$.
+\begin{customthm}{I.11.33} We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma\,[\aleph_\xi\leq\gamma]$.
 Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds.
-$\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
+$\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega\,[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
 
-Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
+Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega\,[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
 \end{customthm}
 
 \begin{customthm}{I.11.34} Let us first note that $\max\{|\alpha|,|\beta|\}=|\max\{\alpha,\beta\}|$. For $|\alpha+\beta|$ and $|\alpha\cdot\beta|$, WLOG we can assume $\alpha\leq\beta$. Then we have $|\alpha+\beta|\leq|\beta+\beta|\leq|\beta\cdot\beta|=|\beta\times\beta|=|\beta|$.
@@ -256,7 +256,7 @@ This $f$ is surjective because $\mathrm{ran}(f)$ includes all countable ordinals
 Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
 \end{customthm}
 
-\begin{customthm}{I.12.14} For each $n\in\omega$, let $\mathcal{F}_n=\{Y\in\mathcal{P}(X):\forall x,y\in Y[x\neq y\rightarrow d(x,y)>2^{-n}]\}$. Then $\mathcal{F}_n$ is of finite character and hence it has a maximal element $E_n$ by Tukey's Lemma.
+\begin{customthm}{I.12.14} For each $n\in\omega$, let $\mathcal{F}_n=\{Y\in\mathcal{P}(X):\forall x,y\in Y\,[x\neq y\rightarrow d(x,y)>2^{-n}]\}$. Then $\mathcal{F}_n$ is of finite character and hence it has a maximal element $E_n$ by Tukey's Lemma.
 Now let $E=\bigcup_n E_n$. If $E$ is not dense in $X$, there is $x\in X$ and $n\in\omega$ such that the ball of radius $2^{-n}$ centered at $x$ does not intersect $E$, which contradicts $E_n$'s maximality. Thus $E$ is dense and since $X$ is non-separable, $E$ is uncountable. Then there is some uncountable $E_n$ because countable union of countable sets would be countable. That $E_n$ with $\varepsilon=2^{-n}$ is what we want.
 \end{customthm}
 
@@ -326,6 +326,11 @@ When $\xi$ is a successor, let $\xi=\eta+1$ and assume $|R(\omega+\eta)|=\beth_\
 Now assume $\xi$ is a limit ordinal and $|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. It is obvious that $|R(\omega+\xi)|\geq\beth_\xi=\sup\{\beth_\eta:\eta<\xi\}$ because $|R(\omega+\xi)|\geq|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$.
 To see $|R(\omega+\xi)|\leq\beth_\xi$, we first note that $R(\omega+\xi)=\bigcup_{\zeta<\omega+\xi}R(\zeta)=\bigcup_{\eta<\xi}R(\omega+\eta)$ holds since $\omega+\xi$ is a limit ordinal as well. The last equality follows from $R(n)\subseteq R(\omega)$ for all $n<\omega$.
 On the other hand, $\omega+\xi\leq\beth_\xi$ and $R(\omega+\eta)\leq\beth_\xi$ hold for any $\xi\in ON$. One can easily show the first inequality by induction and the second one is obvious from our induction hypothesis. Then by Theorem I.12.11, we get $|R(\omega+\xi)|=|\bigcup_{\eta<\xi}R(\omega+\eta)|\leq\beth_\xi$. Thus $|R(\omega+\xi)|=\beth_\xi$ holds for all ordinals $\xi$.
+\end{customthm}
+
+\begin{customthm}{I.14.17} Assume $\forall x\in A\,\exists y\,\varphi(x,y)$. Let $\hat\varphi(x,\alpha)$ say that $\alpha$ is the least ordinal such that $\exists y\in R(\alpha)\,\varphi(x,y)$.
+Then $\forall x\in A\,\exists!\alpha\,\hat\varphi(x,\alpha)$ holds and we get $\exists\hat B\,\forall x\in A\,\exists\alpha\in\hat B\,\hat\varphi(x,\alpha)$ from Replacement.
+For such $\hat B$, let $B=\bigcup_{\alpha\in B\cap ON}R(\alpha)$. Then we have $\forall x\in A\,\exists y\in B\,\varphi(x,y)$.
 \end{customthm}
 
 \end{document}
