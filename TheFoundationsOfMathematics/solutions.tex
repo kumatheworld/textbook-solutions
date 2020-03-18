@@ -7,6 +7,9 @@
 \usepackage{url}
 \usepackage{mathtools}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newcommand{\type}{\mathop{\mathrm{type}}}
+\newcommand{\trcl}{\mathop{\mathrm{trcl}}}
+\newcommand{\rank}{\mathop{\mathrm{rank}}}
 
 \theoremstyle{definition}
 \newtheorem{innercustomthm}{Exercise}
@@ -96,9 +99,9 @@ Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate w
 Now let $\gamma\in n$. Then for every $\alpha\leq\gamma$, $\alpha$ is either 0 or a successor since $n$ is a natural number and $\alpha\leq\gamma\leq n$. Therefore every element of $n$ turns out to be a natural number.
 \end{customthm}
 
-\begin{customthm}{I.8.22} Since every well-ordered set is isomorphic to a unique ordinal, it is sufficient to prove the following; for any ordinal $\alpha$ and $X\subseteq\alpha$, it holds that $\mathrm{type}(X;\in)\leq\alpha$. Now assume $\alpha\in ON$ and  $X\subseteq\alpha$, and let $f$ be the order isomorphism from $X$ to $\mathrm{type}(X)$. Since $f$ is an order-isomorphism, it holds that $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$.
+\begin{customthm}{I.8.22} Since every well-ordered set is isomorphic to a unique ordinal, it is sufficient to prove the following; for any ordinal $\alpha$ and $X\subseteq\alpha$, it holds that $\type(X;\in)\leq\alpha$. Now assume $\alpha\in ON$ and  $X\subseteq\alpha$, and let $f$ be the order isomorphism from $X$ to $\type(X)$. Since $f$ is an order-isomorphism, it holds that $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$.
 Now let $\Xi = \{\xi\in X:\xi<f(\xi)\}$. Assume $\Xi\neq\emptyset$ and let $\xi$ be the least element of $\Xi$. From $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$ and $\xi\in\Xi$, we get $\xi=f(\mu)$ for some $\mu\in X$ such that $\mu<\xi$.
-Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\mu)\leq\mu$ holds. Then we have $\xi\leq f(\mu)\leq\mu$, which is a contradiction. Thus $\Xi=\emptyset$ and hence $\mathrm{type}(X)\subseteq\alpha$ holds.
+Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\mu)\leq\mu$ holds. Then we have $\xi\leq f(\mu)\leq\mu$, which is a contradiction. Thus $\Xi=\emptyset$ and hence $\type(X)\subseteq\alpha$ holds.
 \end{customthm}
 
 \begin{customthm}{I.8.23} Skipped for now.
@@ -106,10 +109,10 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 
 \begin{customthm}{I.9.6} Let $x$ be a set.
   \begin{enumerate}
-  \item $\mathrm{trcl}(x)\supseteq\bigcup^0x=x$.
-  \item Let $y\in\mathrm{trcl}(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$. Hence $\mathrm{trcl}(x)$ is transitive.
-  \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\mathrm{trcl}(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\mathrm{trcl}(x)\subseteq\mathrm{trcl}(t)\subseteq t$.
-  \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\mathrm{trcl}(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\mathrm{trcl}(x)$, which proves $\mathrm{trcl}(y)\subseteq\mathrm{trcl}(x)$.
+  \item $\trcl(x)\supseteq\bigcup^0x=x$.
+  \item Let $y\in\trcl(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\trcl(x)$. Hence $\trcl(x)$ is transitive.
+  \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\trcl(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\trcl(x)\subseteq\trcl(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\trcl(x)\subseteq\trcl(t)\subseteq t$.
+  \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\trcl(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\trcl(x)$, which proves $\trcl(y)\subseteq\trcl(x)$.
   \item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
   Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
@@ -188,7 +191,7 @@ When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\
 Thus $\alpha^+>\alpha+1$ holds.
 \end{customthm}
 
-\begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\mathrm{type}(X;R)+1$, which is equivalent to $\alpha\leq\mathrm{type}(X;R)$. Therefore $\alpha\preccurlyeq\mathrm{type}(X;R)\approx X\preccurlyeq A$ holds.
+\begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\type(X;R)+1$, which is equivalent to $\alpha\leq\type(X;R)$. Therefore $\alpha\preccurlyeq\type(X;R)\approx X\preccurlyeq A$ holds.
 If $\alpha\not\prec\beta$, we would have $\beta\preccurlyeq\alpha\preccurlyeq A$ and that contradicts $\beta\not\preccurlyeq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal.
 $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preccurlyeq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
 \end{customthm}
@@ -218,7 +221,7 @@ where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of inj
 Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$.
 \end{customthm}
 
-\begin{customthm}{I.11.35} Let $W=\{(X,R)\in\mathcal{P}(\omega)\times\mathcal{P(\omega\times\omega)}:R\text{ well-orders }X\}$ and $B=W/\cong$, where $\cong$ is the isomorphism relation. We define a relation $\triangleleft$ on $B$ by $[(X,R)]\triangleleft[(X',R')]$ iff $\mathrm{type}(X;R)<\mathrm{type}(X';R')$.
+\begin{customthm}{I.11.35} Let $W=\{(X,R)\in\mathcal{P}(\omega)\times\mathcal{P(\omega\times\omega)}:R\text{ well-orders }X\}$ and $B=W/\cong$, where $\cong$ is the isomorphism relation. We define a relation $\triangleleft$ on $B$ by $[(X,R)]\triangleleft[(X',R')]$ iff $\type(X;R)<\type(X';R')$.
 It is easy to see that $\triangleleft$ is well-defined and it well-orders $B$. Now let us denote $X_{<x}=\{y\in X:y<x\}$ for an ordered set $(X;<)$ and its element $x$. For any $(X,R)\in W$, $(X,R)\cong B_{\triangleleft[(X,R)]}$ holds because there is an order isomorphism $f:(X,R)\rightarrow B_{\triangleleft[(X,R)]}$ defined by $f(x)=[(X_{<x},R\upharpoonright X_{<x})]$.
 Therefore if $B$ is countable, it is isomorphic to some $(X,R)\in W$ and is also isomorphic to a proper initial segment of itself (namely $B_{\triangleleft[(X,R)]}$), which is a contradiction. Thus $B$ is uncountable. Note that power sets and quotient sets can be constructed without Replacement by Exercise I.10.5 and hence we have an uncountable well-ordered set within $Z^-$.
 \end{customthm}
@@ -247,7 +250,7 @@ It is easy to see that this $f$ actually is an order-preserving injection.
 \begin{customthm}{I.12.13} We define a function $f:\mathcal{P}(\omega\times\omega)\rightarrow\omega_1$ as follows.
   \[f(R)=
     \begin{cases}
-      \mathrm{type}(R) & \mbox{if } R \mbox{ well-orders } \omega \\
+      \type(R) & \mbox{if } R \mbox{ well-orders } \omega \\
       |R| & \mbox{if } R \mbox{ is finite} \\
       0 & \mbox{otherwise}
     \end{cases}.
@@ -300,12 +303,12 @@ Since isomorphisms between vector spaces are group isomorphisms as well, we can 
 \begin{customthm}{I.14.4} The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
 \end{customthm}
 
-\begin{customthm}{I.14.9} Let $x\in WF$,  $\beta=\mathrm{rank}(x)$ and $\gamma=\mathrm{rank}(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
+\begin{customthm}{I.14.9} Let $x\in WF$,  $\beta=\rank(x)$ and $\gamma=\rank(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
   \begin{enumerate}
   \item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$.
-  Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\mathrm{rank}(y)\geq\xi+1$ and $z\in y$ such that $\mathrm{rank}(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\mathrm{rank}(z)+1>\xi$. Thus $\gamma=\beta$ holds.
-  \item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\mathrm{rank}(z)<\mathrm{rank}(y)<\mathrm{rank}(x)=\alpha+1$ holds, which means $\mathrm{rank}(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$.
-  On the other hand, there exists $y\in z$ such that $\mathrm{rank}(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
+  Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\rank(y)\geq\xi+1$ and $z\in y$ such that $\rank(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\rank(z)+1>\xi$. Thus $\gamma=\beta$ holds.
+  \item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\rank(z)<\rank(y)<\rank(x)=\alpha+1$ holds, which means $\rank(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$.
+  On the other hand, there exists $y\in z$ such that $\rank(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
   \end{enumerate}
 \end{customthm}
 
@@ -318,7 +321,7 @@ Since isomorphisms between vector spaces are group isomorphisms as well, we can 
   From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
 \end{customthm}
 
-\begin{customthm}{I.14.15} Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\mathrm{rank}(y)<\mathrm{rank}(x)$ hold, which contradicts the minimality of $\mathrm{rank}(x)$. Thus $WF\subseteq K$ holds.
+\begin{customthm}{I.14.15} Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\rank(y)<\rank(x)$ hold, which contradicts the minimality of $\rank(x)$. Thus $WF\subseteq K$ holds.
 \end{customthm}
 
 \begin{customthm}{I.14.16} We show $|R(\omega+\xi)|=\beth_\xi$ by induction. The equation holds when $\xi=0$ because we have $|R(\omega)|=\omega$ from Exercise I.14.14.
@@ -346,7 +349,15 @@ For such $\hat B$, let $B=\bigcup_{\alpha\in B\cap ON}R(\alpha)$. Then we have $
 \end{customthm}
 
 \begin{customthm}{I.14.23} Let $\psi(y)$ be a formula such that $\forall y\,[(\forall x\in y\,\psi(x))\rightarrow\psi(y)]$. Assume $\neg\forall y\,\psi(y)$ and let $y$ be a set of least rank such that $\neg\psi(y)$.
-Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\mathrm{rank}(x)<\mathrm{rank}(y)$ since $x\in y$, which contradicts the minimality of $\mathrm{rank}(y)$.
+Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\rank(x)<\rank(y)$ since $x\in y$, which contradicts the minimality of $\rank(y)$.
+\end{customthm}
+
+\begin{customthm}{I.14.24} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.15.2} $\mathbb{Z}\subseteq\mathbb{Q}$ is obvious from their definitions. To see $\mathbb{Q}\subseteq HF$, we show $\rank(x)<\omega$ for all $x$. If $x\in\omega$, then $\rank(x)<\rank(\omega)=\omega$.
+If $x=\langle i,\langle m,n\rangle\rangle$ for some $i,m,n\in\omega$, then $\rank(x)=\max\{\rank(i),\max\{\rank(m),\rank(n)\}+2\}+2\in\omega$. (For example, we get $\rank(-2/3)=\rank(\langle 1,\langle 2,3\rangle\rangle)=7$ from this.) Hence $\mathbb{Q}\subseteq HF$ holds.
+$\rank(\mathbb{Z})\leq\omega$ follows from $\mathbb{Z}\subseteq HF$, and we have $\rank(\mathbb{Z})>n$ for any $n\in\omega$ since $n\in\mathbb{Z}$ and $\rank(n)=n$. Thus $\rank(\mathbb{Z})$ is equal to $\omega$ and so is $\rank(\mathbb{Q})$.
 \end{customthm}
 
 \end{document}
