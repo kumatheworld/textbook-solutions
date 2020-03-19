@@ -360,4 +360,9 @@ If $x=\langle i,\langle m,n\rangle\rangle$ for some $i,m,n\in\omega$, then $\ran
 $\rank(\mathbb{Z})\leq\omega$ follows from $\mathbb{Z}\subseteq HF$, and we have $\rank(\mathbb{Z})>n$ for any $n\in\omega$ since $n\in\mathbb{Z}$ and $\rank(n)=n$. Thus $\rank(\mathbb{Z})$ is equal to $\omega$ and so is $\rank(\mathbb{Q})$.
 \end{customthm}
 
+\begin{customthm}{I.15.5} Let $x\in\mathbb{R}$. $\rank(x)\leq\omega$ holds because $\rank(q)<\omega$ holds for all $q\in x$. Now let $q\in x$ and let $n\in\omega$ be one such that $-n<q$. Then $-n\in x$ and we have $\rank(x)>\rank(-n)=\rank(\langle 1,\langle n,1\rangle\rangle)=n+4$.
+Since $n$ can be arbitrarily large, we have $\rank(x)\geq\omega$. Hence $\rank(x)=\omega$ for all $x\in\mathbb{R}$ and we get $\rank(\mathbb{R})=\omega+1$.
+For $z=\langle x,y\rangle\in\mathbb{C}$, we have $\rank(z)=\max\{\rank(x),\rank(y)\}+2=\omega+2$, which proves $\rank(\mathbb{C})=\omega+3$.
+\end{customthm}
+
 \end{document}
