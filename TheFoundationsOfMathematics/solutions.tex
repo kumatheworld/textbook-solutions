@@ -54,23 +54,23 @@
 \end{customthm}
 
 \begin{customthm}{I.6.15} Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
-  \begin{enumerate}
-  \item \underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
-  \item \underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
-  \end{enumerate}
+\begin{enumerate}
+\item \underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
+\item \underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
+\end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.6.17} $\langle 0,1\rangle = \{\{0\}, \{0,1\}\} = \{1,2\}$. $\langle 1,0\rangle = \{\{1\}, \{1,0\}\} = \{\{1\}, 2\}$.
 \end{customthm}
 
 \begin{customthm}{I.7.13} Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
-  \begin{enumerate}
-  \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
-  If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
-  \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
-  \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$.
-  Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
-  \end{enumerate}
+\begin{enumerate}
+\item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$.
+If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
+\item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
+\item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$.
+Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
+\end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.7.15} Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x, y)]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x, y)\in R]\}$ is proved in the same way.
@@ -108,16 +108,16 @@ Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\m
 \end{customthm}
 
 \begin{customthm}{I.9.6} Let $x$ be a set.
-  \begin{enumerate}
-  \item $\trcl(x)\supseteq\bigcup^0x=x$.
-  \item Let $y\in\trcl(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\trcl(x)$. Hence $\trcl(x)$ is transitive.
-  \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\trcl(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\trcl(x)\subseteq\trcl(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\trcl(x)\subseteq\trcl(t)\subseteq t$.
-  \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\trcl(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\trcl(x)$, which proves $\trcl(y)\subseteq\trcl(x)$.
-  \item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
-  $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
-  Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
-  Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
-  \end{enumerate}
+\begin{enumerate}
+\item $\trcl(x)\supseteq\bigcup^0x=x$.
+\item Let $y\in\trcl(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\trcl(x)$. Hence $\trcl(x)$ is transitive.
+\item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\trcl(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\trcl(x)\subseteq\trcl(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\trcl(x)\subseteq\trcl(t)\subseteq t$.
+\item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\trcl(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\trcl(x)$, which proves $\trcl(y)\subseteq\trcl(x)$.
+\item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+$P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By induction hypothesis, we have a function $s$ such that $\mathrm{dom}(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$.
+Now we extend this to a function $s'$ such that $\mathrm{dom}(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
+Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
+\end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.10.5} We can say that $A\times B=\{\{\{x\},\{x,y\}\}\in\mathcal{P(\mathcal{P(A\cup B)})}:x\in A,y\in B\}$ is a set, relying on the specific definition of pairs. $A/R=\{[x]_R\in\mathcal{P}(A):x\in A\}$, where $[x]_R=\{y\in A:yRx\}$, obviously forms a set.
@@ -162,13 +162,13 @@ Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ a
 \end{customthm}
 
 \begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
-  \begin{enumerate}
-  \item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
-  \item \underline{$A\preccurlyeq B$ iff $|A|\leq|B|$}. Assume $A\preccurlyeq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$.
-  The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
-  \item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preccurlyeq B\wedge B\preccurlyeq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
-  \item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
-  \end{enumerate}
+\begin{enumerate}
+\item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
+\item \underline{$A\preccurlyeq B$ iff $|A|\leq|B|$}. Assume $A\preccurlyeq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$.
+The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
+\item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preccurlyeq B\wedge B\preccurlyeq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
+\item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
+\end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.11.24} The 'if' part is obvious since $A\preccurlyeq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preccurlyeq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
@@ -217,8 +217,8 @@ For $|\alpha^\beta|$, let $\gamma=\max\{\alpha,\beta\}$. We prove $|\alpha^\beta
 Now assume that $|\alpha^\delta|\leq|\gamma|$ for any $\delta<\beta$.
 If $\beta=\delta+1$ for some $\delta\geq 2$, then $|\alpha^\beta|=|\alpha^\delta\cdot\alpha|=\max\{|\alpha^\delta|,|\alpha|\}\leq|\gamma|$.
 If $\beta$ is a limit ordinal, then $|\alpha^\beta|=|\beta\times\gamma|$ holds since we can define an injection $i:\alpha^\beta\rightarrow\beta\times\gamma$ as $i(\xi)=\langle\delta,i_\delta(\xi)\rangle$,
-where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of injections and $\delta$ is the least ordinal $\eta$ such that $\xi\leq\alpha^\eta$.
-Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$.
+where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of injections, whose existence relies on Choice, and $\delta$ is the least ordinal $\eta$ such that $\xi\leq\alpha^\eta$.
+Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$. (Note: I will replace this proof later by one without Choice, if I find any.)
 \end{customthm}
 
 \begin{customthm}{I.11.35} Let $W=\{(X,R)\in\mathcal{P}(\omega)\times\mathcal{P(\omega\times\omega)}:R\text{ well-orders }X\}$ and $B=W/\cong$, where $\cong$ is the isomorphism relation. We define a relation $\triangleleft$ on $B$ by $[(X,R)]\triangleleft[(X',R')]$ iff $\type(X;R)<\type(X';R')$.
@@ -304,21 +304,21 @@ Since isomorphisms between vector spaces are group isomorphisms as well, we can 
 \end{customthm}
 
 \begin{customthm}{I.14.9} Let $x\in WF$,  $\beta=\rank(x)$ and $\gamma=\rank(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
-  \begin{enumerate}
-  \item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$.
-  Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\rank(y)\geq\xi+1$ and $z\in y$ such that $\rank(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\rank(z)+1>\xi$. Thus $\gamma=\beta$ holds.
-  \item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\rank(z)<\rank(y)<\rank(x)=\alpha+1$ holds, which means $\rank(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$.
-  On the other hand, there exists $y\in z$ such that $\rank(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
-  \end{enumerate}
+\begin{enumerate}
+\item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$.
+Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\rank(y)\geq\xi+1$ and $z\in y$ such that $\rank(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\rank(z)+1>\xi$. Thus $\gamma=\beta$ holds.
+\item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\rank(z)<\rank(y)<\rank(x)=\alpha+1$ holds, which means $\rank(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$.
+On the other hand, there exists $y\in z$ such that $\rank(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
+\end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.14.14} Let $f:\omega\rightarrow HF$ be the one defined recursively by $f(m)=\{f(n):nEm\}$ and $g:HF\rightarrow\omega$ be the one defined recursively by $g(x)=\sum_{y\in x}2^{g(y)}$. To see $(\omega;E)\cong(HF;\in)$, we show the following.
-  \begin{enumerate}
-  \item\underline{$g\circ f = \mathrm{id}_\omega$}. We show this inductively. Let $m\in\omega$ and assume $g(f(n))=n$ for all $n<m$. Then we have $g(f(m))=g(\{f(n):nEm\})=\sum_{n:nEm}2^{g(f(n))}=\sum_{n:nEm}2^n=m$.
-  \item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$.
-  \item\underline{$nEm\leftrightarrow f(n)\in f(m)$}. This is obvious from the definition of $E$.
-  \end{enumerate}
-  From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
+\begin{enumerate}
+\item\underline{$g\circ f = \mathrm{id}_\omega$}. We show this inductively. Let $m\in\omega$ and assume $g(f(n))=n$ for all $n<m$. Then we have $g(f(m))=g(\{f(n):nEm\})=\sum_{n:nEm}2^{g(f(n))}=\sum_{n:nEm}2^n=m$.
+\item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$.
+\item\underline{$nEm\leftrightarrow f(n)\in f(m)$}. This is obvious from the definition of $E$.
+\end{enumerate}
+From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
 \end{customthm}
 
 \begin{customthm}{I.14.15} Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\rank(y)<\rank(x)$ hold, which contradicts the minimality of $\rank(x)$. Thus $WF\subseteq K$ holds.
@@ -363,6 +363,37 @@ $\rank(\mathbb{Z})\leq\omega$ follows from $\mathbb{Z}\subseteq HF$, and we have
 \begin{customthm}{I.15.5} Let $x\in\mathbb{R}$. $\rank(x)\leq\omega$ holds because $\rank(q)<\omega$ holds for all $q\in x$. Now let $q\in x$ and let $n\in\omega$ be one such that $-n<q$. Then $-n\in x$ and we have $\rank(x)>\rank(-n)=\rank(\langle 1,\langle n,1\rangle\rangle)=n+4$.
 Since $n$ can be arbitrarily large, we have $\rank(x)\geq\omega$. Hence $\rank(x)=\omega$ for all $x\in\mathbb{R}$ and we get $\rank(\mathbb{R})=\omega+1$.
 For $z=\langle x,y\rangle\in\mathbb{C}$, we have $\rank(z)=\max\{\rank(x),\rank(y)\}+2=\omega+2$, which proves $\rank(\mathbb{C})=\omega+3$.
+\end{customthm}
+
+\begin{customthm}{I.15.8} We prove the following.
+\begin{enumerate}
+\item\underline{$|\mathbb{R}|=2^{\aleph_0}$}. $|\mathbb{R}|\leq2^{\aleph_0}$ is clear from $\mathbb{R}\subseteq{\mathcal{P}(\mathbb{Q})}$ and $\mathcal{P}(\mathbb{Q})\approx2^\mathbb{Q}\approx2^{\aleph_0}$.
+However, the opposite is not straightforward from our definition of $\mathbb{R}$. One can prove it by treating $\mathbb{R}$ as the set of infinite decimals and using the diagonal argument. But we would need to prove that the set of infinite decimals is isomorphic to our $\mathbb{R}$ for that, which would be too long to write down here.
+\item\underline{$|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$}. $|C(\mathbb{R},\mathbb{R})|\geq2^{\aleph_0}$ is obvious because $\mathbb{R}\succcurlyeq2^{\aleph_0}$ and we have a constant function $c_x:\mathbb{R}\rightarrow\mathbb{R}$ for each $x\in\mathbb{R}$.
+To prove the opposite, we use the well-known fact from topology that a continuous function from a Hausdorff space is unique up to the restriction to a dense subspace of their domain. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, we have $C(\mathbb{R},\mathbb{R})\subseteq\mathbb{R}^\mathbb{Q}$ and $\mathbb{R}^\mathbb{Q}\approx(2^{\aleph_0})^\mathbb{Q}\approx2^{\aleph_0\times\mathbb{Q}}\approx2^{\aleph_0}$.
+Hence $|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$ holds.
+\item\underline{$|\mathbb{R}^\mathbb{R}|=2^{2^{\aleph_0}}$}. $\mathbb{R}^\mathbb{R}\approx (2^{\aleph_0})^\mathbb{R}\approx 2^{\aleph_0\times\mathbb{R}}\approx2^\mathbb{R}\approx2^{2^{\aleph_0}}$.
+\end{enumerate}
+\end{customthm}
+
+\begin{customthm}{I.15.9} The set $\mathcal{B}=\mathcal{B}_{\omega_1}\subseteq\mathcal{P}(\mathbb{R})$ of Borel subsets is defined recursively,
+where $\mathcal{B}_0$ is the set of open sets and closed sets of $\mathbb{R}$, $\mathcal{B}_{\alpha+1}$ is the family of all countable unions and intersections of sets in $\mathcal{B}_\alpha$, and $\mathcal{B}_\gamma=\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}$ for limit $\gamma$.
+Therefore we prove $|\mathcal{B_\alpha}|=2^{\aleph_0}$ by induction on $\alpha\leq\omega_1$ as follows.
+\begin{enumerate}
+\item\underline{$|\mathcal{B}_0|=2^{\aleph_0}$}. Let $\mathcal{O}$ be the set of open sets. $2^{\aleph_0}\leq|\mathcal{O}|$ is obvious because we have a different open interval $(x,x+1)$ for each $x\in\mathbb{R}$.
+To prove $|\mathcal{O}|\leq2^{\aleph_0}$, we use the fact that $\mathbb{R}$ is second-countable. Let $B=\{B_n:n\in\omega\}$ be a countable base of $\mathbb{R}$. Then we have a surjection from ${}^\omega\omega$ to $\mathcal{O}$ defined by $f\mapsto\bigcup_{n\in\omega}B_{f(n)}$.
+Therefore $|\mathcal{O}|\leq|{}^\omega\omega|=2^{\aleph_0}$ holds and so does $|\mathcal{O}|=2^{\aleph_0}$.
+On the other hand, since there is a 1-to-1 correspondence between closed sets and open sets by taking the complement, we get $\mathcal{B}_0=|2^{\aleph_0}+2^{\aleph_0}|=2^{\aleph_0}$.
+\item\underline{$|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$}.  $|\mathcal{B}_{\alpha+1}|\geq2^{\aleph_0}$ is obvious from $\mathcal{B}_{\alpha+1}\supseteq\mathcal{B}_\alpha$ and $|\mathcal{B}_\alpha|=2^{\aleph_0}$.
+There is a surjection from $2\times{}^\omega\mathcal{B}_{\alpha}$ to $\mathcal{B}_{\alpha+1}$ defined by $(0,f)\mapsto\bigcup_{n\in\omega}f(n)$ and $(1,f)\mapsto\bigcap_{n\in\omega}f(n)$,
+which proves $|\mathcal{B}_{\alpha+1}|\leq|2\times{}^\omega\mathcal{B}_{\alpha}|=|2\times2^{\aleph_0\times\omega}|=2^{\aleph_0}$. Thus $|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ holds.
+\item\underline{$|\mathcal{B}_\gamma|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$ for all $\alpha<\gamma$}.
+By Theorem I.12.11 and $\gamma\leq\omega_1\leq2^{\aleph_0}$, we have $|\mathcal{B}_\gamma|=|\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}|=2^{\aleph_0}$.
+\end{enumerate}
+From the above, we get $|\mathcal{B}|=2^{\aleph_0}$.
+
+For the set $\mathcal{L}$ of Lebesgue measurable set, $|\mathcal{L}|\leq2^{2^{\aleph_0}}$ is obvious from $\mathcal{L}\subseteq\mathcal{P}(\mathbb{R})$.
+To prove $\mathcal{L}\supseteq\mathcal{P}(\mathbb{R})$, we make use of the Cantor set, which is of cardinality $2^{\aleph_0}$ and has measure $0$. Since every subset of a null set is measurable, we have at least $2^{2^{\aleph_0}}$ measurable sets. Hence $|\mathcal{L}|=2^{2^{\aleph_0}}$ holds.
 \end{customthm}
 
 \end{document}
