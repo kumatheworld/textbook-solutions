@@ -412,4 +412,15 @@ To prove $\mathcal{L}\supseteq\mathcal{P}(\mathbb{R})$, we make use of the Canto
 Thus $A\cap A^{<\omega}=\emptyset$ holds.
 \end{customthm}
 
+\begin{customthm}{II.4.7} We prove that by induction on $|\sigma|=k$. If $k=0$, then $\sigma=()$. This is not an expression and we have $\mathrm{count}(\sigma)=0$. Hence the both side of the \textit{iff} are false, in which case the statement holds. Now assume that $k>0$ and that the statement holds for all the sequences.
+
+To prove the 'if' part, assume $\sigma$ is one with $\mathrm{count}(\sigma)=-1$ and $\mathrm{count}(\sigma\upharpoonright l)\geq0$ whenever $l<k$. Let $n=\alpha(s_0)$. Note that $\mathrm{count}(\sigma\upharpoonright1)=n-1$ holds.
+Since the function $\mathrm{count}()$ decreases at most 1 at a step, we have an increasing sequence $1=j_0<j_1<\ldots<j_{n-1}<j_n=k$ of integers such that each $j_i$ is the first one such that $\mathrm{count}(\sigma\upharpoonright j_i)=n-i-1$.
+Then each consecutive sequence $\tau_i=\sigma\upharpoonright(j_{i+1}\setminus j_i)$ satisfies $\mathrm{count}(\tau_i)=-1$ and $\mathrm{count}(\tau_i\upharpoonright l)\geq0$ whenever $l<|\tau_i|$, which turns out to be a subexpression by the induction hypothesis. Thus $\sigma=s_0\tau_0\cdots\tau_{n-1}$ is an expression.
+
+To prove the 'only if' part, assume $\sigma$ is an expression and let $\sigma=s\tau_0\cdots\tau_{n-1}$. Then each $\tau_i$ is an expression shorter than $\sigma$ and we can apply the induction hypothesis to get $\mathrm{count}(\tau_i)=-1$.
+Since it holds that $\mathrm{count}(\sigma)=\sum_{j<k}(\alpha(s_j)-1)=n-1+\sum_{i=0}^{n-1}\mathrm{count}(\tau_i)$, we have $\mathrm{count}(\sigma)=-1$.
+If $\mathrm{count}(\sigma\upharpoonright l)<0$ for some $l<k$, let $l$ be the least one. Then $\mathrm{count}(\sigma\upharpoonright m)\geq0$ holds for $m<l$ and $\mathrm{count}(l)=-1$ holds because the function $\mathrm{count}()$ decreases at most 1 at a step. Then from what we proved in the above (the 'if' part), $\sigma\upharpoonright l$ is an expression, which contradicts Lemma II.4.3. Thus $\mathrm{count}(\sigma\upharpoonright l)\geq0$ holds for all $l<k$.
+\end{customthm}
+
 \end{document}
