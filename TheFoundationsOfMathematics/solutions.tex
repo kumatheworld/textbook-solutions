@@ -444,4 +444,9 @@ For assignments $\sigma,\sigma'$ in $A$ such that $\sigma\upharpoonright V(\varp
 We also have $(\sigma+(y/a))\upharpoonright\{y\}=(\sigma'+(y/a))\upharpoonright\{y\}=a$ for all $a\in A$. Hence we get $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ from the induction hypothesis. The same proof goes for $\varphi=\forall y\psi$.
 \end{customthm}
 
+\begin{customthm}{II.7.10} $\val_\mathfrak{A}(0<x)[2]=T$ iff $(\val_\mathfrak{A}[0](2), \val_\mathfrak{A}[x][2])\in<_\mathfrak{A}\leftrightarrow(0,2)\in\{(x,y)\in\mathbb{Q}^2:x<y\}$ holds, which is true.
+$\val_\mathfrak{A}(\exists y(x=y\cdot y))[2]=T$ iff $\val_\mathfrak{A}(x=y\cdot y)[\{\langle x,2\rangle\}+y/a]$ holds for some $a\in\mathbb{Q}$,
+which is equivalent to $\val_\mathfrak{A}(2)[\{\langle x,2\rangle,\langle y,a\rangle\}]=2=a\cdot a=\val_\mathfrak{A}(y\cdot y)[\{\langle x,2\rangle,\langle y,a\rangle\}]$ holds for some $a\in\mathbb{Q}$, which is false.
+\end{customthm}
+
 \end{document}
