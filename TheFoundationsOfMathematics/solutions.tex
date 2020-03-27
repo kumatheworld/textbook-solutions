@@ -433,4 +433,15 @@ For each $\tau_i$, since $V(\tau_i)\subseteq V(\tau)$ holds, we have $\val_\math
 Thus we get $\val_\mathfrak{A}(\tau)[\sigma]=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])=\val_\mathfrak{A}(\tau)[\sigma']$.
 \end{customthm}
 
+\begin{customthm}{II.7.9} We prove that by induction on the number of the logical symbols of $\varphi$. If $\varphi=p\in\mathcal{P}_0$, then $V(\varphi)=\emptyset$ and $\val_\mathfrak{A}(\varphi)[\sigma]=p_\mathfrak{A}$ holds for any assignment $\sigma$.
+If $\varphi=p\tau_1\cdots\tau_n$ and $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$,
+then from Exercise II.7.5, we have $(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])$
+and hence $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ holds. The case when $\varphi$ is $=\tau_1\tau_2$ is almost the same as when $\varphi=p\tau_1\cdots\tau_n$.
+If $\varphi=\neg\psi$, the proof is obvious from $V(\varphi)=V(\psi)$ and the induction hypothesis.
+If $\varphi$ is either $\wedge\varphi_1\varphi_2$, $\vee\varphi_1\varphi_2$, $\rightarrow\varphi_1\varphi_2$ or $\leftrightarrow\varphi_1\varphi_2$, the proof is done by using $V(\varphi_1)\subseteq V(\varphi)$, $V(\varphi_2)\subseteq V(\varphi)$ and the induction hypothesis.
+Now assume $\varphi=\exists y\psi$. Then $V(\varphi)=V(\psi)\setminus\{y\}$ holds.
+For assignments $\sigma,\sigma'$ in $A$ such that $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$, it holds that $(\sigma+(y/a))\upharpoonright V(\psi)=(\sigma'+(y/a))\upharpoonright V(\psi)$ because $(\sigma+(y/a))(x)=\sigma(x)=\sigma'(x)=(\sigma'+(y/a))(x)$ holds for all $x\in V(\varphi)\setminus\{y\}$ and $a\in A$.
+We also have $(\sigma+(y/a))\upharpoonright\{y\}=(\sigma'+(y/a))\upharpoonright\{y\}=a$ for all $a\in A$. Hence we get $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ from the induction hypothesis. The same proof goes for $\varphi=\forall y\psi$.
+\end{customthm}
+
 \end{document}
