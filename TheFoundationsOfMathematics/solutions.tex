@@ -449,4 +449,12 @@ $\val_\mathfrak{A}(\exists y(x=y\cdot y))[2]=T$ iff $\val_\mathfrak{A}(x=y\cdot 
 which is equivalent to $\val_\mathfrak{A}(2)[\{\langle x,2\rangle,\langle y,a\rangle\}]=2=a\cdot a=\val_\mathfrak{A}(y\cdot y)[\{\langle x,2\rangle,\langle y,a\rangle\}]$ holds for some $a\in\mathbb{Q}$, which is false.
 \end{customthm}
 
+\begin{customthm}{II.7.18} Let $\mathcal{L}=\mathcal{P}_0$ be a lexicon for a propositional logic. We identify each function $f:\mathcal{P}_0\rightarrow2$ with a structure $\mathfrak{A}=(1,f)$ for $\mathcal{L}$. That is, $\mathfrak{A}$ is a structure whose underlying set is $1=\{\emptyset\}$ and whose semantic entities are determined by $p_\mathfrak{A}=f(p)$ for each $p\in\mathcal{P}_0$.
+Note that any structure $\mathfrak{A}'$ for $\mathcal{L}$ is equivalent to a structure $\mathfrak{A}\in2^{\mathcal{P}_0}$ such that $p_\mathfrak{A}=p_{\mathfrak{A}'}$ for each $p\in\mathcal{P}_0$ as long as we only deal with truth values of formulas.
+
+Let $\Sigma$ be a set of variable-free, quantifier-free and $=$-free sentences in $\mathcal{L}$. For each formula $\varphi\in\Sigma$, $F_\varphi=\{\mathfrak{A}\in2^{\mathcal{P}_0}:\mathfrak{A}\models\varphi\}$ is a closed set. This is because we can map every truth table $A\in2^{V(\varphi)}$ to a closed set of structures $E_A=A\times2^{\mathcal{P}_0\setminus V(\varphi)}$
+and we can represent $F_\varphi$ as a finite union of closed sets $F_\varphi=\bigcup\{E_A:\varphi\text{ is true under }A\in2^{V(\varphi)}\}$ since $V(\varphi)$ is finite.
+Now assume every finite subset of $\Sigma$ is semantically consistent. This is equivalent to saying that every finite subset of $\mathcal{F}=\{F_\varphi:\varphi\in\Sigma\}$ has a non-empty intersection. Then by the compactness of $2^{\mathcal{P}_0}$, $\bigcap\mathcal{F}$ is non-empty, which is equivalent to the statement that the whole $\Sigma$ is semantically consistent.
+\end{customthm}
+
 \end{document}
