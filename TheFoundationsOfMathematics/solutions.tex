@@ -457,12 +457,17 @@ and we can represent $F_\varphi$ as a finite union of closed sets $F_\varphi=\bi
 Now assume every finite subset of $\Sigma$ is semantically consistent. This is equivalent to saying that every finite subset of $\mathcal{F}=\{F_\varphi:\varphi\in\Sigma\}$ has a non-empty intersection. Then by the compactness of $2^{\mathcal{P}_0}$, $\bigcap\mathcal{F}$ is non-empty, which is equivalent to the statement that the whole $\Sigma$ is semantically consistent.
 \end{customthm}
 
-\begin{customthm}{II.7.19} Let $\mathcal{P}_0=\{p_a^j:a\in A,j<4\}$ and consider a language $\mathcal{L}=\mathcal{P}_0$, and 2 sets of sentences
+\begin{customthm}{II.7.19} Consider a lanugage $\mathcal{L}=\{p_a^j:a\in A,j<4\}$ and 2 sets of sentences
 $\Sigma_1=\{\neg(p_a^j\wedge p_b^j):a\neq b,aRb,j<4\}$ and
 $\Sigma_2=\{(p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge p_a^3):a\in A\}$
 over $\mathcal{L}$.
 $\neg(p_a^j\wedge p_b^j)\in\Sigma_1$ says that the 2 connected nodes $a,b$ are given different colors and each sentence in $\Sigma_2$ says the corresponding node is given exactly 1 color.
-Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2$ and $A'\subseteq A$ be the set of nodes that appear in $\Sigma'$. Since $A'$ is finite, $A'$ is four-colorable by the assumption and hence $\Sigma'$ is consistent. Then by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which is equivalent to the four-colorability of $A$.
+Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2$ and $A'\subseteq A$ be the set of nodes that appear in $\Sigma'$. Since $A'$ is finite, $A'$ is four-colorable by the assumption and hence $\Sigma'$ is semantically consistent. Then by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which is equivalent to the four-colorability of $A$.
+\end{customthm}
+
+\begin{customthm}{II.7.20} Let $A$ be a set. Consider a lanugage $\mathcal{L}=\{p_{a,b}:a,b\in A\}$ and 3 sets of sentences
+$\Sigma_1=\{\neg p_{a,a}:a\in A\}$, $\Sigma_2=\{p_{a,b}\wedge p_{b,c}\rightarrow p_{a,c}:a,b,c\in A\}$ and  $\Sigma_3=\{p_{a,b}\vee p_{b,a}:a,b\in A,a\neq b\}$ over $\mathcal{L}$.
+They correspond to irreflexivity, transitivity and trichotomy respectively. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2\cup\Sigma_3$ and $A'\subseteq A$ be the set of elements that appear in $\Sigma'$. Since $A'$ is finite, $A'$ can be totally ordered by using an injection from $A'$ to some natural number. Therefore $\Sigma'$ is semantically consistent and by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which means $A$ can be totally ordered.
 \end{customthm}
 
 \end{document}
