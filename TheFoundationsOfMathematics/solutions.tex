@@ -470,4 +470,8 @@ $\Sigma_1=\{\neg p_{a,a}:a\in A\}$, $\Sigma_2=\{p_{a,b}\wedge p_{b,c}\rightarrow
 They correspond to irreflexivity, transitivity and trichotomy respectively. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2\cup\Sigma_3$ and $A'\subseteq A$ be the set of elements that appear in $\Sigma'$. Since $A'$ is finite, $A'$ can be totally ordered by using an injection from $A'$ to some natural number. Therefore $\Sigma'$ is semantically consistent and by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which means $A$ can be totally ordered.
 \end{customthm}
 
+\begin{customthm}{II.7.21} Let $\psi_n(y)$ be a formula over $\mathcal{L}=\{<\}$ defined recursively by $\psi_0(y)=\psi_1(y)=\exists x\exists y(x=y)$ and $\psi_n(y)=\exists x(\psi_{n-1}(x)\wedge x<y)$ for $n\geq2$. For $n\geq2$, $\psi_n(y)$ says there are at least $n-1$ elements below $y$.
+Therefore, for each $n\geq2$, $\varphi_n=\exists y\psi_n(y)$ says there are at least $n$ elements. This is what we want. Note that for $n\leq1$, $\varphi_n$ is true under any structure $\mathfrak{A}=(A,<)$ so we can say $\mathfrak{A}\models\varphi_n$ \textit{iff} $|A|\geq n$, because $|A|\geq 1$ always holds too.
+\end{customthm}
+
 \end{document}
