@@ -13,6 +13,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Build docker image
-        uses: denkiuo604/tex-to-pdf-with-tags/.github/actions/latex@master
+        uses: kumatheworld/textbook-solutions/.github/actions/latex@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

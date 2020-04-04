@@ -12,7 +12,7 @@ res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com
 {
   \"tag_name\": \"$(echo ${GITHUB_REF:10})\",
   \"target_commitish\": \"$GITHUB_SHA\",
-  \"name\": \"solutions.pdf $(echo ${GITHUB_REF:10})\",
+  \"name\": \"($echo $name.pdf) $(echo ${GITHUB_REF:10})\",
   \"draft\": false,
   \"prerelease\": false
 }"`
