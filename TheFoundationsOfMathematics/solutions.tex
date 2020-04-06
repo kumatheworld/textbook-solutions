@@ -471,7 +471,12 @@ They correspond to irreflexivity, transitivity and trichotomy respectively. Let 
 \end{customthm}
 
 \begin{customthm}{II.7.21} Let $\psi_n(y)$ be a formula over $\mathcal{L}=\{<\}$ defined recursively by $\psi_0(y)=\psi_1(y)=\exists x\exists y(x=y)$ and $\psi_n(y)=\exists x(\psi_{n-1}(x)\wedge x<y)$ for $n\geq2$. For $n\geq2$, $\psi_n(y)$ says there are at least $n-1$ elements below $y$.
-Therefore, for each $n\geq2$, $\varphi_n=\exists y\psi_n(y)$ says there are at least $n$ elements. This is what we want. Note that for $n\leq1$, $\varphi_n$ is true under any structure $\mathfrak{A}=(A,<)$ so we can say $\mathfrak{A}\models\varphi_n$ \textit{iff} $|A|\geq n$, because $|A|\geq 1$ always holds too.
+Therefore, for each $n\geq2$, $\varphi_n=\exists y\psi_n(y)$ says there are at least $n$ elements. This is what we want. Note that for $n\leq1$, $\varphi_n$ is true under any structure $\mathfrak{A}=(A,<)$ so we can say $\mathfrak{A}\models\varphi_n$ iff $|A|\geq n$, because $|A|\geq 1$ always holds too.
+\end{customthm}
+
+\begin{customthm}{II.8.5} Let $\tau_1,\tau_2$ be terms and $S$ be the set of symbols that appear in at least one of $\tau_1,\tau_2$. Since $S$ is a finite set, we have an injection $i:S\rightarrow\omega$. We fix such an $i$ and define a structure $\mathfrak{A}=(HF,\mathcal{I})$ where $\mathcal{I}(f)(x_1,\ldots,x_n)=(i(f),x_1,\ldots,x_n)$, and also define an assignment $\sigma$ by $\sigma(x)=i(x)$.
+Then we can show that $\val_\mathfrak{A}(\tau_1)[\sigma]=\val_\mathfrak{A}(\tau_2)[\sigma]$ implies $\tau_1=\tau_2$ by induction on the depth of $\tau_1$.
+Here the depth $d$ is recursively defined as $d(x)=0$ when $x\in VAR$, $d(c)=0$ when $c$ is a constant symbol, and $d(f\tau_1,\ldots,\tau_n)=1+\max(d(\tau_1),\ldots,d(\tau_n))$.
 \end{customthm}
 
 \end{document}
