@@ -479,4 +479,9 @@ Then we can show that $\val_\mathfrak{A}(\tau_1)[\sigma]=\val_\mathfrak{A}(\tau_
 Here the depth $d$ is recursively defined as $d(x)=0$ when $x\in VAR$, $d(c)=0$ when $c$ is a constant symbol, and $d(f\tau_1,\ldots,\tau_n)=1+\max(d(\tau_1),\ldots,d(\tau_n))$.
 \end{customthm}
 
+\begin{customthm}{II.8.20} Assume $\Sigma$ is complete. Then there exists a structure $\mathfrak{A}=(A,\mathcal{I})$ for $\mathcal{L}$ such that $\mathfrak{A}\models\Sigma$.
+Let $p\in\mathcal{L}'\setminus\mathcal{L}$ be a predicate of arity $n$ and we define structures $\mathfrak{A}_1,\mathfrak{A}_2$ for $\mathcal{L}'$ by adding $p_{\mathfrak{A}_1}=\emptyset$ and $p_{\mathfrak{A}_2}=A^{n}$ to $\mathfrak{A}$ respectively.
+Then we have $\mathfrak{A}_1\models\varphi$ and $\mathfrak{A}_2\models\neg\varphi$ for $\varphi=\exists x_1,\ldots,x_n\,p(x_1,\ldots,x_n)$, which contradicts $\Sigma$'s completeness. Hence $\Sigma$ cannot be complete.
+\end{customthm}
+
 \end{document}
