@@ -484,4 +484,15 @@ Let $p\in\mathcal{L}'\setminus\mathcal{L}$ be a predicate of arity $n$ and we de
 Then we have $\mathfrak{A}_1\models\varphi$ and $\mathfrak{A}_2\models\neg\varphi$ for $\varphi=\exists x_1,\ldots,x_n\,p(x_1,\ldots,x_n)$, which contradicts $\Sigma$'s completeness. Hence $\Sigma$ cannot be complete.
 \end{customthm}
 
+\begin{customthm}{II.8.25} A $w$ in $\varphi(w)$ is either a bound $w$ in $\varphi(z)$ or one that originally is a $z$ in $\varphi(z)$ which ends up being substituted by $w$. Therefore a free occurrence of $w$ in $\varphi(w)$ must belong to the second case and it cannot be inside the scope of $\forall z$ nor $\exists z$ because the $z$ that the $w$ would originate from would be bound in $\varphi(z)$, which would not be replaced. Hence $z$ is free for $w$ in $\varphi(w)$.
+It is also clear that there is no free occurrence of $z$ in $\varphi(w)$ because all free $z$'s are supposed to be replaced by the substitution.
+
+We show that $\forall z\varphi(z)\rightarrow\forall w\varphi(w)$ is logically valid. Let $\mathfrak{A}=(A,\mathcal{I})$ be a structure for $\mathcal{L}$ and $\sigma$ be an assignment for $\varphi$.
+$\mathfrak{A}\models(\forall z\varphi(z)\rightarrow\forall w\varphi(w))[\sigma]$ is equivalent to having $\mathfrak{A}\not\models(\forall z\varphi(z))[\sigma]$ or $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$, so we assume
+$\mathfrak{A}\models(\forall z\varphi(z))[\sigma]$ and prove $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$. Since $w$ does not occur free in $\varphi(z)$, it does not in $\forall z\varphi(z)$ either. Hence by Exercise II.7.9, we have $\mathfrak{A}\models(\forall z\varphi(z))[\sigma+(w/a)]$ for any $a\in A$.
+In addition, $\forall z\varphi(z)\rightarrow\varphi(w)$ is logically valid from Corollary II.8.12 and we get $\mathfrak{A}\models\varphi(w)[\sigma+(w/a)]$. Since $a$ is arbitrary, $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$ has been proved.
+
+$\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well because what is assumed for $z,w,\varphi(w)$ is exactly what we assume for $w,z,\varphi(z)$ respectively, which is proved in the first paragraph. Hence $\forall w\varphi(w)$ and $\forall z\varphi(z)$ are logically equivalent. The logical equivalence of $\exists z\varphi(z)$ and $\exists w\varphi(w)$ can be shown likewise.
+\end{customthm}
+
 \end{document}
