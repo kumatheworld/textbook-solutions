@@ -410,4 +410,19 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{enumerate}
 \end{customthm}
 
+\begin{customthm}{I.10.6} Below is the proof.
+
+\begin{tabular}{lll}
+  && \\
+  0. & $\forall x(x=x\rightarrow\exists x(x=x))$ & type 5 axiom \\
+  1. & $\forall x(x=x\rightarrow\exists x(x=x))$ & \\
+  & $\rightarrow(\forall x(x=x)\rightarrow\forall x\exists x(x=x))$ & type 3 axiom \\
+  2. & $\forall x(x=x)\rightarrow\forall x\exists x(x=x)$ & 0, 1, modus ponens \\
+  3. & $\forall x(x=x)$ & type 7 axiom \\
+  4. & $\forall x\exists x(x=x)$ & 3, 2, modus ponens \\
+  5. & $\forall x\exists x(x=x)\rightarrow\exists x(x=x)$ & type 4 axiom \\
+  6. & $\exists x(x=x)$ & 4, 5, modus ponens
+\end{tabular}
+\end{customthm}
+
 \end{document}
