@@ -425,4 +425,18 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{tabular}
 \end{customthm}
 
+\begin{customthm}{I.11.10} Below is the proof.
+
+\begin{tabular}{lll}
+  && \\
+  1. & $\emptyset\vdash_\mathcal{L}\forall x\neg\neg\psi(x)\leftrightarrow\neg\exists x\neg\psi(x)$ & type 6 axiom \\
+  2. & $\psi(c)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & tautology \\
+  3. & $\forall x\psi(x)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & 2, UI \\
+  4. & $\forall x\psi(x)\vdash_\mathcal{L}\forall x\neg\neg\psi(x)$ & 3, UG \\
+  5. & $\emptyset\vdash_\mathcal{L}\forall x\psi(x)\rightarrow\forall x\neg\neg\psi(x)$ & 4, Deduction Theorem \\
+  6. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\rightarrow\neg\forall x\psi(x)$ & 1, 5, tautology \\
+  7. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\leftrightarrow\neg\forall x\psi(x)$ & Example II.11.9, tautology
+\end{tabular}
+\end{customthm}
+
 \end{document}
