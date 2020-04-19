@@ -410,7 +410,7 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.10.6} Below is the proof.
+\begin{customthm}{II.10.6} Below is the proof.
 \begin{flushleft}
 \begin{tabular}{lll}
   0. & $\forall x(x=x\rightarrow\exists x(x=x))$ & type 5 axiom \\
@@ -425,7 +425,7 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{flushleft}
 \end{customthm}
 
-\begin{customthm}{I.11.10} Below is the proof.
+\begin{customthm}{II.11.10} Below is the proof.
 \begin{flushleft}
 \begin{tabular}{lll}
   1. & $\emptyset\vdash_\mathcal{L}\forall x\neg\neg\psi(x)\leftrightarrow\neg\exists x\neg\psi(x)$ & type 6 axiom \\
@@ -439,7 +439,7 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{flushleft}
 \end{customthm}
 
-\begin{customthm}{I.11.11} Below is the proof. Here $GP=\{\gamma_1,\gamma_2\}$, $\gamma_1=\forall xyz[x\cdot yz=xy\cdot z]$ and $\gamma_2=\exists u[\forall x[xu=ux=x]\wedge\forall x\exists y[xy=yx=u]]$ as defined in the textbook.
+\begin{customthm}{II.11.11} Below is the proof. Here $GP=\{\gamma_1,\gamma_2\}$, $\gamma_1=\forall xyz[x\cdot yz=xy\cdot z]$ and $\gamma_2=\exists u[\forall x[xu=ux=x]\wedge\forall x\exists y[xy=yx=u]]$ as defined in the textbook.
 \begin{center}
 \begin{tabular}{llr}
   0. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],ad=da=e,ab=ac\}\vdash_{\mathcal{L}'''}$} \\
@@ -457,19 +457,20 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{center}
 \end{customthm}
 
-\begin{customthm}{I.11.13} Let $\varphi_0,\ldots,\varphi_n$ be a formal proof of $\varphi$ from $\Sigma$ in $\mathcal{L}_1$ and let $\mathcal{L}_0'=\mathcal{L}_0\cup\{c\}$ where $c\not\in\mathcal{L}_0$ is a constant symbol. Let $F$ be a function that turns any formula $\varphi\in\mathcal{L}_1$
+\begin{customthm}{II.11.13} Let $\varphi_0,\ldots,\varphi_n$ be a formal proof of $\varphi$ from $\Sigma$ in $\mathcal{L}_1$ and let $\mathcal{L}_0'=\mathcal{L}_0\cup\{c\}$ where $c\not\in\mathcal{L}_0$ is a constant symbol. Let $F$ be a function that turns any formula $\varphi\in\mathcal{L}_1$
 into a formula of $\mathcal{L}_0'$ by replacing all atomic formulas $p(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $p\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $\forall x(x=x)$, and then replacing all terms $f(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $f\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $c$.
 
-We prove $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ by induction. Assume we have $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_j)$ for all $j<i$. If $\varphi_i$ is in $\Sigma$, $F(\varphi_i)$ coincides with $\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If $\varphi_i$ is obtained from $\varphi_j$ and $\varphi_k=\varphi_j\rightarrow\varphi_i$ by Modus Ponens, $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ can be obtained from $F(\varphi_j)$ and $F(\varphi_k)$ by Modus Ponens since $F(\varphi_k)=F(\varphi_j)\rightarrow F(\varphi_i)$ holds. Now assume $\varphi_i$ is a logical axiom. If $\varphi_i$ is a propositional tautology, so is $F(\varphi_i)$. This can be easily shown by induction and the homomorphic property of $F$ such as $F(\psi\wedge\chi)=F(\psi)\wedge F(\chi)$. If $\varphi_i=\psi\rightarrow\forall x\psi$ (that is, it is a type 2 axiom), then $F(\varphi_i)=F(\psi)\rightarrow\forall xF(\psi)$ holds and $F(\varphi_i)$ turns out to be a type 2 axiom too. Likewise, if $\varphi_i$ is an axiom of type 3 or 6, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 4 or type 5, considering $F(\psi(x\rightsquigarrow\tau))=F(\psi)(x\rightsquigarrow\tau')$ where $\tau'$ is another term which is free for $x$ in $\psi$, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 7, 8 or 9, then $F(\varphi_i)=\varphi_i$ holds and it is obvious that $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is a type 10 axiom $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow(f(x_1,\ldots,x_n)=f(y_1,\ldots,y_n))$ where $f\in\mathcal{L}_1\setminus\mathcal{L}_0$, $F(\varphi)$ is $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$, which is derived as follows.
+We prove $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ by induction. Assume we have $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_j)$ for all $j<i$. If $\varphi_i$ is in $\Sigma$, $F(\varphi_i)$ coincides with $\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If $\varphi_i$ is obtained from $\varphi_j$ and $\varphi_k=\varphi_j\rightarrow\varphi_i$ by Modus Ponens, $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ can be obtained from $F(\varphi_j)$ and $F(\varphi_k)$ by Modus Ponens since $F(\varphi_k)=F(\varphi_j)\rightarrow F(\varphi_i)$ holds. Now assume $\varphi_i$ is a logical axiom. If $\varphi_i$ is a propositional tautology, so is $F(\varphi_i)$. This can be easily shown by induction and the homomorphic property of $F$ such as $F(\psi\wedge\chi)=F(\psi)\wedge F(\chi)$. If $\varphi_i$ is a universal closure of $\psi\rightarrow\forall x\psi$ (that is, it is a type 2 axiom), then $F(\varphi_i)$ is a universal closure of $F(\psi)\rightarrow\forall xF(\psi)$, which is a type 2 axiom too. Likewise, if $\varphi_i$ is an axiom of type 3 or 6, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 4 or type 5, considering $F(\psi(x\rightsquigarrow\tau))=F(\psi)(x\rightsquigarrow\tau')$ where $\tau'$ is another term which is free for $x$ in $\psi$, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 7, 8 or 9, then $F(\varphi_i)=\varphi_i$ holds and it is obvious that $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is a type 10 axiom, let it be a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow(f(x_1,\ldots,x_n)=f(y_1,\ldots,y_n))$. If $f\in\mathcal{L}_0$, we have $F(\varphi_i)=\varphi_i$ and
+$\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If not, $F(\varphi_i)$ is a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$, which is derived as follows.
 \begin{flushleft}
 \begin{tabular}{lll}
   0. & $c=c$ & type 10 axiom \\
-  1. & $c=c\rightarrow(x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c)$ & tautology \\
-  2. & $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$ & 0, 1, modus ponens
+  1. & $c=c\rightarrow(a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c)$ & tautology \\
+  2. & $a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c$ & 0, 1, modus ponens \\
+  3. & $F(\varphi_i)$ & 2, UG
 \end{tabular}
 \end{flushleft}
-If $f\in\mathcal{L}_0$, we have $F(\varphi_i)=\varphi_i$ and
-$\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. The same goes for type 11 axioms. Thus we proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
+The case of type 11 axioms can be shown in a similar way. Thus we have proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
 \end{customthm}
 
 \end{document}
