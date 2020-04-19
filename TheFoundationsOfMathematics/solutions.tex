@@ -446,13 +446,13 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
   & \multicolumn{2}{l}{$b=eb=da\cdot b=d\cdot ab=d\cdot ac=da\cdot c=ec=c$} \\
   && UI, tautology, type 10 axiom \\
   1. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],\exists y[ay=ya=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$} \\
-  && EI, tautology \\
+  && 0, EI, tautology \\
   2. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],\forall x\exists y[xy=yx=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$} \\
-  && Deduction Theorem, type 4 axiom, tautology \\
+  && 1, Deduction Theorem, type 4 axiom, tautology \\
   3. & \multicolumn{2}{l}{$GP\cup\{ab=ac\}\vdash_{\mathcal{L}'}b=c$} \\
-  && Deduction Theorem, tautology \\
+  && 2, Deduction Theorem, tautology \\
   4. & \multicolumn{2}{l}{$GP\vdash_\mathcal{L}\forall xyz[xy=xz\rightarrow y=z]$} \\
-  && Deduction Theorem, UG
+  && 3, Deduction Theorem, UG
 \end{tabular}
 \end{center}
 \end{customthm}
@@ -471,6 +471,18 @@ $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If not, $F(\varphi_i)$ i
 \end{tabular}
 \end{flushleft}
 The case of type 11 axioms can be shown in a similar way. Thus we have proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
+\end{customthm}
+
+\begin{customthm}{II.11.14} Below is the proof.
+\begin{flushleft}
+\begin{tabular}{lll}
+  0. & $\emptyset\vdash\forall xyz(z=z\wedge x=y\rightarrow(z\in x\leftrightarrow z\in y))$ & type 11 axiom \\
+  1. & $\emptyset\vdash c=c\wedge a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & 0, UI \\
+  2. & $\emptyset\vdash c=c\rightarrow(a=b\rightarrow(c\in a\leftrightarrow c\in b))$ & 1, tautology \\
+  3. & $\emptyset\vdash a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & type 10 axiom, 2 \\
+  4. & $\emptyset\vdash\forall xy(x=y\rightarrow\forall z(z\in x\leftrightarrow z\in y))$ & 3, UG
+\end{tabular}
+\end{flushleft}
 \end{customthm}
 
 \end{document}
