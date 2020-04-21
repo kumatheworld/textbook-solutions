@@ -485,4 +485,19 @@ The case of type 11 axioms can be shown in a similar way. Thus we have proved $\
 \end{flushleft}
 \end{customthm}
 
+\begin{customthm}{II.11.15} Below is the proof. Here $SE(z)=[z=z]$ and $C(x,y,z)=[x\in y\leftrightarrow x\in z\wedge z\neq z]$. Note that $\exists xSE(x)$ is the Set Existence axiom and $\forall z\exists y\forall xC(x,y,z)$ is a Comprehension axiom.
+\begin{flushleft}
+\begin{tabular}{lll}
+  0. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c$ & $SE(c)$ \\
+  1. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c\rightarrow a\not\in b$ & \\
+  \multicolumn{3}{r}{$\forall xC(x,b,c)$, UI, tautology} \\
+  2. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash a\not\in b$ & 0, 1, modus ponens \\
+  3. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash\exists y\forall x(x\not\in y)$ & 2, UG, EG \\
+  4. & $ZF\cup\{\exists y\forall xC(x,y,c)\}\vdash\exists y\forall x(x\not\in y)$ & 3, EI \\
+  5. & $ZF\vdash\exists y\forall x(x\not\in y)$ & \\
+  \multicolumn{3}{r}{type 4 axiom, 4, tautology, Deduction Theorem}
+\end{tabular}
+\end{flushleft}
+\end{customthm}
+
 \end{document}
