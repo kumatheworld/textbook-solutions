@@ -6,7 +6,7 @@ tex=$name/solutions.tex
 pdf=$name.pdf
 
 # build pdf
-pdflatex $tex -job-name=$pdf
+pdflatex -jobname=$name $tex
 
 # create release
 res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com/repos/$GITHUB_REPOSITORY/releases \
