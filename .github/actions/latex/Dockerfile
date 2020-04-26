@@ -1,9 +1,11 @@
 FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    ca-certificates \
     curl \
     python3 \
     latexmk \
