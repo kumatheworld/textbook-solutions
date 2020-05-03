@@ -124,8 +124,8 @@ Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
 \begin{customthm}{I.11.12} Let $A,B,C,D$ be sets with $A\preccurlyeq B$, $C\preccurlyeq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preccurlyeq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preccurlyeq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$. We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
 \[F(f)(d)=
   \begin{cases}
-    i(f(c)) & \mbox{if } d=j(c) \\
-    b & \mbox{if } d\not\in\ran(j)
+    i(f(c)) & \text{if } d=j(c) \\
+    b & \text{if } d\not\in\ran(j)
   \end{cases}.
 \]
 One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preccurlyeq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preccurlyeq{}^BD$. Note that $\mathcal{P}(A)\preccurlyeq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
@@ -141,12 +141,12 @@ One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^B
 \end{customthm}
 
 \begin{customthm}{I.11.22} The 'if' part is obvious from Exercise I.11.21. To prove the converse, let $\kappa$ be a cardinal, $B$ be a non-empty set with $B\preccurlyeq\kappa$. For a fixed $b\in B$ and an injection $i:B\rightarrow\kappa$, we can define a surjection $f:\kappa\rightarrow B$ as follows.
-  \[f(\alpha)=
-    \begin{cases}
-      x & \mbox{if } \alpha=i(x) \\
-      b & \mbox{if } \alpha\not\in\ran(i)
-    \end{cases}.
-  \]
+\[f(\alpha)=
+  \begin{cases}
+    x & \text{if } \alpha=i(x) \\
+    b & \text{if } \alpha\not\in\ran(i)
+  \end{cases}.
+\]
 \end{customthm}
 
 \begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
@@ -167,9 +167,9 @@ One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^B
 \begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preccurlyeq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preccurlyeq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds. When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\omega$ turns out to be a cardinal and hence $\alpha^+=\alpha+1$. When $\alpha\geq\omega$, $\alpha+1$ is not a cardinal since we have an injection $i:\alpha+1\rightarrow\alpha$ defined as follows.
 \[i(x)=
   \begin{cases}
-    0 & \mbox{if } x=\alpha \\
-    x+1 & \mbox{if } x\in\omega \\
-    x & \mbox{otherwise}
+    0 & \text{if } x=\alpha \\
+    x+1 & \text{if } x\in\omega \\
+    x & \text{otherwise}
   \end{cases}.
 \]
 Thus $\alpha^+>\alpha+1$ holds.
@@ -195,14 +195,14 @@ Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic 
 \end{customthm}
 
 \begin{customthm}{I.11.36} Let $(A,\triangleleft)$ be a total order with $A=\{a_n:n\in\omega\}$. For $n\in\omega$, let $L_n=\{m\in\omega:m<n\wedge a_m<a_n\}$ and $R_n=\{m\in\omega:m<n\wedge a_n<a_m\}$. we define $f:A\rightarrow\mathbb{Q}$ as follows.
-  \[f(a_n)=
-    \begin{cases}
-      0 & \mbox{if } n=0 \\
-      f(\min(R_n))-1 & \mbox{if } n>0 \mbox{ and } L_n=\emptyset \\
-      f(\max(L_n))+1 & \mbox{if } n>0 \mbox{ and } R_n=\emptyset \\
-      \frac{1}{2}(f(\max(L_n))+f(\min(R_n))) & \mbox{if } n>0 \mbox{, } L_n\neq\emptyset \mbox{ and } R_n\neq\emptyset
-    \end{cases}.
-  \]
+\[f(a_n)=
+  \begin{cases}
+    0 & \text{if } n=0 \\
+    f(\min(R_n))-1 & \text{if } n>0 \text{ and } L_n=\emptyset \\
+    f(\max(L_n))+1 & \text{if } n>0 \text{ and } R_n=\emptyset \\
+    \frac{1}{2}(f(\max(L_n))+f(\min(R_n))) & \text{if } n>0 \text{, } L_n\neq\emptyset \text{ and } R_n\neq\emptyset
+  \end{cases}.
+\]
 It is easy to see that this $f$ actually is an order-preserving injection.
 \end{customthm}
 
@@ -216,13 +216,13 @@ It is easy to see that this $f$ actually is an order-preserving injection.
 \end{customthm}
 
 \begin{customthm}{I.12.13} We define a function $f:\mathcal{P}(\omega\times\omega)\rightarrow\omega_1$ as follows.
-  \[f(R)=
-    \begin{cases}
-      \type(R) & \mbox{if } R \mbox{ well-orders } \omega \\
-      |R| & \mbox{if } R \mbox{ is finite} \\
-      0 & \mbox{otherwise}
-    \end{cases}.
-  \]
+\[f(R)=
+  \begin{cases}
+    \type(R) & \text{if } R \text{ well-orders } \omega \\
+    |R| & \text{if } R \text{ is finite} \\
+    0 & \text{otherwise}
+  \end{cases}.
+\]
 This $f$ is surjective because $\ran(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preccurlyeq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12. Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
 \end{customthm}
 
@@ -233,12 +233,12 @@ This $f$ is surjective because $\ran(f)$ includes all countable ordinals. On the
 \end{customthm}
 
 \begin{customthm}{I.12.17} Let $A$ be a set. To prove the 'only if' part, assume $\omega\preccurlyeq A$ and let $i:\omega\rightarrow A$ be an injection. Then we can define an injection $f:A\rightarrow A$ with $\ran(f)\neq A$ as follows.
-  \[f(x)=
-    \begin{cases}
-      f(i(n+1)) & \mbox{if } x=i(n) \\
-      x & \mbox{otherwise}
-    \end{cases}.
-  \]
+\[f(x)=
+  \begin{cases}
+    f(i(n+1)) & \text{if } x=i(n) \\
+    x & \text{otherwise}
+  \end{cases}.
+\]
 This $f$ does not contain $i(0)\in A$ in its range. Hence $A$ is not Dedekind-finite.
 
 To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\ran(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^n(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
@@ -507,6 +507,30 @@ The case of type 11 axioms can be shown in a similar way. Thus we have proved $\
 \end{customthm}
 
 \begin{customthm}{II.13.8} Let $A$ be a model of $\Sigma$. By defining a scalar multiplication $m:\mathbb{Z}_p\times A\rightarrow A$ by $m(n,x)=x+x+\cdots+x$ with $n$ copies of $x$, we can view $A$ as a vector space over $\mathbb{Z}_p$. Now let $B$ be a basis of $A$ and assume $A$ is infinite. Then $B$ is infinite as well because finite basis (say $|B|=n$) would generate only $p^n$ elements. Then we can apply Exercise I.13.21 to get $|A|=|B|$. Hence infinite models of the same cardinality have bases of the same cardinality, which proves those models are isomorphic. Thus $\Sigma$ is $\kappa$-categorical for all $\kappa\geq\aleph_0$.
+\end{customthm}
+
+\begin{customthm}{II.13.10} We first prove that $\Delta^{(~)}$ is $\aleph_0$-categorical. Let $A=\{a_i:i<\omega\}$, $B=\{b_j:j<\omega\}$ be countable models of $\Delta^{(~)}$. We recursively define $p_k\in A\times B$ and $f_k=\bigcup_{l<k}p_l$ for $k<\omega$ as follows.
+\begin{align*}
+  p_0 &= (a_0, b_0) \\
+  p_k &= (a_i, b_j) \text{ for } k>0 \text{, where} \\
+  &\text{if } k \text{ is odd, } i=\min\{i<\omega:a_i\not\in\dom(f_k)\} \text{, } j=\min\{j<\omega:\psi_j\} \text{ where} \\
+  &\psi_j=\begin{cases}
+    b_j<\min(\ran(f_k)) &\text{ if } a_i<\min(\dom(f_k)) \\
+    b_j>\max(\ran(f_k)) &\text{ if } a_i>\max(\dom(f_k)) \\
+    f_k(a_i^-)<b_j<f_k(a_i^+) &\text{ otherwise, where } \\
+    &a_i^-=\max\{a\in\dom(f_k):a<a_i\}, \\ &a_i^+=\min\{a\in\dom(f_k):a>a_i\}
+  \end{cases} \\
+  &\text{if } k \text{ is even, } j=\min\{j<\omega:b_j\not\in\ran(f_k)\} \text{, } i=\min\{i<\omega:\varphi_i\} \text{ where} \\
+  &\varphi_i=\begin{cases}
+    a_i<\min(\dom(f_k)) &\text{ if } b_j<\min(\ran(f_k)) \\
+    a_i>\max(\dom(f_k)) &\text{ if } b_j>\max(\ran(f_k)) \\
+    f_k^{-1}(b_j^-)<a_i<f_k^{-1}(b_j^+) &\text{ otherwise, where } \\
+    &b_j^-=\max\{b\in\ran(f_k):b<b_j\}, \\ &b_j^+=\min\{b\in\ran(f_k):b>b_j\}
+  \end{cases}
+\end{align*}
+It is easy to see that $\bigcup_kp_k$ is a function from $A$ to $B$ which is bijective and order-preserving. Thus $A\cong B$ holds and $\Delta^{(~)}$ proves to be $\aleph_0$-categorical. For each of the other 3 theories, one can think of the correspondence of the endpoints first and reduce the problem to the case of $\Delta^{(~)}$ to prove that it is also $\aleph_0$-categorical.
+
+Now we prove that $\Delta^{(~)}$ is not $\aleph_1$-categorical. Let $A=((-1,0]\cap\mathbb{Q})\cup[0,1)$ and $B=(-1,0]\cup([0,1)\cap\mathbb{Q})$. Both of these have cardinality $2^{\aleph_0}$ and are models of $\Delta^{(~)}$, but are not isomorphic. To prove this, we assume there is an isomorphism $f:A\rightarrow B$ and consider $A_0=\{x\in A:x<0\}$ and $B_0=\{y\in B:y<f(0)\}$. $A_0$ and $B_0$ have to be isomorphic but $|A_0|=\aleph_0\neq2^{\aleph_0}=|B_0|$ holds, which is a contradiction. Hence $A$ and $B$ are not isomorphic and $\Delta^{(~)}$ is not $\aleph_1$-categorical. The other 3 theories can be proved not to be $\aleph_1$-categorical in a similar way.
 \end{customthm}
 
 \end{document}
