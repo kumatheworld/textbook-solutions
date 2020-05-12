@@ -578,4 +578,12 @@ Then $\Sigma$ is an equational theory. To prove that any lattice is a model of $
 \begin{customthm}{II.16.5} Let $n$ be the number of roots of $\tau$ in $B$. $n$ is finite since $n\leq\textrm{deg}(\tau)$ holds. Assuming we have already discovered $k(<n)$ different roots $b_1,\ldots,b_k$ of $\tau$ in $A$, we can apply II.16.4(2) with $\exists y(\tau(y)=0\wedge y\neq b_1\wedge\cdots\wedge y\neq b_k)$ to obtain another root $b_{k+1}$ in $A$. Repeating this until we get $b_n$, we will get $n$ roots in $A$.
 \end{customthm}
 
+\begin{customthm}{II.16.8} We assume $\mathfrak{B}\preccurlyeq\mathfrak{C}$ throughout this exercise.
+\begin{enumerate}
+\item It is obvious that $\omega=B\subseteq C$ holds, which means $\omega$ is an initial segment of $C$.
+\item $\Phi$ is monotonic since the successor function $S$ on $\omega$ is monotonic and we can extend $\mathfrak{B}\models\forall x,y[x<y\rightarrow S(x)<S(y)]$ to $C$. To prove that $\Phi$ is bijective, we can extend $\mathfrak{B}\models\forall x,y[S(x)=S(y)\rightarrow x=y]$ (injectivity) and $\mathfrak{B}\models\forall y[y\neq 0\rightarrow\exists x[y=S(x)]]$ (surjectivity) to $C$. It is also obvious that $\Phi(S(x))=S(\Phi(x))$ holds for all $x\in C$. Hence $\Phi$ is an automorphism of $\mathfrak{C}$.
+\item Assume $\mathfrak{B}\neq\mathfrak{C}$ and that there is a formula $\varphi(x)$ of $\mathcal{L}$ such that $\mathfrak{B}\models\varphi[a]$ iff $a$ is even. Then  $\psi=\forall x[\varphi(x)\leftrightarrow\neg\varphi(S(x))]$ is valid under $\mathfrak{B}$ so it is valid in $\mathfrak{C}$ as well. Now let $c\in C\setminus\omega$ and assume $\mathfrak{C}\models\varphi[c]$. Then $\mathfrak{C}\models\varphi[\Phi(c)]$ holds since $\Phi$ is an automorphism of $\mathfrak{C}$. Therefore we have $\mathfrak{C}\models\varphi[c]\wedge\varphi[S(c)]$, which contradicts $\psi$. If $\mathfrak{C}\not\models\varphi[c]$, then we will have $\mathfrak{C}\models\neg\varphi[c]\wedge\neg\varphi[S(c)]$ in the same way, which anyway leads to a contradiction. Thus such a $\varphi$ does not exist.
+\end{enumerate}
+\end{customthm}
+
 \end{document}
