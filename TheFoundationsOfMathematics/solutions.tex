@@ -586,7 +586,10 @@ Then $\Sigma$ is an equational theory. To prove that any lattice is a model of $
 \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{II.16.9} Let $\varphi(\vec{x})=\exists y\psi(\vec{x},y)$ be any existential formula and let $\vec{a}\in A$ be one such that $\mathfrak{B}\models\varphi[\vec{a}]$. Then there exists $b\in B$ such that $\mathfrak{B}\models\psi[\vec{a},b]$. If $b\not\in A$, we can get $b'\in A$ that satisfies $\mathfrak{B}\models\psi[\vec{a},b']$ by using an automorphism of $\mathfrak{B}$ such that $\Phi(\vec{a})=\vec{a}$ and $b'=\Phi(b)\in A$ since $\mathfrak{B}\models\psi[\Phi(\vec{a}),\Phi(b)]$ holds. Hence we get $\mathfrak{A}\preccurlyeq\mathfrak{B}$ by Lemma II.16.4.
+\begin{customthm}{II.16.9} Let $\varphi(\vec{x})=\exists y\psi(\vec{x},y)$ be any existential formula and let $\vec{a}\in A$ be one such that $\mathfrak{B}\models\varphi[\vec{a}]$. Then there exists $b\in B$ such that $\mathfrak{B}\models\psi[\vec{a},b]$. By using an automorphism of $\mathfrak{B}$ such that $\Phi(\vec{a})=\vec{a}$ and $\Phi(b)\in A$, we can get $b'=\Phi(b)\in A$ that satisfies $\mathfrak{B}\models\psi[\vec{a},b']$ since $\mathfrak{B}\models\psi[\Phi(\vec{a}),\Phi(b)]$ holds. Hence we get $\mathfrak{A}\preccurlyeq\mathfrak{B}$ by Lemma II.16.4.
+\end{customthm}
+
+\begin{customthm}{II.16.10} Let $\mathfrak{A},\mathfrak{B}$ be infinite abelian group of exponent $p$ such that $\mathfrak{A}\subseteq\mathfrak{B}$. $B$ can be viewed as an infinite dimensional vector space over $\Sigma_p$ and $A$ can be viewed as an infinite dimensional subspace of $B$. Let $a_1,\ldots,a_n\in A$ and $b\in B$. If $b\in A$, the identity map satisfies the condition of Exercise II.16.9. If $b\not\in A$, then let $c\in A$ be a vector such that $a_1,\ldots,a_n,b,c$ are linearly independent. Such $c$ exists because $A$ is infinite dimensional. Let $\mathcal{B}_A$ be a basis of the subspace spanned by $a_1,\ldots,a_n$ and let $\mathcal{B}$ be a basis of $B$ that extends $\mathcal{B}_A\cup\{b,c\}$. Now we define a linear transformation $\Phi:B\rightarrow B$ by $\Phi(b)=c$, $\Phi(c)=b$ and $\Phi(v)=v$ for all other $v\in\mathcal{B}$. Then this $\Phi$ is bijective and hence is an automorphism, which satisfies the condition of Exercise II.16.9. Thus $\mathfrak{A}\preccurlyeq\mathfrak{B}$ holds.
 \end{customthm}
 
 \end{document}
