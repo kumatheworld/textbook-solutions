@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -6,6 +7,8 @@
 \usepackage{multirow}
 \usepackage{url}
 \usepackage{mathtools}
+
+\usepackage{tabularx}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\dom}{\mathop{\mathrm{dom}}}
 \newcommand{\ran}{\mathop{\mathrm{ran}}}
@@ -20,17 +23,18 @@
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
 
-\begin{document}
-\sloppy
 \title{
+  \vspace{-2cm}
   The Foundations of Mathematics \\
   \large by Kenneth Kunen \\
   Exercise Solutions
   \author{Yoshihiro Kumazawa}
 }
+
+\begin{document}
 \maketitle
 
-\begin{customthm}{I.2.1} Below is the table of truth values.
+\begin{customthm}{I.2.1} Below is the table of the truth values.
   \begin{center}
     \begin{tabular}{cc|cccc}
       & & \multicolumn{4}{c}{Axiom} \\
@@ -47,7 +51,7 @@
   \end{center}
 \end{customthm}
 
-\begin{customthm}{I.6.3} Example 2, 3 and 4 are the ones. Those are the ones that satisfy $\neg[\exists x\,\mathrm{emp}(x)]$, which also satisfy Extensionality.
+\begin{customthm}{I.6.3} Example 2, 3 and 4 are the ones.
 \end{customthm}
 
 \begin{customthm}{I.6.11} Example 7 is the one. Example 1, 5 and 6 have pairwise unions. Example 2, 3 and 4 do not have empty sets hence cannot satisfy Comprehension.
@@ -411,7 +415,7 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
 \end{customthm}
 
 \begin{customthm}{II.10.6} Below is the proof.
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{lll}
   0. & $\forall x(x=x\rightarrow\exists x(x=x))$ & type 5 axiom \\
   1. & $\forall x(x=x\rightarrow\exists x(x=x))$ & \\
@@ -422,11 +426,11 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
   5. & $\forall x\exists x(x=x)\rightarrow\exists x(x=x)$ & type 4 axiom \\
   6. & $\exists x(x=x)$ & 4, 5, modus ponens
 \end{tabular}
-\end{flushleft}
+\end{center}
 \end{customthm}
 
 \begin{customthm}{II.11.10} Below is the proof.
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{lll}
   1. & $\emptyset\vdash_\mathcal{L}\forall x\neg\neg\psi(x)\leftrightarrow\neg\exists x\neg\psi(x)$ & type 6 axiom \\
   2. & $\psi(c)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & tautology \\
@@ -436,24 +440,20 @@ $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well b
   6. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\rightarrow\neg\forall x\psi(x)$ & 1, 5, tautology \\
   7. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\leftrightarrow\neg\forall x\psi(x)$ & Example II.11.9, tautology
 \end{tabular}
-\end{flushleft}
+\end{center}
 \end{customthm}
 
 \begin{customthm}{II.11.11} Below is the proof. Here $GP=\{\gamma_1,\gamma_2\}$, $\gamma_1=\forall xyz[x\cdot yz=xy\cdot z]$ and $\gamma_2=\exists u[\forall x[xu=ux=x]\wedge\forall x\exists y[xy=yx=u]]$ as defined in the textbook.
 \begin{center}
-\begin{tabular}{llr}
-  0. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],ad=da=e,ab=ac\}\vdash_{\mathcal{L}'''}$} \\
-  & \multicolumn{2}{l}{$b=eb=da\cdot b=d\cdot ab=d\cdot ac=da\cdot c=ec=c$} \\
-  && UI, tautology, type 10 axiom \\
-  1. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],\exists y[ay=ya=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$} \\
-  && 0, EI, tautology \\
-  2. & \multicolumn{2}{l}{$\{\gamma_1,\forall x[xe=ex=x],\forall x\exists y[xy=yx=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$} \\
-  && 1, Deduction Theorem, type 4 axiom, tautology \\
-  3. & \multicolumn{2}{l}{$GP\cup\{ab=ac\}\vdash_{\mathcal{L}'}b=c$} \\
-  && 2, Deduction Theorem, tautology \\
-  4. & \multicolumn{2}{l}{$GP\vdash_\mathcal{L}\forall xyz[xy=xz\rightarrow y=z]$} \\
-  && 3, Deduction Theorem, UG
-\end{tabular}
+\begin{tabularx}{\textwidth}{lX}
+  0. & $\{\gamma_1,\forall x[xe=ex=x],ad=da=e,ab=ac\}\vdash_{\mathcal{L}'''}$ \\
+  & $b=eb=da\cdot b=d\cdot ab=d\cdot ac=da\cdot c=ec=c$ \hfill UI, tautology, type 10 axiom \\
+  1. & $\{\gamma_1,\forall x[xe=ex=x],\exists y[ay=ya=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \hfill 0, EI, tautology \\
+  2. & $\{\gamma_1,\forall x[xe=ex=x],\forall x\exists y[xy=yx=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \\
+  & \hfill 1, Deduction Theorem, type 4 axiom, tautology \\
+  3. & $GP\cup\{ab=ac\}\vdash_{\mathcal{L}'}b=c$ \hfill 2, Deduction Theorem, tautology \\
+  4. & $GP\vdash_\mathcal{L}\forall xyz[xy=xz\rightarrow y=z]$ \hfill 3, Deduction Theorem, UG
+\end{tabularx}
 \end{center}
 \end{customthm}
 
@@ -462,19 +462,19 @@ into a formula of $\mathcal{L}_0'$ by replacing all atomic formulas $p(\tau_1,\l
 
 We prove $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ by induction. Assume we have $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_j)$ for all $j<i$. If $\varphi_i$ is in $\Sigma$, $F(\varphi_i)$ coincides with $\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If $\varphi_i$ is obtained from $\varphi_j$ and $\varphi_k=\varphi_j\rightarrow\varphi_i$ by Modus Ponens, $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ can be obtained from $F(\varphi_j)$ and $F(\varphi_k)$ by Modus Ponens since $F(\varphi_k)=F(\varphi_j)\rightarrow F(\varphi_i)$ holds. Now assume $\varphi_i$ is a logical axiom. If $\varphi_i$ is a propositional tautology, so is $F(\varphi_i)$. This can be easily shown by induction and the homomorphic property of $F$ such as $F(\psi\wedge\chi)=F(\psi)\wedge F(\chi)$. If $\varphi_i$ is a universal closure of $\psi\rightarrow\forall x\psi$ (that is, it is a type 2 axiom), then $F(\varphi_i)$ is a universal closure of $F(\psi)\rightarrow\forall xF(\psi)$, which is a type 2 axiom too. Likewise, if $\varphi_i$ is an axiom of type 3 or 6, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 4 or type 5, considering $F(\psi(x\rightsquigarrow\tau))=F(\psi)(x\rightsquigarrow\tau')$ where $\tau'$ is another term which is free for $x$ in $\psi$, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 7, 8 or 9, then $F(\varphi_i)=\varphi_i$ holds and it is obvious that $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is a type 10 axiom, let it be a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow(f(x_1,\ldots,x_n)=f(y_1,\ldots,y_n))$. If $f\in\mathcal{L}_0$, we have $F(\varphi_i)=\varphi_i$ and
 $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If not, $F(\varphi_i)$ is a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$, which is derived as follows.
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{lll}
   0. & $c=c$ & type 10 axiom \\
   1. & $c=c\rightarrow(a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c)$ & tautology \\
   2. & $a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c$ & 0, 1, modus ponens \\
   3. & $F(\varphi_i)$ & 2, UG
 \end{tabular}
-\end{flushleft}
+\end{center}
 The case of type 11 axioms can be shown in a similar way. Thus we have proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
 \end{customthm}
 
 \begin{customthm}{II.11.14} Below is the proof.
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{lll}
   0. & $\emptyset\vdash\forall xyz(z=z\wedge x=y\rightarrow(z\in x\leftrightarrow z\in y))$ & type 11 axiom \\
   1. & $\emptyset\vdash c=c\wedge a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & 0, UI \\
@@ -482,25 +482,24 @@ The case of type 11 axioms can be shown in a similar way. Thus we have proved $\
   3. & $\emptyset\vdash a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & type 10 axiom, 2 \\
   4. & $\emptyset\vdash\forall xy(x=y\rightarrow\forall z(z\in x\leftrightarrow z\in y))$ & 3, UG
 \end{tabular}
-\end{flushleft}
+\end{center}
 \end{customthm}
 
 \begin{customthm}{II.11.15} Below is the proof. Here $SE(z)=[z=z]$ and $C(x,y,z)=[x\in y\leftrightarrow x\in z\wedge z\neq z]$. Note that $\exists xSE(x)$ is the Set Existence axiom and $\forall z\exists y\forall xC(x,y,z)$ is a Comprehension axiom.
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{lll}
   0. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c$ & $SE(c)$ \\
-  1. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c\rightarrow a\not\in b$ & \\
-  \multicolumn{3}{r}{$\forall xC(x,b,c)$, UI, tautology} \\
+  1. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c\rightarrow a\not\in b$ & $\forall xC(x,b,c)$, UI, tautology \\
   2. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash a\not\in b$ & 0, 1, modus ponens \\
   3. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash\exists y\forall x(x\not\in y)$ & 2, UG, EG \\
   4. & $ZF\cup\{\exists y\forall xC(x,y,c)\}\vdash\exists y\forall x(x\not\in y)$ & 3, EI \\
-  5. & $ZF\vdash\exists y\forall x(x\not\in y)$ & \\
-  \multicolumn{3}{r}{type 4 axiom, 4, tautology, Deduction Theorem}
+  5. & $ZF\vdash\exists y\forall x(x\not\in y)$ & type 4 axiom, 4, tautology, \\
+  && Deduction Theorem
 \end{tabular}
-\end{flushleft}
+\end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.16} Let $\varphi=\forall y\exists xp(x,y)\rightarrow\exists x\forall yp(x,y)$. Let $\mathfrak{A}=(2,\mathcal{I})$ be a structure for $\mathcal{L}=\{p\}$ where $p_\mathfrak{A}(x,y)=\{(0,0),(1,1)\}$. Then $\val_\mathfrak{A}[\forall y\exists xp(x,y)]=T$ and $\val_\mathfrak{A}[\exists x\forall yp(x,y)]=F$ hold, which means $\mathfrak{A}\not\models\varphi$. Thus we have $\emptyset\not\models\varphi$, which implies $\emptyset\not\vdash\varphi$ by Soundness.
+\begin{customthm}{II.11.16} Let $\varphi=\forall y\exists xp(x,y)\rightarrow\exists x\forall yp(x,y)$. Let $\mathfrak{A}=(2,\mathcal{I})$ be a structure for $\mathcal{L}=\{p\}$ where $p_\mathfrak{A}(x,y)=\{(0,0),(1,1)\}$. Then we have $\val_\mathfrak{A}[\forall y\exists xp(x,y)]=T$ and $\val_\mathfrak{A}[\exists x\forall yp(x,y)]=F$, which means $\mathfrak{A}\not\models\varphi$. Thus $\emptyset\not\models\varphi$ holds, which implies $\emptyset\not\vdash\varphi$ by Soundness.
 \end{customthm}
 
 \begin{customthm}{II.12.23} If $\Sigma\vdash\theta$, then $\Sigma'\vdash\theta$ is obvious. If $\Sigma\not\vdash\theta$, then $\widetilde\Sigma=\Sigma\cup\{\neg\theta\}$ is consistent from Proof by Contradiction. We apply the proof of Lemma II.12.20 to $\widetilde\Sigma$ to get a consistent set of sentences $(\widetilde\Sigma)'=\Sigma'\cup\{\neg\theta\}$, which implies $\Sigma'\not\vdash\theta$.
@@ -559,7 +558,7 @@ Now let $\psi=\varphi_1\vee\cdots\vee\varphi_n$ be a Horn clause and $\sigma$ be
 \begin{customthm}{II.14.4} Let $\mathcal{L}$ be a language without predicate symbols. Let $\mathfrak{A}=(A,\mathcal{I})$, $\mathfrak{B}=(B,\mathcal{J})$ be structures for $\mathcal{L}$, and let $\Phi:\mathfrak{A}\rightarrow\mathfrak{B}$ be a surjective homomorphism. That is, $\Phi$ is one that $\Phi(f_\mathfrak{A}(a_1,\ldots,a_n))=f_\mathfrak{B}(\Phi(a_1),\ldots,\Phi(a_n))$ holds for any $n$-ary function symbol $f\in\mathcal{L}$ and $a_1,\ldots,a_n\in A$. One can easily show that $\Phi(\val_\mathfrak{A}(\tau)[\sigma])=\val_\mathfrak{B}(\tau)[\Phi\circ\sigma]$ holds for any term $\tau$ and any assignment $\sigma$ for $\tau$ by induction on $\tau$. Then it directly follows from this that $\mathfrak{A}\models(\tau_1=\tau_2)[\sigma]$ implies $\mathfrak{B}\models(\tau_1=\tau_2)[\Phi\circ\sigma]$. Then for a closure $\varphi$ of any equation, it holds that $\mathfrak{A}\models\varphi\rightarrow\mathfrak{B}\models\varphi$, which follows from the previous fact and that $\Phi$ is surjective. Thus if $\Sigma$ is an equational theory and $\mathfrak{A}\models\Sigma$, we have $\mathfrak{B}\models\Sigma$.
 \end{customthm}
 
-\begin{customthm}{II.14.5} Let $\varphi(x_1,\ldots,x_m)=\neg p_1(x_1,\ldots,x_m)\vee\neg p_2(x_1,\ldots,x_m)\vee\cdots\vee\neg p_{n-1}(x_1,\ldots,x_m)\vee p_n(x_1,\ldots,x_m)\in\Sigma$ be a Horn clause whose universal closure is $\psi\in\Sigma$. Assume that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\psi$. Then by Lemma II.12.10(2), there exist closed terms $\tau_1,\ldots,\tau_m$ such that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\varphi(\tau_1,\ldots,\tau_m)$. This is equivalent to having $\mathfrak{CT}(\mathcal{L},\Sigma)\models p_i(\tau_1,\ldots,\tau_m)$ for $1\leq i\leq n-1$ and $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models p_n(\tau_1,\ldots,\tau_m)$, which is further equivalent to having $\Sigma\vdash p_i(\tau_1,\ldots,\tau_m)$ for $1\leq i\leq n-1$ and $\Sigma\not\vdash p_n(\tau_1,\ldots,\tau_m)$ by Lemma II.12.10(3). On the other hand, we have $\Sigma\vdash p_1(\tau_1,\ldots,\tau_m)\rightarrow\cdots\rightarrow p_{n-1}(\tau_1,\ldots,\tau_m)\rightarrow p_n(\tau_1,\ldots,\tau_m)$ by $\psi\in\Sigma$, UI and a tautology. Here $\rightarrow$ is understood as right-associative. Then by applying Modus Ponens $n-1$ times, we get $\Sigma\vdash p_n(\tau_1,\ldots,\tau_m)$, which is a contradiction. Hence $\mathfrak{CT}(\mathcal{L},\Sigma)\models\psi$ holds. In a similar way, one can also prove that $\mathfrak{CT}(\mathcal{L},\Sigma)\models\chi$ if $\chi\in\Sigma$ is a universal closure of a Horn clause without a positive literal. Thus $\mathfrak{CT}(\mathcal{L},\Sigma)\models\Sigma$ holds.
+\begin{customthm}{II.14.5} Let $\varphi(\vec{x})=\neg p_1(\vec{x})\vee\cdots\vee\neg p_{n-1}(\vec{x})\vee p_n(\vec{x})\in\Sigma$ be a Horn clause whose universal closure is $\psi\in\Sigma$. Assume that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\psi$. Then by Lemma II.12.10(2), there exist a tuple $\vec{\tau}$ of closed terms such that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\varphi(\vec{\tau})$. This is equivalent to having $\mathfrak{CT}(\mathcal{L},\Sigma)\models p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models p_n(\vec{\tau})$, which is further equivalent to having $\Sigma\vdash p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\Sigma\not\vdash p_n(\vec{\tau})$ by Lemma II.12.10(3). On the other hand, we have $\Sigma\vdash p_1(\vec{\tau})\rightarrow\cdots\rightarrow p_{n-1}(\vec{\tau})\rightarrow p_n(\vec{\tau})$ by $\psi\in\Sigma$, UI and a tautology. Here $\rightarrow$ is understood as right-associative. Then by applying Modus Ponens $n-1$ times, we get $\Sigma\vdash p_n(\vec{\tau})$, which is a contradiction. Hence $\mathfrak{CT}(\mathcal{L},\Sigma)\models\psi$ holds. In a similar way, one can also prove that $\mathfrak{CT}(\mathcal{L},\Sigma)\models\chi$ if $\chi\in\Sigma$ is a universal closure of a Horn clause without a positive literal. Thus $\mathfrak{CT}(\mathcal{L},\Sigma)\models\Sigma$ holds.
 \end{customthm}
 
 \begin{customthm}{II.15.3} Let $\Sigma$ be a set of sentences of $\mathcal{L}=\{\vee,\wedge\}$ where each sentence of it is a universal closure of one of the following 8 equations.
