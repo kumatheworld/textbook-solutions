@@ -613,4 +613,13 @@ To prove the rest, let $A,B$ be countable dense totally ordered sets such that $
 \begin{customthm}{II.16.14} As we saw in Exercise II.13.7, any infinite torsion-free divisible abelian group of cardinality $\aleph_1$ can be viewed as a vector space over $\mathbb{Q}$ which has cardinality $\aleph_1$. Therefore we can prove $\mathfrak{A}\preccurlyeq\mathfrak{B}$ whenever $\mathfrak{A},\mathfrak{B}$ are infinite torsion-free divisible abelian groups such that $\mathfrak{A}\subseteq\mathfrak{B}$ and $|\mathfrak{A}|=|\mathfrak{B}|=\aleph_1$ just as we did in Exercise II.16.10. Thus by Exercise II.16.12, the theory turns out to be model-complete.
 \end{customthm}
 
+\begin{customthm}{II.16.14} We first show that any boolean function of positive arity can be written in conjunctive normal form. Let $0<n\in\omega$ and $\varphi:2^n\rightarrow 2$ be a boolean function. Then the following formula $\psi:2^n\rightarrow 2$ defined as
+\[
+  \psi(p_1,\ldots,p_n)=\bigwedge_{\varphi(b_1,\ldots,b_n)=F}(p_1=\overline{b_1}\vee\cdots\vee p_n=\overline{b_n})
+\]
+is equal to $\varphi$ and is in conjunctive normal form if there are any boolean values $b_1,\ldots,b_n$ such that $\varphi(b_1,\ldots,b_n)=F$. If not, then $\varphi$ is always true and we can simply make $\psi=p_1\vee\neg p_1$.
+
+Given a quantifier-free formula $\varphi$, we can get a boolean function $\varphi'$ by replacing each atomic formula in it by different boolean variables. We have a boolean function $\psi'$ in conjunctive normal form which is equal to $\varphi'$ from the above. By replacing the boolean variables in $\psi'$ by the corresponding atomic formulas, we can get a formula $\psi$ in conjunctive normal form which is equivalent to $\varphi$.
+\end{customthm}
+
 \end{document}
