@@ -7,8 +7,8 @@
 \usepackage{multirow}
 \usepackage{url}
 \usepackage{mathtools}
-
 \usepackage{tabularx}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\dom}{\mathop{\mathrm{dom}}}
 \newcommand{\ran}{\mathop{\mathrm{ran}}}
@@ -623,6 +623,23 @@ Given a quantifier-free formula $\varphi$, we can get a boolean function $\varph
 \end{customthm}
 
 \begin{customthm}{II.16.16} We prove it by induction. For basis, note that any atomic formula is quantifier-free and hence is in prenex normal form. Now let $\varphi=Q_1x_1Q_2x_2\cdots Q_nx_n\psi$ where $\psi$ is a quantifier-free formula. $\neg\varphi$ is equivalent to $\overline{Q_1}x_1\overline{Q_2}x_2\cdots\overline{Q_n}x_n\neg\psi$, where each $Q_i$ stands for the opposite quantifier. Let $\psi'$ be a quantifier-free formula, $\varphi'=Q_1'y_1Q_2'y_2\cdots Q_m'y_m\psi'$ be another formula in prenex normal form and consider $\varphi\wedge\varphi'$. We can make all the variables $x_1,\ldots,x_n,y_1,\ldots,y_m$ that occur in the quantifiers in $\varphi\wedge\varphi'$ different from each other and from any of its free variables, keeping the logical equivalence. By assuming that, we have a formula $Q_1x_1Q_2x_2\cdots Q_nx_nQ_1'y_1Q_2'y_2\cdots Q_m'y_m(\psi\wedge\psi')$ in a prenex normal form, which is equivalent to $\varphi\wedge\varphi'$. Now we proved the negation case and the conjunction case. $\forall x\varphi$ and $\exists x\varphi$ are obviously in prenex normal form. For the other types of formulas, one can use the fact that $\varphi_1\vee\varphi_2,\varphi_1\rightarrow\varphi_2,\varphi_1\leftrightarrow\varphi_2$ are equivalent to $\neg(\neg\varphi_1\wedge\neg\varphi_2), \neg\varphi_1\vee\varphi_2,(\varphi_1\rightarrow\varphi_2)\wedge(\varphi_2\rightarrow\varphi_1)$, respectively to reduce them to the cases of negation and conjunction. Thus every formula is logically equivalent to one in prenex normal form.
+\end{customthm}
+
+\begin{customthm}{II.16.17} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{II.16.18} Skipped for now.
+\end{customthm}
+
+\begin{customthm}{II.16.19} Below is the proof for each item.
+\begin{enumerate}
+  \item Let $b\in B\setminus\{0\}$. If $b$ is infinitely large, then $1/b$ is infinitesimal because $|b|>1/a$ holds for all positive real numbers $a$, which is equivalent to $|1/b|<a$. If $1/b$ is infinitesimal, then $b$ is infinitely large because $|b|>0$ holds and $|1/b|<|1/a|$ holds for all non-zero real numbers $a$, which is equivalent to having $|b|>|a|$ for all real numbers $a$.
+  \item Let $b\in B\setminus\mathbb{R}$. If $b$ is infinitely large, then we can get an infinitesimal $1/b$. If not, $\varepsilon:=b-\sup\{a\in\mathbb{R}:a<b\}$ where sup is calculated in $\mathbb{R}$ is an infinitesimal and we can get an infinitely large number $1/\varepsilon$.
+  \item Let $\eta\in\mathbb{R},\eta>0$ and let $\xi$ be a positive real number such that $\forall h(|h|<\xi\rightarrow|(f(r+h)-f(r))/h-g(r)|<\eta)$ holds. Then by interpreting this formula in $\mathfrak{B}$ and instantiating the $h$ by $\varepsilon$, we have $|(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)|<\eta$. Since $\eta$ is an arbitrary positive real number, we can conclude that $(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)$ is either infinitesimal or $0$.
+  \item Let $\psi(x)=x\neq0\wedge x\neq\pm 1\wedge\neg\exists y,z[x=yz\wedge Z(x)\wedge Z(y)\wedge1<|y|<|x|]$. Then $x\in\mathbb{R}$ is a prime number iff $\varphi(x)$ holds. Since there are arbitrarily large prime numbers, $\forall x\exists y(x<y\wedge\psi(y))$ holds. By interpreting it in $\mathfrak{B}$ with an infinitely large positive $x$, we get an infinitely large prime $y$. Note that if $x<y$ holds for an infinitely large number $x$, then $y$ is infinitely large as well.
+  \item A maximal element in $P$ would contradict $\forall x\exists y(x<y\wedge\psi(y))$. To prove that $P$ does not have a minimal element, we consider the sentence $\forall x [2<x\wedge Z(x)\rightarrow\exists y[\psi(y)\wedge\floor*{\sqrt[\ceil*{\log_2x}]{x}}\leq y<x]$, which one can easily prove in $\mathbb{R}$ by thinking of the factorization of $x$. A minimal element $x\in P$ would contradict it.
+  \item If there are infinitely many twin primes, then $\forall x\exists y[x<y\wedge P(y)\wedge P(y+2)]$ is true. Interpreting this sentence in $\mathfrak{B}$ with an infinitely large number $x$, we get a pair of infinitely large primes $y$ and $y+2$. If there are only finitely many twin primes, let $x$ be the larger one of the largest twin prime pair and consider $\neg\exists y[x<y\wedge P(y)\wedge P(y+2)]$. The interpretation of it in $\mathfrak{B}$ will tell us that there is no infinitely large twin prime.
+\end{enumerate}
 \end{customthm}
 
 \end{document}
