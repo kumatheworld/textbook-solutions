@@ -34,7 +34,8 @@
 \begin{document}
 \maketitle
 
-\begin{customthm}{I.2.1} Below is the table of the truth values.
+\begin{customthm}{I.2.1}
+  Below is the table of the truth values.
   \begin{center}
     \begin{tabular}{cc|cccc}
       & & \multicolumn{4}{c}{Axiom} \\
@@ -51,106 +52,130 @@
   \end{center}
 \end{customthm}
 
-\begin{customthm}{I.6.3} Example 2, 3 and 4 are the ones.
+\begin{customthm}{I.6.3}
+  Example 2, 3 and 4 are the ones.
 \end{customthm}
 
-\begin{customthm}{I.6.11} Example 7 is the one. Example 1, 5 and 6 have pairwise unions. Example 2, 3 and 4 do not have empty sets hence cannot satisfy Comprehension.
+\begin{customthm}{I.6.11}
+  Example 7 is the one. Example 1, 5 and 6 have pairwise unions. Example 2, 3 and 4 do not have empty sets hence cannot satisfy Comprehension.
 \end{customthm}
 
-\begin{customthm}{I.6.13} Example 1 is the one. The other ones do not satisfy $\forall x\,\neg\exists y\,[y\in x]$.
+\begin{customthm}{I.6.13}
+  Example 1 is the one. The other ones do not satisfy $\forall x\,\neg\exists y\,[y\in x]$.
 \end{customthm}
 
-\begin{customthm}{I.6.15} Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
-\begin{enumerate}
-\item \underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
-\item \underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
-\end{enumerate}
+\begin{customthm}{I.6.15}
+  Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
+  \begin{enumerate}
+    \item \underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
+    \item \underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.6.17} $\langle 0,1\rangle = \{\{0\}, \{0,1\}\} = \{1,2\}$. $\langle 1,0\rangle = \{\{1\}, \{1,0\}\} = \{\{1\}, 2\}$.
+\begin{customthm}{I.6.17}
+  $\langle 0,1\rangle = \{\{0\}, \{0,1\}\} = \{1,2\}$. $\langle 1,0\rangle = \{\{1\}, \{1,0\}\} = \{\{1\}, 2\}$.
 \end{customthm}
 
-\begin{customthm}{I.7.13} Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
-\begin{enumerate}
-\item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$. If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
-\item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
-\item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$. Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
-\end{enumerate}
+\begin{customthm}{I.7.13}
+  Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
+  \begin{enumerate}
+    \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$. If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
+    \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
+    \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$. Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.7.15} Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x, y)]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x, y)\in R]\}$ is proved in the same way.
+\begin{customthm}{I.7.15}
+  Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x, y)]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x, y)\in R]\}$ is proved in the same way.
 \end{customthm}
 
-\begin{customthm}{I.7.17} Let $(A,\triangleleft_1),(B,\triangleleft_2),(C,\triangleleft_3)$ be arbitrary relations and $F:A\rightarrow B,G:B\rightarrow C$ be isomorphisms. Reflexivity of $\cong$ is easily checked by letting $(A,\triangleleft_1)=(B,\triangleleft_2)$ and $F$ be the identity map $\mathrm{id}_A$. Symmetry follows from taking $F^{-1}:B\rightarrow A$. Transitivity is proved by considering $G\circ F:A\rightarrow C$. Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
+\begin{customthm}{I.7.17}
+  Let $(A,\triangleleft_1),(B,\triangleleft_2),(C,\triangleleft_3)$ be arbitrary relations and $F:A\rightarrow B,G:B\rightarrow C$ be isomorphisms. Reflexivity of $\cong$ is easily checked by letting $(A,\triangleleft_1)=(B,\triangleleft_2)$ and $F$ be the identity map $\mathrm{id}_A$. Symmetry follows from taking $F^{-1}:B\rightarrow A$. Transitivity is proved by considering $G\circ F:A\rightarrow C$. Note that those $\mathrm{id}_A$, $F^{-1}$ and $G\circ F$ are all isomorphisms.
 \end{customthm}
 
-\begin{customthm}{I.7.21} Note that $R$ well-orders $A$ if and only if every non-empty subset of $A$ has a $R$-least element. If $R$ well-orders $A$, then it is obvious that $R$ well-orders every $X\subseteq A$ because every non-empty subset of $X$ is a non-empty subset of $A$ as well, which has a $R$-least element.
+\begin{customthm}{I.7.21}
+  Note that $R$ well-orders $A$ if and only if every non-empty subset of $A$ has a $R$-least element. If $R$ well-orders $A$, then it is obvious that $R$ well-orders every $X\subseteq A$ because every non-empty subset of $X$ is a non-empty subset of $A$ as well, which has a $R$-least element.
 \end{customthm}
 
-\begin{customthm}{I.7.23} Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \ran(X)$. Then $Y$ is a non-empty subset of $S$ and it has a $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has a $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
+\begin{customthm}{I.7.23}
+  Let $(S,<)$ and $(T,\prec)$ be well-ordered sets and $\triangleleft$ be their lexicographic product. Let $X$ be a non-empty subset of $S\times T$ and $Y = \ran(X)$. Then $Y$ is a non-empty subset of $S$ and it has a $<$-least element $s$. Let $Z=\{y\in T:(s,y)\in X\}$. It is a non-empty subset of $T$, which has a $\prec$-least element $t$. Now we have $(s,t)\in S\times T$ and it is the $\triangleleft$-least element of $X$.
 \end{customthm}
 
-\begin{customthm}{I.8.10} Let $X$ be a non-empty set of ordinals. $\bigcap X$ is well-ordered since it is a set of ordinals and $ON$ is well-ordered by $\in$. Let $\alpha\in\bigcap X$. Then $\alpha\subseteq\beta$ holds for every $\beta\in X$ by transitivity of $\beta$ and hence $\alpha\subseteq\bigcap X$ holds, which proves that $\bigcap X$ is a transitive set. Thus $\bigcap X$ is an ordinal. Now let $\alpha=\min(X)$. $\alpha\subseteq\bigcap X$ follows from the fact that $\alpha\subseteq\beta(\leftrightarrow\alpha\leq\beta)$ for any $\beta\in X$. $\bigcap X\subseteq\alpha$ is obvious since every $\beta\in\bigcap X$ is also a member of $\alpha\in X$. Thus $\bigcap X=\min(X)$ holds. The fact that $\bigcup X$ is an ordinal with $\bigcup X=\sup(X)$ is proved in the same manner.
+\begin{customthm}{I.8.10}
+  Let $X$ be a non-empty set of ordinals. $\bigcap X$ is well-ordered since it is a set of ordinals and $ON$ is well-ordered by $\in$. Let $\alpha\in\bigcap X$. Then $\alpha\subseteq\beta$ holds for every $\beta\in X$ by transitivity of $\beta$ and hence $\alpha\subseteq\bigcap X$ holds, which proves that $\bigcap X$ is a transitive set. Thus $\bigcap X$ is an ordinal. Now let $\alpha=\min(X)$. $\alpha\subseteq\bigcap X$ follows from the fact that $\alpha\subseteq\beta(\leftrightarrow\alpha\leq\beta)$ for any $\beta\in X$. $\bigcap X\subseteq\alpha$ is obvious since every $\beta\in\bigcap X$ is also a member of $\alpha\in X$. Thus $\bigcap X=\min(X)$ holds. The fact that $\bigcup X$ is an ordinal with $\bigcup X=\sup(X)$ is proved in the same manner.
 \end{customthm}
 
-\begin{customthm}{I.8.11} Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious. Thus $\beta\subseteq\alpha\subseteq\alpha\cup\{\alpha\}=S(\alpha)$ holds in both cases, which proves $S(\alpha)$'s transitivity. To prove that $S(\alpha)$ is well-ordered, take a non-empty subset $X$ of $S(\alpha)$. If $X=\{\alpha\}$, then $\alpha$ is obviously the $\in$-least element of $X$. If not, $X\setminus\{\alpha\}$ is a non-empty subset of $\alpha$ and since $\alpha$ is well-ordered, $X\setminus\{\alpha\}$ has a $\in$-least element, which is also the least element of $X$. Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate when we replace "$<$" by "$\in$" and "$\leq$" by "$\in$" or "$=$".
+\begin{customthm}{I.8.11}
+  Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious. Thus $\beta\subseteq\alpha\subseteq\alpha\cup\{\alpha\}=S(\alpha)$ holds in both cases, which proves $S(\alpha)$'s transitivity. To prove that $S(\alpha)$ is well-ordered, take a non-empty subset $X$ of $S(\alpha)$. If $X=\{\alpha\}$, then $\alpha$ is obviously the $\in$-least element of $X$. If not, $X\setminus\{\alpha\}$ is a non-empty subset of $\alpha$ and since $\alpha$ is well-ordered, $X\setminus\{\alpha\}$ has a $\in$-least element, which is also the least element of $X$. Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate when we replace "$<$" by "$\in$" and "$\leq$" by "$\in$" or "$=$".
 \end{customthm}
 
-\begin{customthm}{I.8.13} Let $n$ be a natural number and $\beta\leq S(n)$. Then $\beta$ is either $\beta=S(n)$ or $\beta<S(n)\leftrightarrow\beta\leq n$. If $\beta=S(n)$, then $\beta$ is a successor of $n$. If $\beta\leq n$, then $\beta$ is either 0 or a successor since $n$ is a natural number. In either case, $\beta$ is either 0 or a successor and hence $S(n)$ is a natural number. Now let $\gamma\in n$. Then for every $\alpha\leq\gamma$, $\alpha$ is either 0 or a successor since $n$ is a natural number and $\alpha\leq\gamma\leq n$. Therefore every element of $n$ turns out to be a natural number.
+\begin{customthm}{I.8.13}
+  Let $n$ be a natural number and $\beta\leq S(n)$. Then $\beta$ is either $\beta=S(n)$ or $\beta<S(n)\leftrightarrow\beta\leq n$. If $\beta=S(n)$, then $\beta$ is a successor of $n$. If $\beta\leq n$, then $\beta$ is either 0 or a successor since $n$ is a natural number. In either case, $\beta$ is either 0 or a successor and hence $S(n)$ is a natural number. Now let $\gamma\in n$. Then for every $\alpha\leq\gamma$, $\alpha$ is either 0 or a successor since $n$ is a natural number and $\alpha\leq\gamma\leq n$. Therefore every element of $n$ turns out to be a natural number.
 \end{customthm}
 
-\begin{customthm}{I.8.22} Since every well-ordered set is isomorphic to a unique ordinal, it is sufficient to prove the following; for any ordinal $\alpha$ and $X\subseteq\alpha$, it holds that $\type(X;\in)\leq\alpha$. Now assume $\alpha\in ON$ and  $X\subseteq\alpha$, and let $f$ be the order isomorphism from $X$ to $\type(X)$. Since $f$ is an order-isomorphism, it holds that $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$. Now let $\Xi = \{\xi\in X:\xi<f(\xi)\}$. Assume $\Xi\neq\emptyset$ and let $\xi$ be the least element of $\Xi$. From $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$ and $\xi\in\Xi$, we get $\xi=f(\mu)$ for some $\mu\in X$ such that $\mu<\xi$. Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\mu)\leq\mu$ holds. Then we have $\xi\leq f(\mu)\leq\mu$, which is a contradiction. Thus $\Xi=\emptyset$ and hence $\type(X)\subseteq\alpha$ holds.
+\begin{customthm}{I.8.22}
+  Since every well-ordered set is isomorphic to a unique ordinal, it is sufficient to prove the following; for any ordinal $\alpha$ and $X\subseteq\alpha$, it holds that $\type(X;\in)\leq\alpha$. Now assume $\alpha\in ON$ and  $X\subseteq\alpha$, and let $f$ be the order isomorphism from $X$ to $\type(X)$. Since $f$ is an order-isomorphism, it holds that $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$. Now let $\Xi = \{\xi\in X:\xi<f(\xi)\}$. Assume $\Xi\neq\emptyset$ and let $\xi$ be the least element of $\Xi$. From $f(\xi)=\{f(\mu):\mu\in X\wedge\mu<\xi\}$ and $\xi\in\Xi$, we get $\xi=f(\mu)$ for some $\mu\in X$ such that $\mu<\xi$. Since $\xi$ is the least element of $\Xi$, $\mu$ is not in $\Xi$ and hence $f(\mu)\leq\mu$ holds. Then we have $\xi\leq f(\mu)\leq\mu$, which is a contradiction. Thus $\Xi=\emptyset$ and hence $\type(X)\subseteq\alpha$ holds.
 \end{customthm}
 
-\begin{customthm}{I.8.23} Skipped for now.
+\begin{customthm}{I.8.23}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.9.6} Let $x$ be a set.
-\begin{enumerate}
-\item $\trcl(x)\supseteq\bigcup^0x=x$.
-\item Let $y\in\trcl(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\trcl(x)$. Hence $\trcl(x)$ is transitive.
-\item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\trcl(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\trcl(x)\subseteq\trcl(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\trcl(x)\subseteq\trcl(t)\subseteq t$.
-\item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\trcl(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\trcl(x)$, which proves $\trcl(y)\subseteq\trcl(x)$.
-\item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\dom(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$. $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By inductive hypothesis, we have a function $s$ such that $\dom(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$. Now we extend this to a function $s'$ such that $\dom(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$.
-Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
-\end{enumerate}
+\begin{customthm}{I.9.6}
+  Let $x$ be a set.
+  \begin{enumerate}
+    \item $\trcl(x)\supseteq\bigcup^0x=x$.
+    \item Let $y\in\trcl(x)$. Then there is $n\in\omega$ such that $y\in\bigcup^nx$. For such $n$ and $z\in y$, it holds that $z\in\{z:\exists y\in\bigcup^nx\,(z\in y)\}=\bigcup\bigcup^nx=\bigcup^{n+1}x\subseteq\trcl(x)$. Hence $\trcl(x)$ is transitive.
+    \item Let $t$ be a transitive set. Note that $\bigcup t\subseteq t$ holds by the definition of transitivity. Therefore it can be inductively shown that $\trcl(t)$ is a union of subsets of $t$, which is also a subset of $t$. On the other hand, if $y$ is a superset of $x$, then $\trcl(x)\subseteq\trcl(y)$ holds because we can show that $\bigcup^nx\subseteq\bigcup^ny$ by induction. Thus if $x\subseteq t$, it holds that $\trcl(x)\subseteq\trcl(t)\subseteq t$.
+    \item For $y\in x$, one can easily show that $\bigcup^ny\subseteq\bigcup^{n+1}x$ by induction. Now let $y\in x$, $z\in\trcl(y)$ and $n\in\omega$ be one with $z\in\bigcup^ny$. Then we get $z\in\bigcup^{n+1}x\subseteq\trcl(x)$, which proves $\trcl(y)\subseteq\trcl(x)$.
+    \item We show the following proposition $P(n)$: $z\in\bigcup^nx$ iff there is an $\in$-path from $z$ to $x$ of length $n+1$. Note that an $\in$-path from $z$ to $x$ of length $n\in\omega$ is a function $s$ such that $\dom(s)=n+1$, $s(0)=z$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$. $P(0)$ is obvious by taking the function $s$ such that $s(0)=z=x$. Now assume $P(n)$ holds. Let $z\in\bigcup^{n+1}x=\{z:\exists y\in\bigcup^nx\,(z\in y)\}$ and $y\in\bigcup^n x$ be one such that $z\in y$. By inductive hypothesis, we have a function $s$ such that $\dom(s)=n+1$, $s(0)=y$, $s(n)=x$, and $s(i)\in s(i+1)$ for all $i<n-1$. Now we extend this to a function $s'$ such that $\dom(s')=n+2$, $s(0)=x$, $s'(i+1)=s(i)$ for all $i\leq n$. Then $s'$ turns out to be an $\in$-path from $z$ to $x$ of length $n+1$. Therefore the 'only if' part of $P(n+1)$ is proved. The converse can be proved by considering a sub-path $s$ of an $\in$-path $s'$ from $z$ to $x$ of length $n+1$, where $s$ is the path from $s'(1)$ to $x$ of length $n$. Thus $P(n+1)$ holds, and so does $\forall n\in\omega\,P(n)$.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.10.5} We can say that $A\times B=\{\{\{x\},\{x,y\}\}\in\mathcal{P(\mathcal{P(A\cup B)})}:x\in A,y\in B\}$ is a set, relying on the specific definition of pairs. $A/R=\{[x]_R\in\mathcal{P}(A):x\in A\}$, where $[x]_R=\{y\in A:yRx\}$, obviously forms a set.
+\begin{customthm}{I.10.5}
+  We can say that $A\times B=\{\{\{x\},\{x,y\}\}\in\mathcal{P(\mathcal{P(A\cup B)})}:x\in A,y\in B\}$ is a set, relying on the specific definition of pairs. $A/R=\{[x]_R\in\mathcal{P}(A):x\in A\}$, where $[x]_R=\{y\in A:yRx\}$, obviously forms a set.
 \end{customthm}
 
-\begin{customthm}{I.11.3} $\mathbb{R}\times\mathbb{R}\approx(0,1)\times(0,1)$ holds because $f(x,y)=(\sigma(x),\sigma(y))$, where $\sigma(x)=(1+\exp(x))^{-1}$, is a bijection from $\mathbb{R}\times\mathbb{R}$ to $(0,1)\times(0,1)$. To prove $(0,1)\times(0,1)\preccurlyeq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$. Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preccurlyeq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
+\begin{customthm}{I.11.3}
+  $\mathbb{R}\times\mathbb{R}\approx(0,1)\times(0,1)$ holds because $f(x,y)=(\sigma(x),\sigma(y))$, where $\sigma(x)=(1+\exp(x))^{-1}$, is a bijection from $\mathbb{R}\times\mathbb{R}$ to $(0,1)\times(0,1)$. To prove $(0,1)\times(0,1)\preccurlyeq(0,1)$, we represent $x\in(0,1)$ by an never-ending infinite decimal representation $x=0.x_1x_2\cdots$. Note that any finite decimal $x=0.x_1x_2\cdots x_n$ can be represented that way, i.e. $x=0.x_1x_2\cdots(x_n-1)999\cdots$. Now we define a function from $(0,1)\times(0,1)$ by $f(0.x1x2\cdots, 0.y1y2\cdots) = 0.x1y1x2y2\cdots$. This is an injection to $(0,1)$ because any number in $(0,1)$ is uniquely represented by the infinite decimal. Thus $(0,1)\times(0,1)\preccurlyeq(0,1)$ holds. $(0,1)\approx\mathbb{R}$ is clear by considering $\sigma^{-1}$.
 \end{customthm}
 
-\begin{customthm}{I.11.6} Skipped for now.
+\begin{customthm}{I.11.6}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.11.12} Let $A,B,C,D$ be sets with $A\preccurlyeq B$, $C\preccurlyeq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preccurlyeq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preccurlyeq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$. We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
-\[F(f)(d)=
-  \begin{cases}
-    i(f(c)) & \text{if } d=j(c) \\
-    b & \text{if } d\not\in\ran(j)
-  \end{cases}.
-\]
-One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preccurlyeq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preccurlyeq{}^BD$. Note that $\mathcal{P}(A)\preccurlyeq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
+\begin{customthm}{I.11.12}
+  Let $A,B,C,D$ be sets with $A\preccurlyeq B$, $C\preccurlyeq D$, let $i:A\rightarrow B$, $j:C\rightarrow D$ be injections. Note that if $B=\emptyset$ is allowed, there would be a counterexample of ${}^AC\preccurlyeq{}^BD$. For example, $A=B=C=\emptyset$ and $D=1$ would yield ${}^AC\approx 1\not\preccurlyeq 0={}^BD$. Now Let us further assume that $B\neq\emptyset$ and fix $b\in B$. We define a function $F:{}^AC\rightarrow{}^BD$ by the following.
+  \[F(f)(d)=
+    \begin{cases}
+      i(f(c)) & \text{if } d=j(c) \\
+      b & \text{if } d\not\in\ran(j)
+    \end{cases}.
+  \]
+  One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^BD$ holds. The rest of the exercise, namely if $2\prec C$ then $A\prec \mathcal{P}(A)\preccurlyeq{}^AC$, follows from $\mathcal{P}(A)\approx 2^A$ and the above by letting $B=A, C=2, D=C$ in ${}^AC\preccurlyeq{}^BD$. Note that $\mathcal{P}(A)\preccurlyeq{}^AC$ holds even when $A=\emptyset$, where both sides are of cardinality $1$.
 \end{customthm}
 
-\begin{customthm}{I.11.15} (1) is obvious from Exercise I.8.22. (2) can be reduced to (1) if we replace $B$ by $i(B)$ where $i:B\rightarrow\alpha$ is an injection. To prove (3), let $\alpha,\beta,\gamma$ be ordinals with $\alpha\leq\beta\leq\gamma$, $\alpha\approx\gamma$ and let $f:\gamma\rightarrow\alpha$ be a bijection. Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ as well, and since $\beta\subseteq\gamma$, we have $f\upharpoonright\beta:\beta\rightarrow\alpha$. Both of those functions are injective and hence we get $\gamma\preccurlyeq\beta\preccurlyeq\alpha$. Combining these with $\alpha\leq\beta\leq\gamma$ and Schröder-Bernstein Theorem, we get $\alpha\approx\beta\approx\gamma$.
+\begin{customthm}{I.11.15}
+  (1) is obvious from Exercise I.8.22. (2) can be reduced to (1) if we replace $B$ by $i(B)$ where $i:B\rightarrow\alpha$ is an injection. To prove (3), let $\alpha,\beta,\gamma$ be ordinals with $\alpha\leq\beta\leq\gamma$, $\alpha\approx\gamma$ and let $f:\gamma\rightarrow\alpha$ be a bijection. Since $\alpha\subseteq\beta$ holds, $f$ is a function from $\gamma$ to $\beta$ as well, and since $\beta\subseteq\gamma$, we have $f\upharpoonright\beta:\beta\rightarrow\alpha$. Both of those functions are injective and hence we get $\gamma\preccurlyeq\beta\preccurlyeq\alpha$. Combining these with $\alpha\leq\beta\leq\gamma$ and Schröder-Bernstein Theorem, we get $\alpha\approx\beta\approx\gamma$.
 \end{customthm}
 
-\begin{customthm}{I.11.19} The 'only if' part is obvious since any order isomorphism is a bijection. To prove the 'if' part, let $A$ be a set, $\alpha$ be an ordinal and $f:A\rightarrow\alpha$ be a bijection. Then the relation $R=\{\langle x,y\rangle\in A\times A:f(x)\leq f(y)\}$ well-orders $A$.
+\begin{customthm}{I.11.19}
+  The 'only if' part is obvious since any order isomorphism is a bijection. To prove the 'if' part, let $A$ be a set, $\alpha$ be an ordinal and $f:A\rightarrow\alpha$ be a bijection. Then the relation $R=\{\langle x,y\rangle\in A\times A:f(x)\leq f(y)\}$ well-orders $A$.
 \end{customthm}
 
-\begin{customthm}{I.11.21} Let $A$ be a well-orderable set and $g:A\rightarrow|A|$ be a bijection. Let $B$ be a set and assume there is a surjection $f:A\rightarrow B$.  Since $f$ is surjective, we can define an injection $i:B\rightarrow|A|$ by $i(y)=\min\{g(x)\in|A|:x\in A\wedge y=f(x)\}$. Then by Exercise I.11.15(2) and Exercise I.11.19, we can say that $B$ is well-orderable and $|B|\leq|A|$.
+\begin{customthm}{I.11.21}
+  Let $A$ be a well-orderable set and $g:A\rightarrow|A|$ be a bijection. Let $B$ be a set and assume there is a surjection $f:A\rightarrow B$.  Since $f$ is surjective, we can define an injection $i:B\rightarrow|A|$ by $i(y)=\min\{g(x)\in|A|:x\in A\wedge y=f(x)\}$. Then by Exercise I.11.15(2) and Exercise I.11.19, we can say that $B$ is well-orderable and $|B|\leq|A|$.
 \end{customthm}
 
-\begin{customthm}{I.11.22} The 'if' part is obvious from Exercise I.11.21. To prove the converse, let $\kappa$ be a cardinal, $B$ be a non-empty set with $B\preccurlyeq\kappa$. For a fixed $b\in B$ and an injection $i:B\rightarrow\kappa$, we can define a surjection $f:\kappa\rightarrow B$ as follows.
-\[f(\alpha)=
-  \begin{cases}
-    x & \text{if } \alpha=i(x) \\
-    b & \text{if } \alpha\not\in\ran(i)
-  \end{cases}.
-\]
+\begin{customthm}{I.11.22}
+  The 'if' part is obvious from Exercise I.11.21. To prove the converse, let $\kappa$ be a cardinal, $B$ be a non-empty set with $B\preccurlyeq\kappa$. For a fixed $b\in B$ and an injection $i:B\rightarrow\kappa$, we can define a surjection $f:\kappa\rightarrow B$ as follows.
+  \[
+    f(\alpha)=
+    \begin{cases}
+      x & \text{if } \alpha=i(x) \\
+      b & \text{if } \alpha\not\in\ran(i)
+    \end{cases}.
+  \]
 \end{customthm}
 
 \begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
@@ -168,487 +193,579 @@ One can easily check that this $F$ is injective and hence ${}^AC\preccurlyeq{}^B
 \begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$. If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by inductive hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$. This is a bijection if $i$ is a bijection, which is by inductive hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega\,P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
-\begin{customthm}{I.11.28} Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preccurlyeq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preccurlyeq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds. When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\omega$ turns out to be a cardinal and hence $\alpha^+=\alpha+1$. When $\alpha\geq\omega$, $\alpha+1$ is not a cardinal since we have an injection $i:\alpha+1\rightarrow\alpha$ defined as follows.
-\[i(x)=
-  \begin{cases}
-    0 & \text{if } x=\alpha \\
-    x+1 & \text{if } x\in\omega \\
-    x & \text{otherwise}
-  \end{cases}.
-\]
-Thus $\alpha^+>\alpha+1$ holds.
+\begin{customthm}{I.11.28}
+  Let $\alpha$ be an ordinal. By Exercise I.11.23, we have $\beta\not\preccurlyeq\alpha\leftrightarrow\beta\not\leq\alpha\leftrightarrow\alpha<\beta$ for any ordinal $\beta$. Thus $\alpha^+$, which is by definition the least cardinal $\kappa$ such that $\kappa\not\preccurlyeq\alpha$, is the least cardinal greater than $\alpha$. Now note that $\alpha+1$ is the least ordinal greater than $\alpha$ (See Exercise I.8.11). Therefore $\alpha^+\geq\alpha+1$ holds. When $\alpha\in\omega$, by Exercise I.8.13 and Theorem I.11.17(2), $\alpha+1\in\omega$ turns out to be a cardinal and hence $\alpha^+=\alpha+1$. When $\alpha\geq\omega$, $\alpha+1$ is not a cardinal since we have an injection $i:\alpha+1\rightarrow\alpha$ defined as follows.
+  \[
+    i(x)=
+    \begin{cases}
+      0 & \text{if } x=\alpha \\
+      x+1 & \text{if } x\in\omega \\
+      x & \text{otherwise}
+    \end{cases}.
+  \]
+  Thus $\alpha^+>\alpha+1$ holds.
 \end{customthm}
 
-\begin{customthm}{I.11.29} Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\type(X;R)+1$, which is equivalent to $\alpha\leq\type(X;R)$. Therefore $\alpha\preccurlyeq\type(X;R)\approx X\preccurlyeq A$ holds. If $\alpha\not\prec\beta$, we would have $\beta\preccurlyeq\alpha\preccurlyeq A$ and that contradicts $\beta\not\preccurlyeq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal. $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preccurlyeq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
+\begin{customthm}{I.11.29}
+  Let $A$ be a set and $W,\beta,\kappa$ be the ones occurring in the proof of Theorem I.11.26. Let $\alpha$ be an ordinal such that $\alpha<\beta$. Then there is a pair $(X,R)$ such that $\alpha<\type(X;R)+1$, which is equivalent to $\alpha\leq\type(X;R)$. Therefore $\alpha\preccurlyeq\type(X;R)\approx X\preccurlyeq A$ holds. If $\alpha\not\prec\beta$, we would have $\beta\preccurlyeq\alpha\preccurlyeq A$ and that contradicts $\beta\not\preccurlyeq A$. Hence $\alpha\prec\beta$ holds and $\beta$ turns out to be a cardinal. $\beta=\aleph(A)$ is obvious since $\alpha<\beta$ implies $\alpha\preccurlyeq A$ from the above, the contraposition of which is nothing but a proof of $\beta$'s minimality.
 \end{customthm}
 
-\begin{customthm}{I.11.30} Let $\xi,\zeta$ be ordinals. We prove $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ by induction on $\zeta$. If $\zeta=\xi+1$, which is the least ordinal greater than $\xi$, then $\aleph_\zeta=(\aleph_\xi)^+$ is greater than $\aleph_\xi$ by the definition of $\aleph$. If $\zeta=\eta+1$ and $\eta>\xi$, assuming the inductive hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$. If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
+\begin{customthm}{I.11.30}
+  Let $\xi,\zeta$ be ordinals. We prove $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ by induction on $\zeta$. If $\zeta=\xi+1$, which is the least ordinal greater than $\xi$, then $\aleph_\zeta=(\aleph_\xi)^+$ is greater than $\aleph_\xi$ by the definition of $\aleph$. If $\zeta=\eta+1$ and $\eta>\xi$, assuming the inductive hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$. If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
 
-Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$. Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set. Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
+  Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$. Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set. Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
 \end{customthm}
 
-\begin{customthm}{I.11.33} We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma\,[\aleph_\xi\leq\gamma]$. Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds. $\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega\,[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
+\begin{customthm}{I.11.33}
+  We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma\,[\aleph_\xi\leq\gamma]$. Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds. $\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega\,[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
 
-Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega\,[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
+  Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega\,[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
 \end{customthm}
 
-\begin{customthm}{I.11.34} Let us first note that $\max\{|\alpha|,|\beta|\}=|\max\{\alpha,\beta\}|$. For $|\alpha+\beta|$ and $|\alpha\cdot\beta|$, WLOG we can assume $\alpha\leq\beta$. Then we have $|\alpha+\beta|\leq|\beta+\beta|\leq|\beta\cdot\beta|=|\beta\times\beta|=|\beta|$. For $|\alpha^\beta|$, let $\gamma=\max\{\alpha,\beta\}$. We prove $|\alpha^\beta|\leq|\gamma|$ by induction on $\beta$. If $\beta=2$, then we have $\omega\leq\alpha$ and hence $|\alpha^\beta|=|\alpha\cdot\alpha|=|\alpha\times\alpha|=|\alpha|\leq|\gamma|$. Now assume that $|\alpha^\delta|\leq|\gamma|$ for any $\delta<\beta$. If $\beta=\delta+1$ for some $\delta\geq 2$, then $|\alpha^\beta|=|\alpha^\delta\cdot\alpha|=\max\{|\alpha^\delta|,|\alpha|\}\leq|\gamma|$. If $\beta$ is a limit ordinal, then $|\alpha^\beta|=|\beta\times\gamma|$ holds since we can define an injection $i:\alpha^\beta\rightarrow\beta\times\gamma$ as $i(\xi)=\langle\delta,i_\delta(\xi)\rangle$, where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of injections, whose existence relies on Choice, and $\delta$ is the least ordinal $\eta$ such that $\xi\leq\alpha^\eta$. Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$. (Note: I will replace this proof later by one without Choice, if I find any.)
+\begin{customthm}{I.11.34}
+  Let us first note that $\max\{|\alpha|,|\beta|\}=|\max\{\alpha,\beta\}|$. For $|\alpha+\beta|$ and $|\alpha\cdot\beta|$, WLOG we can assume $\alpha\leq\beta$. Then we have $|\alpha+\beta|\leq|\beta+\beta|\leq|\beta\cdot\beta|=|\beta\times\beta|=|\beta|$. For $|\alpha^\beta|$, let $\gamma=\max\{\alpha,\beta\}$. We prove $|\alpha^\beta|\leq|\gamma|$ by induction on $\beta$. If $\beta=2$, then we have $\omega\leq\alpha$ and hence $|\alpha^\beta|=|\alpha\cdot\alpha|=|\alpha\times\alpha|=|\alpha|\leq|\gamma|$. Now assume that $|\alpha^\delta|\leq|\gamma|$ for any $\delta<\beta$. If $\beta=\delta+1$ for some $\delta\geq 2$, then $|\alpha^\beta|=|\alpha^\delta\cdot\alpha|=\max\{|\alpha^\delta|,|\alpha|\}\leq|\gamma|$. If $\beta$ is a limit ordinal, then $|\alpha^\beta|=|\beta\times\gamma|$ holds since we can define an injection $i:\alpha^\beta\rightarrow\beta\times\gamma$ as $i(\xi)=\langle\delta,i_\delta(\xi)\rangle$, where $(i_\delta:\alpha^\delta\rightarrow\gamma)_{\delta<\beta}$ a family of injections, whose existence relies on Choice, and $\delta$ is the least ordinal $\eta$ such that $\xi\leq\alpha^\eta$. Hence we get $|\alpha^\beta|=|\beta\times\gamma|\leq|\gamma\times\gamma|=|\gamma|$. It is easy to see that $|\gamma|\leq|\alpha^\beta|$ and thus we have $|\alpha^\beta|=|\gamma|=\max\{|\alpha|,|\beta|\}$. (Note: I will replace this proof later by one without Choice, if I find any.)
 \end{customthm}
 
-\begin{customthm}{I.11.35} Let $W=\{(X,R)\in\mathcal{P}(\omega)\times\mathcal{P(\omega\times\omega)}:R\text{ well-orders }X\}$ and $B=W/\cong$, where $\cong$ is the isomorphism relation. We define a relation $\triangleleft$ on $B$ by $[(X,R)]\triangleleft[(X',R')]$ iff $\type(X;R)<\type(X';R')$. It is easy to see that $\triangleleft$ is well-defined and it well-orders $B$. Now let us denote $X_{<x}=\{y\in X:y<x\}$ for an ordered set $(X;<)$ and its element $x$. For any $(X,R)\in W$, $(X,R)\cong B_{\triangleleft[(X,R)]}$ holds because there is an order isomorphism $f:(X,R)\rightarrow B_{\triangleleft[(X,R)]}$ defined by $f(x)=[(X_{<x},R\upharpoonright X_{<x})]$. Therefore if $B$ is countable, it is isomorphic to some $(X,R)\in W$ and is also isomorphic to a proper initial segment of itself (namely $B_{\triangleleft[(X,R)]}$), which is a contradiction. Thus $B$ is uncountable. Note that power sets and quotient sets can be constructed without Replacement by Exercise I.10.5 and hence we have an uncountable well-ordered set within $Z^-$.
+\begin{customthm}{I.11.35}
+  Let $W=\{(X,R)\in\mathcal{P}(\omega)\times\mathcal{P(\omega\times\omega)}:R\text{ well-orders }X\}$ and $B=W/\cong$, where $\cong$ is the isomorphism relation. We define a relation $\triangleleft$ on $B$ by $[(X,R)]\triangleleft[(X',R')]$ iff $\type(X;R)<\type(X';R')$. It is easy to see that $\triangleleft$ is well-defined and it well-orders $B$. Now let us denote $X_{<x}=\{y\in X:y<x\}$ for an ordered set $(X;<)$ and its element $x$. For any $(X,R)\in W$, $(X,R)\cong B_{\triangleleft[(X,R)]}$ holds because there is an order isomorphism $f:(X,R)\rightarrow B_{\triangleleft[(X,R)]}$ defined by $f(x)=[(X_{<x},R\upharpoonright X_{<x})]$. Therefore if $B$ is countable, it is isomorphic to some $(X,R)\in W$ and is also isomorphic to a proper initial segment of itself (namely $B_{\triangleleft[(X,R)]}$), which is a contradiction. Thus $B$ is uncountable. Note that power sets and quotient sets can be constructed without Replacement by Exercise I.10.5 and hence we have an uncountable well-ordered set within $Z^-$.
 \end{customthm}
 
-\begin{customthm}{I.11.36} Let $(A,\triangleleft)$ be a total order with $A=\{a_n:n\in\omega\}$. For $n\in\omega$, let $L_n=\{m\in\omega:m<n\wedge a_m<a_n\}$ and $R_n=\{m\in\omega:m<n\wedge a_n<a_m\}$. we define $f:A\rightarrow\mathbb{Q}$ as follows.
-\[f(a_n)=
-  \begin{cases}
-    0 & \text{if } n=0 \\
-    f(\min(R_n))-1 & \text{if } n>0 \text{ and } L_n=\emptyset \\
-    f(\max(L_n))+1 & \text{if } n>0 \text{ and } R_n=\emptyset \\
-    \frac{1}{2}(f(\max(L_n))+f(\min(R_n))) & \text{if } n>0 \text{, } L_n\neq\emptyset \text{ and } R_n\neq\emptyset
-  \end{cases}.
-\]
-It is easy to see that this $f$ actually is an order-preserving injection.
+\begin{customthm}{I.11.36}
+  Let $(A,\triangleleft)$ be a total order with $A=\{a_n:n\in\omega\}$. For $n\in\omega$, let $L_n=\{m\in\omega:m<n\wedge a_m<a_n\}$ and $R_n=\{m\in\omega:m<n\wedge a_n<a_m\}$. we define $f:A\rightarrow\mathbb{Q}$ as follows.
+  \[
+    f(a_n)=
+    \begin{cases}
+      0 & \text{if } n=0 \\
+      f(\min(R_n))-1 & \text{if } n>0 \text{ and } L_n=\emptyset \\
+      f(\max(L_n))+1 & \text{if } n>0 \text{ and } R_n=\emptyset \\
+      \frac{1}{2}(f(\max(L_n))+f(\min(R_n))) & \text{if } n>0 \text{, } L_n\neq\emptyset \text{ and } R_n\neq\emptyset
+    \end{cases}.
+  \]
+  It is easy to see that this $f$ actually is an order-preserving injection.
 \end{customthm}
 
-\begin{customthm}{I.11.37} Skipped for now.
+\begin{customthm}{I.11.37}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.11.38} Skipped for now.
+\begin{customthm}{I.11.38}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.12.6} Let $\mathcal{F}$ be of finite character, $X\in\mathcal{F}$, and $Y\subseteq X$. $Y\in\mathcal{F}$ holds because every finite subset of $Y$ is in $\mathcal{F}$ since it is a finite subset of $X\in\mathcal{F}$ as well.
+\begin{customthm}{I.12.6}
+  Let $\mathcal{F}$ be of finite character, $X\in\mathcal{F}$, and $Y\subseteq X$. $Y\in\mathcal{F}$ holds because every finite subset of $Y$ is in $\mathcal{F}$ since it is a finite subset of $X\in\mathcal{F}$ as well.
 \end{customthm}
 
-\begin{customthm}{I.12.13} We define a function $f:\mathcal{P}(\omega\times\omega)\rightarrow\omega_1$ as follows.
-\[f(R)=
-  \begin{cases}
-    \type(R) & \text{if } R \text{ well-orders } \omega \\
-    |R| & \text{if } R \text{ is finite} \\
-    0 & \text{otherwise}
-  \end{cases}.
-\]
-This $f$ is surjective because $\ran(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preccurlyeq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12. Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
+\begin{customthm}{I.12.13}
+  We define a function $f:\mathcal{P}(\omega\times\omega)\rightarrow\omega_1$ as follows.
+  \[
+    f(R)=
+    \begin{cases}
+      \type(R) & \text{if } R \text{ well-orders } \omega \\
+      |R| & \text{if } R \text{ is finite} \\
+      0 & \text{otherwise}
+    \end{cases}.
+  \]
+  This $f$ is surjective because $\ran(f)$ includes all countable ordinals. On the other hand, since $\omega\times\omega\preccurlyeq\omega$, we have an injection from $\mathcal{P}(\omega\times\omega)\approx {}^{\omega\times\omega}2$ to $\mathcal{P}(\omega)\approx {}^\omega 2$ by Exercise I.11.12. Hence we have a surjection from $\mathcal{P}(\omega)$ to $\mathcal{P}(\omega\times\omega)$ and we get a surjection from $\mathcal{P}(\omega)$ to $\omega_1$ composing that surjection and $f$.
 \end{customthm}
 
-\begin{customthm}{I.12.14} For each $n\in\omega$, let $\mathcal{F}_n=\{Y\in\mathcal{P}(X):\forall x,y\in Y\,[x\neq y\rightarrow d(x,y)>2^{-n}]\}$. Then $\mathcal{F}_n$ is of finite character and hence it has a maximal element $E_n$ by Tukey's Lemma. Now let $E=\bigcup_n E_n$. If $E$ is not dense in $X$, there is $x\in X$ and $n\in\omega$ such that the ball of radius $2^{-n}$ centered at $x$ does not intersect $E$, which contradicts $E_n$'s maximality. Thus $E$ is dense and since $X$ is non-separable, $E$ is uncountable. Then there is some uncountable $E_n$ because countable union of countable sets would be countable. That $E_n$ with $\varepsilon=2^{-n}$ is what we want.
+\begin{customthm}{I.12.14}
+  For each $n\in\omega$, let $\mathcal{F}_n=\{Y\in\mathcal{P}(X):\forall x,y\in Y\,[x\neq y\rightarrow d(x,y)>2^{-n}]\}$. Then $\mathcal{F}_n$ is of finite character and hence it has a maximal element $E_n$ by Tukey's Lemma. Now let $E=\bigcup_n E_n$. If $E$ is not dense in $X$, there is $x\in X$ and $n\in\omega$ such that the ball of radius $2^{-n}$ centered at $x$ does not intersect $E$, which contradicts $E_n$'s maximality. Thus $E$ is dense and since $X$ is non-separable, $E$ is uncountable. Then there is some uncountable $E_n$ because countable union of countable sets would be countable. That $E_n$ with $\varepsilon=2^{-n}$ is what we want.
 \end{customthm}
 
-\begin{customthm}{I.12.16} Let $X,Y$ be compact Hausdorff spaces, $f:X\rightarrow Y$ be a continuous surjection, and $\mathcal{F}=\{Z\in\mathcal{P}(X):Z\text{ is closed and }f\upharpoonright Z\text{ is surjective}\}$. Let $C$ be a chain in $(\mathcal{F},\supsetneq)$. We prove $\bigcap C\in\mathcal{F}$. It is clear that $\bigcap C$ is closed because $C$ is the intersection of closed sets. Assume $f\upharpoonright\bigcap C$ is not surjective and let $y\in Y\setminus\bigcap C$. Since $f$ is continuous and any singleton in a Hausdorff space is closed, $f^{-1}(y)=\{x\in X:f(x)=y\}$ is a closed subset in $X$, which is compact since $X$ is compact. Then $X\setminus\bigcap C=\bigcup_{Z\in C}(X\setminus Z)$, an open cover of $f^{-1}(y)$, has a finite subcover $(X\setminus Z_1,X\setminus Z_2,\ldots,X\setminus Z_n)$. We can assume $Z_1\supseteq Z_2\supseteq\ldots\supseteq Z_n$ since $C$ is a chain. Then $X\setminus Z_n=\bigcup_{k=1,\ldots,n}(X\setminus Z_k)\supseteq f^{-1}(y)$ holds. This means that $y\not\in\ran(f\upharpoonright Z_k)$, which contradicts $Z_n\in\mathcal{F}$. Hence $f\upharpoonright\bigcap C$ is surjective and $C\in\mathcal{F}$ holds. Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns out to have a maximal set $Z$ by Zorn's Lemma. Such $Z$ is what we want.
+\begin{customthm}{I.12.16}
+  Let $X,Y$ be compact Hausdorff spaces, $f:X\rightarrow Y$ be a continuous surjection, and $\mathcal{F}=\{Z\in\mathcal{P}(X):Z\text{ is closed and }f\upharpoonright Z\text{ is surjective}\}$. Let $C$ be a chain in $(\mathcal{F},\supsetneq)$. We prove $\bigcap C\in\mathcal{F}$. It is clear that $\bigcap C$ is closed because $C$ is the intersection of closed sets. Assume $f\upharpoonright\bigcap C$ is not surjective and let $y\in Y\setminus\bigcap C$. Since $f$ is continuous and any singleton in a Hausdorff space is closed, $f^{-1}(y)=\{x\in X:f(x)=y\}$ is a closed subset in $X$, which is compact since $X$ is compact. Then $X\setminus\bigcap C=\bigcup_{Z\in C}(X\setminus Z)$, an open cover of $f^{-1}(y)$, has a finite subcover $(X\setminus Z_1,X\setminus Z_2,\ldots,X\setminus Z_n)$. We can assume $Z_1\supseteq Z_2\supseteq\ldots\supseteq Z_n$ since $C$ is a chain. Then $X\setminus Z_n=\bigcup_{k=1,\ldots,n}(X\setminus Z_k)\supseteq f^{-1}(y)$ holds. This means that $y\not\in\ran(f\upharpoonright Z_k)$, which contradicts $Z_n\in\mathcal{F}$. Hence $f\upharpoonright\bigcap C$ is surjective and $C\in\mathcal{F}$ holds. Now we have $\bigcap C$ as an upper bound for any chain $C$, $\mathcal{F}$ turns out to have a maximal set $Z$ by Zorn's Lemma. Such $Z$ is what we want.
 \end{customthm}
 
-\begin{customthm}{I.12.17} Let $A$ be a set. To prove the 'only if' part, assume $\omega\preccurlyeq A$ and let $i:\omega\rightarrow A$ be an injection. Then we can define an injection $f:A\rightarrow A$ with $\ran(f)\neq A$ as follows.
-\[f(x)=
-  \begin{cases}
-    f(i(n+1)) & \text{if } x=i(n) \\
-    x & \text{otherwise}
-  \end{cases}.
-\]
-This $f$ does not contain $i(0)\in A$ in its range. Hence $A$ is not Dedekind-finite.
+\begin{customthm}{I.12.17}
+  Let $A$ be a set. To prove the 'only if' part, assume $\omega\preccurlyeq A$ and let $i:\omega\rightarrow A$ be an injection. Then we can define an injection $f:A\rightarrow A$ with $\ran(f)\neq A$ as follows.
+  \[
+    f(x)=
+    \begin{cases}
+      f(i(n+1)) & \text{if } x=i(n) \\
+      x & \text{otherwise}
+    \end{cases}.
+  \]
+  This $f$ does not contain $i(0)\in A$ in its range. Hence $A$ is not Dedekind-finite.
 
-To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\ran(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^n(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
+  To prove the 'if' part, assume $A$ is not Dedekind-finite and let $f:A\rightarrow A$ be an injection with $\ran(f)\neq A$. Then there is $a\in A$ such that $f^n(a)\neq a$ holds for all positive natural number $n$, because otherwise every $a\in A$ would be in the range of $f$ for $a=f(f^{n-1}(a))$. Now fix such $a\in A$ and define $i:\omega\rightarrow A$ by $i(n)=f^n(a)$. This is an injection from $\omega$ to $A$ and we have $\omega\preccurlyeq A$.
 \end{customthm}
 
-\begin{customthm}{I.12.18} Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which gives rise to an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
+\begin{customthm}{I.12.18}
+  Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which gives rise to an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
 \end{customthm}
 
-\begin{customthm}{I.13.17} Skipped for now.
+\begin{customthm}{I.13.17}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.13.18} Let $\delta_0=0$, $\delta_{n+1}=\beth_{\delta_n}$ and $\gamma=\sup\{\delta_n:n\in\omega\}$. Then $\beth_\gamma=\gamma$ holds as is proved in Exercise I.11.33.
+\begin{customthm}{I.13.18}
+  Let $\delta_0=0$, $\delta_{n+1}=\beth_{\delta_n}$ and $\gamma=\sup\{\delta_n:n\in\omega\}$. Then $\beth_\gamma=\gamma$ holds as is proved in Exercise I.11.33.
 \end{customthm}
 
-\begin{customthm}{I.13.20} Skipped for now.
+\begin{customthm}{I.13.20}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.13.21} We can define an injection $i:A\rightarrow\bigcup_{n\in\omega}(K\times B)^n$ by $i(a_1v_1+\cdots+a_nv_n)=((a_1,v_1),\ldots(a_n,v_n))$. Since $\omega\leq\max(|K|,|B|)$ and $(K\times B)^n\approx\max(|K|,|B|)^n\approx\max(|K|,|B|)$ hold, we have $\bigcup_{n\in\omega}(K\times B)^n\approx\max(|K|,|B|)$ by Theorem I.12.11. Hence $|A|\leq\max(|K|,|B|)$ holds. On the other hand, $|B|\leq|A|$ is obvious from $B\subseteq A$ and so is $|K|\leq|A|$ because we can define an injection $i:K\rightarrow A$ by $i(a)=av$ for a fixed $v\in B$. Thus we have $|A|=\max(|K|,|B|)$. Now we view $\mathbb{R}$ and $\mathbb{C}$ as vector spaces over $\mathbb{Q}$ with bases $B_\mathbb{R}$ and $B_\mathbb{C}$ respectively. Then by the above, we have $|\mathbb{R}|=\max(|\mathbb{Q}|, |B_\mathbb{R}|)$. Since $|\mathbb{Q}|=\aleph_0<2^{\aleph_0}=|\mathbb{R}|$, we get $|B_\mathbb{R}|=2^{\aleph_0}$. The same argument goes for $\mathbb{C}$ and we get $|B_\mathbb{C}|=|B_\mathbb{R}|=2^{\aleph_0}$. Hence $\mathbb{R}$ and $\mathbb{C}$ have the same dimensionality as vector spaces over $Q$, which means they are isomorphic. Since isomorphisms between vector spaces are group isomorphisms as well, we can conclude that $\mathbb{R}$ and $\mathbb{C}$ are isomorphic as Abelian groups.
+\begin{customthm}{I.13.21}
+  We can define an injection $i:A\rightarrow\bigcup_{n\in\omega}(K\times B)^n$ by $i(a_1v_1+\cdots+a_nv_n)=((a_1,v_1),\ldots(a_n,v_n))$. Since $\omega\leq\max(|K|,|B|)$ and $(K\times B)^n\approx\max(|K|,|B|)^n\approx\max(|K|,|B|)$ hold, we have $\bigcup_{n\in\omega}(K\times B)^n\approx\max(|K|,|B|)$ by Theorem I.12.11. Hence $|A|\leq\max(|K|,|B|)$ holds. On the other hand, $|B|\leq|A|$ is obvious from $B\subseteq A$ and so is $|K|\leq|A|$ because we can define an injection $i:K\rightarrow A$ by $i(a)=av$ for a fixed $v\in B$. Thus we have $|A|=\max(|K|,|B|)$. Now we view $\mathbb{R}$ and $\mathbb{C}$ as vector spaces over $\mathbb{Q}$ with bases $B_\mathbb{R}$ and $B_\mathbb{C}$ respectively. Then by the above, we have $|\mathbb{R}|=\max(|\mathbb{Q}|, |B_\mathbb{R}|)$. Since $|\mathbb{Q}|=\aleph_0<2^{\aleph_0}=|\mathbb{R}|$, we get $|B_\mathbb{R}|=2^{\aleph_0}$. The same argument goes for $\mathbb{C}$ and we get $|B_\mathbb{C}|=|B_\mathbb{R}|=2^{\aleph_0}$. Hence $\mathbb{R}$ and $\mathbb{C}$ have the same dimensionality as vector spaces over $Q$, which means they are isomorphic. Since isomorphisms between vector spaces are group isomorphisms as well, we can conclude that $\mathbb{R}$ and $\mathbb{C}$ are isomorphic as Abelian groups.
 \end{customthm}
 
-\begin{customthm}{I.14.4} The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
+\begin{customthm}{I.14.4}
+  The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
 \end{customthm}
 
-\begin{customthm}{I.14.9} Let $x\in WF$,  $\beta=\rank(x)$ and $\gamma=\rank(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
-\begin{enumerate}
-\item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$. Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\rank(y)\geq\xi+1$ and $z\in y$ such that $\rank(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\rank(z)+1>\xi$. Thus $\gamma=\beta$ holds.
-\item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\rank(z)<\rank(y)<\rank(x)=\alpha+1$ holds, which means $\rank(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$. On the other hand, there exists $y\in z$ such that $\rank(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
-\end{enumerate}
+\begin{customthm}{I.14.9}
+  Let $x\in WF$,  $\beta=\rank(x)$ and $\gamma=\rank(\bigcup x)$. Note that $\gamma\leq\beta$ holds from Lemma I.14.8(4). We prove the following.
+  \begin{enumerate}
+    \item\underline{$\gamma=\beta$ if $\beta$ is a limit ordinal or 0}. If $x=0$, then $\bigcup x=\emptyset$ and it is obvious that $\gamma=\beta=0$. Now assume $\beta$ is a limit ordinal. To see $\gamma\geq\beta$, we show that $\xi<\gamma$ for all $\xi<\beta$. Let $\xi$ be an ordinal such that $\xi<\beta$. Then by Theorem I.14.6, there exists $y\in x$ such that $\rank(y)\geq\xi+1$ and $z\in y$ such that $\rank(z)\geq\xi$. Since $z\in y\in x$ holds, $z\in\bigcup x$ and we have $\gamma\geq\rank(z)+1>\xi$. Thus $\gamma=\beta$ holds.
+    \item\underline{$\gamma=\alpha$ if $\beta=\alpha+1$}. Let $\beta=\alpha+1$. If $z\in\bigcup x$ and $y$ be one such that $z\in y\in x$, then $\rank(z)<\rank(y)<\rank(x)=\alpha+1$ holds, which means $\rank(z)+1\leq\alpha$. Hence we have $\gamma\leq\alpha$. On the other hand, there exists $y\in z$ such that $\rank(y)=\alpha$. Then $y\subseteq\bigcup x$ holds and we have $\alpha\leq\gamma$ by Lemma I.14.7. Thus $\gamma=\alpha$ holds.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.14.14} Let $f:\omega\rightarrow HF$ be the one defined recursively by $f(m)=\{f(n):nEm\}$ and $g:HF\rightarrow\omega$ be the one defined recursively by $g(x)=\sum_{y\in x}2^{g(y)}$. To see $(\omega;E)\cong(HF;\in)$, we show the following.
-\begin{enumerate}
-\item\underline{$g\circ f = \mathrm{id}_\omega$}. We show this inductively. Let $m\in\omega$ and assume $g(f(n))=n$ for all $n<m$. Then we have $g(f(m))=g(\{f(n):nEm\})=\sum_{n:nEm}2^{g(f(n))}=\sum_{n:nEm}2^n=m$.
-\item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$.
-\item\underline{$nEm\leftrightarrow f(n)\in f(m)$}. This is obvious from the definition of $E$.
-\end{enumerate}
-From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
+\begin{customthm}{I.14.14}
+  Let $f:\omega\rightarrow HF$ be the one defined recursively by $f(m)=\{f(n):nEm\}$ and $g:HF\rightarrow\omega$ be the one defined recursively by $g(x)=\sum_{y\in x}2^{g(y)}$. To see $(\omega;E)\cong(HF;\in)$, we show the following.
+  \begin{enumerate}
+    \item\underline{$g\circ f = \mathrm{id}_\omega$}. We show this inductively. Let $m\in\omega$ and assume $g(f(n))=n$ for all $n<m$. Then we have $g(f(m))=g(\{f(n):nEm\})=\sum_{n:nEm}2^{g(f(n))}=\sum_{n:nEm}2^n=m$.
+    \item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$.
+    \item\underline{$nEm\leftrightarrow f(n)\in f(m)$}. This is obvious from the definition of $E$.
+  \end{enumerate}
+  From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
 \end{customthm}
 
-\begin{customthm}{I.14.15} Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\rank(y)<\rank(x)$ hold, which contradicts the minimality of $\rank(x)$. Thus $WF\subseteq K$ holds.
+\begin{customthm}{I.14.15}
+  Assume $WF\subsetneq K$ and let $x\in WF\setminus K$ be one with the lowest rank. Since $x\not\in K$, $x\subsetneq K$ holds and hence there is $y\in x\setminus K$. From Lemma I.14.4(5), $y\in WF$ and $\rank(y)<\rank(x)$ hold, which contradicts the minimality of $\rank(x)$. Thus $WF\subseteq K$ holds.
 \end{customthm}
 
-\begin{customthm}{I.14.16} We show $|R(\omega+\xi)|=\beth_\xi$ by induction. The equation holds when $\xi=0$ because we have $|R(\omega)|=\omega$ from Exercise I.14.14. When $\xi$ is a successor, let $\xi=\eta+1$ and assume $|R(\omega+\eta)|=\beth_\eta$. Then we have $|R(\omega+\xi)|=|2^{R(\omega+\eta)}|=2^{|R(\omega+\eta)|}=2^{\beth_\eta}=\beth_\xi$. Now assume $\xi$ is a limit ordinal and $|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. It is obvious that $|R(\omega+\xi)|\geq\beth_\xi=\sup\{\beth_\eta:\eta<\xi\}$ because $|R(\omega+\xi)|\geq|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. To see $|R(\omega+\xi)|\leq\beth_\xi$, we first note that $R(\omega+\xi)=\bigcup_{\zeta<\omega+\xi}R(\zeta)=\bigcup_{\eta<\xi}R(\omega+\eta)$ holds since $\omega+\xi$ is a limit ordinal as well. The last equality follows from $R(n)\subseteq R(\omega)$ for all $n<\omega$. On the other hand, $\omega+\xi\leq\beth_\xi$ and $R(\omega+\eta)\leq\beth_\xi$ hold for any $\xi\in ON$. One can easily show the first inequality by induction and the second one is obvious from our inductive hypothesis. Then by Theorem I.12.11, we get $|R(\omega+\xi)|=|\bigcup_{\eta<\xi}R(\omega+\eta)|\leq\beth_\xi$. Thus $|R(\omega+\xi)|=\beth_\xi$ holds for all ordinals $\xi$.
+\begin{customthm}{I.14.16}
+  We show $|R(\omega+\xi)|=\beth_\xi$ by induction. The equation holds when $\xi=0$ because we have $|R(\omega)|=\omega$ from Exercise I.14.14. When $\xi$ is a successor, let $\xi=\eta+1$ and assume $|R(\omega+\eta)|=\beth_\eta$. Then we have $|R(\omega+\xi)|=|2^{R(\omega+\eta)}|=2^{|R(\omega+\eta)|}=2^{\beth_\eta}=\beth_\xi$. Now assume $\xi$ is a limit ordinal and $|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. It is obvious that $|R(\omega+\xi)|\geq\beth_\xi=\sup\{\beth_\eta:\eta<\xi\}$ because $|R(\omega+\xi)|\geq|R(\omega+\eta)|=\beth_\eta$ holds for all $\eta<\xi$. To see $|R(\omega+\xi)|\leq\beth_\xi$, we first note that $R(\omega+\xi)=\bigcup_{\zeta<\omega+\xi}R(\zeta)=\bigcup_{\eta<\xi}R(\omega+\eta)$ holds since $\omega+\xi$ is a limit ordinal as well. The last equality follows from $R(n)\subseteq R(\omega)$ for all $n<\omega$. On the other hand, $\omega+\xi\leq\beth_\xi$ and $R(\omega+\eta)\leq\beth_\xi$ hold for any $\xi\in ON$. One can easily show the first inequality by induction and the second one is obvious from our inductive hypothesis. Then by Theorem I.12.11, we get $|R(\omega+\xi)|=|\bigcup_{\eta<\xi}R(\omega+\eta)|\leq\beth_\xi$. Thus $|R(\omega+\xi)|=\beth_\xi$ holds for all ordinals $\xi$.
 \end{customthm}
 
-\begin{customthm}{I.14.17} Assume $\forall x\in A\,\exists y\,\varphi(x,y)$. Let $\hat\varphi(x,\alpha)$ say that $\alpha$ is the least ordinal such that $\exists y\in R(\alpha)\,\varphi(x,y)$. Then $\forall x\in A\,\exists!\alpha\,\hat\varphi(x,\alpha)$ holds and we get $\exists\hat B\,\forall x\in A\,\exists\alpha\in\hat B\,\hat\varphi(x,\alpha)$ from Replacement. For such $\hat B$, let $B=\bigcup_{\alpha\in B\cap ON}R(\alpha)$. Then we have $\forall x\in A\,\exists y\in B\,\varphi(x,y)$.
+\begin{customthm}{I.14.17}
+  Assume $\forall x\in A\,\exists y\,\varphi(x,y)$. Let $\hat\varphi(x,\alpha)$ say that $\alpha$ is the least ordinal such that $\exists y\in R(\alpha)\,\varphi(x,y)$. Then $\forall x\in A\,\exists!\alpha\,\hat\varphi(x,\alpha)$ holds and we get $\exists\hat B\,\forall x\in A\,\exists\alpha\in\hat B\,\hat\varphi(x,\alpha)$ from Replacement. For such $\hat B$, let $B=\bigcup_{\alpha\in B\cap ON}R(\alpha)$. Then we have $\forall x\in A\,\exists y\in B\,\varphi(x,y)$.
 \end{customthm}
 
-\begin{customthm}{I.14.19} Skipped for now.
+\begin{customthm}{I.14.19}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.14.20} Skipped for now.
+\begin{customthm}{I.14.20}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.14.21} Skipped for now.
+\begin{customthm}{I.14.21}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.14.22} Skipped for now.
+\begin{customthm}{I.14.22}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.14.23} Let $\psi(y)$ be a formula such that $\forall y\,[(\forall x\in y\,\psi(x))\rightarrow\psi(y)]$. Assume $\neg\forall y\,\psi(y)$ and let $y$ be a set of least rank such that $\neg\psi(y)$. Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\rank(x)<\rank(y)$ since $x\in y$, which contradicts the minimality of $\rank(y)$.
+\begin{customthm}{I.14.23}
+  Let $\psi(y)$ be a formula such that $\forall y\,[(\forall x\in y\,\psi(x))\rightarrow\psi(y)]$. Assume $\neg\forall y\,\psi(y)$ and let $y$ be a set of least rank such that $\neg\psi(y)$. Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\rank(x)<\rank(y)$ since $x\in y$, which contradicts the minimality of $\rank(y)$.
 \end{customthm}
 
-\begin{customthm}{I.14.24} Skipped for now.
+\begin{customthm}{I.14.24}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.15.2} $\mathbb{Z}\subseteq\mathbb{Q}$ is obvious from their definitions. To see $\mathbb{Q}\subseteq HF$, we show $\rank(x)<\omega$ for all $x$. If $x\in\omega$, then $\rank(x)<\rank(\omega)=\omega$. If $x=\langle i,\langle m,n\rangle\rangle$ for some $i,m,n\in\omega$, then $\rank(x)=\max\{\rank(i),\max\{\rank(m),\rank(n)\}+2\}+2\in\omega$. (For example, we get $\rank(-2/3)=\rank(\langle 1,\langle 2,3\rangle\rangle)=7$ from this.) Hence $\mathbb{Q}\subseteq HF$ holds. $\rank(\mathbb{Z})\leq\omega$ follows from $\mathbb{Z}\subseteq HF$, and we have $\rank(\mathbb{Z})>n$ for any $n\in\omega$ since $n\in\mathbb{Z}$ and $\rank(n)=n$. Thus $\rank(\mathbb{Z})$ is equal to $\omega$ and so is $\rank(\mathbb{Q})$.
+\begin{customthm}{I.15.2}
+  $\mathbb{Z}\subseteq\mathbb{Q}$ is obvious from their definitions. To see $\mathbb{Q}\subseteq HF$, we show $\rank(x)<\omega$ for all $x$. If $x\in\omega$, then $\rank(x)<\rank(\omega)=\omega$. If $x=\langle i,\langle m,n\rangle\rangle$ for some $i,m,n\in\omega$, then $\rank(x)=\max\{\rank(i),\max\{\rank(m),\rank(n)\}+2\}+2\in\omega$. (For example, we get $\rank(-2/3)=\rank(\langle 1,\langle 2,3\rangle\rangle)=7$ from this.) Hence $\mathbb{Q}\subseteq HF$ holds. $\rank(\mathbb{Z})\leq\omega$ follows from $\mathbb{Z}\subseteq HF$, and we have $\rank(\mathbb{Z})>n$ for any $n\in\omega$ since $n\in\mathbb{Z}$ and $\rank(n)=n$. Thus $\rank(\mathbb{Z})$ is equal to $\omega$ and so is $\rank(\mathbb{Q})$.
 \end{customthm}
 
-\begin{customthm}{I.15.5} Let $x\in\mathbb{R}$. $\rank(x)\leq\omega$ holds because $\rank(q)<\omega$ holds for all $q\in x$. Now let $q\in x$ and let $n\in\omega$ be one such that $-n<q$. Then $-n\in x$ and we have $\rank(x)>\rank(-n)=\rank(\langle 1,\langle n,1\rangle\rangle)=n+4$. Since $n$ can be arbitrarily large, we have $\rank(x)\geq\omega$. Hence $\rank(x)=\omega$ for all $x\in\mathbb{R}$ and we get $\rank(\mathbb{R})=\omega+1$. For $z=\langle x,y\rangle\in\mathbb{C}$, we have $\rank(z)=\max\{\rank(x),\rank(y)\}+2=\omega+2$, which proves $\rank(\mathbb{C})=\omega+3$.
+\begin{customthm}{I.15.5}
+  Let $x\in\mathbb{R}$. $\rank(x)\leq\omega$ holds because $\rank(q)<\omega$ holds for all $q\in x$. Now let $q\in x$ and let $n\in\omega$ be one such that $-n<q$. Then $-n\in x$ and we have $\rank(x)>\rank(-n)=\rank(\langle 1,\langle n,1\rangle\rangle)=n+4$. Since $n$ can be arbitrarily large, we have $\rank(x)\geq\omega$. Hence $\rank(x)=\omega$ for all $x\in\mathbb{R}$ and we get $\rank(\mathbb{R})=\omega+1$. For $z=\langle x,y\rangle\in\mathbb{C}$, we have $\rank(z)=\max\{\rank(x),\rank(y)\}+2=\omega+2$, which proves $\rank(\mathbb{C})=\omega+3$.
 \end{customthm}
 
-\begin{customthm}{I.15.8} We prove the following.
-\begin{enumerate}
-\item\underline{$|\mathbb{R}|=2^{\aleph_0}$}. $|\mathbb{R}|\leq2^{\aleph_0}$ is clear from $\mathbb{R}\subseteq{\mathcal{P}(\mathbb{Q})}$ and $\mathcal{P}(\mathbb{Q})\approx2^\mathbb{Q}\approx2^{\aleph_0}$. However, the opposite is not straightforward from our definition of $\mathbb{R}$. One can prove it by treating $\mathbb{R}$ as the set of infinite decimals and using the diagonal argument. But we would need to prove that the set of infinite decimals is isomorphic to our $\mathbb{R}$ for that, which would be too long to write down here.
-\item\underline{$|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$}. $|C(\mathbb{R},\mathbb{R})|\geq2^{\aleph_0}$ is obvious because $\mathbb{R}\succcurlyeq2^{\aleph_0}$ and we have a constant function $c_x:\mathbb{R}\rightarrow\mathbb{R}$ for each $x\in\mathbb{R}$. To prove the opposite, we use the well-known fact from topology that a continuous function from a Hausdorff space is unique up to the restriction to a dense subspace of their domain. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, we have $C(\mathbb{R},\mathbb{R})\subseteq\mathbb{R}^\mathbb{Q}$ and $\mathbb{R}^\mathbb{Q}\approx(2^{\aleph_0})^\mathbb{Q}\approx2^{\aleph_0\times\mathbb{Q}}\approx2^{\aleph_0}$. Hence $|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$ holds.
-\item\underline{$|\mathbb{R}^\mathbb{R}|=2^{2^{\aleph_0}}$}. $\mathbb{R}^\mathbb{R}\approx (2^{\aleph_0})^\mathbb{R}\approx 2^{\aleph_0\times\mathbb{R}}\approx2^\mathbb{R}\approx2^{2^{\aleph_0}}$.
-\end{enumerate}
+\begin{customthm}{I.15.8}
+  We prove the following.
+  \begin{enumerate}
+    \item\underline{$|\mathbb{R}|=2^{\aleph_0}$}. $|\mathbb{R}|\leq2^{\aleph_0}$ is clear from $\mathbb{R}\subseteq{\mathcal{P}(\mathbb{Q})}$ and $\mathcal{P}(\mathbb{Q})\approx2^\mathbb{Q}\approx2^{\aleph_0}$. However, the opposite is not straightforward from our definition of $\mathbb{R}$. One can prove it by treating $\mathbb{R}$ as the set of infinite decimals and using the diagonal argument. But we would need to prove that the set of infinite decimals is isomorphic to our $\mathbb{R}$ for that, which would be too long to write down here.
+    \item\underline{$|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$}. $|C(\mathbb{R},\mathbb{R})|\geq2^{\aleph_0}$ is obvious because $\mathbb{R}\succcurlyeq2^{\aleph_0}$ and we have a constant function $c_x:\mathbb{R}\rightarrow\mathbb{R}$ for each $x\in\mathbb{R}$. To prove the opposite, we use the well-known fact from topology that a continuous function from a Hausdorff space is unique up to the restriction to a dense subspace of their domain. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, we have $C(\mathbb{R},\mathbb{R})\subseteq\mathbb{R}^\mathbb{Q}$ and $\mathbb{R}^\mathbb{Q}\approx(2^{\aleph_0})^\mathbb{Q}\approx2^{\aleph_0\times\mathbb{Q}}\approx2^{\aleph_0}$. Hence $|C(\mathbb{R},\mathbb{R})|=2^{\aleph_0}$ holds.
+    \item\underline{$|\mathbb{R}^\mathbb{R}|=2^{2^{\aleph_0}}$}. $\mathbb{R}^\mathbb{R}\approx (2^{\aleph_0})^\mathbb{R}\approx 2^{\aleph_0\times\mathbb{R}}\approx2^\mathbb{R}\approx2^{2^{\aleph_0}}$.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.15.9} The set $\mathcal{B}=\mathcal{B}_{\omega_1}\subseteq\mathcal{P}(\mathbb{R})$ of Borel subsets is defined recursively, where $\mathcal{B}_0$ is the set of open sets and closed sets of $\mathbb{R}$, $\mathcal{B}_{\alpha+1}$ is the family of all countable unions and intersections of sets in $\mathcal{B}_\alpha$, and $\mathcal{B}_\gamma=\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}$ for limit $\gamma$. Therefore we prove $|\mathcal{B_\alpha}|=2^{\aleph_0}$ by induction on $\alpha\leq\omega_1$ as follows.
-\begin{enumerate}
-\item\underline{$|\mathcal{B}_0|=2^{\aleph_0}$}. Let $\mathcal{O}$ be the set of open sets. $2^{\aleph_0}\leq|\mathcal{O}|$ is obvious because we have a different open interval $(x,x+1)$ for each $x\in\mathbb{R}$. To prove $|\mathcal{O}|\leq2^{\aleph_0}$, we use the fact that $\mathbb{R}$ is second-countable. Let $B=\{B_n:n\in\omega\}$ be a countable base of $\mathbb{R}$. Then we have a surjection from ${}^\omega\omega$ to $\mathcal{O}$ defined by $f\mapsto\bigcup_{n\in\omega}B_{f(n)}$. Therefore $|\mathcal{O}|\leq|{}^\omega\omega|=2^{\aleph_0}$ holds and so does $|\mathcal{O}|=2^{\aleph_0}$. On the other hand, since there is a 1-to-1 correspondence between closed sets and open sets by taking the complement, we get $\mathcal{B}_0=|2^{\aleph_0}+2^{\aleph_0}|=2^{\aleph_0}$.
-\item\underline{$|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$}.  $|\mathcal{B}_{\alpha+1}|\geq2^{\aleph_0}$ is obvious from $\mathcal{B}_{\alpha+1}\supseteq\mathcal{B}_\alpha$ and $|\mathcal{B}_\alpha|=2^{\aleph_0}$. There is a surjection from $2\times{}^\omega\mathcal{B}_{\alpha}$ to $\mathcal{B}_{\alpha+1}$ defined by $(0,f)\mapsto\bigcup_{n\in\omega}f(n)$ and $(1,f)\mapsto\bigcap_{n\in\omega}f(n)$, which proves $|\mathcal{B}_{\alpha+1}|\leq|2\times{}^\omega\mathcal{B}_{\alpha}|=|2\times2^{\aleph_0\times\omega}|=2^{\aleph_0}$. Thus $|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ holds.
-\item\underline{$|\mathcal{B}_\gamma|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$ for all $\alpha<\gamma$}. By Theorem I.12.11 and $\gamma\leq\omega_1\leq2^{\aleph_0}$, we have $|\mathcal{B}_\gamma|=|\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}|=2^{\aleph_0}$.
-\end{enumerate}
-From the above, we get $|\mathcal{B}|=2^{\aleph_0}$.
+\begin{customthm}{I.15.9}
+  The set $\mathcal{B}=\mathcal{B}_{\omega_1}\subseteq\mathcal{P}(\mathbb{R})$ of Borel subsets is defined recursively, where $\mathcal{B}_0$ is the set of open sets and closed sets of $\mathbb{R}$, $\mathcal{B}_{\alpha+1}$ is the family of all countable unions and intersections of sets in $\mathcal{B}_\alpha$, and $\mathcal{B}_\gamma=\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}$ for limit $\gamma$. Therefore we prove $|\mathcal{B_\alpha}|=2^{\aleph_0}$ by induction on $\alpha\leq\omega_1$ as follows.
+  \begin{enumerate}
+    \item\underline{$|\mathcal{B}_0|=2^{\aleph_0}$}. Let $\mathcal{O}$ be the set of open sets. $2^{\aleph_0}\leq|\mathcal{O}|$ is obvious because we have a different open interval $(x,x+1)$ for each $x\in\mathbb{R}$. To prove $|\mathcal{O}|\leq2^{\aleph_0}$, we use the fact that $\mathbb{R}$ is second-countable. Let $B=\{B_n:n\in\omega\}$ be a countable base of $\mathbb{R}$. Then we have a surjection from ${}^\omega\omega$ to $\mathcal{O}$ defined by $f\mapsto\bigcup_{n\in\omega}B_{f(n)}$. Therefore $|\mathcal{O}|\leq|{}^\omega\omega|=2^{\aleph_0}$ holds and so does $|\mathcal{O}|=2^{\aleph_0}$. On the other hand, since there is a 1-to-1 correspondence between closed sets and open sets by taking the complement, we get $\mathcal{B}_0=|2^{\aleph_0}+2^{\aleph_0}|=2^{\aleph_0}$.
+    \item\underline{$|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$}.  $|\mathcal{B}_{\alpha+1}|\geq2^{\aleph_0}$ is obvious from $\mathcal{B}_{\alpha+1}\supseteq\mathcal{B}_\alpha$ and $|\mathcal{B}_\alpha|=2^{\aleph_0}$. There is a surjection from $2\times{}^\omega\mathcal{B}_{\alpha}$ to $\mathcal{B}_{\alpha+1}$ defined by $(0,f)\mapsto\bigcup_{n\in\omega}f(n)$ and $(1,f)\mapsto\bigcap_{n\in\omega}f(n)$, which proves $|\mathcal{B}_{\alpha+1}|\leq|2\times{}^\omega\mathcal{B}_{\alpha}|=|2\times2^{\aleph_0\times\omega}|=2^{\aleph_0}$. Thus $|\mathcal{B}_{\alpha+1}|=2^{\aleph_0}$ holds.
+    \item\underline{$|\mathcal{B}_\gamma|=2^{\aleph_0}$ under $|\mathcal{B}_\alpha|=2^{\aleph_0}$ for all $\alpha<\gamma$}. By Theorem I.12.11 and $\gamma\leq\omega_1\leq2^{\aleph_0}$, we have $|\mathcal{B}_\gamma|=|\bigcup\{\mathcal{B}_\alpha:\alpha<\gamma\}|=2^{\aleph_0}$.
+  \end{enumerate}
+  From the above, we get $|\mathcal{B}|=2^{\aleph_0}$.
 
-For the set $\mathcal{L}$ of Lebesgue measurable sets, $|\mathcal{L}|\leq2^{2^{\aleph_0}}$ is obvious from $\mathcal{L}\subseteq\mathcal{P}(\mathbb{R})$. To prove $\mathcal{L}\supseteq\mathcal{P}(\mathbb{R})$, we make use of the Cantor set, which is of cardinality $2^{\aleph_0}$ and has measure $0$. Since every subset of a null set is measurable, we have at least $2^{2^{\aleph_0}}$ measurable sets. Hence $|\mathcal{L}|=2^{2^{\aleph_0}}$ holds.
+  For the set $\mathcal{L}$ of Lebesgue measurable sets, $|\mathcal{L}|\leq2^{2^{\aleph_0}}$ is obvious from $\mathcal{L}\subseteq\mathcal{P}(\mathbb{R})$. To prove $\mathcal{L}\supseteq\mathcal{P}(\mathbb{R})$, we make use of the Cantor set, which is of cardinality $2^{\aleph_0}$ and has measure $0$. Since every subset of a null set is measurable, we have at least $2^{2^{\aleph_0}}$ measurable sets. Hence $|\mathcal{L}|=2^{2^{\aleph_0}}$ holds.
 \end{customthm}
 
-\begin{customthm}{I.15.10} Skipped for now.
+\begin{customthm}{I.15.10}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.15.11} Skipped for now.
+\begin{customthm}{I.15.11}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.15.12} Skipped for now.
+\begin{customthm}{I.15.12}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.15.14} Let $x\in HF^{<\omega}$. Every $y=(n,z)\in x$ has finite rank and so does $x$. Hence we have $x\in HF$ and $HF^{<\omega}\subseteq HF$.
+\begin{customthm}{I.15.14}
+  Let $x\in HF^{<\omega}$. Every $y=(n,z)\in x$ has finite rank and so does $x$. Hence we have $x\in HF$ and $HF^{<\omega}\subseteq HF$.
 \end{customthm}
 
-\begin{customthm}{I.15.15} Let $A\subseteq\omega\setminus\{0\}$. Assume $A\cap A^{<\omega}\neq\emptyset$ and let $x\in A\cap A^{<\omega}$. Since $x\in\omega$ and $x\neq 0$, we have $0\in x$. On the other hand, since $A^{<\omega}$ is a set of functions, $x$ is a function and hence is a set of doubletons, which contradicts $0\in x$. Thus $A\cap A^{<\omega}=\emptyset$ holds.
+\begin{customthm}{I.15.15}
+  Let $A\subseteq\omega\setminus\{0\}$. Assume $A\cap A^{<\omega}\neq\emptyset$ and let $x\in A\cap A^{<\omega}$. Since $x\in\omega$ and $x\neq 0$, we have $0\in x$. On the other hand, since $A^{<\omega}$ is a set of functions, $x$ is a function and hence is a set of doubletons, which contradicts $0\in x$. Thus $A\cap A^{<\omega}=\emptyset$ holds.
 \end{customthm}
 
-\begin{customthm}{II.4.7} We prove that by induction on $|\sigma|=k$. If $k=0$, then $\sigma=()$. This is not an expression and we have $\mathrm{count}(\sigma)=0$. Hence the both side of the \textit{iff} are false, in which case the statement holds. Now assume that $k>0$ and that the statement holds for all the sequences.
+\begin{customthm}{II.4.7}
+  We prove that by induction on $|\sigma|=k$. If $k=0$, then $\sigma=()$. This is not an expression and we have $\mathrm{count}(\sigma)=0$. Hence the both side of the \textit{iff} are false, in which case the statement holds. Now assume that $k>0$ and that the statement holds for all the sequences.
 
-To prove the 'if' part, assume $\sigma$ is one with $\mathrm{count}(\sigma)=-1$ and $\mathrm{count}(\sigma\upharpoonright l)\geq0$ whenever $l<k$. Let $n=\alpha(s_0)$. Note that $\mathrm{count}(\sigma\upharpoonright1)=n-1$ holds. Since the function $\mathrm{count}()$ decreases at most 1 at a step, we have an increasing sequence $1=j_0<j_1<\ldots<j_{n-1}<j_n=k$ of integers such that each $j_i$ is the first one such that $\mathrm{count}(\sigma\upharpoonright j_i)=n-i-1$. Then each consecutive sequence $\tau_i=\sigma\upharpoonright(j_{i+1}\setminus j_i)$ satisfies $\mathrm{count}(\tau_i)=-1$ and $\mathrm{count}(\tau_i\upharpoonright l)\geq0$ whenever $l<|\tau_i|$, which turns out to be a subexpression by the inductive hypothesis. Thus $\sigma=s_0\tau_0\cdots\tau_{n-1}$ is an expression.
+  To prove the 'if' part, assume $\sigma$ is one with $\mathrm{count}(\sigma)=-1$ and $\mathrm{count}(\sigma\upharpoonright l)\geq0$ whenever $l<k$. Let $n=\alpha(s_0)$. Note that $\mathrm{count}(\sigma\upharpoonright1)=n-1$ holds. Since the function $\mathrm{count}()$ decreases at most 1 at a step, we have an increasing sequence $1=j_0<j_1<\ldots<j_{n-1}<j_n=k$ of integers such that each $j_i$ is the first one such that $\mathrm{count}(\sigma\upharpoonright j_i)=n-i-1$. Then each consecutive sequence $\tau_i=\sigma\upharpoonright(j_{i+1}\setminus j_i)$ satisfies $\mathrm{count}(\tau_i)=-1$ and $\mathrm{count}(\tau_i\upharpoonright l)\geq0$ whenever $l<|\tau_i|$, which turns out to be a subexpression by the inductive hypothesis. Thus $\sigma=s_0\tau_0\cdots\tau_{n-1}$ is an expression.
 
-To prove the 'only if' part, assume $\sigma$ is an expression and let $\sigma=s\tau_0\cdots\tau_{n-1}$. Then each $\tau_i$ is an expression shorter than $\sigma$ and we can apply the inductive hypothesis to get $\mathrm{count}(\tau_i)=-1$. Since it holds that $\mathrm{count}(\sigma)=\sum_{j<k}(\alpha(s_j)-1)=n-1+\sum_{i=0}^{n-1}\mathrm{count}(\tau_i)$, we have $\mathrm{count}(\sigma)=-1$. If $\mathrm{count}(\sigma\upharpoonright l)<0$ for some $l<k$, let $l$ be the least one. Then $\mathrm{count}(\sigma\upharpoonright m)\geq0$ holds for $m<l$ and $\mathrm{count}(l)=-1$ holds because the function $\mathrm{count}()$ decreases at most 1 at a step. Then from what we proved in the above (the 'if' part), $\sigma\upharpoonright l$ is an expression, which contradicts Lemma II.4.3. Thus $\mathrm{count}(\sigma\upharpoonright l)\geq0$ holds for all $l<k$.
+  To prove the 'only if' part, assume $\sigma$ is an expression and let $\sigma=s\tau_0\cdots\tau_{n-1}$. Then each $\tau_i$ is an expression shorter than $\sigma$ and we can apply the inductive hypothesis to get $\mathrm{count}(\tau_i)=-1$. Since it holds that $\mathrm{count}(\sigma)=\sum_{j<k}(\alpha(s_j)-1)=n-1+\sum_{i=0}^{n-1}\mathrm{count}(\tau_i)$, we have $\mathrm{count}(\sigma)=-1$. If $\mathrm{count}(\sigma\upharpoonright l)<0$ for some $l<k$, let $l$ be the least one. Then $\mathrm{count}(\sigma\upharpoonright m)\geq0$ holds for $m<l$ and $\mathrm{count}(l)=-1$ holds because the function $\mathrm{count}()$ decreases at most 1 at a step. Then from what we proved in the above (the 'if' part), $\sigma\upharpoonright l$ is an expression, which contradicts Lemma II.4.3. Thus $\mathrm{count}(\sigma\upharpoonright l)\geq0$ holds for all $l<k$.
 \end{customthm}
 
-\begin{customthm}{II.7.5} We prove that by induction on $\tau$. If $\tau=x\in\dom(\sigma)$, then $V(\tau)=\{x\}$ and it is obvious that $\val_\mathfrak{A}(\tau)[\sigma]=\sigma(x)$ only depends on $\sigma\upharpoonright V(\tau)$. If $\tau=c\in\mathcal{F}_0$, then $\val_\mathfrak{A}(\tau)[\sigma]=c_\mathfrak{A}$ holds for any assignment $\sigma$. Now, let $\tau=f\tau_1\cdots\tau_n$ and let $\sigma,\sigma'$ be assignments such that $\sigma\upharpoonright V(\tau)=\sigma'\upharpoonright V(\tau)$. For each $\tau_i$, since $V(\tau_i)\subseteq V(\tau)$ holds, we have $\val_\mathfrak{A}(\tau_i)[\sigma]=\val_\mathfrak{A}(\tau_i)[\sigma']$ by the inductive hypothesis. Thus we get $\val_\mathfrak{A}(\tau)[\sigma]=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])=\val_\mathfrak{A}(\tau)[\sigma']$.
+\begin{customthm}{II.7.5}
+  We prove that by induction on $\tau$. If $\tau=x\in\dom(\sigma)$, then $V(\tau)=\{x\}$ and it is obvious that $\val_\mathfrak{A}(\tau)[\sigma]=\sigma(x)$ only depends on $\sigma\upharpoonright V(\tau)$. If $\tau=c\in\mathcal{F}_0$, then $\val_\mathfrak{A}(\tau)[\sigma]=c_\mathfrak{A}$ holds for any assignment $\sigma$. Now, let $\tau=f\tau_1\cdots\tau_n$ and let $\sigma,\sigma'$ be assignments such that $\sigma\upharpoonright V(\tau)=\sigma'\upharpoonright V(\tau)$. For each $\tau_i$, since $V(\tau_i)\subseteq V(\tau)$ holds, we have $\val_\mathfrak{A}(\tau_i)[\sigma]=\val_\mathfrak{A}(\tau_i)[\sigma']$ by the inductive hypothesis. Thus we get $\val_\mathfrak{A}(\tau)[\sigma]=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=f_\mathfrak{A}(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])=\val_\mathfrak{A}(\tau)[\sigma']$.
 \end{customthm}
 
-\begin{customthm}{II.7.9} We prove that by induction on the number of the logical symbols of $\varphi$. If $\varphi=p\in\mathcal{P}_0$, then $V(\varphi)=\emptyset$ and $\val_\mathfrak{A}(\varphi)[\sigma]=p_\mathfrak{A}$ holds for any assignment $\sigma$. If $\varphi=p\tau_1\cdots\tau_n$ and $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$, then from Exercise II.7.5, we have $(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])$ and hence $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ holds. The case when $\varphi$ is $=\tau_1\tau_2$ is almost the same as when $\varphi=p\tau_1\cdots\tau_n$. If $\varphi=\neg\psi$, the proof is obvious from $V(\varphi)=V(\psi)$ and the inductive hypothesis. If $\varphi$ is either $\wedge\varphi_1\varphi_2$, $\vee\varphi_1\varphi_2$, $\rightarrow\varphi_1\varphi_2$ or $\leftrightarrow\varphi_1\varphi_2$, the proof is done by using $V(\varphi_1)\subseteq V(\varphi)$, $V(\varphi_2)\subseteq V(\varphi)$ and the inductive hypothesis. Now assume $\varphi=\exists y\psi$. Then $V(\varphi)=V(\psi)\setminus\{y\}$ holds. For assignments $\sigma,\sigma'$ in $A$ such that $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$, it holds that $(\sigma+(y/a))\upharpoonright V(\psi)=(\sigma'+(y/a))\upharpoonright V(\psi)$ because $(\sigma+(y/a))(x)=\sigma(x)=\sigma'(x)=(\sigma'+(y/a))(x)$ holds for all $x\in V(\varphi)\setminus\{y\}$ and $a\in A$. We also have $(\sigma+(y/a))\upharpoonright\{y\}=(\sigma'+(y/a))\upharpoonright\{y\}=a$ for all $a\in A$. Hence we get $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ from the inductive hypothesis. The same proof goes for $\varphi=\forall y\psi$.
+\begin{customthm}{II.7.9}
+  We prove that by induction on the number of the logical symbols of $\varphi$. If $\varphi=p\in\mathcal{P}_0$, then $V(\varphi)=\emptyset$ and $\val_\mathfrak{A}(\varphi)[\sigma]=p_\mathfrak{A}$ holds for any assignment $\sigma$. If $\varphi=p\tau_1\cdots\tau_n$ and $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$, then from Exercise II.7.5, we have $(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])=(\val_\mathfrak{A}(\tau_1)[\sigma'],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma'])$ and hence $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ holds. The case when $\varphi$ is $=\tau_1\tau_2$ is almost the same as when $\varphi=p\tau_1\cdots\tau_n$. If $\varphi=\neg\psi$, the proof is obvious from $V(\varphi)=V(\psi)$ and the inductive hypothesis. If $\varphi$ is either $\wedge\varphi_1\varphi_2$, $\vee\varphi_1\varphi_2$, $\rightarrow\varphi_1\varphi_2$ or $\leftrightarrow\varphi_1\varphi_2$, the proof is done by using $V(\varphi_1)\subseteq V(\varphi)$, $V(\varphi_2)\subseteq V(\varphi)$ and the inductive hypothesis. Now assume $\varphi=\exists y\psi$. Then $V(\varphi)=V(\psi)\setminus\{y\}$ holds. For assignments $\sigma,\sigma'$ in $A$ such that $\sigma\upharpoonright V(\varphi)=\sigma'\upharpoonright V(\varphi)$, it holds that $(\sigma+(y/a))\upharpoonright V(\psi)=(\sigma'+(y/a))\upharpoonright V(\psi)$ because $(\sigma+(y/a))(x)=\sigma(x)=\sigma'(x)=(\sigma'+(y/a))(x)$ holds for all $x\in V(\varphi)\setminus\{y\}$ and $a\in A$. We also have $(\sigma+(y/a))\upharpoonright\{y\}=(\sigma'+(y/a))\upharpoonright\{y\}=a$ for all $a\in A$. Hence we get $\val_\mathfrak{A}(\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma']$ from the inductive hypothesis. The same proof goes for $\varphi=\forall y\psi$.
 \end{customthm}
 
-\begin{customthm}{II.7.10} $\val_\mathfrak{A}(0<x)[2]=T$ iff $(\val_\mathfrak{A}[0](2), \val_\mathfrak{A}[x][2])\in<_\mathfrak{A}\leftrightarrow(0,2)\in\{(x,y)\in\mathbb{Q}^2:x<y\}$ holds, which is true. $\val_\mathfrak{A}(\exists y(x=y\cdot y))[2]=T$ iff $\val_\mathfrak{A}(x=y\cdot y)[\{\langle x,2\rangle\}+y/a]$ holds for some $a\in\mathbb{Q}$, which is equivalent to $\val_\mathfrak{A}(2)[\{\langle x,2\rangle,\langle y,a\rangle\}]=2=a\cdot a=\val_\mathfrak{A}(y\cdot y)[\{\langle x,2\rangle,\langle y,a\rangle\}]$ holds for some $a\in\mathbb{Q}$, which is false.
+\begin{customthm}{II.7.10}
+  $\val_\mathfrak{A}(0<x)[2]=T$ iff $(\val_\mathfrak{A}[0](2), \val_\mathfrak{A}[x][2])\in<_\mathfrak{A}\leftrightarrow(0,2)\in\{(x,y)\in\mathbb{Q}^2:x<y\}$ holds, which is true. $\val_\mathfrak{A}(\exists y(x=y\cdot y))[2]=T$ iff $\val_\mathfrak{A}(x=y\cdot y)[\{\langle x,2\rangle\}+y/a]$ holds for some $a\in\mathbb{Q}$, which is equivalent to $\val_\mathfrak{A}(2)[\{\langle x,2\rangle,\langle y,a\rangle\}]=2=a\cdot a=\val_\mathfrak{A}(y\cdot y)[\{\langle x,2\rangle,\langle y,a\rangle\}]$ holds for some $a\in\mathbb{Q}$, which is false.
 \end{customthm}
 
-\begin{customthm}{II.7.18} Let $\mathcal{L}=\mathcal{P}_0$ be a lexicon for a propositional logic. We identify each function $f:\mathcal{P}_0\rightarrow2$ with a structure $\mathfrak{A}=(1,f)$ for $\mathcal{L}$. That is, $\mathfrak{A}$ is a structure whose underlying set is $1=\{\emptyset\}$ and whose semantic entities are determined by $p_\mathfrak{A}=f(p)$ for each $p\in\mathcal{P}_0$. Note that any structure $\mathfrak{A}'$ for $\mathcal{L}$ is equivalent to a structure $\mathfrak{A}\in2^{\mathcal{P}_0}$ such that $p_\mathfrak{A}=p_{\mathfrak{A}'}$ for each $p\in\mathcal{P}_0$ as long as we only deal with truth values of formulas.
+\begin{customthm}{II.7.18}
+  Let $\mathcal{L}=\mathcal{P}_0$ be a lexicon for a propositional logic. We identify each function $f:\mathcal{P}_0\rightarrow2$ with a structure $\mathfrak{A}=(1,f)$ for $\mathcal{L}$. That is, $\mathfrak{A}$ is a structure whose underlying set is $1=\{\emptyset\}$ and whose semantic entities are determined by $p_\mathfrak{A}=f(p)$ for each $p\in\mathcal{P}_0$. Note that any structure $\mathfrak{A}'$ for $\mathcal{L}$ is equivalent to a structure $\mathfrak{A}\in2^{\mathcal{P}_0}$ such that $p_\mathfrak{A}=p_{\mathfrak{A}'}$ for each $p\in\mathcal{P}_0$ as long as we only deal with truth values of formulas.
 
-Let $\Sigma$ be a set of variable-free, quantifier-free and $=$-free sentences in $\mathcal{L}$. For each formula $\varphi\in\Sigma$, $F_\varphi=\{\mathfrak{A}\in2^{\mathcal{P}_0}:\mathfrak{A}\models\varphi\}$ is a closed set. This is because we can map every truth table $A\in2^{V(\varphi)}$ to a closed set of structures $E_A=A\times2^{\mathcal{P}_0\setminus V(\varphi)}$ and we can represent $F_\varphi$ as a finite union of closed sets $F_\varphi=\bigcup\{E_A:\varphi\text{ is true under }A\in2^{V(\varphi)}\}$ since $V(\varphi)$ is finite. Now assume every finite subset of $\Sigma$ is semantically consistent. This is equivalent to saying that every finite subset of $\mathcal{F}=\{F_\varphi:\varphi\in\Sigma\}$ has a non-empty intersection. Then by the compactness of $2^{\mathcal{P}_0}$, $\bigcap\mathcal{F}$ is non-empty, which is equivalent to the statement that the whole $\Sigma$ is semantically consistent.
+  Let $\Sigma$ be a set of variable-free, quantifier-free and $=$-free sentences in $\mathcal{L}$. For each formula $\varphi\in\Sigma$, $F_\varphi=\{\mathfrak{A}\in2^{\mathcal{P}_0}:\mathfrak{A}\models\varphi\}$ is a closed set. This is because we can map every truth table $A\in2^{V(\varphi)}$ to a closed set of structures $E_A=A\times2^{\mathcal{P}_0\setminus V(\varphi)}$ and we can represent $F_\varphi$ as a finite union of closed sets $F_\varphi=\bigcup\{E_A:\varphi\text{ is true under }A\in2^{V(\varphi)}\}$ since $V(\varphi)$ is finite. Now assume every finite subset of $\Sigma$ is semantically consistent. This is equivalent to saying that every finite subset of $\mathcal{F}=\{F_\varphi:\varphi\in\Sigma\}$ has a non-empty intersection. Then by the compactness of $2^{\mathcal{P}_0}$, $\bigcap\mathcal{F}$ is non-empty, which is equivalent to the statement that the whole $\Sigma$ is semantically consistent.
 \end{customthm}
 
-\begin{customthm}{II.7.19} Consider a language $\mathcal{L}=\{p_a^j:a\in A,j<4\}$ and 2 sets of sentences $\Sigma_1=\{\neg(p_a^j\wedge p_b^j):a\neq b,aRb,j<4\}$ and $\Sigma_2=\{(p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge p_a^3):a\in A\}$ over $\mathcal{L}$. $\neg(p_a^j\wedge p_b^j)\in\Sigma_1$ says that the 2 connected nodes $a,b$ are given different colors and each sentence in $\Sigma_2$ says the corresponding node is given exactly 1 color. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2$ and $A'\subseteq A$ be the set of nodes that appear in $\Sigma'$. Since $A'$ is finite, $A'$ is four-colorable by the assumption and hence $\Sigma'$ is semantically consistent. Then by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which is equivalent to the four-colorability of $A$.
+\begin{customthm}{II.7.19}
+  Consider a language $\mathcal{L}=\{p_a^j:a\in A,j<4\}$ and 2 sets of sentences $\Sigma_1=\{\neg(p_a^j\wedge p_b^j):a\neq b,aRb,j<4\}$ and $\Sigma_2=\{(p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge p_a^1\wedge\neg p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge p_a^2\wedge\neg p_a^3)\vee(\neg p_a^0\wedge\neg p_a^1\wedge\neg p_a^2\wedge p_a^3):a\in A\}$ over $\mathcal{L}$. $\neg(p_a^j\wedge p_b^j)\in\Sigma_1$ says that the 2 connected nodes $a,b$ are given different colors and each sentence in $\Sigma_2$ says the corresponding node is given exactly 1 color. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2$ and $A'\subseteq A$ be the set of nodes that appear in $\Sigma'$. Since $A'$ is finite, $A'$ is four-colorable by the assumption and hence $\Sigma'$ is semantically consistent. Then by the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which is equivalent to the four-colorability of $A$.
 \end{customthm}
 
-\begin{customthm}{II.7.20} Let $A$ be a set. Consider a language $\mathcal{L}=\{p_{a,b}:a,b\in A\}$ and 3 sets of sentences $\Sigma_1=\{\neg p_{a,a}:a\in A\}$, $\Sigma_2=\{p_{a,b}\wedge p_{b,c}\rightarrow p_{a,c}:a,b,c\in A\}$ and  $\Sigma_3=\{p_{a,b}\vee p_{b,a}:a,b\in A,a\neq b\}$ over $\mathcal{L}$. They correspond to irreflexivity, transitivity and trichotomy respectively. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2\cup\Sigma_3$ and $A'\subseteq A$ be the set of elements that appear in $\Sigma'$. Since $A'$ is finite, $A'$ can be totally ordered by using an injection from $A'$ to some natural number. Therefore $\Sigma'$ is semantically consistent. By the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which means $A$ can be totally ordered.
+\begin{customthm}{II.7.20}
+  Let $A$ be a set. Consider a language $\mathcal{L}=\{p_{a,b}:a,b\in A\}$ and 3 sets of sentences $\Sigma_1=\{\neg p_{a,a}:a\in A\}$, $\Sigma_2=\{p_{a,b}\wedge p_{b,c}\rightarrow p_{a,c}:a,b,c\in A\}$ and  $\Sigma_3=\{p_{a,b}\vee p_{b,a}:a,b\in A,a\neq b\}$ over $\mathcal{L}$. They correspond to irreflexivity, transitivity and trichotomy respectively. Let $\Sigma'$ be a finite subset of $\Sigma=\Sigma_1\cup\Sigma_2\cup\Sigma_3$ and $A'\subseteq A$ be the set of elements that appear in $\Sigma'$. Since $A'$ is finite, $A'$ can be totally ordered by using an injection from $A'$ to some natural number. Therefore $\Sigma'$ is semantically consistent. By the Propositional Compactness Theorem, the whole $\Sigma$ is satisfiable, which means $A$ can be totally ordered.
 \end{customthm}
 
-\begin{customthm}{II.7.21} Let $\psi_n(y)$ be a formula over $\mathcal{L}=\{<\}$ defined recursively by $\psi_0(y)=\psi_1(y)=\exists x\exists y(x=y)$ and $\psi_n(y)=\exists x(\psi_{n-1}(x)\wedge x<y)$ for $n\geq2$. For $n\geq2$, $\psi_n(y)$ says there are at least $n-1$ elements below $y$. Therefore, for each $n\geq2$, $\varphi_n=\exists y\psi_n(y)$ says there are at least $n$ elements. This is what we want. Note that for $n\leq1$, $\varphi_n$ is true under any structure $\mathfrak{A}=(A,<)$ so we can say $\mathfrak{A}\models\varphi_n$ iff $|A|\geq n$, because $|A|\geq 1$ always holds too.
+\begin{customthm}{II.7.21}
+  Let $\psi_n(y)$ be a formula over $\mathcal{L}=\{<\}$ defined recursively by $\psi_0(y)=\psi_1(y)=\exists x\exists y(x=y)$ and $\psi_n(y)=\exists x(\psi_{n-1}(x)\wedge x<y)$ for $n\geq2$. For $n\geq2$, $\psi_n(y)$ says there are at least $n-1$ elements below $y$. Therefore, for each $n\geq2$, $\varphi_n=\exists y\psi_n(y)$ says there are at least $n$ elements. This is what we want. Note that for $n\leq1$, $\varphi_n$ is true under any structure $\mathfrak{A}=(A,<)$ so we can say $\mathfrak{A}\models\varphi_n$ iff $|A|\geq n$, because $|A|\geq 1$ always holds too.
 \end{customthm}
 
-\begin{customthm}{II.8.5} Let $\tau_1,\tau_2$ be terms and $S$ be the set of symbols that appear in at least one of $\tau_1,\tau_2$. Since $S$ is a finite set, we have an injection $i:S\rightarrow\omega$. We fix such an $i$ and define a structure $\mathfrak{A}=(HF,\mathcal{I})$ where $\mathcal{I}(f)(x_1,\ldots,x_n)=(i(f),x_1,\ldots,x_n)$, and also define an assignment $\sigma$ by $\sigma(x)=i(x)$. Then we can show that $\val_\mathfrak{A}(\tau_1)[\sigma]=\val_\mathfrak{A}(\tau_2)[\sigma]$ implies $\tau_1=\tau_2$ by induction on the depth of $\tau_1$. Here the depth $d$ is recursively defined as $d(x)=0$ when $x\in VAR$, $d(c)=0$ when $c$ is a constant symbol, and $d(f\tau_1,\ldots,\tau_n)=1+\max(d(\tau_1),\ldots,d(\tau_n))$.
+\begin{customthm}{II.8.5}
+  Let $\tau_1,\tau_2$ be terms and $S$ be the set of symbols that appear in at least one of $\tau_1,\tau_2$. Since $S$ is a finite set, we have an injection $i:S\rightarrow\omega$. We fix such an $i$ and define a structure $\mathfrak{A}=(HF,\mathcal{I})$ where $\mathcal{I}(f)(x_1,\ldots,x_n)=(i(f),x_1,\ldots,x_n)$, and also define an assignment $\sigma$ by $\sigma(x)=i(x)$. Then we can show that $\val_\mathfrak{A}(\tau_1)[\sigma]=\val_\mathfrak{A}(\tau_2)[\sigma]$ implies $\tau_1=\tau_2$ by induction on the depth of $\tau_1$. Here the depth $d$ is recursively defined as $d(x)=0$ when $x\in VAR$, $d(c)=0$ when $c$ is a constant symbol, and $d(f\tau_1,\ldots,\tau_n)=1+\max(d(\tau_1),\ldots,d(\tau_n))$.
 \end{customthm}
 
-\begin{customthm}{II.8.20} Assume $\Sigma$ is complete. Then there exists a structure $\mathfrak{A}=(A,\mathcal{I})$ for $\mathcal{L}$ such that $\mathfrak{A}\models\Sigma$. Let $p\in\mathcal{L}'\setminus\mathcal{L}$ be a predicate of arity $n$ and we define structures $\mathfrak{A}_1,\mathfrak{A}_2$ for $\mathcal{L}'$ by adding $p_{\mathfrak{A}_1}=\emptyset$ and $p_{\mathfrak{A}_2}=A^{n}$ to $\mathfrak{A}$ respectively. Then we have $\mathfrak{A}_1\models\varphi$ and $\mathfrak{A}_2\models\neg\varphi$ for $\varphi=\exists x_1,\ldots,x_n\,p(x_1,\ldots,x_n)$, which contradicts $\Sigma$'s completeness. Hence $\Sigma$ cannot be complete.
+\begin{customthm}{II.8.20}
+  Assume $\Sigma$ is complete. Then there exists a structure $\mathfrak{A}=(A,\mathcal{I})$ for $\mathcal{L}$ such that $\mathfrak{A}\models\Sigma$. Let $p\in\mathcal{L}'\setminus\mathcal{L}$ be a predicate of arity $n$ and we define structures $\mathfrak{A}_1,\mathfrak{A}_2$ for $\mathcal{L}'$ by adding $p_{\mathfrak{A}_1}=\emptyset$ and $p_{\mathfrak{A}_2}=A^{n}$ to $\mathfrak{A}$ respectively. Then we have $\mathfrak{A}_1\models\varphi$ and $\mathfrak{A}_2\models\neg\varphi$ for $\varphi=\exists x_1,\ldots,x_n\,p(x_1,\ldots,x_n)$, which contradicts $\Sigma$'s completeness. Hence $\Sigma$ cannot be complete.
 \end{customthm}
 
-\begin{customthm}{II.8.25} A $w$ in $\varphi(w)$ is either a bound $w$ in $\varphi(z)$ or one that originally is a $z$ in $\varphi(z)$ which ends up being substituted by $w$. Therefore a free occurrence of $w$ in $\varphi(w)$ must belong to the second case and it cannot be inside the scope of $\forall z$ nor $\exists z$ because the $z$ that the $w$ would originate from would be bound in $\varphi(z)$, which would not be replaced. Hence $z$ is free for $w$ in $\varphi(w)$. It is also clear that there is no free occurrence of $z$ in $\varphi(w)$ because all free $z$'s are supposed to be replaced by the substitution.
+\begin{customthm}{II.8.25}
+  A $w$ in $\varphi(w)$ is either a bound $w$ in $\varphi(z)$ or one that originally is a $z$ in $\varphi(z)$ which ends up being substituted by $w$. Therefore a free occurrence of $w$ in $\varphi(w)$ must belong to the second case and it cannot be inside the scope of $\forall z$ nor $\exists z$ because the $z$ that the $w$ would originate from would be bound in $\varphi(z)$, which would not be replaced. Hence $z$ is free for $w$ in $\varphi(w)$. It is also clear that there is no free occurrence of $z$ in $\varphi(w)$ because all free $z$'s are supposed to be replaced by the substitution.
 
-We show that $\forall z\varphi(z)\rightarrow\forall w\varphi(w)$ is logically valid. Let $\mathfrak{A}=(A,\mathcal{I})$ be a structure for $\mathcal{L}$ and $\sigma$ be an assignment for $\varphi$. $\mathfrak{A}\models(\forall z\varphi(z)\rightarrow\forall w\varphi(w))[\sigma]$ is equivalent to having $\mathfrak{A}\not\models(\forall z\varphi(z))[\sigma]$ or $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$, so we assume $\mathfrak{A}\models(\forall z\varphi(z))[\sigma]$ and prove $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$. Since $w$ does not occur free in $\varphi(z)$, it does not in $\forall z\varphi(z)$ either. Hence by Exercise II.7.9, we have $\mathfrak{A}\models(\forall z\varphi(z))[\sigma+(w/a)]$ for any $a\in A$. In addition, $\forall z\varphi(z)\rightarrow\varphi(w)$ is logically valid from Corollary II.8.12 and we get $\mathfrak{A}\models\varphi(w)[\sigma+(w/a)]$. Since $a$ is arbitrary, $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$ has been proved.
+  We show that $\forall z\varphi(z)\rightarrow\forall w\varphi(w)$ is logically valid. Let $\mathfrak{A}=(A,\mathcal{I})$ be a structure for $\mathcal{L}$ and $\sigma$ be an assignment for $\varphi$. $\mathfrak{A}\models(\forall z\varphi(z)\rightarrow\forall w\varphi(w))[\sigma]$ is equivalent to having $\mathfrak{A}\not\models(\forall z\varphi(z))[\sigma]$ or $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$, so we assume $\mathfrak{A}\models(\forall z\varphi(z))[\sigma]$ and prove $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$. Since $w$ does not occur free in $\varphi(z)$, it does not in $\forall z\varphi(z)$ either. Hence by Exercise II.7.9, we have $\mathfrak{A}\models(\forall z\varphi(z))[\sigma+(w/a)]$ for any $a\in A$. In addition, $\forall z\varphi(z)\rightarrow\varphi(w)$ is logically valid from Corollary II.8.12 and we get $\mathfrak{A}\models\varphi(w)[\sigma+(w/a)]$. Since $a$ is arbitrary, $\mathfrak{A}\models(\forall w\varphi(w))[\sigma]$ has been proved.
 
-$\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well because what is assumed for $z,w,\varphi(w)$ is exactly what we assume for $w,z,\varphi(z)$ respectively, which is proved in the first paragraph. Hence $\forall w\varphi(w)$ and $\forall z\varphi(z)$ are logically equivalent. The logical equivalence of $\exists z\varphi(z)$ and $\exists w\varphi(w)$ can be shown likewise.
+  $\forall w\varphi(w)\rightarrow\forall z\varphi(z)$ is logically valid as well because what is assumed for $z,w,\varphi(w)$ is exactly what we assume for $w,z,\varphi(z)$ respectively, which is proved in the first paragraph. Hence $\forall w\varphi(w)$ and $\forall z\varphi(z)$ are logically equivalent. The logical equivalence of $\exists z\varphi(z)$ and $\exists w\varphi(w)$ can be shown likewise.
 \end{customthm}
 
-\begin{customthm}{II.8.26} We show that by induction on $\varphi$. The basis is trivial because $\varphi'$ will be syntactically the same as $\varphi$ since there will be no bound occurrence of $z$. For the step cases, let $\varphi_1',\varphi_2'$ be formulas which result from replacing all bound occurrences of $z$ in $\varphi_1,\varphi_2$ by $w$, respectively, and assume that $\varphi_1\leftrightarrow\varphi_1'$ and $\varphi_2\leftrightarrow\varphi_2'$ hold. Then for $\varphi=\varphi_1\wedge\varphi_2$, we have $\varphi'=(\varphi_1\wedge\varphi_2)'=\varphi_1'\wedge\varphi_2'\leftrightarrow\varphi_1\wedge\varphi_2=\varphi$. The cases when $\varphi=\neg\varphi_1$, $\varphi=\varphi_1\vee\varphi_2$, $\varphi=\varphi_1\rightarrow\varphi_2$ or $\varphi=\varphi_1\leftrightarrow\varphi_2$ can be proved similarly. If $\varphi=\forall z\varphi_1(z)$, it holds that $\varphi=\forall w\varphi_1'(w)\leftrightarrow\forall z\varphi_1'(z)\leftrightarrow\forall z\varphi_1(z)=\varphi$, where the first equivalence comes from Exercise II.8.25 and the second one is clear from the inductive hypothesis. The case when $\varphi=\exists z\varphi_1(z)$ can be proved similarly. Thus $\varphi$ and $\varphi'$ are logically equivalent.
+\begin{customthm}{II.8.26}
+  We show that by induction on $\varphi$. The basis is trivial because $\varphi'$ will be syntactically the same as $\varphi$ since there will be no bound occurrence of $z$. For the step cases, let $\varphi_1',\varphi_2'$ be formulas which result from replacing all bound occurrences of $z$ in $\varphi_1,\varphi_2$ by $w$, respectively, and assume that $\varphi_1\leftrightarrow\varphi_1'$ and $\varphi_2\leftrightarrow\varphi_2'$ hold. Then for $\varphi=\varphi_1\wedge\varphi_2$, we have $\varphi'=(\varphi_1\wedge\varphi_2)'=\varphi_1'\wedge\varphi_2'\leftrightarrow\varphi_1\wedge\varphi_2=\varphi$. The cases when $\varphi=\neg\varphi_1$, $\varphi=\varphi_1\vee\varphi_2$, $\varphi=\varphi_1\rightarrow\varphi_2$ or $\varphi=\varphi_1\leftrightarrow\varphi_2$ can be proved similarly. If $\varphi=\forall z\varphi_1(z)$, it holds that $\varphi=\forall w\varphi_1'(w)\leftrightarrow\forall z\varphi_1'(z)\leftrightarrow\forall z\varphi_1(z)=\varphi$, where the first equivalence comes from Exercise II.8.25 and the second one is clear from the inductive hypothesis. The case when $\varphi=\exists z\varphi_1(z)$ can be proved similarly. Thus $\varphi$ and $\varphi'$ are logically equivalent.
 \end{customthm}
 
-\begin{customthm}{II.9.3} Let $\mathcal{L}$ be a language. Let $\varphi$ be a formula of $\mathcal{L}$ for which we can consider a truth assignment. That is, $\varphi$ is a formula constructed recursively from basic formulas by applying $\neg$, $\wedge$, $\vee$, $\rightarrow$ or $\leftrightarrow$. Let $\mathfrak{A}$ be a structure for $\mathcal{L}$ and let $\sigma$ be an assignment for $\varphi$. We define a truth assignment $v_{\mathfrak{A};\sigma}$ by $v_{\mathfrak{A};\sigma}(\psi)=\val_\mathfrak{A}(\psi)[\sigma]$ for a basic formula $\psi$. Since Definition II.9.2 is consistent with the definition of $\val$, we can show that $\overline{v_{\mathfrak{A};\sigma}}(\varphi)=\val_\mathfrak{A}(\varphi)[\sigma]$ by induction. Now assume that $\varphi$ is a propositional tautology. Then $\overline{v_{\mathfrak{A};\sigma}}(\varphi)=T$ holds and so does $\val_\mathfrak{A}(\varphi)[\sigma]=T$. Since $\mathfrak{A}$ and $\sigma$ are arbitrary, $\varphi$ turns out to be logically valid.
+\begin{customthm}{II.9.3}
+  Let $\mathcal{L}$ be a language. Let $\varphi$ be a formula of $\mathcal{L}$ for which we can consider a truth assignment. That is, $\varphi$ is a formula constructed recursively from basic formulas by applying $\neg$, $\wedge$, $\vee$, $\rightarrow$ or $\leftrightarrow$. Let $\mathfrak{A}$ be a structure for $\mathcal{L}$ and let $\sigma$ be an assignment for $\varphi$. We define a truth assignment $v_{\mathfrak{A};\sigma}$ by $v_{\mathfrak{A};\sigma}(\psi)=\val_\mathfrak{A}(\psi)[\sigma]$ for a basic formula $\psi$. Since Definition II.9.2 is consistent with the definition of $\val$, we can show that $\overline{v_{\mathfrak{A};\sigma}}(\varphi)=\val_\mathfrak{A}(\varphi)[\sigma]$ by induction. Now assume that $\varphi$ is a propositional tautology. Then $\overline{v_{\mathfrak{A};\sigma}}(\varphi)=T$ holds and so does $\val_\mathfrak{A}(\varphi)[\sigma]=T$. Since $\mathfrak{A}$ and $\sigma$ are arbitrary, $\varphi$ turns out to be logically valid.
 \end{customthm}
 
-\begin{customthm}{II.10.2} The validity of the universal closure of a formula is equivalent to the validity of that formula. Therefore, for each formula $\varphi$ of the 11 axioms, we fix an arbitrary structure $\mathfrak{A}=(A,\mathcal{I})$ and an arbitrary assignment $\sigma$ for $\varphi$ to show $\mathfrak{A}\models\varphi[\sigma]$.
-\begin{enumerate}
-\item Already done in Exercise II.9.3.
-\item Since $\val_\mathfrak{A}(\varphi)[\sigma]$ only depends on $\sigma\upharpoonright V(\varphi)$ (see Exercise II.7.9), which does not contain $x$, we have $\val_\mathfrak{A}(\forall x\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma]$.
-\item Assume $\mathfrak{A}\models(\forall x\varphi)[\sigma]$, $\mathfrak{A}\models(\forall x(\varphi\rightarrow\psi))[\sigma]$ and let $a\in A$. From the first assumption, we have $\mathfrak{A}\models\varphi[\sigma+(x/a)]$. From the second assumption, we can say that $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ implies $\mathfrak{A}\models\psi[\sigma+(x/a)]$. Thus we have $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for an arbitrary $a\in A$, which proves $\mathfrak{A}\models(\forall x\psi)[\sigma]$.
-\item See Corollary II.8.12.
-\item See Corollary II.8.12.
-\item $\mathfrak{A}\models(\forall x\neg\varphi)[\sigma]$ iff $\mathfrak{A}\models(\neg\varphi)[\sigma+(x/a)]$ for all $a\in A$, iff $\mathfrak{A}\not\models\varphi[\sigma+(x/a)]$ for all $a\in A$, iff not $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for any $a\in A$, iff not ($\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for some $a\in A$), iff not ($\mathfrak{A}\models(\exists x\varphi)[\sigma]$), iff $\mathfrak{A}\models(\neg\exists x\varphi)[\sigma]$.
-\item Obvious from the reflexivity of '$=$'.
-\item Obvious from the symmetry of '$=$'.
-\item Obvious from the transitivity of '$=$'.
-\item Assume $\sigma(x_i)=\sigma(y_i)$ for each $i=1,\ldots,n$. Then we have $\val_\mathfrak{A}(f(x_1,\ldots,x_n))[\sigma]=f_\mathfrak{A}(\sigma(x_1),\ldots,\sigma(x_n))=f_\mathfrak{A}(\sigma(y_1),\ldots,\sigma(y_n))=\val_\mathfrak{A}(f(y_1,\ldots,y_n))[\sigma]$.
-\item Almost the same as 10.
-\end{enumerate}
+\begin{customthm}{II.10.2}
+  The validity of the universal closure of a formula is equivalent to the validity of that formula. Therefore, for each formula $\varphi$ of the 11 axioms, we fix an arbitrary structure $\mathfrak{A}=(A,\mathcal{I})$ and an arbitrary assignment $\sigma$ for $\varphi$ to show $\mathfrak{A}\models\varphi[\sigma]$.
+  \begin{enumerate}
+    \item Already done in Exercise II.9.3.
+    \item Since $\val_\mathfrak{A}(\varphi)[\sigma]$ only depends on $\sigma\upharpoonright V(\varphi)$ (see Exercise II.7.9), which does not contain $x$, we have $\val_\mathfrak{A}(\forall x\varphi)[\sigma]=\val_\mathfrak{A}(\varphi)[\sigma]$.
+    \item Assume $\mathfrak{A}\models(\forall x\varphi)[\sigma]$, $\mathfrak{A}\models(\forall x(\varphi\rightarrow\psi))[\sigma]$ and let $a\in A$. From the first assumption, we have $\mathfrak{A}\models\varphi[\sigma+(x/a)]$. From the second assumption, we can say that $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ implies $\mathfrak{A}\models\psi[\sigma+(x/a)]$. Thus we have $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for an arbitrary $a\in A$, which proves $\mathfrak{A}\models(\forall x\psi)[\sigma]$.
+    \item See Corollary II.8.12.
+    \item See Corollary II.8.12.
+    \item $\mathfrak{A}\models(\forall x\neg\varphi)[\sigma]$ iff $\mathfrak{A}\models(\neg\varphi)[\sigma+(x/a)]$ for all $a\in A$, iff $\mathfrak{A}\not\models\varphi[\sigma+(x/a)]$ for all $a\in A$, iff not $\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for any $a\in A$, iff not ($\mathfrak{A}\models\varphi[\sigma+(x/a)]$ for some $a\in A$), iff not ($\mathfrak{A}\models(\exists x\varphi)[\sigma]$), iff $\mathfrak{A}\models(\neg\exists x\varphi)[\sigma]$.
+    \item Obvious from the reflexivity of '$=$'.
+    \item Obvious from the symmetry of '$=$'.
+    \item Obvious from the transitivity of '$=$'.
+    \item Assume $\sigma(x_i)=\sigma(y_i)$ for each $i=1,\ldots,n$. Then we have $\val_\mathfrak{A}(f(x_1,\ldots,x_n))[\sigma]=f_\mathfrak{A}(\sigma(x_1),\ldots,\sigma(x_n))=f_\mathfrak{A}(\sigma(y_1),\ldots,\sigma(y_n))=\val_\mathfrak{A}(f(y_1,\ldots,y_n))[\sigma]$.
+    \item Almost the same as 10.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{II.10.6} Below is the proof.
-\begin{center}
-\begin{tabular}{lll}
-  0. & $\forall x(x=x\rightarrow\exists x(x=x))$ & type 5 axiom \\
-  1. & $\forall x(x=x\rightarrow\exists x(x=x))$ & \\
-  & $\rightarrow(\forall x(x=x)\rightarrow\forall x\exists x(x=x))$ & type 3 axiom \\
-  2. & $\forall x(x=x)\rightarrow\forall x\exists x(x=x)$ & 0, 1, modus ponens \\
-  3. & $\forall x(x=x)$ & type 7 axiom \\
-  4. & $\forall x\exists x(x=x)$ & 3, 2, modus ponens \\
-  5. & $\forall x\exists x(x=x)\rightarrow\exists x(x=x)$ & type 4 axiom \\
-  6. & $\exists x(x=x)$ & 4, 5, modus ponens
-\end{tabular}
-\end{center}
+\begin{customthm}{II.10.6}
+  Below is the proof.
+  \begin{center}
+    \begin{tabular}{lll}
+      0. & $\forall x(x=x\rightarrow\exists x(x=x))$ & type 5 axiom \\
+      1. & $\forall x(x=x\rightarrow\exists x(x=x))$ & \\
+      & $\rightarrow(\forall x(x=x)\rightarrow\forall x\exists x(x=x))$ & type 3 axiom \\
+      2. & $\forall x(x=x)\rightarrow\forall x\exists x(x=x)$ & 0, 1, modus ponens \\
+      3. & $\forall x(x=x)$ & type 7 axiom \\
+      4. & $\forall x\exists x(x=x)$ & 3, 2, modus ponens \\
+      5. & $\forall x\exists x(x=x)\rightarrow\exists x(x=x)$ & type 4 axiom \\
+      6. & $\exists x(x=x)$ & 4, 5, modus ponens
+    \end{tabular}
+  \end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.10} Below is the proof.
-\begin{center}
-\begin{tabular}{lll}
-  1. & $\emptyset\vdash_\mathcal{L}\forall x\neg\neg\psi(x)\leftrightarrow\neg\exists x\neg\psi(x)$ & type 6 axiom \\
-  2. & $\psi(c)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & tautology \\
-  3. & $\forall x\psi(x)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & 2, UI \\
-  4. & $\forall x\psi(x)\vdash_\mathcal{L}\forall x\neg\neg\psi(x)$ & 3, UG \\
-  5. & $\emptyset\vdash_\mathcal{L}\forall x\psi(x)\rightarrow\forall x\neg\neg\psi(x)$ & 4, Deduction Theorem \\
-  6. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\rightarrow\neg\forall x\psi(x)$ & 1, 5, tautology \\
-  7. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\leftrightarrow\neg\forall x\psi(x)$ & Example II.11.9, tautology
-\end{tabular}
-\end{center}
+\begin{customthm}{II.11.10}
+  Below is the proof.
+  \begin{center}
+    \begin{tabular}{lll}
+      1. & $\emptyset\vdash_\mathcal{L}\forall x\neg\neg\psi(x)\leftrightarrow\neg\exists x\neg\psi(x)$ & type 6 axiom \\
+      2. & $\psi(c)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & tautology \\
+      3. & $\forall x\psi(x)\vdash_{\mathcal{L}'}\neg\neg\psi(c)$ & 2, UI \\
+      4. & $\forall x\psi(x)\vdash_\mathcal{L}\forall x\neg\neg\psi(x)$ & 3, UG \\
+      5. & $\emptyset\vdash_\mathcal{L}\forall x\psi(x)\rightarrow\forall x\neg\neg\psi(x)$ & 4, Deduction Theorem \\
+      6. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\rightarrow\neg\forall x\psi(x)$ & 1, 5, tautology \\
+      7. & $\emptyset\vdash_\mathcal{L}\exists x\neg\psi(x)\leftrightarrow\neg\forall x\psi(x)$ & Example II.11.9, tautology
+    \end{tabular}
+  \end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.11} Below is the proof. Here $GP=\{\gamma_1,\gamma_2\}$, $\gamma_1=\forall xyz[x\cdot yz=xy\cdot z]$ and $\gamma_2=\exists u[\forall x[xu=ux=x]\wedge\forall x\exists y[xy=yx=u]]$ as defined in the textbook.
-\begin{center}
-\begin{tabularx}{\textwidth}{lX}
-  0. & $\{\gamma_1,\forall x[xe=ex=x],ad=da=e,ab=ac\}\vdash_{\mathcal{L}'''}$ \\
-  & $b=eb=da\cdot b=d\cdot ab=d\cdot ac=da\cdot c=ec=c$ \hfill UI, tautology, type 10 axiom \\
-  1. & $\{\gamma_1,\forall x[xe=ex=x],\exists y[ay=ya=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \hfill 0, EI, tautology \\
-  2. & $\{\gamma_1,\forall x[xe=ex=x],\forall x\exists y[xy=yx=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \\
-  & \hfill 1, Deduction Theorem, type 4 axiom, tautology \\
-  3. & $GP\cup\{ab=ac\}\vdash_{\mathcal{L}'}b=c$ \hfill 2, Deduction Theorem, tautology \\
-  4. & $GP\vdash_\mathcal{L}\forall xyz[xy=xz\rightarrow y=z]$ \hfill 3, Deduction Theorem, UG
-\end{tabularx}
-\end{center}
+\begin{customthm}{II.11.11}
+  Below is the proof. Here $GP=\{\gamma_1,\gamma_2\}$, $\gamma_1=\forall xyz[x\cdot yz=xy\cdot z]$ and $\gamma_2=\exists u[\forall x[xu=ux=x]\wedge\forall x\exists y[xy=yx=u]]$ as defined in the textbook.
+  \begin{center}
+    \begin{tabularx}{\textwidth}{lX}
+      0. & $\{\gamma_1,\forall x[xe=ex=x],ad=da=e,ab=ac\}\vdash_{\mathcal{L}'''}$ \\
+      & $b=eb=da\cdot b=d\cdot ab=d\cdot ac=da\cdot c=ec=c$ \hfill UI, tautology, type 10 axiom \\
+      1. & $\{\gamma_1,\forall x[xe=ex=x],\exists y[ay=ya=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \hfill 0, EI, tautology \\
+      2. & $\{\gamma_1,\forall x[xe=ex=x],\forall x\exists y[xy=yx=e],ab=ac\}\vdash_{\mathcal{L}''}b=c$ \\
+      & \hfill 1, Deduction Theorem, type 4 axiom, tautology \\
+      3. & $GP\cup\{ab=ac\}\vdash_{\mathcal{L}'}b=c$ \hfill 2, Deduction Theorem, tautology \\
+      4. & $GP\vdash_\mathcal{L}\forall xyz[xy=xz\rightarrow y=z]$ \hfill 3, Deduction Theorem, UG
+    \end{tabularx}
+  \end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.13} Let $\varphi_0,\ldots,\varphi_n$ be a formal proof of $\varphi$ from $\Sigma$ in $\mathcal{L}_1$ and let $\mathcal{L}_0'=\mathcal{L}_0\cup\{c\}$ where $c\not\in\mathcal{L}_0$ is a constant symbol. Let $F$ be a function that turns any formula $\varphi\in\mathcal{L}_1$
-into a formula of $\mathcal{L}_0'$ by replacing all atomic formulas $p(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $p\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $\forall x(x=x)$, and then replacing all terms $f(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $f\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $c$.
+\begin{customthm}{II.11.13}
+  Let $\varphi_0,\ldots,\varphi_n$ be a formal proof of $\varphi$ from $\Sigma$ in $\mathcal{L}_1$ and let $\mathcal{L}_0'=\mathcal{L}_0\cup\{c\}$ where $c\not\in\mathcal{L}_0$ is a constant symbol. Let $F$ be a function that turns any formula $\varphi\in\mathcal{L}_1$ into a formula of $\mathcal{L}_0'$ by replacing all atomic formulas $p(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $p\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $\forall x(x=x)$, and then replacing all terms $f(\tau_1,\ldots,\tau_m)$ in $\varphi$ with $f\in\mathcal{L}_1\setminus\mathcal{L}_0$ by $c$.
 
-We prove $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ by induction. Assume we have $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_j)$ for all $j<i$. If $\varphi_i$ is in $\Sigma$, $F(\varphi_i)$ coincides with $\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If $\varphi_i$ is obtained from $\varphi_j$ and $\varphi_k=\varphi_j\rightarrow\varphi_i$ by Modus Ponens, $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ can be obtained from $F(\varphi_j)$ and $F(\varphi_k)$ by Modus Ponens since $F(\varphi_k)=F(\varphi_j)\rightarrow F(\varphi_i)$ holds. Now assume $\varphi_i$ is a logical axiom. If $\varphi_i$ is a propositional tautology, so is $F(\varphi_i)$. This can be easily shown by induction and the homomorphic property of $F$ such as $F(\psi\wedge\chi)=F(\psi)\wedge F(\chi)$. If $\varphi_i$ is a universal closure of $\psi\rightarrow\forall x\psi$ (that is, it is a type 2 axiom), then $F(\varphi_i)$ is a universal closure of $F(\psi)\rightarrow\forall xF(\psi)$, which is a type 2 axiom too. Likewise, if $\varphi_i$ is an axiom of type 3 or 6, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 4 or type 5, considering $F(\psi(x\rightsquigarrow\tau))=F(\psi)(x\rightsquigarrow\tau')$ where $\tau'$ is another term which is free for $x$ in $\psi$, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 7, 8 or 9, then $F(\varphi_i)=\varphi_i$ holds and it is obvious that $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is a type 10 axiom, let it be a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow(f(x_1,\ldots,x_n)=f(y_1,\ldots,y_n))$. If $f\in\mathcal{L}_0$, we have $F(\varphi_i)=\varphi_i$ and
-$\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If not, $F(\varphi_i)$ is a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$, which is derived as follows.
-\begin{center}
-\begin{tabular}{lll}
-  0. & $c=c$ & type 10 axiom \\
-  1. & $c=c\rightarrow(a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c)$ & tautology \\
-  2. & $a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c$ & 0, 1, modus ponens \\
-  3. & $F(\varphi_i)$ & 2, UG
-\end{tabular}
-\end{center}
-The case of type 11 axioms can be shown in a similar way. Thus we have proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
+  We prove $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ by induction. Assume we have $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_j)$ for all $j<i$. If $\varphi_i$ is in $\Sigma$, $F(\varphi_i)$ coincides with $\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If $\varphi_i$ is obtained from $\varphi_j$ and $\varphi_k=\varphi_j\rightarrow\varphi_i$ by Modus Ponens, $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ can be obtained from $F(\varphi_j)$ and $F(\varphi_k)$ by Modus Ponens since $F(\varphi_k)=F(\varphi_j)\rightarrow F(\varphi_i)$ holds. Now assume $\varphi_i$ is a logical axiom. If $\varphi_i$ is a propositional tautology, so is $F(\varphi_i)$. This can be easily shown by induction and the homomorphic property of $F$ such as $F(\psi\wedge\chi)=F(\psi)\wedge F(\chi)$. If $\varphi_i$ is a universal closure of $\psi\rightarrow\forall x\psi$ (that is, it is a type 2 axiom), then $F(\varphi_i)$ is a universal closure of $F(\psi)\rightarrow\forall xF(\psi)$, which is a type 2 axiom too. Likewise, if $\varphi_i$ is an axiom of type 3 or 6, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 4 or type 5, considering $F(\psi(x\rightsquigarrow\tau))=F(\psi)(x\rightsquigarrow\tau')$ where $\tau'$ is another term which is free for $x$ in $\psi$, $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is an axiom of type 7, 8 or 9, then $F(\varphi_i)=\varphi_i$ holds and it is obvious that $F(\varphi_i)$ is an axiom of the same type as $\varphi_i$. If $\varphi_i$ is a type 10 axiom, let it be a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow(f(x_1,\ldots,x_n)=f(y_1,\ldots,y_n))$. If $f\in\mathcal{L}_0$, we have $F(\varphi_i)=\varphi_i$ and $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi_i)$ is obvious. If not, $F(\varphi_i)$ is a universal closure of $x_1=y_1\wedge\ldots\wedge x_n=y_n\rightarrow c=c$, which is derived as follows.
+  \begin{center}
+    \begin{tabular}{lll}
+      0. & $c=c$ & type 10 axiom \\
+      1. & $c=c\rightarrow(a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c)$ & tautology \\
+      2. & $a_1=b_1\wedge\ldots\wedge a_n=b_n\rightarrow c=c$ & 0, 1, modus ponens \\
+      3. & $F(\varphi_i)$ & 2, UG
+    \end{tabular}
+  \end{center}
+  The case of type 11 axioms can be shown in a similar way. Thus we have proved $\Sigma\vdash_{\mathcal{L}_0'}F(\varphi)$. The rest follows from Lemma II.11.12.
 \end{customthm}
 
-\begin{customthm}{II.11.14} Below is the proof.
-\begin{center}
-\begin{tabular}{lll}
-  0. & $\emptyset\vdash\forall xyz(z=z\wedge x=y\rightarrow(z\in x\leftrightarrow z\in y))$ & type 11 axiom \\
-  1. & $\emptyset\vdash c=c\wedge a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & 0, UI \\
-  2. & $\emptyset\vdash c=c\rightarrow(a=b\rightarrow(c\in a\leftrightarrow c\in b))$ & 1, tautology \\
-  3. & $\emptyset\vdash a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & type 10 axiom, 2 \\
-  4. & $\emptyset\vdash\forall xy(x=y\rightarrow\forall z(z\in x\leftrightarrow z\in y))$ & 3, UG
-\end{tabular}
-\end{center}
+\begin{customthm}{II.11.14}
+  Below is the proof.
+  \begin{center}
+    \begin{tabular}{lll}
+      0. & $\emptyset\vdash\forall xyz(z=z\wedge x=y\rightarrow(z\in x\leftrightarrow z\in y))$ & type 11 axiom \\
+      1. & $\emptyset\vdash c=c\wedge a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & 0, UI \\
+      2. & $\emptyset\vdash c=c\rightarrow(a=b\rightarrow(c\in a\leftrightarrow c\in b))$ & 1, tautology \\
+      3. & $\emptyset\vdash a=b\rightarrow(c\in a\leftrightarrow c\in b)$ & type 10 axiom, 2 \\
+      4. & $\emptyset\vdash\forall xy(x=y\rightarrow\forall z(z\in x\leftrightarrow z\in y))$ & 3, UG
+    \end{tabular}
+  \end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.15} Below is the proof. Here $SE(z)=[z=z]$ and $C(x,y,z)=[x\in y\leftrightarrow x\in z\wedge z\neq z]$. Note that $\exists xSE(x)$ is the Set Existence axiom and $\forall z\exists y\forall xC(x,y,z)$ is a Comprehension axiom.
-\begin{center}
-\begin{tabular}{lll}
-  0. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c$ & $SE(c)$ \\
-  1. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c\rightarrow a\not\in b$ & $\forall xC(x,b,c)$, UI, tautology \\
-  2. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash a\not\in b$ & 0, 1, modus ponens \\
-  3. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash\exists y\forall x(x\not\in y)$ & 2, UG, EG \\
-  4. & $ZF\cup\{\exists y\forall xC(x,y,c)\}\vdash\exists y\forall x(x\not\in y)$ & 3, EI \\
-  5. & $ZF\vdash\exists y\forall x(x\not\in y)$ & type 4 axiom, 4, tautology, \\
-  && Deduction Theorem
-\end{tabular}
-\end{center}
+\begin{customthm}{II.11.15}
+  Below is the proof. Here $SE(z)=[z=z]$ and $C(x,y,z)=[x\in y\leftrightarrow x\in z\wedge z\neq z]$. Note that $\exists xSE(x)$ is the Set Existence axiom and $\forall z\exists y\forall xC(x,y,z)$ is a Comprehension axiom.
+  \begin{center}
+    \begin{tabular}{lll}
+      0. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c$ & $SE(c)$ \\
+      1. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash c=c\rightarrow a\not\in b$ & $\forall xC(x,b,c)$, UI, tautology \\
+      2. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash a\not\in b$ & 0, 1, modus ponens \\
+      3. & $ZF\cup\{SE(c),\forall xC(x,b,c)\}\vdash\exists y\forall x(x\not\in y)$ & 2, UG, EG \\
+      4. & $ZF\cup\{\exists y\forall xC(x,y,c)\}\vdash\exists y\forall x(x\not\in y)$ & 3, EI \\
+      5. & $ZF\vdash\exists y\forall x(x\not\in y)$ & type 4 axiom, 4, tautology, \\
+      && Deduction Theorem
+    \end{tabular}
+  \end{center}
 \end{customthm}
 
-\begin{customthm}{II.11.16} Let $\varphi=\forall y\exists xp(x,y)\rightarrow\exists x\forall yp(x,y)$. Let $\mathfrak{A}=(2,\mathcal{I})$ be a structure for $\mathcal{L}=\{p\}$ where $p_\mathfrak{A}(x,y)=\{(0,0),(1,1)\}$. Then we have $\val_\mathfrak{A}[\forall y\exists xp(x,y)]=T$ and $\val_\mathfrak{A}[\exists x\forall yp(x,y)]=F$, which means $\mathfrak{A}\not\models\varphi$. Thus $\emptyset\not\models\varphi$ holds, which implies $\emptyset\not\vdash\varphi$ by Soundness.
+\begin{customthm}{II.11.16}
+  Let $\varphi=\forall y\exists xp(x,y)\rightarrow\exists x\forall yp(x,y)$. Let $\mathfrak{A}=(2,\mathcal{I})$ be a structure for $\mathcal{L}=\{p\}$ where $p_\mathfrak{A}(x,y)=\{(0,0),(1,1)\}$. Then we have $\val_\mathfrak{A}[\forall y\exists xp(x,y)]=T$ and $\val_\mathfrak{A}[\exists x\forall yp(x,y)]=F$, which means $\mathfrak{A}\not\models\varphi$. Thus $\emptyset\not\models\varphi$ holds, which implies $\emptyset\not\vdash\varphi$ by Soundness.
 \end{customthm}
 
-\begin{customthm}{II.12.23} If $\Sigma\vdash\theta$, then $\Sigma'\vdash\theta$ is obvious. If $\Sigma\not\vdash\theta$, then $\widetilde\Sigma=\Sigma\cup\{\neg\theta\}$ is consistent from Proof by Contradiction. We apply the proof of Lemma II.12.20 to $\widetilde\Sigma$ to get a consistent set of sentences $(\widetilde\Sigma)'=\Sigma'\cup\{\neg\theta\}$, which implies $\Sigma'\not\vdash\theta$.
+\begin{customthm}{II.12.23}
+  If $\Sigma\vdash\theta$, then $\Sigma'\vdash\theta$ is obvious. If $\Sigma\not\vdash\theta$, then $\widetilde\Sigma=\Sigma\cup\{\neg\theta\}$ is consistent from Proof by Contradiction. We apply the proof of Lemma II.12.20 to $\widetilde\Sigma$ to get a consistent set of sentences $(\widetilde\Sigma)'=\Sigma'\cup\{\neg\theta\}$, which implies $\Sigma'\not\vdash\theta$.
 \end{customthm}
 
-\begin{customthm}{II.13.8} Let $A$ be a model of $\Sigma$. By defining a scalar multiplication $m:\mathbb{Z}_p\times A\rightarrow A$ by $m(n,x)=x+x+\cdots+x$ with $n$ copies of $x$, we can view $A$ as a vector space over $\mathbb{Z}_p$. Now let $B$ be a basis of $A$ and assume $A$ is infinite. Then $B$ is infinite as well because finite basis (say $|B|=n$) would generate only $p^n$ elements. Then we can apply Exercise I.13.21 to get $|A|=|B|$. Hence infinite models of the same cardinality have bases of the same cardinality, which proves those models are isomorphic. Thus $\Sigma$ is $\kappa$-categorical for all $\kappa\geq\aleph_0$.
+\begin{customthm}{II.13.8}
+  Let $A$ be a model of $\Sigma$. By defining a scalar multiplication $m:\mathbb{Z}_p\times A\rightarrow A$ by $m(n,x)=x+x+\cdots+x$ with $n$ copies of $x$, we can view $A$ as a vector space over $\mathbb{Z}_p$. Now let $B$ be a basis of $A$ and assume $A$ is infinite. Then $B$ is infinite as well because finite basis (say $|B|=n$) would generate only $p^n$ elements. Then we can apply Exercise I.13.21 to get $|A|=|B|$. Hence infinite models of the same cardinality have bases of the same cardinality, which proves those models are isomorphic. Thus $\Sigma$ is $\kappa$-categorical for all $\kappa\geq\aleph_0$.
 \end{customthm}
 
-\begin{customthm}{II.13.10} We first prove that $\Delta^{(~)}$ is $\aleph_0$-categorical. Let $A=\{a_i:i<\omega\}$, $B=\{b_j:j<\omega\}$ be countable models of $\Delta^{(~)}$. We recursively define $p_k\in A\times B$ and $f_k=\bigcup_{l<k}p_l$ for $k<\omega$ as follows.
-\begin{align*}
-  p_0 &= (a_0, b_0) \\
-  p_k &= (a_i, b_j) \text{ for } k>0 \text{, where} \\
-  &\text{if } k \text{ is odd, } i=\min\{i<\omega:a_i\not\in\dom(f_k)\} \text{, } j=\min\{j<\omega:\psi_j\} \text{ where} \\
-  &\psi_j=\begin{cases}
-    b_j<\min(\ran(f_k)) &\text{ if } a_i<\min(\dom(f_k)) \\
-    b_j>\max(\ran(f_k)) &\text{ if } a_i>\max(\dom(f_k)) \\
-    f_k(a_i^-)<b_j<f_k(a_i^+) &\text{ otherwise, where } \\
-    &a_i^-=\max\{a\in\dom(f_k):a<a_i\}, \\ &a_i^+=\min\{a\in\dom(f_k):a>a_i\}
-  \end{cases} \\
-  &\text{if } k \text{ is even, } j=\min\{j<\omega:b_j\not\in\ran(f_k)\} \text{, } i=\min\{i<\omega:\varphi_i\} \text{ where} \\
-  &\varphi_i=\begin{cases}
-    a_i<\min(\dom(f_k)) &\text{ if } b_j<\min(\ran(f_k)) \\
-    a_i>\max(\dom(f_k)) &\text{ if } b_j>\max(\ran(f_k)) \\
-    f_k^{-1}(b_j^-)<a_i<f_k^{-1}(b_j^+) &\text{ otherwise, where } \\
-    &b_j^-=\max\{b\in\ran(f_k):b<b_j\}, \\ &b_j^+=\min\{b\in\ran(f_k):b>b_j\}
-  \end{cases}
-\end{align*}
-It is easy to see that $\bigcup_kp_k$ is a function from $A$ to $B$ which is bijective and order-preserving. Thus $A\cong B$ holds and $\Delta^{(~)}$ proves to be $\aleph_0$-categorical. For each of the other 3 theories, one can think of the correspondence of the endpoints first and reduce the problem to the case of $\Delta^{(~)}$ to prove that it is also $\aleph_0$-categorical.
+\begin{customthm}{II.13.10}
+  We first prove that $\Delta^{(~)}$ is $\aleph_0$-categorical. Let $A=\{a_i:i<\omega\}$, $B=\{b_j:j<\omega\}$ be countable models of $\Delta^{(~)}$. We recursively define $p_k\in A\times B$ and $f_k=\bigcup_{l<k}p_l$ for $k<\omega$ as follows.
+  \begin{align*}
+    p_0 &= (a_0, b_0) \\
+    p_k &= (a_i, b_j) \text{ for } k>0 \text{, where} \\
+    &\text{if } k \text{ is odd, } i=\min\{i<\omega:a_i\not\in\dom(f_k)\} \text{, } j=\min\{j<\omega:\psi_j\} \text{ where} \\
+    &\psi_j=
+    \begin{cases}
+      b_j<\min(\ran(f_k)) &\text{ if } a_i<\min(\dom(f_k)) \\
+      b_j>\max(\ran(f_k)) &\text{ if } a_i>\max(\dom(f_k)) \\
+      f_k(a_i^-)<b_j<f_k(a_i^+) &\text{ otherwise, where } \\
+      &a_i^-=\max\{a\in\dom(f_k):a<a_i\}, \\ &a_i^+=\min\{a\in\dom(f_k):a>a_i\}
+    \end{cases} \\
+    &\text{if } k \text{ is even, } j=\min\{j<\omega:b_j\not\in\ran(f_k)\} \text{, } i=\min\{i<\omega:\varphi_i\} \text{ where} \\
+    &\varphi_i=
+    \begin{cases}
+      a_i<\min(\dom(f_k)) &\text{ if } b_j<\min(\ran(f_k)) \\
+      a_i>\max(\dom(f_k)) &\text{ if } b_j>\max(\ran(f_k)) \\
+      f_k^{-1}(b_j^-)<a_i<f_k^{-1}(b_j^+) &\text{ otherwise, where } \\
+      &b_j^-=\max\{b\in\ran(f_k):b<b_j\}, \\ &b_j^+=\min\{b\in\ran(f_k):b>b_j\}
+    \end{cases}
+  \end{align*}
+  It is easy to see that $\bigcup_kp_k$ is a function from $A$ to $B$ which is bijective and order-preserving. Thus $A\cong B$ holds and $\Delta^{(~)}$ proves to be $\aleph_0$-categorical. For each of the other 3 theories, one can think of the correspondence of the endpoints first and reduce the problem to the case of $\Delta^{(~)}$ to prove that it is also $\aleph_0$-categorical.
 
-Now we prove that $\Delta^{(~)}$ is not $\aleph_1$-categorical. Let $A=((-1,0]\cap\mathbb{Q})\cup[0,1)$ and $B=(-1,0]\cup([0,1)\cap\mathbb{Q})$. Both of these have cardinality $2^{\aleph_0}$ and are models of $\Delta^{(~)}$, but are not isomorphic. To prove this, we assume there is an isomorphism $f:A\rightarrow B$ and consider $A_0=\{x\in A:x<0\}$ and $B_0=\{y\in B:y<f(0)\}$. $A_0$ and $B_0$ have to be isomorphic but $|A_0|=\aleph_0\neq2^{\aleph_0}=|B_0|$ holds, which is a contradiction. Hence $A$ and $B$ are not isomorphic and $\Delta^{(~)}$ is not $\aleph_1$-categorical. The other 3 theories can be proved not to be $\aleph_1$-categorical in a similar way.
+  Now we prove that $\Delta^{(~)}$ is not $\aleph_1$-categorical. Let $A=((-1,0]\cap\mathbb{Q})\cup[0,1)$ and $B=(-1,0]\cup([0,1)\cap\mathbb{Q})$. Both of these have cardinality $2^{\aleph_0}$ and are models of $\Delta^{(~)}$, but are not isomorphic. To prove this, we assume there is an isomorphism $f:A\rightarrow B$ and consider $A_0=\{x\in A:x<0\}$ and $B_0=\{y\in B:y<f(0)\}$. $A_0$ and $B_0$ have to be isomorphic but $|A_0|=\aleph_0\neq2^{\aleph_0}=|B_0|$ holds, which is a contradiction. Hence $A$ and $B$ are not isomorphic and $\Delta^{(~)}$ is not $\aleph_1$-categorical. The other 3 theories can be proved not to be $\aleph_1$-categorical in a similar way.
 \end{customthm}
 
-\begin{customthm}{II.13.11} We first prove the completeness of $\Sigma$. Let $\Sigma_k$ be the reduct of $\Sigma$ to  $\{<,c_0,c_i,\ldots,c_k\}$. Then each $\Sigma_k$ is $\aleph_0$-categorical because we can always make an isomorphism between 2 models $\mathfrak{A}$, $\mathfrak{B}$ of $\Sigma_k$ by considering an isomorphism between each pair of corresponding open intervals $({c_{i}}_\mathfrak{A},{c_{i+1}}_\mathfrak{A})$ and $({c_{i}}_\mathfrak{B},{c_{i+1}}_\mathfrak{B})$, the existence of which is assured by the fact that $\Delta^{(~)}$ is $\aleph_0$-categorical (see Exercise II.13.10). Therefore $\Sigma_k$ is complete by Łoś–Vaught test. Let $\varphi$ be a formula of $\mathcal{L}$ and $k=\max\{i\in\omega:c_i \text{ appears in } \varphi\}$. If no $c_i$ appear in $\varphi$, then let $k=0$. Since $\Sigma_k$ is complete, we have either $\Sigma_k\models\varphi$ or $\Sigma_k\models\neg\varphi$. If $\Sigma_k\models\varphi$ holds, then $\Sigma\models\varphi$ holds. This is obvious from $\Sigma_k\subseteq\Sigma$ and the definition of $\models$. If $\Sigma_k\models\neg\varphi$ holds, then $\Sigma\models\neg\varphi$ holds. Thus we have either one of $\Sigma\models\varphi$ or $\Sigma\models\neg\varphi$ for any $\varphi$, which shows the completeness of $\Sigma$.
+\begin{customthm}{II.13.11}
+  We first prove the completeness of $\Sigma$. Let $\Sigma_k$ be the reduct of $\Sigma$ to  $\{<,c_0,c_i,\ldots,c_k\}$. Then each $\Sigma_k$ is $\aleph_0$-categorical because we can always make an isomorphism between 2 models $\mathfrak{A}$, $\mathfrak{B}$ of $\Sigma_k$ by considering an isomorphism between each pair of corresponding open intervals $({c_{i}}_\mathfrak{A},{c_{i+1}}_\mathfrak{A})$ and $({c_{i}}_\mathfrak{B},{c_{i+1}}_\mathfrak{B})$, the existence of which is assured by the fact that $\Delta^{(~)}$ is $\aleph_0$-categorical (see Exercise II.13.10). Therefore $\Sigma_k$ is complete by Łoś–Vaught test. Let $\varphi$ be a formula of $\mathcal{L}$ and $k=\max\{i\in\omega:c_i \text{ appears in } \varphi\}$. If no $c_i$ appear in $\varphi$, then let $k=0$. Since $\Sigma_k$ is complete, we have either $\Sigma_k\models\varphi$ or $\Sigma_k\models\neg\varphi$. If $\Sigma_k\models\varphi$ holds, then $\Sigma\models\varphi$ holds. This is obvious from $\Sigma_k\subseteq\Sigma$ and the definition of $\models$. If $\Sigma_k\models\neg\varphi$ holds, then $\Sigma\models\neg\varphi$ holds. Thus we have either one of $\Sigma\models\varphi$ or $\Sigma\models\neg\varphi$ for any $\varphi$, which shows the completeness of $\Sigma$.
 
-To see that $\Sigma$ has precisely three models of size $\aleph_0$, we identify a model of $\Sigma$ with $\mathbb{Q}$, which is possible because $\Delta^{(~)}$ is $\aleph_0$-categorical and $\mathbb{Q}$ is a model of it. We also identify each constant symbol $c_i$ with a point $c_i$ in $\mathbb{Q}$. Here we consider the following 3 cases; (i) $\sup_n c_n=\infty$, (ii) $\sup_n c_n\in\mathbb{Q}$ and (iii) $\sup_n c_n\in\mathbb{R}\setminus\mathbb{Q}$. Models within each case are isomorphic by considering correspondences between intervals as we did above. However, models of different cases are not isomorphic since $\{x\in\mathbb{Q}:c_i\leq x \text{ for all } i\in\omega\}$ cannot be isomorphic because it is empty in (i), it has a minimum in (ii), and it is not empty and does not have a minimum in (iii). Thus $\Sigma$ has precisely 3 countable models.
+  To see that $\Sigma$ has precisely three models of size $\aleph_0$, we identify a model of $\Sigma$ with $\mathbb{Q}$, which is possible because $\Delta^{(~)}$ is $\aleph_0$-categorical and $\mathbb{Q}$ is a model of it. We also identify each constant symbol $c_i$ with a point $c_i$ in $\mathbb{Q}$. Here we consider the following 3 cases; (i) $\sup_n c_n=\infty$, (ii) $\sup_n c_n\in\mathbb{Q}$ and (iii) $\sup_n c_n\in\mathbb{R}\setminus\mathbb{Q}$. Models within each case are isomorphic by considering correspondences between intervals as we did above. However, models of different cases are not isomorphic since $\{x\in\mathbb{Q}:c_i\leq x \text{ for all } i\in\omega\}$ cannot be isomorphic because it is empty in (i), it has a minimum in (ii), and it is not empty and does not have a minimum in (iii). Thus $\Sigma$ has precisely 3 countable models.
 \end{customthm}
 
-\begin{customthm}{II.13.12} $\Sigma$ is complete just as $\Sigma$ in Exercise II.13.11 is complete. We first show that $\Sigma$ has at most $2^{\aleph_0}$ models. Note that the underlying set of a model can be viewed as $\omega$. Then we have $2^{|\omega\times\omega|}=2^{\aleph_0}$ possible interpretations of $<$ and $|\omega|^{|\mathbb{Q}|}=2^{\aleph_0}$ possible interpretations of $\{c_q:q\in\mathbb{Q}\}$, ignoring the sentences in $\Sigma$. Therefore we have $2^{\aleph_0}\times2^{\aleph_0}=2^{\aleph_0}$ possible interpretations of $\mathcal{L}$, which implies there are at most $2^{\aleph_0}$ models of $\Sigma$. To prove that $\Sigma$ has at least $2^{\aleph_0}$ countable models, we show $2^{\aleph_0}$ different models below. For any $r\in\mathbb{R}\setminus\mathbb{Q}$, we define a model $A_r$ of $\Sigma$ by $A_r=\mathbb{Q}\cup\{r\}$ where each $c_q\in\mathbb{Q}$ is interpreted as $q\in A_r$. Then for any 2 different irrationals $r$ and $r'$, $A_r$ and $A_{r'}$ are not isomorphic because any isomorphism $f:A_r\rightarrow A_{r'}$ would map $r$ to $r'$ since it would have to be identical on $\mathbb{Q}$, which would invert the order between $r$ and a rational number which lies between $r$ and $r'$. Thus by Schröder–Bernstein theorem, we conclude that $\Sigma$ has exactly $2^{\aleph_0}$ countable models.
+\begin{customthm}{II.13.12}
+  $\Sigma$ is complete just as $\Sigma$ in Exercise II.13.11 is complete. We first show that $\Sigma$ has at most $2^{\aleph_0}$ models. Note that the underlying set of a model can be viewed as $\omega$. Then we have $2^{|\omega\times\omega|}=2^{\aleph_0}$ possible interpretations of $<$ and $|\omega|^{|\mathbb{Q}|}=2^{\aleph_0}$ possible interpretations of $\{c_q:q\in\mathbb{Q}\}$, ignoring the sentences in $\Sigma$. Therefore we have $2^{\aleph_0}\times2^{\aleph_0}=2^{\aleph_0}$ possible interpretations of $\mathcal{L}$, which implies there are at most $2^{\aleph_0}$ models of $\Sigma$. To prove that $\Sigma$ has at least $2^{\aleph_0}$ countable models, we show $2^{\aleph_0}$ different models below. For any $r\in\mathbb{R}\setminus\mathbb{Q}$, we define a model $A_r$ of $\Sigma$ by $A_r=\mathbb{Q}\cup\{r\}$ where each $c_q\in\mathbb{Q}$ is interpreted as $q\in A_r$. Then for any 2 different irrationals $r$ and $r'$, $A_r$ and $A_{r'}$ are not isomorphic because any isomorphism $f:A_r\rightarrow A_{r'}$ would map $r$ to $r'$ since it would have to be identical on $\mathbb{Q}$, which would invert the order between $r$ and a rational number which lies between $r$ and $r'$. Thus by Schröder–Bernstein theorem, we conclude that $\Sigma$ has exactly $2^{\aleph_0}$ countable models.
 \end{customthm}
 
-\begin{customthm}{II.14.3} We first show that for any atomic formula $\varphi$ and any assignment $\sigma$, $\mathfrak{A}\times\mathfrak{B}\models\varphi[\sigma]$ is equivalent to $\mathfrak{A}\models\varphi[\sigma]$ and $\mathfrak{B}\models\varphi[\sigma]$. This is proved as follows. Here we assume $\varphi$ is of the form $p(\tau_1,\ldots,\tau_n)$, but the proof also works when it is $\tau_1=\tau_2$.
-\begin{align*}
-  &\mathfrak{A}\times\mathfrak{B}\models\varphi[\sigma] \\
-  \leftrightarrow~&\textstyle\val_{\mathfrak{A}\times\mathfrak{B}}(\varphi)[\sigma]=T \\
-  \leftrightarrow~&\textstyle(\val_{\mathfrak{A}\times\mathfrak{B}}(\tau_1)[\sigma],\ldots,\val_{\mathfrak{A}\times\mathfrak{B}}(\tau_n)[\sigma])\in p_{\mathfrak{A}\times\mathfrak{B}} \\
-  \leftrightarrow~&\textstyle((\val_\mathfrak{A}(\tau_1)[\sigma],\val_\mathfrak{B}(\tau_1)[\sigma]),\ldots,(\val_\mathfrak{A}(\tau_n)[\sigma],\val_\mathfrak{B}(\tau_n)[\sigma]))\in p_{\mathfrak{A}\times\mathfrak{B}} \\
-  \leftrightarrow~&\textstyle(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])\in p_\mathfrak{A}\mbox{ and }(\val_\mathfrak{B}(\tau_1)[\sigma],\ldots,\val_\mathfrak{B}(\tau_n)[\sigma])\in p_\mathfrak{B} \\
-  \leftrightarrow~&\textstyle\val_\mathfrak{A}(\varphi)[\sigma]=T\mbox{ and }\val_\mathfrak{B}(\varphi)[\sigma]=T \\
-  \leftrightarrow~&\mathfrak{A}\models\varphi[\sigma]\mbox{ and }\mathfrak{B}\models\varphi[\sigma] \\
-\end{align*}
-Here the fourth equivalence comes from the definition of $p_{\mathfrak{A}\times\mathfrak{B}}$, and the third equivalence comes from $\val_{\mathfrak{A}\times\mathfrak{B}}(\tau)[\sigma]=(\val_\mathfrak{A}(\tau)[\sigma],\val_\mathfrak{B}(\tau)[\sigma])$, which can be easily proved by the definition of $\val_{\mathfrak{A}\times\mathfrak{B}}(\tau)[\sigma]$ and induction on $\tau$.
+\begin{customthm}{II.14.3}
+  We first show that for any atomic formula $\varphi$ and any assignment $\sigma$, $\mathfrak{A}\times\mathfrak{B}\models\varphi[\sigma]$ is equivalent to $\mathfrak{A}\models\varphi[\sigma]$ and $\mathfrak{B}\models\varphi[\sigma]$. This is proved as follows. Here we assume $\varphi$ is of the form $p(\tau_1,\ldots,\tau_n)$, but the proof also works when it is $\tau_1=\tau_2$.
+  \begin{align*}
+    &\mathfrak{A}\times\mathfrak{B}\models\varphi[\sigma] \\
+    \leftrightarrow~&\textstyle\val_{\mathfrak{A}\times\mathfrak{B}}(\varphi)[\sigma]=T \\
+    \leftrightarrow~&\textstyle(\val_{\mathfrak{A}\times\mathfrak{B}}(\tau_1)[\sigma],\ldots,\val_{\mathfrak{A}\times\mathfrak{B}}(\tau_n)[\sigma])\in p_{\mathfrak{A}\times\mathfrak{B}} \\
+    \leftrightarrow~&\textstyle((\val_\mathfrak{A}(\tau_1)[\sigma],\val_\mathfrak{B}(\tau_1)[\sigma]),\ldots,(\val_\mathfrak{A}(\tau_n)[\sigma],\val_\mathfrak{B}(\tau_n)[\sigma]))\in p_{\mathfrak{A}\times\mathfrak{B}} \\
+    \leftrightarrow~&\textstyle(\val_\mathfrak{A}(\tau_1)[\sigma],\ldots,\val_\mathfrak{A}(\tau_n)[\sigma])\in p_\mathfrak{A}\mbox{ and }(\val_\mathfrak{B}(\tau_1)[\sigma],\ldots,\val_\mathfrak{B}(\tau_n)[\sigma])\in p_\mathfrak{B} \\
+    \leftrightarrow~&\textstyle\val_\mathfrak{A}(\varphi)[\sigma]=T\mbox{ and }\val_\mathfrak{B}(\varphi)[\sigma]=T \\
+    \leftrightarrow~&\mathfrak{A}\models\varphi[\sigma]\mbox{ and }\mathfrak{B}\models\varphi[\sigma] \\
+  \end{align*}
+  Here the fourth equivalence comes from the definition of $p_{\mathfrak{A}\times\mathfrak{B}}$, and the third equivalence comes from $\val_{\mathfrak{A}\times\mathfrak{B}}(\tau)[\sigma]=(\val_\mathfrak{A}(\tau)[\sigma],\val_\mathfrak{B}(\tau)[\sigma])$, which can be easily proved by the definition of $\val_{\mathfrak{A}\times\mathfrak{B}}(\tau)[\sigma]$ and induction on $\tau$.
 
-Now let $\psi=\varphi_1\vee\cdots\vee\varphi_n$ be a Horn clause and $\sigma$ be an assignment for $\psi$. Then it holds that $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$ imply $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. To prove that, assume that $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$. If there is a negative literal $\varphi_i$ that is true either under $\mathfrak{A}$ or $\mathfrak{B}$, then we have $\mathfrak{A}\times\mathfrak{B}\not\models\neg\varphi_i[\sigma]$ by what is proved above, which means $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. If not, there is a positive literal $\varphi_i$ that is true under both $\mathfrak{A}$ and $\mathfrak{B}$. Then we have $\mathfrak{A}\times\mathfrak{B}\models\varphi_i[\sigma]$ by what is proved above, which means $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. Therefore in any case, $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$ imply $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. By considering a closure of $\psi$, we can conclude that $\mathfrak{A}\models\chi$ and $\mathfrak{B}\models\chi$ imply $\mathfrak{A}\times\mathfrak{B}\models\chi$ for any $\chi$ which is a closure of a Horn clause. Then if $\Sigma$ is universal Horn, $\mathfrak{A}\models\Sigma$ and $\mathfrak{B}\models\Sigma$, we have $\mathfrak{A}\times\mathfrak{B}\models\Sigma$.
+  Now let $\psi=\varphi_1\vee\cdots\vee\varphi_n$ be a Horn clause and $\sigma$ be an assignment for $\psi$. Then it holds that $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$ imply $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. To prove that, assume that $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$. If there is a negative literal $\varphi_i$ that is true either under $\mathfrak{A}$ or $\mathfrak{B}$, then we have $\mathfrak{A}\times\mathfrak{B}\not\models\neg\varphi_i[\sigma]$ by what is proved above, which means $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. If not, there is a positive literal $\varphi_i$ that is true under both $\mathfrak{A}$ and $\mathfrak{B}$. Then we have $\mathfrak{A}\times\mathfrak{B}\models\varphi_i[\sigma]$ by what is proved above, which means $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. Therefore in any case, $\mathfrak{A}\models\psi[\sigma]$ and $\mathfrak{B}\models\psi[\sigma]$ imply $\mathfrak{A}\times\mathfrak{B}\models\psi[\sigma]$. By considering a closure of $\psi$, we can conclude that $\mathfrak{A}\models\chi$ and $\mathfrak{B}\models\chi$ imply $\mathfrak{A}\times\mathfrak{B}\models\chi$ for any $\chi$ which is a closure of a Horn clause. Then if $\Sigma$ is universal Horn, $\mathfrak{A}\models\Sigma$ and $\mathfrak{B}\models\Sigma$, we have $\mathfrak{A}\times\mathfrak{B}\models\Sigma$.
 \end{customthm}
 
-\begin{customthm}{II.14.4} Let $\mathcal{L}$ be a language without predicate symbols. Let $\mathfrak{A}=(A,\mathcal{I})$, $\mathfrak{B}=(B,\mathcal{J})$ be structures for $\mathcal{L}$, and let $\Phi:\mathfrak{A}\rightarrow\mathfrak{B}$ be a surjective homomorphism. That is, $\Phi$ is one that $\Phi(f_\mathfrak{A}(a_1,\ldots,a_n))=f_\mathfrak{B}(\Phi(a_1),\ldots,\Phi(a_n))$ holds for any $n$-ary function symbol $f\in\mathcal{L}$ and $a_1,\ldots,a_n\in A$. One can easily show that $\Phi(\val_\mathfrak{A}(\tau)[\sigma])=\val_\mathfrak{B}(\tau)[\Phi\circ\sigma]$ holds for any term $\tau$ and any assignment $\sigma$ for $\tau$ by induction on $\tau$. Then it directly follows from this that $\mathfrak{A}\models(\tau_1=\tau_2)[\sigma]$ implies $\mathfrak{B}\models(\tau_1=\tau_2)[\Phi\circ\sigma]$. Then for a closure $\varphi$ of any equation, it holds that $\mathfrak{A}\models\varphi\rightarrow\mathfrak{B}\models\varphi$, which follows from the previous fact and that $\Phi$ is surjective. Thus if $\Sigma$ is an equational theory and $\mathfrak{A}\models\Sigma$, we have $\mathfrak{B}\models\Sigma$.
+\begin{customthm}{II.14.4}
+  Let $\mathcal{L}$ be a language without predicate symbols. Let $\mathfrak{A}=(A,\mathcal{I})$, $\mathfrak{B}=(B,\mathcal{J})$ be structures for $\mathcal{L}$, and let $\Phi:\mathfrak{A}\rightarrow\mathfrak{B}$ be a surjective homomorphism. That is, $\Phi$ is one that $\Phi(f_\mathfrak{A}(a_1,\ldots,a_n))=f_\mathfrak{B}(\Phi(a_1),\ldots,\Phi(a_n))$ holds for any $n$-ary function symbol $f\in\mathcal{L}$ and $a_1,\ldots,a_n\in A$. One can easily show that $\Phi(\val_\mathfrak{A}(\tau)[\sigma])=\val_\mathfrak{B}(\tau)[\Phi\circ\sigma]$ holds for any term $\tau$ and any assignment $\sigma$ for $\tau$ by induction on $\tau$. Then it directly follows from this that $\mathfrak{A}\models(\tau_1=\tau_2)[\sigma]$ implies $\mathfrak{B}\models(\tau_1=\tau_2)[\Phi\circ\sigma]$. Then for a closure $\varphi$ of any equation, it holds that $\mathfrak{A}\models\varphi\rightarrow\mathfrak{B}\models\varphi$, which follows from the previous fact and that $\Phi$ is surjective. Thus if $\Sigma$ is an equational theory and $\mathfrak{A}\models\Sigma$, we have $\mathfrak{B}\models\Sigma$.
 \end{customthm}
 
-\begin{customthm}{II.14.5} Let $\varphi(\vec{x})=\neg p_1(\vec{x})\vee\cdots\vee\neg p_{n-1}(\vec{x})\vee p_n(\vec{x})\in\Sigma$ be a Horn clause whose universal closure is $\psi\in\Sigma$. Assume that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\psi$. Then by Lemma II.12.10(2), there exist a tuple $\vec{\tau}$ of closed terms such that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\varphi(\vec{\tau})$. This is equivalent to having $\mathfrak{CT}(\mathcal{L},\Sigma)\models p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models p_n(\vec{\tau})$, which is further equivalent to having $\Sigma\vdash p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\Sigma\not\vdash p_n(\vec{\tau})$ by Lemma II.12.10(3). On the other hand, we have $\Sigma\vdash p_1(\vec{\tau})\rightarrow\cdots\rightarrow p_{n-1}(\vec{\tau})\rightarrow p_n(\vec{\tau})$ by $\psi\in\Sigma$, UI and a tautology. Here $\rightarrow$ is understood as right-associative. Then by applying Modus Ponens $n-1$ times, we get $\Sigma\vdash p_n(\vec{\tau})$, which is a contradiction. Hence $\mathfrak{CT}(\mathcal{L},\Sigma)\models\psi$ holds. In a similar way, one can also prove that $\mathfrak{CT}(\mathcal{L},\Sigma)\models\chi$ if $\chi\in\Sigma$ is a universal closure of a Horn clause without a positive literal. Thus $\mathfrak{CT}(\mathcal{L},\Sigma)\models\Sigma$ holds.
+\begin{customthm}{II.14.5}
+  Let $\varphi(\vec{x})=\neg p_1(\vec{x})\vee\cdots\vee\neg p_{n-1}(\vec{x})\vee p_n(\vec{x})\in\Sigma$ be a Horn clause whose universal closure is $\psi\in\Sigma$. Assume that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\psi$. Then by Lemma II.12.10(2), there exist a tuple $\vec{\tau}$ of closed terms such that $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models\varphi(\vec{\tau})$. This is equivalent to having $\mathfrak{CT}(\mathcal{L},\Sigma)\models p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\mathfrak{CT}(\mathcal{L},\Sigma)\not\models p_n(\vec{\tau})$, which is further equivalent to having $\Sigma\vdash p_i(\vec{\tau})$ for $1\leq i\leq n-1$ and $\Sigma\not\vdash p_n(\vec{\tau})$ by Lemma II.12.10(3). On the other hand, we have $\Sigma\vdash p_1(\vec{\tau})\rightarrow\cdots\rightarrow p_{n-1}(\vec{\tau})\rightarrow p_n(\vec{\tau})$ by $\psi\in\Sigma$, UI and a tautology. Here $\rightarrow$ is understood as right-associative. Then by applying Modus Ponens $n-1$ times, we get $\Sigma\vdash p_n(\vec{\tau})$, which is a contradiction. Hence $\mathfrak{CT}(\mathcal{L},\Sigma)\models\psi$ holds. In a similar way, one can also prove that $\mathfrak{CT}(\mathcal{L},\Sigma)\models\chi$ if $\chi\in\Sigma$ is a universal closure of a Horn clause without a positive literal. Thus $\mathfrak{CT}(\mathcal{L},\Sigma)\models\Sigma$ holds.
 \end{customthm}
 
-\begin{customthm}{II.15.3} Let $\Sigma$ be a set of sentences of $\mathcal{L}=\{\vee,\wedge\}$ where each sentence of it is a universal closure of one of the following 8 equations.
-\begin{align*}
-  &x\vee(y\vee z)=(x\vee y)\vee z &&x\wedge(y\wedge z)=(x\wedge y)\wedge z \\
-  &x\vee y=y\vee x &&x\wedge y=y\wedge x \\
-  &x\vee x=x &&x\wedge x=x \\
-  &x\wedge(x\vee y)=x &&x\vee(x\wedge y)=x
-\end{align*}
-Then $\Sigma$ is an equational theory. To prove that any lattice is a model of $\Sigma$, it suffices to show that the least upper bound operator $\vee$ and the greatest lower bound operator $\wedge$ satisfy the 8 equations above. One can easily prove it by using the properties that $x\vee y<z\leftrightarrow x<z$ \& $y<z$ and $z<x\wedge y\leftrightarrow z<x$ \& $z<y$. To prove that every model of $\Sigma$ is a lattice, we define the least upper bound operator by $\vee$ and the greatest lower bound operator by $\wedge$, and define the order $x<y$ by $y=x\vee y$ \& $x\neq y$. We have to confirm that $<$ is a partial order. The irreflexivity is obvious. To show the transitivity, let $x<y$ and $y<z$. That is, we have $y=x\vee y$, $x\neq y$, $z=y\vee z$ and $y\neq z$. Then it holds that $z=y\vee z=(x\vee y)\vee z=x\vee(y\vee z)=x\vee z$. If $x=z$ then $y=z\vee y=y\vee z=z$, which contradicts $y\neq z$. Hence we have $x\neq z$ and get $x<z$. Thus $<$ is a partial order and any model of $\Sigma$ is a lattice. Therefore being a lattice is equivalent to being a model of $\Sigma$ and we conclude that $\Sigma$ is an equational theory of lattices.
+\begin{customthm}{II.15.3}
+  Let $\Sigma$ be a set of sentences of $\mathcal{L}=\{\vee,\wedge\}$ where each sentence of it is a universal closure of one of the following 8 equations.
+  \begin{align*}
+    &x\vee(y\vee z)=(x\vee y)\vee z &&x\wedge(y\wedge z)=(x\wedge y)\wedge z \\
+    &x\vee y=y\vee x &&x\wedge y=y\wedge x \\
+    &x\vee x=x &&x\wedge x=x \\
+    &x\wedge(x\vee y)=x &&x\vee(x\wedge y)=x
+  \end{align*}
+  Then $\Sigma$ is an equational theory. To prove that any lattice is a model of $\Sigma$, it suffices to show that the least upper bound operator $\vee$ and the greatest lower bound operator $\wedge$ satisfy the 8 equations above. One can easily prove it by using the properties that $x\vee y<z\leftrightarrow x<z$ \& $y<z$ and $z<x\wedge y\leftrightarrow z<x$ \& $z<y$. To prove that every model of $\Sigma$ is a lattice, we define the least upper bound operator by $\vee$ and the greatest lower bound operator by $\wedge$, and define the order $x<y$ by $y=x\vee y$ \& $x\neq y$. We have to confirm that $<$ is a partial order. The irreflexivity is obvious. To show the transitivity, let $x<y$ and $y<z$. That is, we have $y=x\vee y$, $x\neq y$, $z=y\vee z$ and $y\neq z$. Then it holds that $z=y\vee z=(x\vee y)\vee z=x\vee(y\vee z)=x\vee z$. If $x=z$ then $y=z\vee y=y\vee z=z$, which contradicts $y\neq z$. Hence we have $x\neq z$ and get $x<z$. Thus $<$ is a partial order and any model of $\Sigma$ is a lattice. Therefore being a lattice is equivalent to being a model of $\Sigma$ and we conclude that $\Sigma$ is an equational theory of lattices.
 \end{customthm}
 
-\begin{customthm}{II.15.4} Let $\mathcal{L}$ be a language, $\mathfrak{A}=(A,\mathcal{I})$, $\mathfrak{B}=(B,\mathcal{J})$ be structures for $\mathcal{L}$, $\varphi$ be a quantifier-free formula of $\mathcal{L}$ and $\sigma$ be an assignment for $\varphi$ in $A$. Assume that $\mathfrak{A}$ is a substructure of $\mathfrak{B}$ and that $\mathfrak{B}\models\varphi[\sigma]$. We prove $\mathfrak{A}\models\varphi[\sigma]$ by induction on $\varphi$. If $\varphi=p(\tau_1,\ldots,\tau_n)$, we have $(\val_{\mathfrak{B}}(\tau_1)[\sigma],\ldots,\val_{\mathfrak{B}}(\tau_n)[\sigma])\in p_\mathfrak{B}$ from $\mathfrak{B}\models\varphi[\sigma]$. Here we use the fact that $\val_{\mathfrak{A}}(\tau)[\sigma]=\val_{\mathfrak{B}}(\tau)[\sigma]$ holds for any term $\tau$ and any assignment $\sigma$ for $\tau$ in $A$, which can be easily proved by induction on $\tau$, to get $\val_{\mathfrak{A}}(\varphi)[\sigma]\in p_\mathfrak{B}\cap A^n$. Hence we get $\mathfrak{A}\models\varphi[\sigma]$. If $\varphi=\varphi_1\wedge\varphi_2$ and we have  $\mathfrak{A}\models\varphi_1[\sigma]$ \& $\mathfrak{A}\models\varphi_2[\sigma]$, then it is obvious that $\mathfrak{A}\models\varphi[\sigma]$ holds. The same goes for the other logical connectives. Thus we have $\mathfrak{B}\models\varphi[\sigma]\rightarrow\mathfrak{A}\models\varphi[\sigma]$ for any quantifier-free formula of $\mathcal{L}$ and any assignment $\sigma$ for $\varphi$ in $A$. Therefore for a set $\Sigma$ of sentences in $\mathcal{L}$ which is universal, we have $\mathfrak{B}\models\Sigma\rightarrow\mathfrak{A}\models\Sigma$.
+\begin{customthm}{II.15.4}
+  Let $\mathcal{L}$ be a language, $\mathfrak{A}=(A,\mathcal{I})$, $\mathfrak{B}=(B,\mathcal{J})$ be structures for $\mathcal{L}$, $\varphi$ be a quantifier-free formula of $\mathcal{L}$ and $\sigma$ be an assignment for $\varphi$ in $A$. Assume that $\mathfrak{A}$ is a substructure of $\mathfrak{B}$ and that $\mathfrak{B}\models\varphi[\sigma]$. We prove $\mathfrak{A}\models\varphi[\sigma]$ by induction on $\varphi$. If $\varphi=p(\tau_1,\ldots,\tau_n)$, we have $(\val_{\mathfrak{B}}(\tau_1)[\sigma],\ldots,\val_{\mathfrak{B}}(\tau_n)[\sigma])\in p_\mathfrak{B}$ from $\mathfrak{B}\models\varphi[\sigma]$. Here we use the fact that $\val_{\mathfrak{A}}(\tau)[\sigma]=\val_{\mathfrak{B}}(\tau)[\sigma]$ holds for any term $\tau$ and any assignment $\sigma$ for $\tau$ in $A$, which can be easily proved by induction on $\tau$, to get $\val_{\mathfrak{A}}(\varphi)[\sigma]\in p_\mathfrak{B}\cap A^n$. Hence we get $\mathfrak{A}\models\varphi[\sigma]$. If $\varphi=\varphi_1\wedge\varphi_2$ and we have  $\mathfrak{A}\models\varphi_1[\sigma]$ \& $\mathfrak{A}\models\varphi_2[\sigma]$, then it is obvious that $\mathfrak{A}\models\varphi[\sigma]$ holds. The same goes for the other logical connectives. Thus we have $\mathfrak{B}\models\varphi[\sigma]\rightarrow\mathfrak{A}\models\varphi[\sigma]$ for any quantifier-free formula of $\mathcal{L}$ and any assignment $\sigma$ for $\varphi$ in $A$. Therefore for a set $\Sigma$ of sentences in $\mathcal{L}$ which is universal, we have $\mathfrak{B}\models\Sigma\rightarrow\mathfrak{A}\models\Sigma$.
 \end{customthm}
 
-\begin{customthm}{II.16.5} Let $n$ be the number of roots of $\tau$ in $B$. $n$ is finite since $n\leq\textrm{deg}(\tau)$ holds. Assuming we have already discovered $k(<n)$ different roots $b_1,\ldots,b_k$ of $\tau$ in $A$, we can apply II.16.4(2) with $\exists y(\tau(y)=0\wedge y\neq b_1\wedge\cdots\wedge y\neq b_k)$ to obtain another root $b_{k+1}$ in $A$. Repeating this until we get $b_n$, we will get $n$ roots in $A$.
+\begin{customthm}{II.16.5}
+  Let $n$ be the number of roots of $\tau$ in $B$. $n$ is finite since $n\leq\textrm{deg}(\tau)$ holds. Assuming we have already discovered $k(<n)$ different roots $b_1,\ldots,b_k$ of $\tau$ in $A$, we can apply II.16.4(2) with $\exists y(\tau(y)=0\wedge y\neq b_1\wedge\cdots\wedge y\neq b_k)$ to obtain another root $b_{k+1}$ in $A$. Repeating this until we get $b_n$, we will get $n$ roots in $A$.
 \end{customthm}
 
-\begin{customthm}{II.16.8} We assume $\mathfrak{B}\preccurlyeq\mathfrak{C}$ throughout this exercise.
-\begin{enumerate}
-\item It is obvious that $\omega=B\subseteq C$ holds, which means $\omega$ is an initial segment of $C$.
-\item $\Phi$ is monotonic since the successor function $S$ on $\omega$ is monotonic and we can extend $\mathfrak{B}\models\forall x,y[x<y\rightarrow S(x)<S(y)]$ to $C$. To prove that $\Phi$ is bijective, we can extend $\mathfrak{B}\models\forall x,y[S(x)=S(y)\rightarrow x=y]$ (injectivity) and $\mathfrak{B}\models\forall y[y\neq 0\rightarrow\exists x[y=S(x)]]$ (surjectivity) to $C$. It is also obvious that $\Phi(S(x))=S(\Phi(x))$ holds for all $x\in C$. Hence $\Phi$ is an automorphism of $\mathfrak{C}$.
-\item Assume $\mathfrak{B}\neq\mathfrak{C}$ and that there is a formula $\varphi(x)$ of $\mathcal{L}$ such that $\mathfrak{B}\models\varphi[a]$ iff $a$ is even. Then  $\psi=\forall x[\varphi(x)\leftrightarrow\neg\varphi(S(x))]$ is valid under $\mathfrak{B}$ so it is valid in $\mathfrak{C}$ as well. Now let $c\in C\setminus\omega$ and assume $\mathfrak{C}\models\varphi[c]$. Then $\mathfrak{C}\models\varphi[\Phi(c)]$ holds since $\Phi$ is an automorphism of $\mathfrak{C}$. Therefore we have $\mathfrak{C}\models\varphi[c]\wedge\varphi[S(c)]$, which contradicts $\psi$. If $\mathfrak{C}\not\models\varphi[c]$, then we will have $\mathfrak{C}\models\neg\varphi[c]\wedge\neg\varphi[S(c)]$ in the same way, which anyway leads to a contradiction. Thus such a $\varphi$ does not exist.
-\end{enumerate}
+\begin{customthm}{II.16.8}
+  We assume $\mathfrak{B}\preccurlyeq\mathfrak{C}$ throughout this exercise.
+  \begin{enumerate}
+    \item It is obvious that $\omega=B\subseteq C$ holds, which means $\omega$ is an initial segment of $C$.
+    \item $\Phi$ is monotonic since the successor function $S$ on $\omega$ is monotonic and we can extend $\mathfrak{B}\models\forall x,y[x<y\rightarrow S(x)<S(y)]$ to $C$. To prove that $\Phi$ is bijective, we can extend $\mathfrak{B}\models\forall x,y[S(x)=S(y)\rightarrow x=y]$ (injectivity) and $\mathfrak{B}\models\forall y[y\neq 0\rightarrow\exists x[y=S(x)]]$ (surjectivity) to $C$. It is also obvious that $\Phi(S(x))=S(\Phi(x))$ holds for all $x\in C$. Hence $\Phi$ is an automorphism of $\mathfrak{C}$.
+    \item Assume $\mathfrak{B}\neq\mathfrak{C}$ and that there is a formula $\varphi(x)$ of $\mathcal{L}$ such that $\mathfrak{B}\models\varphi[a]$ iff $a$ is even. Then  $\psi=\forall x[\varphi(x)\leftrightarrow\neg\varphi(S(x))]$ is valid under $\mathfrak{B}$ so it is valid in $\mathfrak{C}$ as well. Now let $c\in C\setminus\omega$ and assume $\mathfrak{C}\models\varphi[c]$. Then $\mathfrak{C}\models\varphi[\Phi(c)]$ holds since $\Phi$ is an automorphism of $\mathfrak{C}$. Therefore we have $\mathfrak{C}\models\varphi[c]\wedge\varphi[S(c)]$, which contradicts $\psi$. If $\mathfrak{C}\not\models\varphi[c]$, then we will have $\mathfrak{C}\models\neg\varphi[c]\wedge\neg\varphi[S(c)]$ in the same way, which anyway leads to a contradiction. Thus such a $\varphi$ does not exist.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{II.16.9} Let $\varphi(\vec{x})=\exists y\psi(\vec{x},y)$ be any existential formula and let $\vec{a}\in A$ be one such that $\mathfrak{B}\models\varphi[\vec{a}]$. Then there exists $b\in B$ such that $\mathfrak{B}\models\psi[\vec{a},b]$. By using an automorphism of $\mathfrak{B}$ such that $\Phi(\vec{a})=\vec{a}$ and $\Phi(b)\in A$, we can get $b'=\Phi(b)\in A$ that satisfies $\mathfrak{B}\models\psi[\vec{a},b']$ since $\mathfrak{B}\models\psi[\Phi(\vec{a}),\Phi(b)]$ holds. Hence we get $\mathfrak{A}\preccurlyeq\mathfrak{B}$ by Lemma II.16.4.
+\begin{customthm}{II.16.9}
+  Let $\varphi(\vec{x})=\exists y\psi(\vec{x},y)$ be any existential formula and let $\vec{a}\in A$ be one such that $\mathfrak{B}\models\varphi[\vec{a}]$. Then there exists $b\in B$ such that $\mathfrak{B}\models\psi[\vec{a},b]$. By using an automorphism of $\mathfrak{B}$ such that $\Phi(\vec{a})=\vec{a}$ and $\Phi(b)\in A$, we can get $b'=\Phi(b)\in A$ that satisfies $\mathfrak{B}\models\psi[\vec{a},b']$ since $\mathfrak{B}\models\psi[\Phi(\vec{a}),\Phi(b)]$ holds. Hence we get $\mathfrak{A}\preccurlyeq\mathfrak{B}$ by Lemma II.16.4.
 \end{customthm}
 
-\begin{customthm}{II.16.10} Let $\mathfrak{A},\mathfrak{B}$ be infinite abelian group of exponent $p$ such that $\mathfrak{A}\subseteq\mathfrak{B}$. $B$ can be viewed as an infinite dimensional vector space over $\Sigma_p$ and $A$ can be viewed as an infinite dimensional subspace of $B$. Let $a_1,\ldots,a_n\in A$ and $b\in B$. If $b\in A$, the identity map satisfies the condition of Exercise II.16.9. If $b\not\in A$, then let $c\in A$ be a vector such that $a_1,\ldots,a_n,b,c$ are linearly independent. Such $c$ exists because $A$ is infinite dimensional. Let $\mathcal{B}_A$ be a basis of the subspace spanned by $a_1,\ldots,a_n$ and let $\mathcal{B}$ be a basis of $B$ that extends $\mathcal{B}_A\cup\{b,c\}$. Now we define a linear transformation $\Phi:B\rightarrow B$ by $\Phi(b)=c$, $\Phi(c)=b$ and $\Phi(v)=v$ for all other $v\in\mathcal{B}$. Then this $\Phi$ is bijective and hence is an automorphism, which satisfies the condition of Exercise II.16.9. Thus $\mathfrak{A}\preccurlyeq\mathfrak{B}$ holds.
+\begin{customthm}{II.16.10}
+  Let $\mathfrak{A},\mathfrak{B}$ be infinite abelian group of exponent $p$ such that $\mathfrak{A}\subseteq\mathfrak{B}$. $B$ can be viewed as an infinite dimensional vector space over $\Sigma_p$ and $A$ can be viewed as an infinite dimensional subspace of $B$. Let $a_1,\ldots,a_n\in A$ and $b\in B$. If $b\in A$, the identity map satisfies the condition of Exercise II.16.9. If $b\not\in A$, then let $c\in A$ be a vector such that $a_1,\ldots,a_n,b,c$ are linearly independent. Such $c$ exists because $A$ is infinite dimensional. Let $\mathcal{B}_A$ be a basis of the subspace spanned by $a_1,\ldots,a_n$ and let $\mathcal{B}$ be a basis of $B$ that extends $\mathcal{B}_A\cup\{b,c\}$. Now we define a linear transformation $\Phi:B\rightarrow B$ by $\Phi(b)=c$, $\Phi(c)=b$ and $\Phi(v)=v$ for all other $v\in\mathcal{B}$. Then this $\Phi$ is bijective and hence is an automorphism, which satisfies the condition of Exercise II.16.9. Thus $\mathfrak{A}\preccurlyeq\mathfrak{B}$ holds.
 \end{customthm}
 
-\begin{customthm}{II.16.11} Let $0<a_1<\ldots<a_n<1\leq b<2$. Then the following function $f:(0,2)\rightarrow(0,2)$ defined by
-\[f(x)=
-\begin{cases}
-  x & \text{if } 0<x\leq a_n \\
-  \frac{1-a_n}{2(b-a_n)}(x-a_n)+a_n & \text{if } a_n<x<b \\
-  2-\frac{3-a_n}{2(2-b)}(2-x) & \text{if } b\leq x<2
-\end{cases}
-\]
-satisfies the condition of Exercise II.16.9. Hence we get $(0,1)\preccurlyeq(0,2)$.
+\begin{customthm}{II.16.11}
+  Let $0<a_1<\ldots<a_n<1\leq b<2$. Then the following function $f:(0,2)\rightarrow(0,2)$ defined by
+  \[
+    f(x)=
+    \begin{cases}
+      x & \text{if } 0<x\leq a_n \\
+      \frac{1-a_n}{2(b-a_n)}(x-a_n)+a_n & \text{if } a_n<x<b \\
+      2-\frac{3-a_n}{2(2-b)}(2-x) & \text{if } b\leq x<2
+    \end{cases}
+  \]
+  satisfies the condition of Exercise II.16.9. Hence we get $(0,1)\preccurlyeq(0,2)$.
 
-To prove the rest, let $A,B$ be countable dense totally ordered sets such that $A\subseteq B$. Let $a_1,\ldots,a_n\in A$, $a_1<\ldots<a_n$ and $b\in B\setminus A$. We fix an element of $c\in A$ which belongs to the same interval with $b$ partitioned by $a_1,\ldots,a_n$. Then we can construct an automorphism $\Phi$ of $B$, starting from $\Phi(a_1)=a_1,\ldots,\Phi(a_n)=a_n$ and $\Phi(b)=c$ as we saw in Exercise II.13.10. Thus the condition of Exercise II.16.9 is satisfied and it turns out that $\mathfrak{A}\preccurlyeq\mathfrak{B}$ holds whenever $\mathfrak{A}\subseteq\mathfrak{B}$ and $\mathfrak{A},\mathfrak{B}$ are countable models of $\Delta^{(~)}$.
+  To prove the rest, let $A,B$ be countable dense totally ordered sets such that $A\subseteq B$. Let $a_1,\ldots,a_n\in A$, $a_1<\ldots<a_n$ and $b\in B\setminus A$. We fix an element of $c\in A$ which belongs to the same interval with $b$ partitioned by $a_1,\ldots,a_n$. Then we can construct an automorphism $\Phi$ of $B$, starting from $\Phi(a_1)=a_1,\ldots,\Phi(a_n)=a_n$ and $\Phi(b)=c$ as we saw in Exercise II.13.10. Thus the condition of Exercise II.16.9 is satisfied and it turns out that $\mathfrak{A}\preccurlyeq\mathfrak{B}$ holds whenever $\mathfrak{A}\subseteq\mathfrak{B}$ and $\mathfrak{A},\mathfrak{B}$ are countable models of $\Delta^{(~)}$.
 \end{customthm}
 
-\begin{customthm}{II.16.12} Skipped for now.
+\begin{customthm}{II.16.12}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.16.13} By Exercise II.16.11, we know that $\Delta^{(~)}$ satisfies the condition of Exercise II.16.12. Hence it is model-complete.
+\begin{customthm}{II.16.13}
+  By Exercise II.16.11, we know that $\Delta^{(~)}$ satisfies the condition of Exercise II.16.12. Hence it is model-complete.
 \end{customthm}
 
-\begin{customthm}{II.16.14} As we saw in Exercise II.13.7, any infinite torsion-free divisible abelian group of cardinality $\aleph_1$ can be viewed as a vector space over $\mathbb{Q}$ which has cardinality $\aleph_1$. Therefore we can prove $\mathfrak{A}\preccurlyeq\mathfrak{B}$ whenever $\mathfrak{A},\mathfrak{B}$ are infinite torsion-free divisible abelian groups such that $\mathfrak{A}\subseteq\mathfrak{B}$ and $|\mathfrak{A}|=|\mathfrak{B}|=\aleph_1$ just as we did in Exercise II.16.10. Thus by Exercise II.16.12, the theory turns out to be model-complete.
+\begin{customthm}{II.16.14}
+  As we saw in Exercise II.13.7, any infinite torsion-free divisible abelian group of cardinality $\aleph_1$ can be viewed as a vector space over $\mathbb{Q}$ which has cardinality $\aleph_1$. Therefore we can prove $\mathfrak{A}\preccurlyeq\mathfrak{B}$ whenever $\mathfrak{A},\mathfrak{B}$ are infinite torsion-free divisible abelian groups such that $\mathfrak{A}\subseteq\mathfrak{B}$ and $|\mathfrak{A}|=|\mathfrak{B}|=\aleph_1$ just as we did in Exercise II.16.10. Thus by Exercise II.16.12, the theory turns out to be model-complete.
 \end{customthm}
 
-\begin{customthm}{II.16.15} We first show that any boolean function of positive arity can be written in conjunctive normal form. Let $0<n\in\omega$ and $\varphi:2^n\rightarrow 2$ be a boolean function. Then the following formula $\psi:2^n\rightarrow 2$ defined as
-\[
-  \psi(p_1,\ldots,p_n)=\bigwedge_{\varphi(b_1,\ldots,b_n)=F}(p_1=\overline{b_1}\vee\cdots\vee p_n=\overline{b_n})
-\]
-is equal to $\varphi$ and is in conjunctive normal form if there are any boolean values $b_1,\ldots,b_n$ such that $\varphi(b_1,\ldots,b_n)=F$. If not, then $\varphi$ is always true and we can simply make $\psi=p_1\vee\neg p_1$.
+\begin{customthm}{II.16.15}
+  We first show that any boolean function of positive arity can be written in conjunctive normal form. Let $0<n\in\omega$ and $\varphi:2^n\rightarrow 2$ be a boolean function. Then the following formula $\psi:2^n\rightarrow 2$ defined as
+  \[
+    \psi(p_1,\ldots,p_n)=\bigwedge_{\varphi(b_1,\ldots,b_n)=F}(p_1=\overline{b_1}\vee\cdots\vee p_n=\overline{b_n})
+  \]
+  is equal to $\varphi$ and is in conjunctive normal form if there are any boolean values $b_1,\ldots,b_n$ such that $\varphi(b_1,\ldots,b_n)=F$. If not, then $\varphi$ is always true and we can simply make $\psi=p_1\vee\neg p_1$.
 
-Given a quantifier-free formula $\varphi$, we can get a boolean function $\varphi'$ by replacing each atomic formula in it by different boolean variables. We have a boolean function $\psi'$ in conjunctive normal form which is equal to $\varphi'$ from the above. By replacing the boolean variables in $\psi'$ by the corresponding atomic formulas, we can get a formula $\psi$ in conjunctive normal form which is equivalent to $\varphi$.
+  Given a quantifier-free formula $\varphi$, we can get a boolean function $\varphi'$ by replacing each atomic formula in it by different boolean variables. We have a boolean function $\psi'$ in conjunctive normal form which is equal to $\varphi'$ from the above. By replacing the boolean variables in $\psi'$ by the corresponding atomic formulas, we can get a formula $\psi$ in conjunctive normal form which is equivalent to $\varphi$.
 \end{customthm}
 
-\begin{customthm}{II.16.16} We prove it by induction. For basis, note that any atomic formula is quantifier-free and hence is in prenex normal form. Now let $\varphi=Q_1x_1Q_2x_2\cdots Q_nx_n\psi$ where $\psi$ is a quantifier-free formula. $\neg\varphi$ is equivalent to $\overline{Q_1}x_1\overline{Q_2}x_2\cdots\overline{Q_n}x_n\neg\psi$, where each $Q_i$ stands for the opposite quantifier. Let $\psi'$ be a quantifier-free formula, $\varphi'=Q_1'y_1Q_2'y_2\cdots Q_m'y_m\psi'$ be another formula in prenex normal form and consider $\varphi\wedge\varphi'$. We can make all the variables $x_1,\ldots,x_n,y_1,\ldots,y_m$ that occur in the quantifiers in $\varphi\wedge\varphi'$ different from each other and from any of its free variables, keeping the logical equivalence. By assuming that, we have a formula $Q_1x_1Q_2x_2\cdots Q_nx_nQ_1'y_1Q_2'y_2\cdots Q_m'y_m(\psi\wedge\psi')$ in a prenex normal form, which is equivalent to $\varphi\wedge\varphi'$. Now we proved the negation case and the conjunction case. $\forall x\varphi$ and $\exists x\varphi$ are obviously in prenex normal form. For the other types of formulas, one can use the fact that $\varphi_1\vee\varphi_2,\varphi_1\rightarrow\varphi_2,\varphi_1\leftrightarrow\varphi_2$ are equivalent to $\neg(\neg\varphi_1\wedge\neg\varphi_2), \neg\varphi_1\vee\varphi_2,(\varphi_1\rightarrow\varphi_2)\wedge(\varphi_2\rightarrow\varphi_1)$, respectively to reduce them to the cases of negation and conjunction. Thus every formula is logically equivalent to one in prenex normal form.
+\begin{customthm}{II.16.16}
+  We prove it by induction. For basis, note that any atomic formula is quantifier-free and hence is in prenex normal form. Now let $\varphi=Q_1x_1Q_2x_2\cdots Q_nx_n\psi$ where $\psi$ is a quantifier-free formula. $\neg\varphi$ is equivalent to $\overline{Q_1}x_1\overline{Q_2}x_2\cdots\overline{Q_n}x_n\neg\psi$, where each $Q_i$ stands for the opposite quantifier. Let $\psi'$ be a quantifier-free formula, $\varphi'=Q_1'y_1Q_2'y_2\cdots Q_m'y_m\psi'$ be another formula in prenex normal form and consider $\varphi\wedge\varphi'$. We can make all the variables $x_1,\ldots,x_n,y_1,\ldots,y_m$ that occur in the quantifiers in $\varphi\wedge\varphi'$ different from each other and from any of its free variables, keeping the logical equivalence. By assuming that, we have a formula $Q_1x_1Q_2x_2\cdots Q_nx_nQ_1'y_1Q_2'y_2\cdots Q_m'y_m(\psi\wedge\psi')$ in a prenex normal form, which is equivalent to $\varphi\wedge\varphi'$. Now we proved the negation case and the conjunction case. $\forall x\varphi$ and $\exists x\varphi$ are obviously in prenex normal form. For the other types of formulas, one can use the fact that $\varphi_1\vee\varphi_2,\varphi_1\rightarrow\varphi_2,\varphi_1\leftrightarrow\varphi_2$ are equivalent to $\neg(\neg\varphi_1\wedge\neg\varphi_2), \neg\varphi_1\vee\varphi_2,(\varphi_1\rightarrow\varphi_2)\wedge(\varphi_2\rightarrow\varphi_1)$, respectively to reduce them to the cases of negation and conjunction. Thus every formula is logically equivalent to one in prenex normal form.
 \end{customthm}
 
-\begin{customthm}{II.16.17} Skipped for now.
+\begin{customthm}{II.16.17}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.16.18} Skipped for now.
+\begin{customthm}{II.16.18}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.16.19} Below is the proof for each item.
-\begin{enumerate}
-  \item Let $b\in B\setminus\{0\}$. If $b$ is infinitely large, then $1/b$ is infinitesimal because $|b|>1/a$ holds for all positive real numbers $a$, which is equivalent to $|1/b|<a$. If $1/b$ is infinitesimal, then $b$ is infinitely large because $|b|>0$ holds and $|1/b|<|1/a|$ holds for all non-zero real numbers $a$, which is equivalent to having $|b|>|a|$ for all real numbers $a$.
-  \item Let $b\in B\setminus\mathbb{R}$. If $b$ is infinitely large, then we can get an infinitesimal $1/b$. If not, $\varepsilon:=b-\sup\{a\in\mathbb{R}:a<b\}$ where sup is calculated in $\mathbb{R}$ is an infinitesimal and we can get an infinitely large number $1/\varepsilon$.
-  \item Let $\eta\in\mathbb{R},\eta>0$ and let $\xi$ be a positive real number such that $\forall h(|h|<\xi\rightarrow|(f(r+h)-f(r))/h-g(r)|<\eta)$ holds. Then by interpreting this formula in $\mathfrak{B}$ and instantiating the $h$ by $\varepsilon$, we have $|(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)|<\eta$. Since $\eta$ is an arbitrary positive real number, we can conclude that $(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)$ is either infinitesimal or $0$.
-  \item Let $\psi(x)=x\neq0\wedge x\neq\pm 1\wedge\neg\exists y,z[x=yz\wedge Z(x)\wedge Z(y)\wedge1<|y|<|x|]$. Then $x\in\mathbb{R}$ is a prime number iff $\varphi(x)$ holds. Since there are arbitrarily large prime numbers, $\forall x\exists y(x<y\wedge\psi(y))$ holds. By interpreting it in $\mathfrak{B}$ with an infinitely large positive $x$, we get an infinitely large prime $y$. Note that if $x<y$ holds for an infinitely large number $x$, then $y$ is infinitely large as well.
-  \item A maximal element in $P$ would contradict $\forall x\exists y(x<y\wedge\psi(y))$. To prove that $P$ does not have a minimal element, we consider the sentence $\forall x [2<x\wedge Z(x)\rightarrow\exists y[\psi(y)\wedge\floor*{\sqrt[\ceil*{\log_2x}]{x}}\leq y<x]$, which one can easily prove in $\mathbb{R}$ by thinking of the factorization of $x$. A minimal element $x\in P$ would contradict it.
-  \item If there are infinitely many twin primes, then $\forall x\exists y[x<y\wedge P(y)\wedge P(y+2)]$ is true. Interpreting this sentence in $\mathfrak{B}$ with an infinitely large number $x$, we get a pair of infinitely large primes $y$ and $y+2$. If there are only finitely many twin primes, let $x$ be the larger one of the largest twin prime pair and consider $\neg\exists y[x<y\wedge P(y)\wedge P(y+2)]$. The interpretation of it in $\mathfrak{B}$ will tell us that there is no infinitely large twin prime.
-\end{enumerate}
+\begin{customthm}{II.16.19}
+  Below is the proof for each item.
+  \begin{enumerate}
+    \item Let $b\in B\setminus\{0\}$. If $b$ is infinitely large, then $1/b$ is infinitesimal because $|b|>1/a$ holds for all positive real numbers $a$, which is equivalent to $|1/b|<a$. If $1/b$ is infinitesimal, then $b$ is infinitely large because $|b|>0$ holds and $|1/b|<|1/a|$ holds for all non-zero real numbers $a$, which is equivalent to having $|b|>|a|$ for all real numbers $a$.
+    \item Let $b\in B\setminus\mathbb{R}$. If $b$ is infinitely large, then we can get an infinitesimal $1/b$. If not, $\varepsilon:=b-\sup\{a\in\mathbb{R}:a<b\}$ where sup is calculated in $\mathbb{R}$ is an infinitesimal and we can get an infinitely large number $1/\varepsilon$.
+    \item Let $\eta\in\mathbb{R},\eta>0$ and let $\xi$ be a positive real number such that $\forall h(|h|<\xi\rightarrow|(f(r+h)-f(r))/h-g(r)|<\eta)$ holds. Then by interpreting this formula in $\mathfrak{B}$ and instantiating the $h$ by $\varepsilon$, we have $|(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)|<\eta$. Since $\eta$ is an arbitrary positive real number, we can conclude that $(f_\mathfrak{B}(r+\varepsilon)-f_\mathfrak{B}(r))/\varepsilon-g_\mathfrak{B}(r)$ is either infinitesimal or $0$.
+    \item Let $\psi(x)=x\neq0\wedge x\neq\pm 1\wedge\neg\exists y,z[x=yz\wedge Z(x)\wedge Z(y)\wedge1<|y|<|x|]$. Then $x\in\mathbb{R}$ is a prime number iff $\varphi(x)$ holds. Since there are arbitrarily large prime numbers, $\forall x\exists y(x<y\wedge\psi(y))$ holds. By interpreting it in $\mathfrak{B}$ with an infinitely large positive $x$, we get an infinitely large prime $y$. Note that if $x<y$ holds for an infinitely large number $x$, then $y$ is infinitely large as well.
+    \item A maximal element in $P$ would contradict $\forall x\exists y(x<y\wedge\psi(y))$. To prove that $P$ does not have a minimal element, we consider the sentence $\forall x [2<x\wedge Z(x)\rightarrow\exists y[\psi(y)\wedge\floor*{\sqrt[\ceil*{\log_2x}]{x}}\leq y<x]$, which one can easily prove in $\mathbb{R}$ by thinking of the factorization of $x$. A minimal element $x\in P$ would contradict it.
+    \item If there are infinitely many twin primes, then $\forall x\exists y[x<y\wedge P(y)\wedge P(y+2)]$ is true. Interpreting this sentence in $\mathfrak{B}$ with an infinitely large number $x$, we get a pair of infinitely large primes $y$ and $y+2$. If there are only finitely many twin primes, let $x$ be the larger one of the largest twin prime pair and consider $\neg\exists y[x<y\wedge P(y)\wedge P(y+2)]$. The interpretation of it in $\mathfrak{B}$ will tell us that there is no infinitely large twin prime.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{II.17.2} The function $f:R(\gamma)\rightarrow R(\gamma)$ recursively defined by $f(0)=7$ and $f(x)=\{f(y):y\in x\}$ if $0<\rank(x)<\gamma$, is an isomorphic embedding since it obviously satisfies $x\in y\leftrightarrow f(x)\in f(y)$.
+\begin{customthm}{II.17.2}
+  The function $f:R(\gamma)\rightarrow R(\gamma)$ recursively defined by $f(0)=7$ and $f(x)=\{f(y):y\in x\}$ if $0<\rank(x)<\gamma$, is an isomorphic embedding since it obviously satisfies $x\in y\leftrightarrow f(x)\in f(y)$.
 \end{customthm}
 
-\begin{customthm}{II.17.4} Skipped for now.
+\begin{customthm}{II.17.4}
+  Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.17.6} By Lemma II.17.9 (10), (19), (17) and (18), the following statement $\varphi=\forall x\exists n\exists f[[n\textrm{ is a natural number }]\wedge[f\textrm{ is a bijection from }\dom(f)\textrm{ to }\ran(f)]\wedge[\dom(f)=x]\wedge[\ran(f)=n]]$ can be viewed as a sentence of $\mathcal{L}=\{\in\}$. Since every set in $HF$ is finite, $HF\models\varphi$ holds.
+\begin{customthm}{II.17.6}
+  By Lemma II.17.9 (10), (19), (17) and (18), the following statement $\varphi=\forall x\exists n\exists f[[n\textrm{ is a natural number }]\wedge[f\textrm{ is a bijection from }\dom(f)\textrm{ to }\ran(f)]\wedge[\dom(f)=x]\wedge[\ran(f)=n]]$ can be viewed as a sentence of $\mathcal{L}=\{\in\}$. Since every set in $HF$ is finite, $HF\models\varphi$ holds.
 \end{customthm}
 
 \end{document}
