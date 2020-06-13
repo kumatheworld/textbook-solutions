@@ -764,8 +764,20 @@
   Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.17.6}
-  By Lemma II.17.9 (10), (19), (17) and (18), the following statement $\varphi=\forall x\exists n\exists f[[n\textrm{ is a natural number }]\wedge[f\textrm{ is a bijection from }\dom(f)\textrm{ to }\ran(f)]\wedge[\dom(f)=x]\wedge[\ran(f)=n]]$ can be viewed as a sentence of $\mathcal{L}=\{\in\}$. Since every set in $HF$ is finite, $HF\models\varphi$ holds.
+\begin{customthm}{II.17.16}
+  By Lemma II.17.9 (10), (19), (17) and (18), the following statement $\varphi=\forall x\exists n\exists f[[n\textrm{ is a natural number}]\wedge[f\textrm{ is a bijection from }\dom(f)\textrm{ to }\ran(f)]\wedge[\dom(f)=x]\wedge[\ran(f)=n]]$ can be viewed as a $\Delta_0$ sentence of $\mathcal{L}=\{\in\}$. Since $HF$ is transitive, the interpretation of $\varphi$ in $HF$ is that every set in it has a bijection onto some natural number, just as we interpret $\varphi$ in $V$. Therefore $HF\models\varphi$ is obvious because every set in $HF$ is finite.
+\end{customthm}
+
+\begin{customthm}{II.17.23}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{II.17.30}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{II.18.10}
+  Let $f:\omega\rightarrow N$ be the function defined by (a) and (b). That is, define $f$ by $f(0)=c$ and $f(S(n))=\sigma(f(n))$ for $n\in\omega$. $f$ is surjective because $\ran(f)=N$ follows from (9) and $c\in\ran(f)\wedge\forall x\in\ran(f)[\sigma(x)\in\ran(f)]$. To show the injectivitiy of $f$, assume $f$ is not injective and let $n\in\omega$ be the least one such that $\exists m<n[f(m)=f(n)]$. Let $l$ be the predecessor of $n$ (i.e. $n=S(l)$). $m$ cannot be $0$ because we have $f(n)=\sigma(f(l))$ and $f(0)=c\not\in\ran(\sigma)$ from (8). Now let $k$ be the predecessor of $m$. Then we get $\sigma(f(k))=\sigma(f(l))$ from $f(m)=f(n)$. Since $\sigma$ is injective from (7), we have $f(k)=f(l)$, which contradicts the minimality of $n$. Thus $f$ is injective and we conclude that $f$ is an bijection from $\omega$ to $N$.
 \end{customthm}
 
 \end{document}
