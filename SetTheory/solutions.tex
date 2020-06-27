@@ -2,6 +2,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{mathtools}
 \usepackage{amsthm}
+\usepackage{amsfonts}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\dom}{\mathop{\mathrm{dom}}}
@@ -30,6 +31,10 @@
 
 \begin{customthm}{I.4.18}
   Assume $y$ is a set such that $y\in y$ and let $x=\{y\}$. This $x$ can be expressed as $x=\{z\in y:z=y\}$ and hence it exists by Comprehension. Now we apply Foundation to $x$, which states that there is no $z$ such that $z=y\wedge z\in y$. That contradicts the assumption $y\in y$. Thus $y\not\in y$ holds for any set $y$.
+\end{customthm}
+
+\begin{customthm}{I.6.23}
+  Let $X$ be a non-empty subset of $(\mathbb{N}\times\mathbb{N},R)$. Let $x=\min(\dom(X))$ and $y=\min\{v\in\mathbb{N}:(x,v)\in X\}$. Then $(x,y)$ is an $R$-minimal element. $X$ has at most $y$ minimal elements other than $(x,y)$ because $X_v=\{(u,v)\in X\}$ for each $v<y$ has at most 1 minimal element and $(u,v)\in X$ such that $y\leq v$ and $(u,v)\neq(x,y)$ cannot be minimal since $(x,y)<(u,v)$ holds. Hence $X$ has only finitely many $R$-minimal elements. For each $k\in\mathbb{N}$, we have a subset $\{(x,y)\in\mathbb{N}\times\mathbb{N}:x+y+1=k\}$ of size $k$, every element of which is an $R$-minimal element.
 \end{customthm}
 
 \end{document}
