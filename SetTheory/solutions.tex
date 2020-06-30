@@ -45,4 +45,8 @@
   Assume there are distinct sets $x,y$ such that $S(x)=S(y)$. Since $x\in S(x)$, we get $x\in y$ from $x\in S(y)$ and $x\neq y$. We get $y\in x$ as well, from which we conclude that the set $\{x,y\}$ has no $\in$-minimal element. Thus $S$ is injective on $V$.
 \end{customthm}
 
+\begin{customthm}{I.7.2}
+  Let $t$ be a non-empty transitive set. By Foundation, there is $x\in t$ with $x\cap t=\emptyset$. Since $t$ is transitive, $x\subseteq t$ holds and we get $x=\emptyset$ from $x\cap t=\emptyset$. Now assume $t$ has at least 1 element other than $\emptyset$. By applying Foundation to $t\setminus\{\emptyset\}$, we get $y\in t$ such that $y\neq\emptyset\wedge y\cap(t\setminus\{\emptyset\})=\emptyset$. From $y\subseteq t$ (transitivity) and $y\cap(t\setminus\{\emptyset\})=\emptyset$ we get $y\subseteq\{\emptyset\}$, which means nothing but $y=\{\emptyset\}$ since $y$ is non-empty. Now the statements in the exercise are clear.
+\end{customthm}
+
 \end{document}
