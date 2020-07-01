@@ -49,4 +49,8 @@
   Let $t$ be a non-empty transitive set. By Foundation, there is $x\in t$ with $x\cap t=\emptyset$. Since $t$ is transitive, $x\subseteq t$ holds and we get $x=\emptyset$ from $x\cap t=\emptyset$. Now assume $t$ has at least 1 element other than $\emptyset$. By applying Foundation to $t\setminus\{\emptyset\}$, we get $y\in t$ such that $y\neq\emptyset\wedge y\cap(t\setminus\{\emptyset\})=\emptyset$. From $y\subseteq t$ (transitivity) and $y\cap(t\setminus\{\emptyset\})=\emptyset$ we get $y\subseteq\{\emptyset\}$, which means nothing but $y=\{\emptyset\}$ since $y$ is non-empty. Now the statements in the exercise are clear.
 \end{customthm}
 
+\begin{customthm}{I.7.25}
+  Any ordinal is transitive and satisfies trichotomy by definition. Conversely, under Foundation, we prove that any transitive set whose $\in$ satisfies trichotomy also satisfies irreflexivity and transitivity. Irreflexivity is obvious from Exercise I.4.18. To prove transitivity, let $t$ be a transitive set, $x,y,z\in t$ and $x\in y\in z$. If $(t,\in)$ satisfies trichotomy, either of $x\in z$, $x=z$ or $z\in x$ holds. If $x=z$, then $z\in y\in z$ would hold, producing a set $\{y,z\}$ which does not have an $\in$-minimal element, contradicting Foundation. $z\in x$ would produce a contradictory set $\{x,y,z\}$ as well. Thus $x\in z$ holds, which proves transitivity.
+\end{customthm}
+
 \end{document}
