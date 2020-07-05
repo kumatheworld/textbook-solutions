@@ -70,4 +70,8 @@
   If $R$ is cyclic on $A$, let $a_0,a_1,\ldots,a_{n-1},a_0$ be a cycle and consider $S=\{a_i:i<n\}$ . Since $S$ is a non-empty subset of $A$ which does not have an $R$-minimal element, $R$ is not well-founded on $A$. Hence any well-founded relation is acyclic. Now we consider the converse when the underlying set is finite. If $R$ is not well-founded on a finite set $A$, there is a non-empty $S\subseteq A$ which does not have an $R$-minimal element. Then $S$ has a cycle because otherwise we would have an infinite sequence of distinct elements in $S$, which cannot happen since $A$ is finite. Thus any acyclic relation on a finite set is well-founded on that set.
 \end{customthm}
 
+\begin{customthm}{I.9.27}
+  Since $\mathbb{R}\subseteq R(\omega)$, $\mathbb{R}\in R(\omega+1)\subseteq WF$ holds and we have $\rank(\mathbb{R})=\sup\{\rank(x)+1:x\in\mathbb{R}\}=\omega+1$. Since the Lebesgue measure $\mu$ is a function with $\{\emptyset\}\subsetneq\dom(\mu)\subseteq\mathcal{P}(\mathbb{R})$ and $\ran(\mu)\subseteq\mathbb{R}$, each element of $\mu$ is a pair $\langle x,y\rangle$ with $\rank(x)=\omega+1$ and $\rank(y)=\omega$. Thus from Lemma I.9.26 (2), each $\langle x,y\rangle\in\mu$ has rank $\omega+3$ and we get $\rank(\mu)=\omega+4$.
+\end{customthm}
+
 \end{document}
