@@ -59,7 +59,13 @@
 \end{customthm}
 
 \begin{customthm}{I.7.27}
-  Skipped for now.
+  Let $A,B$ be finite sets, $f:A\rightarrow m$ and $g:B\rightarrow n$ be bijections where $m$ and $n$ are natural numbers. See lemma I.16.5 for existence of such natural numbers. Now we prove $A\cup B\preccurlyeq m+n$ and $A\times B\approx m\cdot n$.
+
+  To show $A\cup B\preccurlyeq m+n$, we consider a function $f\cup g:A\cup B\rightarrow m\times\{0\}\cup n\times\{1\}$ defined by $f\cup g(x)=(f(x),0)$ if $x\in A$ and $f\cup g(x)=(g(x),1)$ otherwise. Since $f$ and $g$ are injective, $f\cup g$ is also injective. Therefore we get $A\cup B\preccurlyeq m\times\{0\}\cup n\times\{1\}\approx m+n$. One can show the finiteness of $m+n$ by induction on $n$, where facts such as $m+S(n)\approx S(m+n)$ and that $S(n)$ is finite whenever $n$ is finite will be used.
+
+  Likewise, for $A\times B\approx m\cdot n$, consider a function $f\times g:A\times B\rightarrow m\times n$ defined by $f\times g(x,y)=(f(x),g(y))$, which is bijective since $f$ and $g$ are bijective. One can show the finiteness of $m\times n$ by induction on $n$, where facts such as $m\times S(n)\approx m\times n+m$ and the closure property of $+$ on $\omega$ which is shown above will be used.
+
+  To prove the existence of $\mathcal{P}(A)$, we first show the existence of $\mathcal{P}(m)$ by induction on $m$. It is obvious that $\mathcal{P}(\emptyset)=\{\emptyset\}=1$ exists. Now let us assume that $\mathcal{P}(m)$ exists and consider a function $h:2\times\mathcal{P}(m)\rightarrow\mathcal{P}(S(m))$ defined by $h(0,S)=S$ and $h(1,S)=S\cup\{m\}$. Since this $h$ is a bijection, we obtain $\mathcal{P}(S(m))$ by Replacement. Therefore $\mathcal{P}(m)$ exists for each $m\in\omega$. Now we can easily get $\mathcal{P}(A)=\{\{f(l):l\in S\}:S\in\mathcal{P}(m)\}$ by Replacement.
 \end{customthm}
 
 \begin{customthm}{I.9.6}
