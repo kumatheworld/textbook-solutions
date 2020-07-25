@@ -81,4 +81,8 @@
   Since $\mathbb{R}\subseteq R(\omega)$, $\mathbb{R}\in R(\omega+1)\subseteq WF$ holds and we have $\rank(\mathbb{R})=\sup\{\rank(x)+1:x\in\mathbb{R}\}=\omega+1$. Since the Lebesgue measure $\mu$ is a function with $\{\emptyset\}\subsetneq\dom(\mu)\subseteq\mathcal{P}(\mathbb{R})$ and $\ran(\mu)\subseteq\mathbb{R}$, each element of $\mu$ is a pair $\langle x,y\rangle$ with $\rank(x)=\omega+1$ and $\rank(y)=\omega$. Thus from Lemma I.9.26 (2), each $\langle x,y\rangle\in\mu$ has rank $\omega+3$ and we get $\rank(\mu)=\omega+4$.
 \end{customthm}
 
+\begin{customthm}{I.9.39}
+  To prove the 'if' part, assume that $R^*$ totally orders $A$. Let $x,y\in A$ be distinct elements. We can assume $xR^*y$ and let $xRx_1R\cdots Rx_nRy$ without loss of generality. Then by the definition of $\rank$, we have $\rank(x)<\rank(x_1)<\cdots\rank(x_n)<\rank(y)$. Thus $\rank$ is injective. To prove the 'only if' part, assume $\rank$ is injective. Let $x,y\in A$ be distinct elements and assume WLOG that $\rank(x)<\rank(y)$. By Lemma I.9.16, there is an $a\in A$ such that $aR^*y$ and $\rank(a)=\rank(x)$. Since $\rank$ is injective, this $a$ is nothing but $x$ and we get $xR^*y$. Thus $R^*$ totally orders $A$.
+\end{customthm}
+
 \end{document}
