@@ -85,4 +85,8 @@
   To prove the 'if' part, assume that $R^*$ totally orders $A$. Let $x,y\in A$ be distinct elements. We can assume $xR^*y$ and let $xRx_1R\cdots Rx_nRy$ without loss of generality. Then by the definition of $\rank$, we have $\rank(x)<\rank(x_1)<\cdots\rank(x_n)<\rank(y)$. Thus $\rank$ is injective. To prove the 'only if' part, assume $\rank$ is injective. Let $x,y\in A$ be distinct elements and assume WLOG that $\rank(x)<\rank(y)$. By Lemma I.9.16, there is an $a\in A$ such that $aR^*y$ and $\rank(a)=\rank(x)$. Since $\rank$ is injective, this $a$ is nothing but $x$ and we get $xR^*y$. Thus $R^*$ totally orders $A$.
 \end{customthm}
 
+\begin{customthm}{I.9.40}
+  Let $R_1\subseteq R_2$ are both well-founded and set-like on $A$. Then $\rank_{A,R_1}(y)\leq\rank_{A,R_2}(y)$ obviously holds for all $y\in A$ because we have $\pred_{A,R_1}\subseteq\pred_{A,R_2}$. We next show that $\rank_{A,R_1^*}(y)\leq\rank_{A,R_1}(y)$ holds for all $y\in A$. Note that $R_1^*$ is also set-like and well-founded on $A$ (see Lemma I.9.5 and Lemma I.9.15). Now let $xR_1^*y$ and consider a path $xR_1x_1R_1\cdots R_1x_nR_1y$. We have $\rank_{A,R_1}(x)+1<\rank_{A,R_1}(x_1)+1<\cdots<\rank_{A,R_1}(x_n)+1\leq\rank_{A,R_1}(y)$ and thus $\rank_{A,R_1^*}(y)\leq\rank_{A,R_1}(y)$ holds. Now if $R_1\subseteq R_2\subseteq R_1^*$, we will have $\rank_{A,R_1}(y)\leq\rank_{A,R_2}(y)\leq\rank_{A,R_1^*}(y)\leq\rank_{A,R_1}(y)$ for all $y\in A$, which says $\rank_{A,R_1}(y)=\rank_{A,R_2}(y)=\rank_{A,R_1^*}(y)$.
+\end{customthm}
+
 \end{document}
