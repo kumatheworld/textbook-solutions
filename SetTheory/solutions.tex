@@ -12,6 +12,7 @@
 \newcommand{\trcl}{\mathop{\mathrm{trcl}}}
 \newcommand{\pred}{\mathop{\mathrm{pred}}}
 \newcommand{\rank}{\mathop{\mathrm{rank}}}
+\newcommand{\mos}{\mathop{\mathrm{mos}}}
 \newcommand{\val}{\mathop{\mathrm{val}}}
 
 \theoremstyle{definition}
@@ -91,6 +92,10 @@
 
 \begin{customthm}{I.9.41}
   We first show that $\rank_{A,R}(y)=\{\rank_{A,R}(x):x\in y\downarrow\}$ for all $y\in A$. For any $\alpha<\rank_{A,R}(y)$, there is an $x\in A$ such that $xR^*y\wedge\rank_{A,R}(x)=\alpha$ by Lemma I.9.16. Since $R$ is transitive now, $xR^*y$ simply means $xRy$, which implies such an $x$ satisfies $x\in y\downarrow$. Therefore $\rank_{A,R}(y)\subseteq\{\rank_{A,R}(x):x\in y\downarrow\}$ holds. The opposite inclusion is obvious since $\rank_{A,R}(x)<\rank_{A,R}(y)$ holds whenever $xRy$. Thus we get $\rank_{A,R}(y)=\{\rank_{A,R}(x):x\in y\downarrow\}$. Now let $X=\{a\in A:\mos_{A,R}(a)\neq\rank_{A,R}(a)\}$, assume $X$ is non-empty and let $y\in X$ be an $R$-minimal element. By the minimality of $y$ and what we have proved above, we get $\mos_{A,R}(y)=\{\mos_{A,R}(x):x\in y\downarrow\}=\{\rank_{A,R}(x):x\in y\downarrow\}=\rank(y)$, which contradicts $y\not\in X$. Thus $X$ is empty and we get $\mos_{A,R}(a)=\rank_{A,R}(a)$ for all $a\in A$.
+\end{customthm}
+
+\begin{customthm}{I.9.42}
+  Since $R$ is well-founded and is a transitive relation, we have $\mos_{A,R}(a)=\rank_{A,R}(a)$ for all $a\in A$ from Exercise I.9.41. Moreover, $R$ is extensional on $A$, which means $\mos_{A,R}$ is an isomorphism from $(A,R)$ to an ordinal $(\mos"A,\in)$ by Lemma I.9.35. This $(\mos"A,\in)$ is an ordinal since it is a transitive set of ordinals. Then by Theorem I.8.2, we have $\mos"A=\type(A;R)$ and thus $\mos_{A,R}$ and $\rank_{A,R}$ are both identical to the isomorphism.
 \end{customthm}
 
 \end{document}
