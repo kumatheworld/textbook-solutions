@@ -4,6 +4,7 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{enumitem}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\dom}{\mathop{\mathrm{dom}}}
@@ -104,6 +105,22 @@
 
 \begin{customthm}{I.9.44}
   The proof easily follows from the fact that $x$ is an $R$-minimal element of a non-empty set $X\subseteq\cup\pred_{A,R^*}(a)$ iff $x$ is an $R$-minimal element of $X\cup\{a\}$. Note that $a$ cannot be $R$-minimal.
+\end{customthm}
+
+\begin{customthm}{I.9.46}
+  Below is the proof for each item.
+  \begin{enumerate}[label=\arabic*.]
+    \item If $a\in A\setminus W$ was an $R$-minimal element, then $\pred_{A,R^*}(a)\subseteq W$ would hold, on which $R$ is well founded since $R$ is well founded on $W$ (see the proof for (2)). This shows that $a\in W$, which is a contradiction.
+    \item Let $X\subseteq W$ be non-empty. We show that $X$ has an $R$-minimal element. Let $a\in X$ and consider $(\{a\}\cup\pred_{A,R^*}(a))\cap X$. It is non-empty and has an $R$-minimal element since $R$ is well-founded on $\{a\}\cup\pred_{A,R^*}(a)$. Note that such an $R$-minimal element is also $R$-minimal in $X$.
+    \item Let $a\in W$. Since $\{a\}\cup\pred_{A,R^*}(a)\subseteq W$ holds and $R$ is well-founded on $W$ as proved above, we have $\rank_{A,R}(a)=\rank_{\{a\}\cup\pred_{A,R^*}}(a)=\rank_{W,R}(a)$ by Lemma I.9.18.
+    \item Let $a\in A$. We prove the following.
+    \begin{enumerate}
+      \item \underline{$a\in W\rightarrow\pred_{A,R^*}(a)\subseteq W$}. let $a\in W$ and consider $x\in\pred_{A,R^*}(a)$. Then $\pred_{A,R^*}(x)\subseteq \pred_{A,R^*}(a)$ holds and we get $x\in W$ from $a\in W$, which says $R$ is well-founded on $\pred_{A,R^*}(a)$. Thus $\pred_{A,R^*}(a)\subseteq W$ holds.
+      \item \underline{$\pred_{A,R^*}(a)\subseteq W\rightarrow a\in W$}. This is obvious since $R$ is well-founded on $W$.
+      \item \underline{$\pred_{A,R^*}(a)\subseteq W\rightarrow\pred_{A,R}(a)\subseteq W$}. This is obvious too since $\pred_{A,R}(a)\subseteq\pred_{A,R^*}(a)$ holds.
+      \item \underline{$\pred_{A,R}(a)\subseteq W\rightarrow\pred_{A,R^*}(a)\subseteq W$}. Assume $\pred_{A,R}(a)\subseteq W$. Consider the following equation $\pred_{A,R^*}(a)=\pred_{A,R}(a)\cup\bigcup_{xRa}\pred_{A,R^*}(x)$. Here we have $\pred_{A,R}(a)\subseteq W$ and $\pred_{A,R^*}(x)\subseteq W$ for all $xRa$ since we have $x\in W$ and $x\in W\rightarrow\pred_{A,R^*}(x)\subseteq W$, which is proved above. Thus $\pred_{A,R^*}(a)\subseteq W$ holds.
+    \end{enumerate}
+  \end{enumerate}
 \end{customthm}
 
 \end{document}
