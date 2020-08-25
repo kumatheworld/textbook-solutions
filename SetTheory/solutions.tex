@@ -123,4 +123,12 @@
   \end{enumerate}
 \end{customthm}
 
+\begin{customthm}{I.9.47}
+  Let $A$ be a set, $R$ be a well-founded relation on $A$ and define $H$ by $H=\{(x,z)\in A^2:xRz\wedge\forall y\in A\neg(xRy\wedge yRz)\}$. $H$ is an anti-transitive relation such that $H\subseteq R$. We prove that $R\subseteq H^*$ assuming that $\rank_{A,R}(a)$ is finite for any $a\in A$. Let $x,z\in A$ and $xRz$. We show $xH^*z$ by induction on $\rank(z)-\rank(x)$. Note that $\rank(z)-\rank(x)\geq 1$ whenever $xRz$. If $\rank(z)-\rank(x)=1$, there is no $y\in A$ such that $xRy\wedge yRz$ since for such $y$, $\rank(x)+2\leq\rank(y)+1\leq\rank(z)$ holds. Then we have $xHz$. Next we assume $\rank(z)-\rank(x)>1$. If there is no $y\in A$ such that $xRy\wedge yRz$, we have $xHz$. Otherwise, let $y\in A$ be one such that $xRy\wedge yRz$. Then we have $\rank(x)<\rank(y)<\rank(z)$ and therefore both $\rank(y)-\rank(x)$ and $\rank(z)-\rank(y)$ are smaller than $\rank(z)-\rank(x)$. By inductive hypothesis, we have $H$-paths from $x$ to $y$ and from $y$ to $z$, where the concatenation of these 2 paths yields an $H$-path from $x$ to $z$. Thus in any case, $xH^*z$ holds. Now we have $H\subseteq R\subseteq H^*$ and we get $H^*=R^*$ by taking the transitive closures.
+
+  However, the uniqueness does not always hold. Here we consider $(4,<)$ . Then according to the above definition, $H$ is defined as $H=\{(0,1),(1,2),(1,3)\}$, but another anti-transitive relation $H'=H\cup\{(0,3)\}$ also satisfies $H'^*=R^*$. To resolve the ambiguity, one could adopt a slightly different definition of anti-transitivity saying that $H$ is anti-transitive if there is no other path from $x$ to $y$ when $xHy$. Under that definition, we redefine $H$ by $H=\{(x,z)\in A^2:xRy\wedge\forall n\geq 1\,\forall y_1,\ldots,y_n\in A\neg(xRy_1R\cdots Ry_nRz)\}$ and consider another 'anti-transitive' $H'\subseteq R$. Since $H$ is the set of all pairs in $R$ that satisfy the necessary condition of being 'anti-transitive', $H'\subseteq H$ always holds. One can easily prove $H'^*\subsetneq H^*$ from $H'\subsetneq H$, where $H\setminus H'\subseteq H^*\setminus H'^*$ holds.
+
+  A counter example is $(\omega+1,<)$, where $H^*=(\omega,<)$ is a proper subset of $(\omega+1,<)$.
+\end{customthm}
+
 \end{document}
