@@ -783,13 +783,13 @@
 
 \begin{customthm}{II.18.12} Below is the proof for each item. Arithmetic operations are based on the ordinal product $\alpha\cdot\beta=\type(\beta\times\alpha)$ and sum $\alpha+\beta=\type(\{0\}\times\alpha\cup\{1\}\times\beta)$ of Definition I.8.21.
   \begin{enumerate}[label=\alph*.]
-    \item \underline{$S(x)=S(y)\rightarrow x=y$}. Assume $S(x)=S(y)$ and $x\neq y$. Then $x\in y\in x$ holds, which contradicts Foundation. Hence we have $x=y$ whenever $S(x)=S(y)$.
-    \item \underline{$S(x)\neq 0$}. Since $x\in S(x)=x\cup\{x\}$, $S(x)$ is non-empty.
-    \item \underline{$x+0=x$}. $x+0=\type(\{0\}\times x\cup\{1\}\times 0)=\type(\{0\}\times x)=\type(x)=x$.
-    \item \underline{$x+S(y)=S(x+y)$}. It holds that $x+S(y)=\type((x+y)\cup\{(1,y)\})$. By considering the order isomorphism $f:(x+y)\cup\{(1,y)\}\rightarrow S(x+y)$ defined by $f(\alpha)=\alpha$ for $\alpha\in x+y$ and $f((1,y))=x+y$, we get $x+S(y)=S(x+y)$.
-    \item \underline{$x\cdot 0=0$}. $x\cdot 0=\type(0\times x)=\type(0)=0$.
-    \item \underline{$x\cdot S(y)=x\cdot y+x$}. We have $x\cdot S(y)=\type(y\times x\cup\{y\}\times x)$ and $x\cdot y+x=\type(\{0\}\times \type(y\times x)\cup\{1\}\times x)$. Using the order isomorphism $\varphi:y\times x\rightarrow\type(y\times x)$, we can define an order isomorphism $f:y\times x\cup\{y\}\times x\rightarrow\{0\}\times \type(y\times x)\cup\{1\}\times x$ by $f((\beta,\alpha))=\varphi((\beta,\alpha))$ for $(\beta,\alpha)\in y\times x$ and $f((y,\alpha))=(1,\alpha)$ for $\alpha\in x$. Thus we get $x\cdot S(y)=x\cdot y+x$.
-    \item \underline{$\varphi(0)\wedge\forall x[\varphi(x)\rightarrow\varphi(S(x))]\rightarrow\forall x\varphi(x)$}. The relativized formula is $\varphi(0)\wedge\forall x[\mathrm{nat}(x)\wedge\varphi(x)\rightarrow\varphi(S(x))]\rightarrow\forall x[\mathrm{nat}(x)\rightarrow\varphi(x)]$. It is a variant of the ordinary induction in $CST$ assuming the first universal quantification is restricted to natural numbers, which can be proved in $CST$ just like the ordinary induction.
+    \item\underline{$S(x)=S(y)\rightarrow x=y$}. Assume $S(x)=S(y)$ and $x\neq y$. Then $x\in y\in x$ holds, which contradicts Foundation. Hence we have $x=y$ whenever $S(x)=S(y)$.
+    \item\underline{$S(x)\neq 0$}. Since $x\in S(x)=x\cup\{x\}$, $S(x)$ is non-empty.
+    \item\underline{$x+0=x$}. $x+0=\type(\{0\}\times x\cup\{1\}\times 0)=\type(\{0\}\times x)=\type(x)=x$.
+    \item\underline{$x+S(y)=S(x+y)$}. It holds that $x+S(y)=\type((x+y)\cup\{(1,y)\})$. By considering the order isomorphism $f:(x+y)\cup\{(1,y)\}\rightarrow S(x+y)$ defined by $f(\alpha)=\alpha$ for $\alpha\in x+y$ and $f((1,y))=x+y$, we get $x+S(y)=S(x+y)$.
+    \item\underline{$x\cdot 0=0$}. $x\cdot 0=\type(0\times x)=\type(0)=0$.
+    \item\underline{$x\cdot S(y)=x\cdot y+x$}. We have $x\cdot S(y)=\type(y\times x\cup\{y\}\times x)$ and $x\cdot y+x=\type(\{0\}\times \type(y\times x)\cup\{1\}\times x)$. Using the order isomorphism $\varphi:y\times x\rightarrow\type(y\times x)$, we can define an order isomorphism $f:y\times x\cup\{y\}\times x\rightarrow\{0\}\times \type(y\times x)\cup\{1\}\times x$ by $f((\beta,\alpha))=\varphi((\beta,\alpha))$ for $(\beta,\alpha)\in y\times x$ and $f((y,\alpha))=(1,\alpha)$ for $\alpha\in x$. Thus we get $x\cdot S(y)=x\cdot y+x$.
+    \item\underline{$\varphi(0)\wedge\forall x[\varphi(x)\rightarrow\varphi(S(x))]\rightarrow\forall x\varphi(x)$}. The relativized formula is $\varphi(0)\wedge\forall x[\mathrm{nat}(x)\wedge\varphi(x)\rightarrow\varphi(S(x))]\rightarrow\forall x[\mathrm{nat}(x)\rightarrow\varphi(x)]$. It is a variant of the ordinary induction in $CST$ assuming the first universal quantification is restricted to natural numbers, which can be proved in $CST$ just like the ordinary induction.
   \end{enumerate}
 \end{customthm}
 
