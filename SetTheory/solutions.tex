@@ -147,4 +147,23 @@
   Assume that $X$ does not have an $R$-minimal element. For each $x\in X$, let $f(x)=\min\{\rank(z):z\in x\downarrow\}$. Note that $f(x)$ is well-defined since every $x\downarrow$ is non-empty. For each $\alpha\in ON$, let $X_\alpha=X\cap R(\alpha)$. Fix $x_0\in X$. For $n\in\omega$, we define $\gamma_n$ recursively by $\gamma_0=\rank(x_0)+1$ and $\gamma_{n+1}=\gamma_n\cup\{f(x):x\in X_{\gamma_n}\}$. Let $\gamma=\sup\{\gamma_n:n\in\omega\}$. Let $x\in X_\gamma$ and let $n\in\omega$ be one such that $x\in X_{\gamma_n}$. Then $f(x)<\gamma_{n+1}\leq\gamma$ holds by definition. Now we have $\forall x\in X_\gamma[f(x)<\gamma]$, which means $\forall x\in X_\gamma\exists z\in X_\gamma[z\downarrow x]$, which further means that $R$ is not well-founded on the set $X_\gamma$ since $X_\gamma$ is not empty. That contradicts the well-foundedness of $V$ and thus we conclude that $X$ has an $R$-minimal element.
 \end{customthm}
 
+\begin{customthm}{I.9.52}
+  Let $\alpha,\beta,\gamma\in ON$. We prove the following by induction on $\gamma$.
+  \begin{enumerate}
+    \item\underline{$\alpha^{\beta+\gamma}=\alpha^\beta\cdot\alpha^\gamma$}.
+    \begin{enumerate}\label{I.9.52.1}
+      \item\underline{$\gamma=0$}. $\alpha^{\beta+\gamma}=\alpha^{\beta+0}=\alpha^\beta=\alpha^\beta\cdot 1=\alpha^\beta\cdot\alpha^0=\alpha^\beta\cdot\alpha^\gamma$.
+      \item\underline{$\gamma=\delta+1$}. $\alpha^{\beta+\gamma}=\alpha^{\beta+(\delta+1)}=\alpha^{(\beta+\delta)+1}=\alpha^{\beta+\delta}\cdot\alpha=(\alpha^\beta\cdot\alpha^\delta)\cdot\alpha=\alpha^\beta\cdot(\alpha^\delta\cdot\alpha)=\alpha^\beta\cdot\alpha^{\delta+1}=\alpha^\beta\cdot\alpha^\gamma$.
+      \item\underline{$\gamma$ being a limit}. $\alpha^{\beta+\gamma}=\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})=\sup_{\delta<\gamma}(\alpha^\beta\cdot\alpha^\delta)=\sup_{\varepsilon<\alpha^\gamma}(\alpha^\beta\cdot\varepsilon)=\alpha^\beta\cdot\alpha^\gamma$.
+    \end{enumerate}
+    \item\underline{$(\alpha^\beta)^\gamma=\alpha^{\beta\cdot\gamma}$}.
+    \begin{enumerate}
+      \item\underline{$\gamma=0$}. $(\alpha^\beta)^\gamma=(\alpha^\beta)^0=1=\alpha^{0}=\alpha^{\beta\cdot 0}=\alpha^{\beta\cdot\gamma}$.
+      \item\underline{$\gamma=\delta+1$}.\label{I.9.52.2.b} $(\alpha^\beta)^\gamma=(\alpha^\beta)^{\delta+1}=(\alpha^\beta)^{\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta+\beta}=\alpha^{\beta\cdot(\delta+1)}=\alpha^{\beta\cdot\gamma}$.
+      \item\underline{$\gamma$ being a limit}. $(\alpha^\beta)^\gamma=\sup_{\delta<\gamma}((\alpha^\beta)^\delta)=\sup_{\delta<\gamma}(\alpha^{\beta\cdot\delta})=\sup_{\varepsilon<\beta\cdot\gamma}(\alpha^\varepsilon)=\alpha^{\beta\cdot\gamma}$.
+    \end{enumerate}
+  \end{enumerate}
+  Note that \ref{I.9.52.2.b} uses the addition theorem proved in \ref{I.9.52.1}. The supremum substitutions like $\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})$ as in the limit cases are not obvious, but one can easily derive them by using the facts such as $\varepsilon<\beta+\gamma\leftrightarrow\exists\delta<\gamma[\varepsilon<\beta+\delta]$.
+\end{customthm}
+
 \end{document}
