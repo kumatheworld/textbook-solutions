@@ -166,4 +166,14 @@
   Note that \ref{I.9.52.2.b} uses the addition theorem proved in \ref{I.9.52.1}. The supremum substitutions like $\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})$ as in the limit cases are not obvious, but one can easily derive them by using the facts such as $\varepsilon<\beta+\gamma\leftrightarrow\exists\delta<\gamma[\varepsilon<\beta+\delta]$.
 \end{customthm}
 
+\begin{customthm}{I.9.53}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.9.54}
+  We first note that if we have $\alpha=\omega^{\beta_1}\cdot n_1+\cdots+\omega^{\beta_k}\cdot n_k$ where $k,n_1,\ldots,n_k\in\omega\setminus\{0\}$ and $\beta_1>\cdots>\beta_k$, then $\alpha\geq\beta_1$ holds. This is because $\omega^\alpha\geq\alpha\geq\omega^{\beta_1}$ holds. One can easily prove this $\omega^\alpha\geq\alpha$ by induction.
+
+  Now for any ordinal $\beta>0$, let $T_\beta$ say that the rest of the theorem holds for all $0<\alpha<\omega^\beta$. We prove $T_\beta$ by induction on $\beta>0$. If $\beta=1$, then $\alpha=n\in\omega$ holds, which clearly satisfies $T_1$. If $\beta=\gamma+1$, we divide $\alpha$ by $\omega^\gamma$ to represent it uniquely by $\alpha=\omega^\gamma\cdot n+\delta$, where $n\in\omega$ and $\delta<\omega^\gamma$. Then by assuming the inductive hypothesis, we get a unique decomposition of $\alpha$, satisfying $T_\beta$. If $\beta$ is a limit ordinal, $\alpha<\omega^\gamma$ holds for some $\gamma<\beta$, where $T_\gamma$ is obvious if we assume the inductive hypothesis. Thus $T_\beta$ is proved for any ordinal $\beta>0$. Now we can conclude the statement of the theorem by thinking of $T_\beta$ where $\beta=\min\{\beta\in ON:\alpha<\omega^\beta\}$.
+\end{customthm}
+
 \end{document}
