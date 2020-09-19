@@ -176,4 +176,8 @@
   Now for any ordinal $\beta>0$, let $T_\beta$ say that the rest of the theorem holds for all $0<\alpha<\omega^\beta$. We prove $T_\beta$ by induction on $\beta>0$. If $\beta=1$, then $\alpha=n\in\omega$ holds, which clearly satisfies $T_1$. If $\beta=\gamma+1$, we divide $\alpha$ by $\omega^\gamma$ to represent it uniquely by $\alpha=\omega^\gamma\cdot n+\delta$, where $n\in\omega$ and $\delta<\omega^\gamma$. Then by assuming the inductive hypothesis, we get a unique decomposition of $\alpha$, satisfying $T_\beta$. If $\beta$ is a limit ordinal, $\alpha<\omega^\gamma$ holds for some $\gamma<\beta$, where $T_\gamma$ is obvious if we assume the inductive hypothesis. Thus $T_\beta$ is proved for any ordinal $\beta>0$. Now we can conclude the statement of the theorem by thinking of $T_\beta$ where $\beta=\min\{\beta\in ON:\alpha<\omega^\beta\}$.
 \end{customthm}
 
+\begin{customthm}{I.9.55}
+  We prove it by induction on $\beta$. If $\beta=0$, then $F(\alpha,\beta)=\{\{\}\}$ and that is trivially isomorphic to $\alpha^0=1$. If $\beta=\gamma+1$, Then $(F(\alpha,\beta),\triangleleft)\cong(\alpha\times F(\alpha,\gamma),\triangleleft')$ holds by inductive hypothesis, where $\triangleleft'$ is the lexicographic product of the ordinary ordinal order $<$ and $\triangleleft$. Therefore we get $F(\alpha,\beta)\cong\alpha^\gamma\times\alpha=\alpha^{\beta}$. If $\beta$ is a limit ordinal, assume the inductive hypothesis and for $\gamma<\beta$, let $i_\gamma$ be the isomorphism from $F(\alpha,\gamma)$ to $\alpha^\gamma$. Then $\bigcup_{\gamma<\beta}i_\gamma$ gives us the isomorphism from $F(\alpha,\beta)$ to $\alpha^\beta$. Thus $F(\alpha,\beta)\cong\alpha^\beta$ holds for all $\beta$ (and for all $\alpha$).
+\end{customthm}
+
 \end{document}
