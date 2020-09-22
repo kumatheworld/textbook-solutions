@@ -167,7 +167,13 @@
 \end{customthm}
 
 \begin{customthm}{I.9.53}
-  Skipped for now.
+  We prove the following.
+  \begin{enumerate}
+    \item\underline{(a)$\rightarrow$(d)}. Let $\delta$ be the least ordinal such that $\gamma<\omega^{\delta+1}$. We divide $\gamma$ by $\omega^\delta$ to get a representation $\gamma=\omega^{\delta}\cdot\xi+\eta$ where $0<\xi<\omega$ and $\eta<\omega^\delta$. If $\xi>1$, we can think of $\alpha=\beta=\omega^\delta\cdot(\xi-1)+\eta$, which satisfies $\alpha+\beta\geq\gamma$. If $\xi=1$ and $\eta>0$, we can think of $\alpha=\beta=\omega^\delta+\eta-1$, which satisfies $\alpha+\beta\geq\gamma$. Then by assuming (a), we get $(\xi,\eta)=(1,0)$. That shows $\gamma=\omega^\delta$.
+    \item\underline{(d)$\rightarrow$(c)}. We prove this by induction on $\delta$ even if $\gamma$ is not an limit ordinal. Let $X\subseteq\gamma$ throughout the proof. If $\delta=0$, (c) is trivial since $\gamma$ is $1$ and only $X=0$ or $X=1$ is possible. If $\delta=\xi+1$, let $S_n=\omega^\xi\cdot(n+1)\setminus\omega^\xi\cdot n$, $X_n=X\cap S_n$ and $X^c_n=S_n\setminus X$ for $n\in\omega$. It holds that $\forall n\in\omega[\type(S_n)=\omega^\xi]$, $X=\biguplus_{n<\omega}X_n$ and $\gamma\setminus X=\biguplus_{n<\omega}X^c_n$. By assuming the inductive hypothesis, at least one of $\{X_n:n\in\omega\}$ or $\{X^c_n:n\in\omega\}$ turns out to have infinitely many elements of type $\omega^\xi$. We assume WLOG that $\{X_n:n\in\omega\}$ is one. Then we get $\type(X)=\omega^{\xi+1}$. If $\delta$ is a limit ordinal, let $X_\xi=X\cap\omega^\xi$ and $X^c_\xi=\omega^\xi\setminus X$ for $\xi<\delta$. It holds that $X=\bigcup_{\xi<\delta}X_\xi$ and $\gamma\setminus X=\bigcup_{\xi<\delta}X^c_\xi$. By assuming the inductive hypothesis, at least one of $\{\xi<\delta:\type(X_\xi)=\omega^\xi\}$ or $\{\xi<\delta:\type(X^c_\xi)=\omega^\xi\}$ turns out to be unbounded under $\delta$. We assume WLOG that $\{\xi<\delta:\type(X_\xi)=\omega^\xi\}$ is one. Then $\type(X)=\omega^\delta$ holds. Thus (c) holds for all $\gamma=\omega^\delta$.
+    \item\underline{(c)$\rightarrow$(b)}. Let $\alpha<\gamma$. By assuming (c), we have $\type(\gamma\setminus\alpha)=\gamma$. On the other hand, it is easy to see that $\alpha+\type(\gamma\setminus\alpha)=\gamma$ holds since stacking up $\gamma\setminus\alpha$ on top of $\alpha$ gives us $\gamma$. Thus $\alpha+\gamma=\alpha+\type(\gamma\setminus\alpha)=\gamma$ holds.
+    \item\underline{(b)$\rightarrow$(a)}. Assuming (b), we easily get $\alpha+\beta<\alpha+\gamma=\gamma$ for any $\alpha,\beta<\gamma$.
+  \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.9.54}
