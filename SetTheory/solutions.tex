@@ -192,4 +192,12 @@
   We induct on $\max\{\alpha,\beta\}$. If $\max\{\alpha,\beta\}=1$, then $\alpha=\beta=1$ and we have the greatest common divisor of $1$. If $\max\{\alpha,\beta\}>1$, we assume WLOG that $\alpha<\beta$ and let $\delta,\gamma$ be the unique ordinals such that $\beta=\alpha\cdot\delta+\gamma$ and $\gamma<\alpha$. By assuming inductive hypothesis, we have the greatest common divisor $\xi$ of $\gamma$ and $\alpha$. We prove that this $\xi$ is also the greatest common divisor of $\alpha$ and $\beta$. Let $\lambda,\nu$ be the unique ordinals such that $\alpha=\xi\cdot\lambda$ and $\gamma=\xi\cdot\nu$. Then $\beta=\alpha\cdot\delta+\gamma=\xi\cdot(\lambda\cdot\delta+\nu)$ holds, which shows $\xi~|~\beta$. To see the maximality of $\xi$, let $\eta$ be a common divisor of $\alpha$ and $\beta$, and let $\lambda',\mu'$ be the quotients. Then $\gamma=\beta-\alpha\cdot\delta=\eta\cdot(\mu'-\lambda\cdot\delta)$ holds, which shows $\eta~|~\gamma$. Thus the maximality of $\xi$ as a common divisor of $\alpha$ and $\beta$ follows from the maximality of $\xi$ as a common divisor of $\gamma$ and $\alpha$. Hence the greatest common divisor always exists.
 \end{customthm}
 
+\begin{customthm}{I.11.7}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.11.8}
+  Let $\eta$ be a limit ordinal. Since every $\delta_\xi$ is a limit ordinal for $\xi>0$, $\aleph_{\delta_\eta}=\sup_{\zeta<\delta_\eta}\aleph_\zeta$ holds by definition of $\aleph$. On the other hand, $\delta_\eta=\sup_{\xi<\eta}\delta_\xi=\sup_{\xi<\eta}\delta_{\xi+1}=\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds by definition of $\delta$. It is obvious that $\sup_{\zeta<\delta_\eta}\aleph_\zeta\geq\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds since both $\aleph$ and $\delta$ are increasing and for an arbitrary $\xi<\eta$, we can choose $\zeta=\delta_\xi$ to show $\sup_{\zeta<\delta_\eta}\aleph_\zeta\geq\aleph_{\delta_\xi}$. To prove the opposite direction, let $\zeta<\delta_\eta$ and take a $\xi<\eta$ such that $\zeta<\delta_\xi$. Then $\aleph_\zeta\leq\aleph_{\delta_\xi}\leq\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds. Since $\zeta$ is arbitrary, we get $\sup_{\zeta<\delta_\eta}\aleph_\zeta\leq\sup_{\xi<\eta}\aleph_{\delta_\xi}$. Thus we have $\sup_{\zeta<\delta_\eta}\aleph_\zeta=\sup_{\xi<\eta}\aleph_{\delta_\xi}$, which is $\aleph_{\delta_\eta}=\delta_\eta$.
+\end{customthm}
+
 \end{document}
