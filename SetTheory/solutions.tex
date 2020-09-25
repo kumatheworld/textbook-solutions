@@ -200,4 +200,18 @@
   Let $\eta$ be a limit ordinal. Since every $\delta_\xi$ is a limit ordinal for $\xi>0$, $\aleph_{\delta_\eta}=\sup_{\zeta<\delta_\eta}\aleph_\zeta$ holds by definition of $\aleph$. On the other hand, $\delta_\eta=\sup_{\xi<\eta}\delta_\xi=\sup_{\xi<\eta}\delta_{\xi+1}=\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds by definition of $\delta$. It is obvious that $\sup_{\zeta<\delta_\eta}\aleph_\zeta\geq\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds since both $\aleph$ and $\delta$ are increasing and for an arbitrary $\xi<\eta$, we can choose $\zeta=\delta_\xi$ to show $\sup_{\zeta<\delta_\eta}\aleph_\zeta\geq\aleph_{\delta_\xi}$. To prove the opposite direction, let $\zeta<\delta_\eta$ and take a $\xi<\eta$ such that $\zeta<\delta_\xi$. Then $\aleph_\zeta\leq\aleph_{\delta_\xi}\leq\sup_{\xi<\eta}\aleph_{\delta_\xi}$ holds. Since $\zeta$ is arbitrary, we get $\sup_{\zeta<\delta_\eta}\aleph_\zeta\leq\sup_{\xi<\eta}\aleph_{\delta_\xi}$. Thus we have $\sup_{\zeta<\delta_\eta}\aleph_\zeta=\sup_{\xi<\eta}\aleph_{\delta_\xi}$, which is $\aleph_{\delta_\eta}=\delta_\eta$.
 \end{customthm}
 
+\begin{customthm}{I.12.5}
+  Let $\kappa=|A\setminus\{0\}|$ and list $A\setminus\{0\}$ as $\{a_\alpha:\alpha<\kappa\}$. We recursively define $B_\alpha$ for $\alpha\leq\kappa$ as follows.
+  \begin{itemize}
+    \item $B_0=\emptyset$
+    \item $B_{\alpha+1} =
+      \begin{cases}
+        B_\alpha & \text{ if }a_\alpha\in\textrm{span}_{\xi<\alpha}(B_\xi) \\
+        B_\alpha\cup\{a_\alpha\} & \text{ otherwise}
+      \end{cases}$
+    \item $B_\alpha=\sup_{\xi<\alpha}B_\xi$ if $\alpha$ is a limit
+  \end{itemize}
+  Then $B_\kappa$ is a basis of $A$. Indeed, $B_\alpha$ is linearly independent for $\alpha\leq\kappa$, and $a_\alpha\in\textrm{span}(B_{\alpha+1})$ holds for $\alpha<\kappa$.
+\end{customthm}
+
 \end{document}
