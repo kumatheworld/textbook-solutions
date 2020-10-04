@@ -204,10 +204,10 @@
   Let $\kappa=|A\setminus\{0\}|$ and list $A\setminus\{0\}$ as $\{a_\alpha:\alpha<\kappa\}$. We recursively define $B_\alpha$ for $\alpha\leq\kappa$ as follows.
   \begin{itemize}
     \item $B_0=\emptyset$
-    \item $B_{\alpha+1} =
+    \item $B_{\alpha+1}=
       \begin{cases}
-        B_\alpha & \text{ if }a_\alpha\in\textrm{span}_{\xi<\alpha}(B_\xi) \\
-        B_\alpha\cup\{a_\alpha\} & \text{ otherwise}
+        B_\alpha & \text{if }a_\alpha\in\textrm{span}_{\xi<\alpha}(B_\xi) \\
+        B_\alpha\cup\{a_\alpha\} & \text{otherwise}
       \end{cases}$
     \item $B_\alpha=\sup_{\xi<\alpha}B_\xi$ if $\alpha$ is a limit
   \end{itemize}
@@ -215,7 +215,24 @@
 \end{customthm}
 
 \begin{customthm}{I.12.6}
-  We only prove that the Tychonov Theorem implies AC. Let $F=(X_i)_{i\in I}$ be a family of non-empty sets and let $\infty\not\in\bigcup F$. We consider $Y_i=X_i\cup\{\infty\}$ for each $i\in I$ and topologize it by defining the set of open sets by $\{\emptyset,\{\infty\},Y_i\}$. With this topology, each $Y_i$ becomes a compact space and $X_i\subseteq Y_i$ is a closed subset. Moreover, the product space $\prod_{i\in I}Y_i$ is compact by the Tychonov Theorem. Now consider the projection $\pi_i:\prod_{i\in I}Y_i\rightarrow Y_i$ for each $i\in I$. It is continuous since we consider the product topology for $\prod_{i\in I}Y_i$, and the inverse image $\pi_i^{-1}(X_i)$ is closed since $X_i$ is closed. Now consider a family $G=(\pi_i^{-1}(X_i))_{i\in I}$ of closed sets of $\prod_{i\in I}Y_i$. It has the finite intersection property since for a given finite subfamily $\{\pi_{i_0}^{-1}(X_{i_0}),\ldots,\pi_{i_{n-1}}^{-1}(X_{i_{n-1}})\}$, we have a function $f$ in the intersection defined by $f(i_j)=x_{i_j}$ for $j<n$ and $f(i)=\infty$ otherwise, where $x_{i_j}\in X_{i_j}$. Then by the compactness of $\prod_{i\in I}Y_i$, $\bigcap G\neq0$ holds. This $\bigcap G$ is nothing but $\prod_{i\in I}X_i=\prod F$, which proves AC.
+  We only prove that the Tychonov Theorem implies $AC$. Let $F=(X_i)_{i\in I}$ be a family of non-empty sets and let $\infty\not\in\bigcup F$. We consider $Y_i=X_i\cup\{\infty\}$ for each $i\in I$ and topologize it by defining the set of open sets by $\{\emptyset,\{\infty\},Y_i\}$. With this topology, each $Y_i$ becomes a compact space and $X_i\subseteq Y_i$ is a closed subset. Moreover, the product space $\prod_{i\in I}Y_i$ is compact by the Tychonov Theorem. Now consider the projection $\pi_i:\prod_{i\in I}Y_i\rightarrow Y_i$ for each $i\in I$. It is continuous since we consider the product topology for $\prod_{i\in I}Y_i$, and the inverse image $\pi_i^{-1}(X_i)$ is closed since $X_i$ is closed. Now consider a family $G=(\pi_i^{-1}(X_i))_{i\in I}$ of closed sets of $\prod_{i\in I}Y_i$. It has the finite intersection property since for a given finite subfamily $\{\pi_{i_0}^{-1}(X_{i_0}),\ldots,\pi_{i_{n-1}}^{-1}(X_{i_{n-1}})\}$, we have a function $f$ in the intersection defined by $f(i_j)=x_{i_j}$ for $j<n$ and $f(i)=\infty$ otherwise, where $x_{i_j}\in X_{i_j}$. Then by the compactness of $\prod_{i\in I}Y_i$, $\bigcap G\neq0$ holds. This $\bigcap G$ is nothing but $\prod_{i\in I}X_i=\prod F$, which proves $AC$.
+\end{customthm}
+
+\begin{customthm}{I.12.17}
+  Assuming $AC$, it is obvious that $\mathcal{P}(\delta)$ can be well-ordered for all $\delta\in ON$ because any set is well-orderable under $AC$. To prove the converse, we show that every $R(\gamma)$ for a limit ordinal $\gamma$ is well-orderable by recursively constructing a well-order $\triangleleft_\alpha$ on $R(\alpha)$ for each $\alpha\leq\gamma$. Let $\kappa$ be a cardinal such that $\kappa\not\preccurlyeq R(\gamma)$ and let $\sqsubset$ be a well-order of $\mathcal{P}(\kappa)$. Now we define $\triangleleft_\alpha$ for $\alpha\leq\gamma$ as follows.
+  \begin{itemize}
+    \item $\triangleleft_0=\emptyset$
+    \item $x\triangleleft_{\xi+1}y$ iff
+      $\begin{cases}
+        \text{True} & \text{if }\rank(x)<\rank(y) \\
+        x\triangleleft_\xi y & \text{if }\rank(x)=\rank(y)<\xi \\
+        \{f(z):z\in x\}\sqsubset\{f(z):z\in y\} & \text{if }\rank(x)=\rank(y)=\xi
+      \end{cases}$
+
+      where $f:R(\xi)\rightarrow\type(R(\xi),\triangleleft_\xi)$ is the order-isomorphism
+    \item $\triangleleft_\alpha=\bigcup_{\xi<\alpha}\triangleleft_\xi$ if $\alpha$ is a limit
+  \end{itemize}
+  Note that for all $\alpha<\gamma$, it holds that $\type(R(\alpha),\triangleleft_\alpha)\leq\kappa$ since otherwise we would have $\kappa<\type(R(\alpha),\triangleleft_\alpha)\approx R(\alpha)\preccurlyeq R(\gamma)$, which contradicts our assumption $\kappa\not\preccurlyeq R(\gamma)$. It is easy to see that each $\triangleleft_\alpha$ indeed well-orders $R(\alpha)$. Now assume Foundation and let $\gamma$ be a limit ordinal such that $x\subseteq R(\gamma)$ for a given set $x$. Then by well-ordering $R(\gamma)$ as above, we get a well-order of $x$, which shows $AC$.
 \end{customthm}
 
 \end{document}
