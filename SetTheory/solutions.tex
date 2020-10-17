@@ -235,13 +235,25 @@
   Note that for all $\alpha<\gamma$, it holds that $\type(R(\alpha),\triangleleft_\alpha)\leq\kappa$ since otherwise we would have $\kappa<\type(R(\alpha),\triangleleft_\alpha)\approx R(\alpha)\preccurlyeq R(\gamma)$, which contradicts our assumption $\kappa\not\preccurlyeq R(\gamma)$. It is easy to see that each $\triangleleft_\alpha$ indeed well-orders $R(\alpha)$. Now assume Foundation and let $\gamma$ be a limit ordinal such that $x\subseteq R(\gamma)$ for a given set $x$. Then by well-ordering $R(\gamma)$ as above, we get a well-order of $x$, which shows $AC$.
 \end{customthm}
 
-\begin{customthm}{I.13.34}
+\begin{customthm}{I.13.33}
   We prove the following.
   \begin{enumerate}
     \item\underline{$(\beth_\omega)^{\aleph_0}\leq\beth_{\omega+1}$}.$\because(\beth_\omega)^{\aleph_0}\leq(2^{\beth_\omega})^{\aleph_0}=2^{|\beth_\omega\times\aleph_0|}=2^{\beth_\omega}=\beth_{\omega+1}$.
     \item\underline{$\beth_{\omega+1}\leq\prod_{n\in\omega}\beth_n$}. Let $\mathcal{F}=\{f\in{}^\omega\beth_\omega:\forall n\,f(n)\in\beth_n\}$ and let $(g_n:\mathcal{P}(\beth_n)\rightarrow\beth_{n+1})_{n\in\omega}$ be a family of bijections. Consider $F:\mathcal{P}(\beth_\omega)\rightarrow\mathcal{F}$ defined by $F(S)(0)=0$ and $F(S)(n+1)=g_n(S\cap(\beth_n\setminus\beth_{n-1}))$ where $\beth_{-1}=\emptyset$. This $F$ is injective and thus we have $\beth_{\omega+1}\approx\mathcal{P}(\beth_\omega)\preccurlyeq\prod_{n\in\omega}\beth_n$.
     \item\underline{$\prod_{n\in\omega}\beth_n\leq(\beth_\omega)^{\aleph_0}$}. This is obvious from the definition of $\prod_{n\in\omega}$.
   \end{enumerate}
+\end{customthm}
+
+\begin{customthm}{I.13.34}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.13.35}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{I.13.36}
+  We induct on $n\geq1$. If $n=1$, we easily get $(\aleph_1)^{\aleph_0}=(2^{\aleph_0})^{\aleph_0}=2^{|\aleph_0\times\aleph_0|}=2^{\aleph_0}=\aleph_1$, assuming the continuum hypothesis $\aleph_1=2^{\aleph_0}$. Now for $n\geq2$, consider the following mapping $F:{}^\omega\omega_n\rightarrow\bigcup_{\xi<\omega_n}(\{\xi\}\times{}^\omega\xi)$ defined by $F(f)=(\sup_{\alpha<\omega}f(\alpha)+1,f)$. Note that this $F$ is well-defined since every $f:\omega\rightarrow\omega_n$ is bounded because of the regularity of $\aleph_n$. Assuming the inductive hypothesis, we have $|\{\xi\}\times{}^\omega\xi|\leq(\aleph_{n-1})^{\aleph_0}=\aleph_{n-1}$ for every $\xi<\omega_n$. Thus by Theorem I.12.14, $|\bigcup_{\xi<\omega_n}(\{\xi\}\times{}^\omega\xi)|=\aleph_n$ holds. Since $F$ is injective, we have $(\aleph_n)^{\aleph_0}=|{}^\omega\omega_n|\leq\aleph_n$. $\aleph_n\leq(\aleph_n)^{\aleph_0}$ is obvious. Hence we get $(\aleph_n)^{\aleph_0}=\aleph_n$ for every $n\geq1$.
 \end{customthm}
 
 \end{document}
