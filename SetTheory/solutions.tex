@@ -245,7 +245,9 @@
 \end{customthm}
 
 \begin{customthm}{I.13.34}
-  Skipped for now.
+  We first prove that the dual of a $\kappa$-dimensional infinite vector space over $F$ has dimension $|F|^\kappa$. Note that any $\kappa$-dimensional infinite vector space over $F$ is isomorphic to the direct sum $F^{(\kappa)}$, which is the set of functions from $\kappa$ to $F$ with only finitely many non-zero elements in their ranges. Here $(\delta_\xi:\kappa\rightarrow F)_{\xi\in F}$ defined by $\delta_\xi(\xi)=1$ and $\delta_\xi(\eta)=0$ for $\eta\neq\xi$ is a basis of cardinality $\kappa$. Now consider the dual space of $F^{(\kappa)}$. It is actually the direct product $F^\kappa$, which is the vector space consisting of any functions $f:\kappa\rightarrow F$. Its dimension $d$ turns out to be at least $|F|$ by considering the linearly independent sequence $(f_x:\kappa\rightarrow F)_{x<|F|}$ of $F^\kappa$ defined by $f_x(n)=x^n$ for $n\in\omega$ and $f_x(\xi)=0$ for $\xi\geq\omega$. On the other hand, it holds that $|F|^\kappa=\max(|F|,d)$, which one can easily prove by considering the representation of each vector by a unique finite weighted sum of the basis. Thus $d=|F|^\kappa$ holds.
+
+  Now we show that $\dim(W_\omega)=\beth_\omega$. To prove that $\dim(W_\omega)\leq\beth_\omega$, it suffices to show $\dim(W_n)<\beth_\omega$ for each $n\in\omega$. This can be easily proved by induction. Firstly, $\dim(W_0)<\beth_\omega$ holds by the assumption. Assuming the inductive hypothesis and letting $m\in\omega$ be one such that $\max(|F|, \dim(W_n))\leq\beth_m$, we have $\dim(W_{n+1})=|F|^{|F|^{\dim(W_{n})}}\leq(\beth_m)^{(\beth_m)^{\beth_m}}=\beth_{m+2}<\beth_\omega$. For the opposite direction $\dim(W_\omega)\geq\beth_\omega$, consider the smallest case, which is $|F|=2$ and $\dim(W_0)=\aleph_0$. It is easy to see that $\dim(W_n)=\beth_{2n}$, in which case $\dim(W_\omega)=\beth_\omega$ holds. Thus we finally conclude that $\dim(W_\omega)=\beth_\omega$ holds for any case.
 \end{customthm}
 
 \begin{customthm}{I.13.35}
