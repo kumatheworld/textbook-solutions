@@ -78,7 +78,7 @@
 \end{customthm}
 
 \begin{customthm}{I.7.13}
-  Let $<$ and $\prec$ be are strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
+  Let $<,\prec$ be strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
   \begin{enumerate}
     \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$. If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
     \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
@@ -179,19 +179,22 @@
   \]
 \end{customthm}
 
-\begin{customthm}{I.11.23} Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
-\begin{enumerate}
-\item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
-\item \underline{$A\preccurlyeq B$ iff $|A|\leq|B|$}. Assume $A\preccurlyeq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$. The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
-\item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preccurlyeq B\wedge B\preccurlyeq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
-\item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
-\end{enumerate}
+\begin{customthm}{I.11.23}
+  Let $f:A\rightarrow|A|$, $g:B\rightarrow|B|$ be bijections.
+  \begin{enumerate}
+    \item \underline{$|A|$ is a cardinal}. Assume not and let $\xi$ be an ordinal such that $\xi<|A|$ and $\xi\approx|A|$. Then $A\approx\xi$ holds by $A\approx|A|$, contradicting the minimality of $|A|$.
+    \item \underline{$A\preccurlyeq B$ iff $|A|\leq|B|$}. Assume $A\preccurlyeq B$ and let $i:A\rightarrow B$ be an injection. Then $g\circ i:A\rightarrow|B|$ is an injection, and by Exercise I.11.15(2), there exists an ordinal $\delta\leq|B|$ with a bijection $h:A\rightarrow\delta$. For such $\delta$ and $h$, we can define an injection $h\circ f^{-1}:|A|\rightarrow|B|$. Hence we have $|A|\leq|B|$. The converse is obvious from an injection $g^{-1}\circ f:A\rightarrow B$.
+    \item \underline{$A\approx B$ iff $|A|=|B|$}. This is obvious from (2) since both $A\preccurlyeq B\wedge B\preccurlyeq A\leftrightarrow A\approx B$ (Schröder-Bernstein Theorem) and $|A|\leq|B|\wedge|B|\leq|A|\leftrightarrow|A|=|B|$ hold.
+    \item \underline{$A\prec B$ iff $|A|<|B|$}. This is obvious from (2), (3) and the definitions of $\prec$ and $<$.
+  \end{enumerate}
 \end{customthm}
 
-\begin{customthm}{I.11.24} The 'if' part is obvious since $A\preccurlyeq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preccurlyeq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
+\begin{customthm}{I.11.24}
+  The 'if' part is obvious since $A\preccurlyeq|A|$ holds. To prove the converse, let $A$ be a finite set and let $n\in\omega$ be one with $A\preccurlyeq n$. Then by Exercise I.11.15(2), $A$ is well-orderable and there exists $m\leq n$ such that $A\approx m$. Now it is obvious that $|A|\leq m\leq n<\omega$.
 \end{customthm}
 
-\begin{customthm}{I.11.25} We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$. If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by inductive hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$. This is a bijection if $i$ is a bijection, which is by inductive hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega\,P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
+\begin{customthm}{I.11.25}
+  We prove by induction the following proposition $P(n)$: $|A\cup B|\leq m+n$, equality holding iff $A\cap B=\emptyset$. $P(0)$ is obvious since if $n=0$, then we have $B=\emptyset$, $|A\cup B|=|A|=m$ and $A\cap B=\emptyset$. Now assume $P(n)$ and let $B'=B\cup\{b\}$ with $b\not\in B$, $|B|=n$. If $b\in A$, we have $|A\cup B'|=|A\cup B|\leq m+n<m+n+1$ by inductive hypothesis. Note that $A\cap B'\neq\emptyset$ since $A$ and $B'$ has $b$ in common, in which case the equality does not hold. If $b\not\in A$, we can define an injection $i':A\cup B'\rightarrow m+n+1$ by $i\cup\{\langle b',m+n\rangle\}$, where $i$ is an induction $i:A\cup B\rightarrow m+n$. This is a bijection if $i$ is a bijection, which is by inductive hypothesis equivalent to $A\cap B=\emptyset$, which is also equivalent to $A\cap B'=\emptyset$. Thus $P(n+1)$ holds under $P(n)$ and we have $\forall n\in\omega\,P(n)$. One can also prove $|A\times B|=m\cdot n$ by induction on $n$, using the fact that $A\times (B\sqcup\{b\})\approx(A\times B)\sqcup(A\times\{b\})$, where $\sqcup$ denotes the disjoint union operator.
 \end{customthm}
 
 \begin{customthm}{I.11.28}
@@ -214,7 +217,7 @@
 \begin{customthm}{I.11.30}
   Let $\xi,\zeta$ be ordinals. We prove $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ by induction on $\zeta$. If $\zeta=\xi+1$, which is the least ordinal greater than $\xi$, then $\aleph_\zeta=(\aleph_\xi)^+$ is greater than $\aleph_\xi$ by the definition of $\aleph$. If $\zeta=\eta+1$ and $\eta>\xi$, assuming the inductive hypothesis $\aleph_\eta>\aleph_\xi$, we get $\aleph_\zeta=(\aleph_\eta)^+>(\aleph_\xi)^+>\aleph_\xi$. If $\zeta$ is a limit ordinal and $\aleph_\xi<\aleph_\eta$ for all $\xi<\eta<\zeta$, then $\aleph_\zeta=\sup\{\aleph_\eta:\eta<\zeta\}\geq\aleph_{\xi+1}>\aleph_\xi$. Hence $\xi<\zeta\rightarrow\aleph_\xi<\aleph_\zeta$ holds.
 
-  Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$. Note that $\xi$ is an an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set. Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
+  Now we prove that $\kappa$ is an infinite cardinal iff $\kappa=\aleph_\xi$ for some $\xi$. The 'if' part is obvious from the definition of $\aleph$ and Theorem I.11.17(3). To prove the converse by contradiction, assume there is an infinite cardinal $\kappa$ such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$. Let $\kappa$ be the least cardinal such that $\forall\xi\in ON\,[\kappa\neq\aleph_\xi]$ and let $\xi=\{\eta\in ON:\aleph_\eta<\kappa\}$. Note that $\xi$ is an initial segment of $ON$ by the above. Furthermore, $\xi$ forms a set. Otherwise, $\xi=ON$ and $\kappa$ would contain all $\aleph_\eta$, which by Replacement implies $ON$ is a set. Now we prove $\kappa=\aleph_\xi$. One can easily prove that $\aleph_\xi\leq\kappa$ by splitting $\xi$ into $0$, a successor or a limit ordinal. On the other hand, $\aleph_\xi\not<\kappa$ holds because $\aleph_\xi<\kappa$ would imply $\xi\in\xi$. Thus $\kappa=\aleph_\xi$ holds, which contradicts with the definition of $\kappa$. Hence any infinite cardinal is identical to $\aleph_\xi$ for some $\xi$.
 \end{customthm}
 
 \begin{customthm}{I.11.33}
@@ -293,7 +296,7 @@
 \end{customthm}
 
 \begin{customthm}{I.12.18}
-  Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which gives rise to an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
+  Let $A$ be dense in $X$. $A$ cannot be finite because $X$ is not finite. (To see that, one can take $x\in X\setminus A$ and consider a ball $B=\{y\in X: |y-x|<\min\{|x-a|:a\in A\}\}$. $B$ does not intersect $A$.) $A$ cannot be countably infinite either because it would give a bijection $i:\omega\rightarrow A$, which is an injection to $X$, contradicting that $X$ is not Dedekind-finite. This can be checked by Exercise I.12.17. Thus $A$ has to be uncountable, which proves inseparability of $X$.
 \end{customthm}
 
 \begin{customthm}{I.13.17}
@@ -313,7 +316,7 @@
 \end{customthm}
 
 \begin{customthm}{I.14.4}
-  The list is too long to show here. You can find python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
+  The list is too long to show here. You can find Python code in \url{https://github.com/kumatheworld/math-playground/blob/master/foundations.py}.
 \end{customthm}
 
 \begin{customthm}{I.14.9}
@@ -596,7 +599,7 @@
 \end{customthm}
 
 \begin{customthm}{II.13.8}
-  Let $A$ be a model of $\Sigma$. By defining a scalar multiplication $m:\mathbb{Z}_p\times A\rightarrow A$ by $m(n,x)=x+x+\cdots+x$ with $n$ copies of $x$, we can view $A$ as a vector space over $\mathbb{Z}_p$. Now let $B$ be a basis of $A$ and assume $A$ is infinite. Then $B$ is infinite as well because finite basis (say $|B|=n$) would generate only $p^n$ elements. Then we can apply Exercise I.13.21 to get $|A|=|B|$. Hence infinite models of the same cardinality have bases of the same cardinality, which proves those models are isomorphic. Thus $\Sigma$ is $\kappa$-categorical for all $\kappa\geq\aleph_0$.
+  Let $A$ be a model of $\Sigma$. By defining a scalar multiplication $m:\mathbb{Z}_p\times A\rightarrow A$ by $m(n,x)=x+x+\cdots+x$ with $n$ copies of $x$, we can view $A$ as a vector space over $\mathbb{Z}_p$. Now let $B$ be a basis of $A$ and assume $A$ is infinite. Then $B$ is infinite as well because a finite basis (say $|B|=n$) would generate only $p^n$ elements. Then we can apply Exercise I.13.21 to get $|A|=|B|$. Hence infinite models of the same cardinality have bases of the same cardinality, which proves those models are isomorphic. Thus $\Sigma$ is $\kappa$-categorical for all $\kappa\geq\aleph_0$.
 \end{customthm}
 
 \begin{customthm}{II.13.10}
