@@ -363,7 +363,11 @@
 \end{customthm}
 
 \begin{customthm}{I.14.19}
-  Skipped for now.
+  Let $\kappa$ be an infinite cardinal.
+  \begin{enumerate}
+    \item Let $y\in H(\kappa)$ and consider a set of ordinals $\alpha=\{\rank(x):x\in \trcl(y)\}$. By Lemma I.14.11, we have $\alpha\in ON$. Moreover, $\alpha<\kappa$ holds because $|\alpha|\leq|\trcl(y)|<\kappa$ holds. Since $\rank(x)<\alpha$ holds for all $x\in\trcl(y)$, we have $\rank(\trcl(y))\leq\alpha<\kappa$. From $\rank(y)=\rank(\trcl(y))$, we get $\rank(y)<\kappa$, which means $y\in R(\kappa)$. Thus $H(\kappa)\subseteq R(\kappa)$ holds.
+    \item $|H(\kappa)|\geq2^{<\kappa}$ holds because $\mathcal{P}(\alpha)\subseteq H(\kappa)$ holds for all $\alpha<\kappa$. When $\kappa=\omega$, the inequality is nothing but $|HF|=\aleph_0$, which we know already. To prove $|H(\kappa)|\leq2^{<\kappa}$ in general, we first consider the cases when $\kappa=\theta^+$. Then $2^{<\kappa}=2^\theta$ holds. Now let $S(\alpha)=H(\theta^+)\cap R(\alpha)$ for $\alpha\in ON$. We show that $|S(\alpha)|\leq2^\theta$ by induction on $\alpha\leq\theta^+$. If $\alpha=0$, $S(\alpha)=0$ holds and we obviously have $|S(\alpha)|\leq2^\theta$. If $\alpha=\xi+1$, consider the relation $S(\alpha)\subseteq[S(\xi)]^{<\theta^+}$, which means any $y\in S(\alpha)$ is a set of elements in $S(\xi)$ and its has cardinality less than $\theta^+$. By this inclusion, the inductive hypothesis and Exercise I.13.20, we get $|S(\alpha)|\leq(2^\theta)^\theta=2^\theta$. If $\alpha$ is a limit ordinal, $S(\alpha)=\bigcup_{\xi<\alpha}S(\xi)$ holds and we get $|S(\alpha)|\leq2^\theta$ from the inductive hypothesis and $|\alpha|\leq\theta^+\leq2^\theta$. Now we have $|S(\theta^+)|\leq2^\theta$. Since $H(\theta^+)\subseteq R(\theta^+)$ holds from the above, we get $H(\theta^+)\leq2^\theta$. If $\kappa$ is a limit cardinal, it holds that $H(\kappa)=\bigcup_{\theta<\kappa}H(\theta)$. We can think of this union as the union only taken among the successor cardinals below $\kappa$. Then from what we proved above, we get $|H(\kappa)|\leq2^\kappa=2^{<\kappa}$. Thus $|H(\kappa)|=2^{<\kappa}$ holds for any infinite cardinal $\kappa$.
+    \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.14.20}
