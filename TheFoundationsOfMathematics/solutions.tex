@@ -371,7 +371,9 @@
 \end{customthm}
 
 \begin{customthm}{I.14.20}
-  Skipped for now.
+  Let $y\subseteq H(\kappa)$ and $|y|<\kappa$. We show that $|\trcl(y)|<\kappa$. It suffices to show that $|\bigcup\{\trcl(z):z\in y\}|<\kappa$ since $\trcl(y)=y\cup\bigcup\{\trcl(z):z\in y\}$ holds and we know that $|y|<\kappa$ by assumption and union does not raise cardinality. Here $|\bigcup\{\trcl(z):z\in y\}|<\kappa$ follows from Theorem I.13.12 since $\kappa$ is regular, $|y|<\kappa$ holds and we have $|\trcl(z)|<\kappa$ for any $z\in y$ since $y\subseteq H(\kappa)$. Thus $|\trcl(y)|<\kappa$ holds, which is nothing but $y\in H(\kappa)$.
+
+  Now let $z\in H(\kappa)$ and $f:z\rightarrow H(\kappa)$. We prove that $f\in H(\kappa)$. Note that $\trcl(f)=f\cup\bigcup\{\trcl(\langle x,y\rangle):\langle x,y\rangle\in f\}$ holds. Here one can easily break down every $\trcl(\langle x,y\rangle)$ into $\{x,y,\{x\},\{x,y\}\}\cup\trcl(x)\cup\trcl(y)$, which has cardinality less than $\kappa$ since $|\trcl(x)|<\kappa$ and $|\trcl(y)|<\kappa$ hold from $x,y\in H(\kappa)$. On the other hand, we have $|f|\leq|z|\leq|\trcl(z)|<\kappa$. Thus by Theorem I.13.12, $|\trcl(f)|<\kappa$ holds, which means $f\in H(\kappa)$.
 \end{customthm}
 
 \begin{customthm}{I.14.21}
