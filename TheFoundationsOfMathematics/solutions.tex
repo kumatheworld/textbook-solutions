@@ -377,7 +377,21 @@
 \end{customthm}
 
 \begin{customthm}{I.14.21}
-  Skipped for now.
+  Let $\gamma>\omega$ be a limit ordinal. We first prove that $R(\gamma)$ is a model for $ZC$ by showing that it satisfies each of the following.
+  \begin{enumerate}
+    \setcounter{enumi}{-1}
+    \item\textbf{Set Existence.} We have $0\in R(\gamma)$.
+    \item\textbf{Extensionality.} Let $x,y\in R(\gamma)$ and assume that $z\in x\leftrightarrow z\in y$ holds for all $z\in R(\gamma)$. It implies that $z\in x\leftrightarrow z\in y$ holds for all $z\in V$ since $R(\gamma)$ is transitive. Hence $x=y$ holds in $V$, which also means $x=y$ in $R(\gamma)$.
+    \item\textbf{Foundation.} For a given non-empty $x\in R(\gamma)$, an element $y\in x$ of the least rank has the property. Note that such a $y$ is also in $R(\gamma)$.
+    \item\textbf{Comprehension Scheme.} For a given $z\in R(\gamma)$ and a formula $\varphi$ without $y$ free, the set $\{x\in z:\varphi(x)\}$ has the property. Since it is a subset of $z$, it has rank no greater than $\rank(z)$, which shows that it is also in $R(\gamma)$.
+    \item\textbf{Pairing.} For given $x,y\in R(\gamma)$, the pair $\{x,y\}$ has the property. To see that $\{x,y\}\in R(\gamma)$, consider its rank, which is $\max\{\rank(x),\rank(y)\}+1$. Since $\gamma$ is a limit ordinal, $\rank(\{x,y\})<\gamma$ holds whenever $\rank(x),\rank(y)<\gamma$.
+    \item\textbf{Union.} For a given $x\in R(\gamma)$, the union $\bigcup x$ has the property. Note that $\rank(\bigcup x)\leq\rank(x)$ holds and hence $\bigcup x\in R(\gamma)$.
+    \item\textbf{Replacement Scheme.} Some instances might fail. See below for a counterexample when $\gamma=\omega+\omega$.
+    \item\textbf{Infinity.} $\omega\in R(\gamma)$ has the property. Note that $\emptyset$ in $R(\gamma)$ is the empty set (of $V$, i.e. $0$), which is in $R(\gamma)$. Also, $S(x)$ in $R(\gamma)$ for a given $x\in R(\gamma)$ is the successor of $x$ (in $V$, i.e. $S(x)$), which is in $R(\gamma)$.
+    \item\textbf{Power Set.} For a given $x\in R(\gamma)$, the power set $\mathcal{P}(x)$, which is also in $R(\gamma)$ since $\rank(\mathcal{P}(x))=\rank(x)+1<\gamma$ holds, has the property. To see that, let $z\in R(\gamma)$ and assume that $z\subseteq x$ holds in $R(\gamma)$. We show that $z\subseteq x$ holds in $V$. Let $w\in z$. Since $R(\gamma)$ is transitive, $w\in R(\gamma)$ holds and we have $w\in x$ in $R(\gamma)$ from $z\subseteq x$ in $R(\gamma)$. Thus $z\subseteq x$ also holds in $V$, which means $z\in\mathcal{P}(x)$.
+    \item\textbf{Choice.} For a family $F\in R(\gamma)$ of mutually exclusive non-empty sets, let $C\subseteq\bigcup F$ be a set (in $V$) which has exactly one element in each $x\in F$. Note that $C$ is in $R(\gamma)$ since it has rank at most $\rank(\bigcup F)$. To prove that $C$ really is a "choice set" in $R(\gamma)$, one can again use the transitivity of $R(\gamma)$ to see the notions in $R(\gamma)$ that appear in the axiom, such as $\forall x\in F$, $x\cap y=\emptyset$ and $\textrm{SING}$, really have the same meaning as what they mean in $V$.
+  \end{enumerate}
+  To see that Replacement fails in $R(\omega+\omega)$, assume hypothetically that Replacement holds in $R(\omega+\omega)$ and consider the set $\{\omega+n:n\in\omega\}$. This definition that includes the recursively defined $+$ is valid because $R(\omega+\omega)$ satisfies all the $ZFC$ axioms under our assumption. However, the set $\{\omega+n:n\in\omega\}$ has rank $\omega+\omega$ and hence is not included in $R(\omega+\omega)$. Thus our assumption that Replacement holds is not correct, which shows that the above set is a counterexample.
 \end{customthm}
 
 \begin{customthm}{I.14.22}
