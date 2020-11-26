@@ -395,11 +395,19 @@
 \end{customthm}
 
 \begin{customthm}{I.14.22}
-  Skipped for now.
+  Let $\kappa>\omega$ be a regular cardinal. For $H(\kappa)$ and $H(\omega)$, most of the axioms can be proved similarly as in Exercise I.14.21, based on facts such as that $H(\kappa)$ is a transitive set or that $x\subseteq y\in H(\kappa)\rightarrow x\in H(\kappa)$.
+
+  Here we first show that Replacement holds in $H(\theta)$ when $\theta$ is a regular cardinal, which means that it is true in both $H(\kappa)$ and $H(\omega)$. Let $A\in H(\theta)$ and let $\varphi$ be a formula without $B$ free which satisfies $\forall x\in A\,\exists!y\,\varphi(x,y)$. Note that the meanings of $\forall$ and $\exists!$ are the same in both $V$ and $H(\theta)$ since $H(\theta)$ is transitive. By Replacement in $V$, we have a set $B=\{y:\exists x\,\varphi(x,y)\}$ in $V$. Note here that $B\subseteq H(\theta)$ and $|B|\leq|A|\leq|\trcl(A)|<\theta$ hold. Thus by Exercise I.14.20, we have $B\in H(\theta)$, which shows that Replacement is true.
+
+  Now assume that the Power Set Axiom holds in $H(\kappa)$. Then $\mathcal{P}(\lambda)\in H(\kappa)$ holds whenever $\lambda<\kappa$. Considering $\trcl(\mathcal{P}(\lambda))\supseteq\mathcal{P}(\lambda)$, we have $2^\lambda\leq|\trcl(\mathcal{P}(\lambda))|<\kappa$, which shows the strong inacessibility of $\kappa$.
+
+  Conversely, assume that $\kappa$ is strongly inaccessible and consider any $y\in H(\kappa)$ and its power set $P(y)$. Let $\lambda=|\trcl(y)|$. Considering $\trcl(\mathcal{P}(y))=\mathcal{P}(y)\cup\bigcup\{\trcl(x):x\subseteq y\}=\mathcal{P}(y)\cup\trcl(y)$, we have $|\trcl(y)|=2^\lambda<\kappa$ by the strong inaccessibility of $\kappa$. Thus the Power Set Axiom holds.
+
+  Furthermore, if $\kappa$ is strongly inaccessible, $H(\kappa)=R(\kappa)$ holds. Since $H(\kappa)\subseteq R(\kappa)$ is proven for any cardinal $\kappa$ so far, we only prove the opposite direction here. Let $y\in R(\kappa)$ and let $\gamma=\rank(y)$. Considering $\trcl(y)\subseteq R(\gamma)$, we have $|\trcl(y)|\leq|R(\gamma)|\leq\beth_\gamma<\beth_\kappa=\kappa$, where one can easily prove $|R(\gamma)|\leq\beth_\gamma$ by induction and $\beth_\kappa=\kappa$ is proved in Exercise I.13.17. Thus $y\in H(\kappa)$ and we get $H(\kappa)=R(\kappa)$.
 \end{customthm}
 
 \begin{customthm}{I.14.23}
-  Let $\psi(y)$ be a formula such that $\forall y\,[(\forall x\in y\,\psi(x))\rightarrow\psi(y)]$. Assume $\neg\forall y\,\psi(y)$ and let $y$ be a set of least rank such that $\neg\psi(y)$. Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\rank(x)<\rank(y)$ since $x\in y$, which contradicts the minimality of $\rank(y)$.
+  Let $\psi(y)$ be a formula such that $\forall y\,[(\forall x\in y\,\psi(x))\rightarrow\psi(y)]$. Assume $\neg\forall y\,\psi(y)$ and let $y$ be a set of the least rank such that $\neg\psi(y)$. Then by the contraposition of $(\forall x\in y\,\psi(x))\rightarrow\psi(y)$, there is a set $x\in y$ such that $\neg\psi(x)$. Here we have $\rank(x)<\rank(y)$ since $x\in y$, which contradicts the minimality of $\rank(y)$.
 \end{customthm}
 
 \begin{customthm}{I.14.24}
