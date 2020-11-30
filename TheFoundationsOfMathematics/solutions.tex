@@ -464,7 +464,7 @@
 \end{customthm}
 
 \begin{customthm}{II.4.7}
-  We prove that by induction on $|\sigma|=k$. If $k=0$, then $\sigma=()$. This is not an expression and we have $\mathrm{count}(\sigma)=0$. Hence the both side of the \textit{iff} are false, in which case the statement holds. Now assume that $k>0$ and that the statement holds for all the sequences.
+  We prove that by induction on $|\sigma|=k$. If $k=0$, then $\sigma=()$. This is not an expression and we have $\mathrm{count}(\sigma)=0$. Hence both sides of the 'iff' are false, in which case the statement holds. Now assume that $k>0$ and that the statement holds for all the sequences.
 
   To prove the 'if' part, assume $\sigma$ is one with $\mathrm{count}(\sigma)=-1$ and $\mathrm{count}(\sigma\upharpoonright l)\geq0$ whenever $l<k$. Let $n=\alpha(s_0)$. Note that $\mathrm{count}(\sigma\upharpoonright1)=n-1$ holds. Since the function $\mathrm{count}()$ decreases at most 1 at a step, we have an increasing sequence $1=j_0<j_1<\ldots<j_{n-1}<j_n=k$ of integers such that each $j_i$ is the first one such that $\mathrm{count}(\sigma\upharpoonright j_i)=n-i-1$. Then each consecutive sequence $\tau_i=\sigma\upharpoonright(j_{i+1}\setminus j_i)$ satisfies $\mathrm{count}(\tau_i)=-1$ and $\mathrm{count}(\tau_i\upharpoonright l)\geq0$ whenever $l<|\tau_i|$, which turns out to be a subexpression by the inductive hypothesis. Thus $\sigma=s_0\tau_0\cdots\tau_{n-1}$ is an expression.
 
