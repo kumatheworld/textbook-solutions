@@ -120,7 +120,11 @@
 \end{customthm}
 
 \begin{customthm}{I.8.23}
-  Skipped for now.
+  We work on ZF to prove the following. Let $Z=\{\{\},\{\{\}\},\ldots\}$.
+  \begin{itemize}
+    \item\underline{$(1)\rightarrow(2)$}. Assume the Axiom of Infinity. We have $\omega$. Let $\varphi(x,y)=x\in\omega\wedge\exists f[\dom(f)=x+1\wedge f(x)=y\wedge f(0)=\emptyset\wedge\forall n\in x[f(n+1)=\{f(n)\}]]$. By Replacement, we get $Z$.
+    \item\underline{$(2)\rightarrow(1)$}. Assume the Axiom des Unendlichen of Zermelo. We have $Z$. Let $\psi(y,x)=y\in Z\wedge[\chi(y,\dom(g))\wedge g(y)=x\wedge g(\emptyset)=\emptyset\wedge\forall w\in\dom(g)\setminus\{y\}[g(\{w\})=g(w)\cup\{w\}]]$, where $\chi(y, S)=S\subseteq Z\wedge y\in S\wedge\{y\}\not\in S\wedge\forall v\in S\,\forall u\in v[u\in S]$, which means that $S$ is the "initial segment" of $Z$ whose "maximum" is $y$. By Replacement, we get $\omega$.
+  \end{itemize}
 \end{customthm}
 
 \begin{customthm}{I.9.6}
