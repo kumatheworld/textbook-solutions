@@ -2,7 +2,7 @@ name: LaTeX to PDF
 
 on:
   push:
-    paths: */solutions.tex
+    paths: '*/solutions.tex'
     tags: v*.*.*
 
 jobs:
