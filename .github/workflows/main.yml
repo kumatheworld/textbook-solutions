@@ -2,7 +2,9 @@ name: LaTeX to PDF
 
 on:
   push:
-    paths: '*/solutions.tex'
+    paths:
+      - TheFoundationsOfMathematics/solutions.tex
+      - SetTheory/solutions.tex
     tags: v*.*.*
 
 jobs:
