@@ -15,6 +15,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Build docker image
-        uses: kumatheworld/textbook-solutions/.github/actions/latex@main
+        uses: kumatheworld/textbook-solutions/.github/actions/latex@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
