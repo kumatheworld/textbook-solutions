@@ -152,7 +152,7 @@
   Let $\alpha,\beta,\gamma\in ON$. We prove the following by induction on $\gamma$.
   \begin{enumerate}
     \item\underline{$\alpha^{\beta+\gamma}=\alpha^\beta\cdot\alpha^\gamma$}.
-    \begin{enumerate}\label{I.9.52.1}
+    \begin{enumerate}
       \item\underline{$\gamma=0$}. $\alpha^{\beta+\gamma}=\alpha^{\beta+0}=\alpha^\beta=\alpha^\beta\cdot 1=\alpha^\beta\cdot\alpha^0=\alpha^\beta\cdot\alpha^\gamma$.
       \item\underline{$\gamma=\delta+1$}. $\alpha^{\beta+\gamma}=\alpha^{\beta+(\delta+1)}=\alpha^{(\beta+\delta)+1}=\alpha^{\beta+\delta}\cdot\alpha=(\alpha^\beta\cdot\alpha^\delta)\cdot\alpha=\alpha^\beta\cdot(\alpha^\delta\cdot\alpha)=\alpha^\beta\cdot\alpha^{\delta+1}=\alpha^\beta\cdot\alpha^\gamma$.
       \item\underline{$\gamma$ being a limit}. $\alpha^{\beta+\gamma}=\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})=\sup_{\delta<\gamma}(\alpha^\beta\cdot\alpha^\delta)=\sup_{\varepsilon<\alpha^\gamma}(\alpha^\beta\cdot\varepsilon)=\alpha^\beta\cdot\alpha^\gamma$.
@@ -160,11 +160,11 @@
     \item\underline{$(\alpha^\beta)^\gamma=\alpha^{\beta\cdot\gamma}$}.
     \begin{enumerate}
       \item\underline{$\gamma=0$}. $(\alpha^\beta)^\gamma=(\alpha^\beta)^0=1=\alpha^{0}=\alpha^{\beta\cdot 0}=\alpha^{\beta\cdot\gamma}$.
-      \item\underline{$\gamma=\delta+1$}.\label{I.9.52.2.b} $(\alpha^\beta)^\gamma=(\alpha^\beta)^{\delta+1}=(\alpha^\beta)^{\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta+\beta}=\alpha^{\beta\cdot(\delta+1)}=\alpha^{\beta\cdot\gamma}$.
+      \item\underline{$\gamma=\delta+1$}. $(\alpha^\beta)^\gamma=(\alpha^\beta)^{\delta+1}=(\alpha^\beta)^{\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta}\cdot\alpha^\beta=\alpha^{\beta\cdot\delta+\beta}=\alpha^{\beta\cdot(\delta+1)}=\alpha^{\beta\cdot\gamma}$.
       \item\underline{$\gamma$ being a limit}. $(\alpha^\beta)^\gamma=\sup_{\delta<\gamma}((\alpha^\beta)^\delta)=\sup_{\delta<\gamma}(\alpha^{\beta\cdot\delta})=\sup_{\varepsilon<\beta\cdot\gamma}(\alpha^\varepsilon)=\alpha^{\beta\cdot\gamma}$.
     \end{enumerate}
   \end{enumerate}
-  Note that \ref{I.9.52.2.b} uses the addition theorem proved in \ref{I.9.52.1}. The supremum substitutions like $\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})$ as in the limit cases are not obvious, but one can easily derive them by using the facts such as $\varepsilon<\beta+\gamma\leftrightarrow\exists\delta<\gamma[\varepsilon<\beta+\delta]$.
+  Note that 2(b) uses the addition theorem proved in 1. The supremum substitutions like $\sup_{\varepsilon<\beta+\gamma}(\alpha^\varepsilon)=\sup_{\delta<\gamma}(\alpha^{\beta+\delta})$ as in the limit cases are not obvious, but one can easily derive them by using the facts such as $\varepsilon<\beta+\gamma\leftrightarrow\exists\delta<\gamma[\varepsilon<\beta+\delta]$.
 \end{customthm}
 
 \begin{customthm}{I.9.53}
