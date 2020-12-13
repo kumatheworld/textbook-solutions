@@ -20,9 +20,6 @@ for name in ${names[@]}; do
   tex=$name/solutions.tex
   pdf=$name.pdf
 
-  # copy .sty
-  cp common.sty $name/kuma.sty
-
   # build pdf
   pdflatex -jobname=$name $tex
 
