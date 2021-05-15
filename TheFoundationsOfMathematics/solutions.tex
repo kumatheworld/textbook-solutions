@@ -767,7 +767,23 @@
 \end{customthm}
 
 \begin{customthm}{II.16.17}
-  Skipped for now.
+  By Exercise II.16.16, we may assume that every sentence $\varphi$ in $\Sigma$ is in prenex normal form $\varphi=\forall\vec{x_1}\exists y_1\forall\vec{x_2}\exists y_2\cdots\forall\vec{x_n}\exists y_n\psi(\vec{x_1},y_1,\vec{x_2},y_2,\ldots,\vec{x_n},y_n)$ where $\psi$ is $\forall\vec{x}\chi$ for some quantifier-free formula $\chi$. For such a sentence $\varphi$, we consider a set of new function symbols $\mathcal{C}_\varphi=\{f_1,f_2,\ldots,f_n\}$ where each $f_k$ has arity $\mathrm{dim}(\vec{x_1})+\cdots+\mathrm{dim}(\vec{x_k})$. Using these function symbols, we consider a corresponding universal sentence $\varphi'$ in $\mathcal{L}\cup\mathcal{C}_\varphi$ defined by $\varphi'=\forall\vec{x_1}\forall\vec{x_2}\cdots\forall\vec{x_n}\psi(\vec{x_1},f_1(\vec{x_1}),\vec{x_2},f_2(\vec{x_1},\vec{x_2}),\ldots,\vec{x_n},f_n(\vec{x_1},\vec{x_2},\ldots,\vec{x_n}))$. Now we let $\mathcal{C}=\bigcup_{\varphi\in\Sigma}\mathcal{C}_\varphi$, $\mathcal{L}'=\mathcal{L}\cup\mathcal{C}$ and $\Sigma'=\{\varphi':\varphi\in\Sigma\}$ to prove each item.
+  \begin{enumerate}
+    \item Obvious.
+    \item $\Sigma'$ is clearly a set of $\mathcal{L}'$ sentences. To see that every sentence of $\Sigma$ is provable from $\Sigma'$, one can show that every $\varphi=\forall\vec{x_1}\exists y_1\forall\vec{x_2}\exists y_2\cdots\forall\vec{x_n}\exists y_n\psi(\vec{x_1},y_1,\vec{x_2},y_2,\ldots,\vec{x_n},y_n)\in\Sigma$ is provable from its corresponding $\varphi'\in\Sigma'$ by repeating a sequence of EG, UI and UG rules $n$ times as below.
+    \begin{center}
+      \begin{tabular}{ll}
+        $\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{c_n},f_n(\vec{c_1},\ldots,\vec{c_n}))\vdash\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{c_n},f_n(\vec{c_1},\ldots,\vec{c_n}))$ & tautology \\
+        $\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{c_n},f_n(\vec{c_1},\ldots,\vec{c_n}))\vdash\exists y_n\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{c_n},y_n)$ & EG \\
+        $\forall\vec{x_n}\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{x_n},f_n(\vec{c_1},\ldots,\vec{x_n}))\vdash\exists y_n\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{c_n},y_n)$ & UI \\
+        $\forall\vec{x_n}\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{x_n},f_n(\vec{c_1},\ldots,\vec{x_n}))\vdash\forall\vec{x_n}\exists y_n\psi(\vec{c_1},f_1(\vec{c_1}),\ldots,\vec{x_n},y_n)$ & UG \\
+        $\vdots$ & $\vdots$ \\
+        $\varphi'\vdash\varphi$ & UG \\
+      \end{tabular}
+    \end{center}
+    \item Obvious.
+    \item We first show a way to expand any model of $\Sigma$ to a model of $\Sigma'$. Let $\mathfrak{A}$ be a model of $\Sigma$, let $\varphi=\forall\vec{x_1}\exists y_1\forall\vec{x_2}\exists y_2\cdots\forall\vec{x_n}\exists y_n\psi(\vec{x_1},y_1,\vec{x_2},y_2,\ldots,\vec{x_n},y_n)\in\Sigma$, and let $\varphi'\in\Sigma'$ be the corresponding sentence. We are going to expand $\mathfrak{A}$ to $\mathfrak{A}_\varphi$ that satisfies $\varphi'$. Since $\mathfrak{A}\models\varphi$ holds, for each $\vec{a}\in A$, we have a non-empty subset $S_{\vec{a}}=\{b\in A:\mathfrak{A}\models\forall\vec{x_2}\exists y_2\cdots\forall\vec{x_n}\exists y_n\psi(\vec{x_1},y_1,\vec{x_2},y_2,\ldots,\vec{x_n},y_n)[\vec{x_1}/\vec{a},y_1/b]\}$, from which we can define ${f_1}_{\mathfrak{A}_\varphi}$ so that $\forall\vec{x_2}\exists y_2\cdots\forall\vec{x_n}\exists y_n\psi(\vec{x_1},f(\vec{x_1}),\vec{x_2},y_2,\ldots,\vec{x_n},y_n)[\vec{x_1}/\vec{a}]$ is true in $\mathfrak{A}_\varphi$, using Axiom of Choice. Likewise, we can define the rest of functions in $\varphi'$ so that $\varphi'$ is finally true in $\mathfrak{A}_\varphi$. Repeating this process for all the formulas in $\Sigma$, we get an expansion of $\mathfrak{A}$ that models the whole $\Sigma'$. Now, let $\varphi$ be any sentence in $\mathcal{L}$ and assume $\Sigma'\vdash\varphi$. Let $\mathfrak{A}$ be a model of $\Sigma$ and let $\mathfrak{A}'$ be an expansion of it that models $\Sigma'$. Then we have $\mathfrak{A}'\models\varphi$ since $\Sigma'\models\varphi$ holds from $\Sigma'\vdash\varphi$ and Soundness. Therefore $\mathfrak{A}\models\varphi$ holds as well because we have $\val_\mathfrak{A}(\varphi)=\val_{\mathfrak{A}'}(\varphi)$. Thus we get $\Sigma\models\varphi$, which means $\Sigma\vdash\varphi$ from Completeness.
+  \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{II.16.18}
