@@ -819,6 +819,12 @@
 \end{customthm}
 
 \begin{customthm}{II.17.30}
+  Let $A\preccurlyeq H(\aleph_1)$. We prove that $A$ is transitive. First of all, we make sure that $\emptyset\in A$ by considering $\mathrm{emp}(x)=\forall z(z\not\in x)$ both on $A$ and on $H(\aleph_1)$, where $H(\aleph_1)\models\exists!x\,\mathrm{emp}(x)$ and hence $A\models\exists!x\,\mathrm{emp}(x)$. By $A\preccurlyeq H(\aleph_1)$, we find that $\mathrm{emp}^A(a)$ iff $\mathrm{emp}^{H(\aleph_1)}(a)$ for $a\in A$, and that proves $\emptyset\in A$. Likewise, we can show that $\omega\in A$ by considering a formula that uniquely defines $\omega$, which is possible because $H(\aleph_1)$ satisfies the Axiom of Infinity and Comprehension. Now consider the sentence $\varphi=\forall x\neq\emptyset\,\exists f:\omega\xrightarrow{\textrm{onto}}x\,[\forall n\in\omega\,\exists!y\in x[f(n)=y]]$. $H(\aleph_1)\models\varphi$ holds because every set is countable and $\trcl(f)$ is also countable. Considering $A\models\varphi$, we conclude that every element $y$ of a non-empty set $x\in A$ also lies in $A$, which means that $A$ is transitive.
+
+  Now, since $H(\aleph_1)$ is uncountable, there is a $b\in H(\aleph_1)$ such that $\{b\}$ is not $\Delta_0$ on $H(\aleph_1)$. By the Downward Löwenheim-Skolem-Tarski theorem, we have a countable $A\preccurlyeq H(\aleph_1)$ such that $b\in A$. Then $\{b\}$ is not $\Delta_0$ on $A$ either. To see this, let $\varphi(x)$ be a formula that defines $\{b\}$ on $A$. We have $A\models\exists!x\varphi(x)$, and hence $H(\aleph_1)\models\exists!x\varphi(x)$. We also have $\varphi^A(b)$ and hence $\varphi^{H(\aleph_1)}(b)$. Therefore $\varphi$ defines $\{b\}$ on $H(\aleph_1)$ as well, which cannot be $\Delta_0$. Thus we have a countable transitive $A$ with some $b\in A$ such that $\{b\}$ is not $\Delta_0$ on $A$.
+\end{customthm}
+
+\begin{customthm}{II.18.9}
   Skipped for now.
 \end{customthm}
 
