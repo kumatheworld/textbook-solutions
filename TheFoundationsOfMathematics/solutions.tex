@@ -825,7 +825,11 @@
 \end{customthm}
 
 \begin{customthm}{II.18.9}
-  Skipped for now.
+  We show that $PAS$ proves Replacement and Choice. The Power Set axiom has already been done in Lemma II.18.7 and the rest are obvious since they are part of $CST$.
+
+  For Replacement, let $\varphi$ be a formula, let $A$ be a set and assume that $\forall x\in A\,\exists!y\,\varphi(x,y)$. We show by induction on $n=|A|$ that there exists a set $B$ such that $\forall x\in A\,\exists y\in B\,\varphi(x,y)$. Note that we assume $A$ is finite since we are working in $PAS$ now. If $n=0$, $B=\emptyset$ will do. Now let $A'=A\cup\{p\}$, $p\not\in A$, $|A|=n$ and assume we have a corresponding $B$ from the inductive hypothesis. Then, using the $y$ such that $\varphi(p,y)$, we define $B'=B\cup\{y\}$, which exists by Lemma II.18.7 and satisfies $\forall x\in A'\,\exists y\in B'\,\varphi(x,y)$.
+
+  For Choice, we induct on the size of the given family of sets. If the family is of size $0$ (i.e. the empty set), $\emptyset$ is a choice set. For the inductive step, consider a family $F'=F\cup\{P\}$ with $P\neq\emptyset$, $P\not\in F$. A choice set for $F'$ can be $C\cup\{p\}$ where $C$ is a choice set for $F$ (inductive hypothesis) and $p$ is some element in $P$. Note that $C\cup\{p\}$ exists by Lemma II.18.7.
 \end{customthm}
 
 \begin{customthm}{II.18.10}
