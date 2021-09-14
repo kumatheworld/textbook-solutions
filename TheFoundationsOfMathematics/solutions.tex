@@ -872,4 +872,8 @@
   We define $C:HF\rightarrow HF$ by $C(x)=\min_\Delta(x)$, where $\Delta$ is defined by $x\Delta y\leftrightarrow\Gamma(x)<\Gamma(y)$ with $\Gamma(y)=\sum\{2^{\Gamma(x)}:x\in y\}$ and $\min_\Delta(\emptyset)=\emptyset$. This $C$ clearly satisfies $C(x)\in x$ whenever $x\neq\emptyset$. On the other hand, Lemma IV.3.17 shows that $\Gamma$ is computable and so is $C$ because $y=\min_\Delta(x)$ is equivalent to $\Gamma(y)=\min\{\Gamma(w):w\in x\}$, where $\min()$ here is the usual minimum function for a set of natural numbers (i.e. $\min(z)=\bigcap z$ with $\min(\emptyset)=\emptyset$). Note that $z=\{\Gamma(w):w\in x\}$ is also computable since it is equivalent to $\forall v\in z\exists w\in x[v=\Gamma(w)]\wedge\forall w\in x[\Gamma(w)\in z]$.
 \end{customthm}
 
+\begin{customthm}{IV.3.28}
+  Let $S\subset HF$ be a $\Sigma_1$ set which is not $\Delta_1$ and fix a computable surjection $g:\omega\rightarrow S$ as in Corollary IV.3.18. We define a binary relation by $x\sqsubset y$ iff $\exists n\in\omega[x=\langle0,n\rangle\wedge y=\langle1,g(n)\rangle\wedge\neg\exists m<n[g(m)=g(n)]]$. This $\sqsubset$ is clearly decidable and satisfies $|y\downarrow|\leq1$ for all $y$ since $y\downarrow=\emptyset$ unless $y=\langle1,a\rangle$ for some $a\in S$, in which case $y\downarrow=\{\langle0,\min g^{-1}(a)\rangle\}$. $\downarrow$ is not decidable because $S$ is not $\Delta_1$ and $S=\{a:\langle1,a\rangle\neq\emptyset\}$ holds, where $\langle1,a\rangle\neq\emptyset$ would be $\Delta_1$ if $y\downarrow$ is decidable.
+\end{customthm}
+
 \end{document}
