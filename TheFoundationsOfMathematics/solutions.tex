@@ -880,4 +880,20 @@
   Let $S\subset HF$ be a $\Sigma_1$ set which is not $\Delta_1$ and fix a computable surjection $g:\omega\rightarrow S$ as in Corollary IV.3.18. We define a function $h:S\rightarrow\omega$ by $h(x)=\min g^{-1}(x)+1$. $h$ is computable because $n=h(x)$ is equivalent to $1<n\wedge g(n\dotdiv1)=x\wedge\neg\exists m<n[g(m\dotdiv1)=x]$, which has a $\Delta_1$ graph. Now we extend this $h$ to a total function $f$ on $HF$ defined by $f=h\cup(HF\setminus S)\times\{0\}$. This $f$ is $\Pi_1$ because $n=f(x)$ is equivalent to a $\Pi_1$ formula $n=h(x)\vee[x\not\in S\wedge n=0]$, where $h$ is computable and $x\not\in S$ is $\Pi_1$ since $S$ is $\Sigma_1$. However, $f$ is not $\Sigma_1$ because $S=\{x:f(x)\neq0\}$ holds, which is not $\Pi_1$ by assumption but would be $\Pi_1$ if $f$ is $\Sigma_1$.
 \end{customthm}
 
+\begin{customthm}{IV.3.30}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{IV.3.31}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{IV.3.32}
+  Skipped for now.
+\end{customthm}
+
+\begin{customthm}{IV.3.33} (half-done)
+  If $\varphi(x,y)$ is a formula that defines $|x|=|y|$, then $\exists k\in n\,\varphi(k,n\setminus k)$ defines the set $E$ of even natural numbers. Here, the set difference function is $\Delta_0$ since it holds that $z=x\setminus y$ iff $\forall w\in z[w\in x\wedge w\not\in y]\wedge\forall w\in x[w\in y\vee w\in z]$. Nevertheless, I do not come up with any $\Delta_0$-looking formula that defines $E$. Once we have such a formula, we can conclude that $\varphi$ is not $\Delta_0$ since $E$ is not $\Delta_0$ by Lemma II.17.19.
+\end{customthm}
+
 \end{document}
