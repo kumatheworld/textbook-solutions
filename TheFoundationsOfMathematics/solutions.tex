@@ -323,10 +323,10 @@
   Let $f:\omega\rightarrow HF$ be the one defined recursively by $f(m)=\{f(n):nEm\}$ and $g:HF\rightarrow\omega$ be the one defined recursively by $g(x)=\sum_{y\in x}2^{g(y)}$. To see $(\omega;E)\cong(HF;\in)$, we show the following.
   \begin{enumerate}
     \item\underline{$g\circ f = \mathrm{id}_\omega$}. We show this inductively. Let $m\in\omega$ and assume $g(f(n))=n$ for all $n<m$. Then we have $g(f(m))=g(\{f(n):nEm\})=\sum_{n:nEm}2^{g(f(n))}=\sum_{n:nEm}2^n=m$.
-    \item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$.
+    \item\underline{$f\circ g = \mathrm{id}_{HF}$}. We show this inductively too. Let $x\in HF$ and assume $f(g(y))=y$ for all $y\in x$. Then we have $f(g(x))=\{f(n):nE_{g(x)}\}=\{f(n):nE_{\sum_{y\in x}2^{g(y)}}\}=\{f(g(y)):y\in x\}=\{y:y\in x\}=x$. Note here that $nE_{\sum_{y\in x}2^{g(y)}}\leftrightarrow n=g(y)$ holds since $g\upharpoonright x$ is injective by inductive hypothesis.
     \item\underline{$nEm\leftrightarrow f(n)\in f(m)$}. This is obvious from the definition of $E$.
   \end{enumerate}
-  From the above $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
+  From the above, $f$ turns out to be an order isomorphism and we get $(\omega;E)\cong(HF;\in)$.
 \end{customthm}
 
 \begin{customthm}{I.14.15}
