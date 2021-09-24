@@ -884,8 +884,14 @@
   Skipped for now.
 \end{customthm}
 
-\begin{customthm}{IV.3.31}
-  Skipped for now.
+\begin{customthm}{IV.3.31} (half-done)
+  We define a function $F$ recursively by $F(x)=\{F(v):v\in A\cap x\}$, let $T=\ran(F\upharpoonright A)$ and prove the following.
+  \begin{enumerate}
+    \item\underline{$F\upharpoonright A:A\rightarrow T$ is bijective}. It is obviously surjective to its range. We prove the injectivity by induction on $\in$. Let $X=\{x\in A:\exists y\in A[y\neq x\wedge F(y)=F(x)]\}$ and assume that $X\neq\emptyset$. Let $x$ be an $\in$-least element of $X$ and take $y\in A$ such that $F(y)=F(x)$. Since $F(x)\subseteq F(y)$, for any $u\in A\cap x$, there is $v\in A\cap y$ such that $F(v)=F(u)$. If $v\neq u$, then we have $u\in X$, contradicting the minimality of $x$. Thus $v=u$ holds and we have $x\cap A\subseteq y\cap A$. Likewise, since $F(y)\subseteq F(x)$, for any $v\in A\cap y$, there is $u\in A\cap x$ such that $u=v$, meaning that $y\cap A\subseteq x\cap A$. Thus we have $x\cap A=y\cap A$, which by Extensionality means $x=y$, contradicting our assumption of $x\neq y$. Hence $X=\emptyset$ holds, meaning that $F\upharpoonright A:A\rightarrow T$ is injective.
+    \item\underline{$F\upharpoonright A:A\rightarrow T$ is isomorphic}. We have already seen above that $F\upharpoonright A$ is bijective. For $x,y\in A$, if $x\in y$, we have $F(x)\in\{F(v):v\in A\cap y\}=F(y)$. Conversely, if $F(x)\in F(y)$ holds for $x,y\in A$, we have $F(v)=F(x)$ for some $v\in A\cap y$, which by injectivity means that $v=x$ and hence $x\in y$. Thus $x\in y\leftrightarrow F(x)=F(y)$ holds for any $x,y\in A$, meaning that $F\upharpoonright A:A\rightarrow T$ is isomorphic.
+    \item\underline{$F(x)=x$ for all $x\in A$ such that $\trcl(x)\subseteq A$}. Coming soon.
+    \item\underline{There is a countable transitive $T\models ZFC-P$ such that $\approx$ is not absolute for $T$}. Coming soon.
+  \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{IV.3.32}
