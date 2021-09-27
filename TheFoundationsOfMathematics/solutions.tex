@@ -902,4 +902,8 @@
   If $\varphi(x,y)$ is a formula that defines $|x|=|y|$, then $\exists k\in n\,\varphi(k,n\setminus k)$ defines the set $E$ of even natural numbers. Here, the set difference function is $\Delta_0$ since it holds that $z=x\setminus y$ iff $\forall w\in z[w\in x\wedge w\not\in y]\wedge\forall w\in x[w\in y\vee w\in z]$. Nevertheless, I do not come up with any $\Delta_0$-looking formula that defines $E$. Once we have such a formula, we can conclude that $\varphi$ is not $\Delta_0$ since $E$ is not $\Delta_0$ by Lemma II.17.19.
 \end{customthm}
 
+\begin{customthm}{IV.4.8}
+  Let $E\subset HF$ be $\Sigma_1$ and not $\Delta_1$, and let $E(x)\leftrightarrow\exists y\,A(x,y)$, where $A$ is $\Delta_1$. Then $F(x)=\mu y\, A(x,y)$ is partially computable by Lemma IV.4.6 but cannot be extended to a total computable function because $F=A\cap\overline{F}$ holds for any extension $\overline{F}$ of $F$, where the computability of $\overline{F}$ would make $F$ also computable.
+\end{customthm}
+
 \end{document}
