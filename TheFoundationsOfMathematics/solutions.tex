@@ -836,7 +836,8 @@
   Let $f:\omega\rightarrow N$ be the function defined by (a) and (b). That is, define $f$ by $f(0)=c$ and $f(S(n))=\sigma(f(n))$ for $n\in\omega$. $f$ is surjective because $\ran(f)=N$ follows from (9) and $c\in\ran(f)\wedge\forall x\in\ran(f)[\sigma(x)\in\ran(f)]$. To show the injectivity of $f$, assume $f$ is not injective and let $n\in\omega$ be the least one such that $\exists m<n[f(m)=f(n)]$. Let $l$ be the predecessor of $n$ (i.e. $n=S(l)$). $m$ cannot be $0$ because we have $f(n)=\sigma(f(l))$ and $f(0)=c\not\in\ran(\sigma)$ from (8). Now let $k$ be the predecessor of $m$. Then we get $\sigma(f(k))=\sigma(f(l))$ from $f(m)=f(n)$. Since $\sigma$ is injective from (7), we have $f(k)=f(l)$, which contradicts the minimality of $n$. Thus $f$ is injective and we conclude that $f$ is a bijection from $\omega$ to $N$.
 \end{customthm}
 
-\begin{customthm}{II.18.12} Below is the proof for each item. Note that we can assume by Lemma II.18.7 that any function between finite sets exists.
+\begin{customthm}{II.18.12}
+  Below is the proof for each item. Note that we can assume by Lemma II.18.7 that any function between finite sets exists.
   \begin{enumerate}[label=\alph*.]
     \item\underline{$S(x)=S(y)\rightarrow x=y$}. Assume $S(x)=S(y)$ and $x\neq y$. Then $x\in y\in x$ holds, which contradicts Foundation. Hence we have $x=y$ whenever $S(x)=S(y)$.
     \item\underline{$S(x)\neq 0$}. Since $x\in S(x)=x\cup\{x\}$, $S(x)$ is non-empty.
