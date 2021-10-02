@@ -907,13 +907,13 @@
   Let $E\subset HF$ be $\Sigma_1$ and not $\Delta_1$, and let $E(x)\leftrightarrow\exists y\,A(x,y)$, where $A$ is $\Delta_1$. Then $F(x)=\mu y\, A(x,y)$ is partially computable by Lemma IV.4.6 but cannot be extended to a total computable function because $F=A\cap\overline{F}$ holds for any extension $\overline{F}$ of $F$, where the computability of $\overline{F}$ would make $F$ also computable.
 \end{customthm}
 
-\begin{customthm}{IV.4.13}
+\begin{customthm}{IV.4.13} (half-done)
   We treat $X$ as its homeomorphic space $2^\omega$, which is the product space of countably many copies of the discrete space $2=\{0,1\}$. Let $p_n:2^\omega\rightarrow 2$ be the projection onto the $n$-th coordinate.
   \begin{enumerate}
     \item $S=\{p_n^{-1}(0):n\in\omega\}\cup\{p_n^{-1}(1):n\in\omega\}$ is a countable clopen subbase of $X$. Then, the base $B=\{O_1\cap\cdots\cap O_n:n\in\omega\wedge O_1,\ldots O_n\in S\}$ is also countable and clopen. Therefore, any open set of $X$ is a countable union of clopen sets in $X$. Now, let $U,V\subseteq X$ be open sets and let $(U_n)_{n\in\omega}$ and $(V_n)_{n\in\omega}$ be families of clopen sets such that $\bigcup_{n\in\omega}U_n=U$ and $\bigcup_{n\in\omega}V_n=V$. We define $(W_n)_{n\in\omega}$ by $W_{2n}=U_n$ and $W_{2n+1}=V_n$ for each $n\in\omega$ and further define $(K_n)_{n\in\omega}$ by $K_n=W_n\setminus\bigcup_{m<n}W_m$. Since this $(K_n)_{n\in\omega}$ is a family of disjoint open sets such that $K_{2n}\subseteq U$ and $K_{2n+1}\subseteq V$ for each $n\in\omega$, and $\bigcup_{n\in\omega}K_n=U\cup V$, we have $\hat{U}=\bigcup_{n\in\omega}K_{2n}$ and $\hat{V}=\bigcup_{n\in\omega}K_{2n+1}$ that satisfy $\hat{U}\subseteq U$, $\hat{V}\subseteq V$, $\hat{U}\cup\hat{V}=U\cup V$ and $\hat{U}\cap\hat{V}=\emptyset$.
     \item Let $H,K\subseteq X$ be disjoint closed sets. We apply (1) to $U=H^c$ and $V=K^c$ to get $\hat{U},\hat{V}$ such that $\hat{U}\subseteq H^c$, $\hat{V}\subseteq K^c$, $\hat{U}\cup\hat{V}=H^c\cup K^c=X$ and $\hat{U}\cap\hat{V}=\emptyset$. Therefore this $\hat{V}(=\hat{U}^c)$ is a clopen set such that $H\subseteq\hat{V}$ and $\hat{V}\cap K=\emptyset$.
-    \item Let $H,K\subseteq X$ be disjoint closed sets. We apply (1) to $U=H^c$ and $V=K^c$ to get $\hat{U},\hat{V}$ such that $\hat{U}\subseteq H^c$, $\hat{V}\subseteq K^c$, $\hat{U}\cup\hat{V}=H^c\cup K^c=X$ and $\hat{U}\cap\hat{V}=\emptyset$. Therefore this $\hat{V}(=\hat{U}^c)$ is a clopen set such that $H\subseteq\hat{V}$ and $\hat{V}\cap K=\emptyset$.
-    \item Coming soon.
+    \item Let $U=\bigcup_{n\in\omega}\left(p_{2n}^{-1}(0)\cap\bigcap_{k\in2n}p_k^{-1}(1)\right)$ and $V=\bigcup_{n\in\omega}\left(p_{2n+1}^{-1}(0)\cap\bigcap_{k\in2n+1}p_k^{-1}(1)\right)$. $U$ (resp. $V$) is the set of countably infinite sequences of $2=\{0,1\}$ in which the first $0$ occurs at an even (resp. odd) index. It is clear that $U,V\subseteq X$, $U\cap V=\emptyset$ and both of $U$ and $V$ are open. Moreover, $\mathrm{Cl}(U)\cap\mathrm{Cl}(V)=\{(1,1,\ldots)\}$ holds. Therefore, if $C\subseteq X$ is a clopen set such that $U\subseteq C$ and $C\cap V=\emptyset$, it holds that $\mathrm{Cl}(U)\subseteq C$ and $\mathrm{Cl}(V)\subseteq C^c$, which leads to a contradiction $(1,1,\ldots)\in C\cap C^c=\emptyset$.
+    \item Skipped for now.
   \end{enumerate}
 \end{customthm}
 
