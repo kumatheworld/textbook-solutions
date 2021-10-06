@@ -937,4 +937,8 @@
   Fix $S\subset\omega$ which is $\Sigma_1$ but not $\Delta_1$. Note that such an $S$ can be easily obtained from a subset of $HF$ which is $\Sigma_1$ but not $\Delta_1$ via the computable bijection from $\omega$ to $HF$ defined in Exercise I.14.14. By Corollary IV.3.18, there is a computable $g:\omega\rightarrow HF$ with $S=\{g(n):n\in\omega\}$. Now we define $f:\omega\times\omega\rightarrow\{5,6\}$ by $f(j,n)=5$ iff $j=g(n)$. This is computable since $d=f(j,n)$ iff $\mathrm{nat}(j)\wedge\mathrm{nat}(n)\wedge[[n=g(j)\wedge d=5]\vee[n\neq g(j)\wedge d=6]]$, which is $\Delta_1$. However, the map $d\mapsto d_j^f$ is not $\Delta_1$ as it is the characteristic function of $\{j\in\omega:r_j=0.0666\cdots\}=\omega\setminus S$.
 \end{customthm}
 
+\begin{customthm}{IV.4.16}
+  We define $\varphi(x,y,s)$ as $s\in HF^{<\omega}\wedge \mathrm{lh(s)}\neq0\wedge s(0)=x\wedge\forall i<\mathrm{lh}(s)\dot{-}1[s(i+1)=\mathrm{sd}(s(i))]\wedge s(\mathrm{lh}(s)\dot{-}1)=y$, which is $\Delta_1$ by Lemma IV.3.22. Then $f(x)=y$ is equivalent to the $\Sigma_1$ formula $\exists s\,\varphi(x,y,s)$, meaning that $f$ is partially computable.
+\end{customthm}
+
 \end{document}
