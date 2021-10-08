@@ -705,9 +705,9 @@
 \end{customthm}
 
 \begin{customthm}{II.16.8}
-  We assume $\mathfrak{B}\preccurlyeq\mathfrak{C}$ throughout this exercise.
+  Let $\mathfrak{C}=(C;\triangleleft,T)$ and assume $\mathfrak{B}\preccurlyeq\mathfrak{C}$ throughout this exercise.
   \begin{enumerate}
-    \item It is obvious that $\omega=B\subseteq C$ holds, which means $\omega$ is an initial segment of $C$.
+    \item Let $P(n)$ say that $\forall x\in C[x\triangleleft n\rightarrow x\in\omega]$. We prove $\forall n\in\omega\,P(n)$ by induction. $P(0)$ holds because there is no $x\in C$ such that $x\triangleleft0$, which is clear from $\mathfrak{B}\models\forall x[x\not<0]$. Now we prove $P(n+1)$ from $P(n)$ and the fact $\mathfrak{B}\models\forall n\forall x[x<S(n)\leftrightarrow x<n\vee x=n]$. That is, for $x\in C$ such that $x\triangleleft T(n)$, it is either $x\triangleleft n$ or $x=n$, which anyway means $x\in\omega$ by inductive hypothesis or simply by $x=n\in\omega$. Hence $\forall n\in\omega\,P(n)$ holds, meaning that $\omega$ is an initial segment of $C$.
     \item $\Phi$ is monotonic since the successor function $S$ on $\omega$ is monotonic and we can extend $\mathfrak{B}\models\forall x,y[x<y\rightarrow S(x)<S(y)]$ to $C$. To prove that $\Phi$ is bijective, we can extend $\mathfrak{B}\models\forall x,y[S(x)=S(y)\rightarrow x=y]$ (injectivity) and $\mathfrak{B}\models\forall y[y\neq 0\rightarrow\exists x[y=S(x)]]$ (surjectivity) to $C$. It is also obvious that $\Phi(S(x))=S(\Phi(x))$ holds for all $x\in C$. Hence $\Phi$ is an automorphism of $\mathfrak{C}$.
     \item Assume $\mathfrak{B}\neq\mathfrak{C}$ and that there is a formula $\varphi(x)$ of $\mathcal{L}$ such that $\mathfrak{B}\models\varphi[a]$ iff $a$ is even. Then  $\psi=\forall x[\varphi(x)\leftrightarrow\neg\varphi(S(x))]$ is valid under $\mathfrak{B}$ so it is valid in $\mathfrak{C}$ as well. Now let $c\in C\setminus\omega$ and assume $\mathfrak{C}\models\varphi[c]$. Then $\mathfrak{C}\models\varphi[\Phi(c)]$ holds since $\Phi$ is an automorphism of $\mathfrak{C}$. Therefore we have $\mathfrak{C}\models\varphi[c]\wedge\varphi[S(c)]$, which contradicts $\psi$. If $\mathfrak{C}\not\models\varphi[c]$, then we will have $\mathfrak{C}\models\neg\varphi[c]\wedge\neg\varphi[S(c)]$ in the same way, which anyway leads to a contradiction. Thus such a $\varphi$ does not exist.
   \end{enumerate}
@@ -860,8 +860,7 @@
 \begin{customthm}{II.18.16} (half-done)
   Below is the proof for each item.
   \begin{enumerate}
-    \item $\omega$ is a proper initial segment of $\mathrm{nat}^\mathfrak{A}$ because for any $n\in\omega$ and $\nu\in\mathrm{nat}^\mathfrak{A}$ such that $\nu<n$, it holds that $\nu\in\omega$ since $\omega$ is transitive. To see that $\mathrm{nat}^\mathfrak{A}\setminus\omega$ has no least element, consider the formula $\forall x[\mathrm{nat}(x)\wedge x\neq0\rightarrow\exists w[\mathrm{nat}(w)\wedge x=S(w)]]$, which is true in $(M;\in)$ and hence in $(A;E)$ too. That means for any $\nu\in\mathrm{nat}^\mathfrak{A}\setminus\omega$, we have $\mu\in\mathrm{nat}^\mathfrak{A}\setminus\omega$ such that $\mu<S(\mu)=\nu$. Thus $\mathrm{nat}^\mathfrak{A}\setminus\omega$ has no least element.
-    \item Skipped for now.
+    \item We can prove that $\omega$ is a proper initial segment of $\mathrm{nat}^\mathfrak{A}$ just like we have done in Exercise II.16.8.1. $\mathrm{nat}^\mathfrak{A}\setminus\omega$ has no least element because $\forall x[\mathrm{nat}(x)\wedge x\neq0\rightarrow\exists w[\mathrm{nat}(w)\wedge w<x]]$ holds.
     \item Skipped for now.
   \end{enumerate}
 \end{customthm}
