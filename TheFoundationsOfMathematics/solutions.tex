@@ -935,7 +935,7 @@
     \begin{enumerate}
       \item\underline{$0\in J$}. Its decimal expansion $(0,0,0,\cdots)=\{\langle0,0\rangle,\langle0,1\rangle,\langle0,2\rangle,\ldots\}\subseteq HF$ is computable since $x\in(0,0,0,\cdots)$ iff $\mathrm{op}(x)\wedge\mathrm{nat}(x_0)\wedge x_1=0$.
       \item\underline{$x\in J\rightarrow-x\in J$}. This is obvious since $x$ and $-x$ have the same decimal expansion.
-      \item\underline{$x,y\in J\rightarrow x+y\in J$}. Coming soon.
+      \item\underline{$x,y\in J\rightarrow x+y\in J$}. (half-done) We first show that any rational number is computable. For a given rational number, we consider its repeating decimal expansion $D=d_0d_1\cdots d_{k-1}\overline{d_kd_{k+1}\cdots d_{k+l-1}}$. It holds that $\langle n,d\rangle\in D$ iff $\bigvee_{i<k}[n=i\wedge d=d_i]\vee[n\geq k\wedge[\bigvee_{i<l}[l|(n-i)\wedge d=d_i]]]$, which is $\Delta_1$. Now we assume that $x,y\in J$ and that $x+y$ is irrational. The rest of the proof is coming soon.
       \item\underline{$1\in J$}. This is obvious since $1$ has the same decimal expansion as $0\in J$. Coming soon.
       \item\underline{$x\in J\wedge x\neq0\rightarrow x^{-1}\in J$}. Coming soon.
       \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. Coming soon.
