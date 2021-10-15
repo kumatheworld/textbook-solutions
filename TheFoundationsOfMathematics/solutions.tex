@@ -929,20 +929,22 @@
 \end{customthm}
 
 \begin{customthm}{IV.4.14} (half-done)
+  We first note that $J$ is well-defined as some numbers have two decimal expansions, where one could conceive that one expansion is computable and the other is not. Since such a number is rational, it is sufficient to show that any rational number is computable. For a given rational number, we consider its repeating decimal expansion $D=d_0d_1\cdots d_{k-1}\overline{d_kd_{k+1}\cdots d_{k+l-1}}$. It holds that $\langle n,d\rangle\in D$ iff $\bigvee_{i<k}[n=i\wedge d=d_i]\vee[n\geq k\wedge[\bigvee_{i<l}[l|(n-i)\wedge d=d_i]]]$, which is $\Delta_1$.
+
+  Furthermore, we call a decimal expansion is in normal form when it has no infinite consecutive repetition of $9$. Note that any decimal expansion has a unique normal form as the repeating $9$'s can be all replaced by $0$'s, incrementing the digit right before the first $9$ of the infinite repetition. Therefore, we may assume that any decimal expansion is in normal form throughout the exercise.
+
   Below is the proof for each item.
   \begin{enumerate}
     \item\underline{$J$ is a subfield of $\mathbb{R}$}. We prove the following.
     \begin{enumerate}
       \item\underline{$0\in J$}. Its decimal expansion $(0,0,0,\cdots)=\{\langle0,0\rangle,\langle0,1\rangle,\langle0,2\rangle,\ldots\}\subseteq HF$ is computable since $x\in(0,0,0,\cdots)$ iff $\mathrm{op}(x)\wedge\mathrm{nat}(x_0)\wedge x_1=0$.
       \item\underline{$x\in J\rightarrow-x\in J$}. This is obvious since $x$ and $-x$ have the same decimal expansion.
-      \item\underline{$x,y\in J\rightarrow x+y\in J$}. (half-done) We first show that any rational number is computable. For a given rational number, we consider its repeating decimal expansion $D=d_0d_1\cdots d_{k-1}\overline{d_kd_{k+1}\cdots d_{k+l-1}}$. It holds that $\langle n,d\rangle\in D$ iff $\bigvee_{i<k}[n=i\wedge d=d_i]\vee[n\geq k\wedge[\bigvee_{i<l}[l|(n-i)\wedge d=d_i]]]$, which is $\Delta_1$.
-
-      Now we assume that $x,y\in J$ and that $x+y$ is irrational. Note that the decimal expansion of $x+y$ is either the sum or the difference of the two decimal expansions of $x$ and $y$ depending on their signs, but this does not matter when considering the computability due to the following reason. For a given decimal expansion $D=(d_0,d_1,\ldots)$ of a computable real number, the reals that have the complementary decimal expansion $\overline{D}=(10-d_0,10-d_1,\ldots)$ are also computable as it holds that $\langle n,d\rangle\in\overline{D}$ iff $d<10\wedge\langle n,10\dot{-}d\rangle\in D$. Therefore, we may assume that the decimal expansion of $x+y$ is the sum of the two decimal expansions of $x$ and $y$. Let $(x_0,x_1,\ldots)$ and $(y_0,y_1,\ldots)$ be the decimal expansions of $x$ and $y$, respectively. Let $n\in\omega$ and $m=\min\{i\in\omega:n<i\wedge x_i+y_i\neq9\}$. $m$ is well-defined by our assumption that $x+y$ is irrational. Then it holds that $d$ is the $n$-th digit of $x+y$ iff $[d\equiv x_n+y_n\vee d\equiv x_n+y_n+1]\wedge[d\equiv x_n+y_n\wedge[x_{n+1}+y_{n+1}<9\vee[x_{n+1}+y_{n+1}=9\wedge[x_{n+2}+y_{n+2}<9\vee[x_{n+2}+y_{n+2}=9\wedge[\cdots\vee[x_{m-1}+y_{m-1}=9\wedge[x_m+y_m<9]]\cdots]]]]]]$, where $\equiv$ is the equivalence modulo $10$. This is $\Delta_1$ and basically means that we can determine $d$ by looking at a finite number of digits of $x$ and $y$ from the $n$-th ones to the $m$-th ones. Thus $x+y$ is computable.
+      \item\underline{$x,y\in J\rightarrow x+y\in J$}. Coming soon.
       \item\underline{$1\in J$}. This is obvious since $1$ has the same decimal expansion as $0\in J$.
       \item\underline{$x\in J\wedge x\neq0\rightarrow x^{-1}\in J$}. Coming soon.
-      \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. As the rational numbers are computable, we may assume that $x,y\in J$ and $x\cdot y$ is irrational. We may also assume that $|x|,|y|\in[0.1,1)$ since $w\in J\leftrightarrow 10w\in J$ holds for any $w\in\mathbb{R}$. We also note that $\forall n\in10\,\forall w\in J[nw\in J]$ holds since $0\in J$ and the addition function is closed under $J$ as shown above. The rest of the proof is coming soon.
+      \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. (half-done) As the rational numbers are computable, we may assume that $x,y\in J$ and $x\cdot y$ is irrational. We may also assume that $|x|,|y|\in[0.1,1)$ since $w\in J\leftrightarrow 10w\in J$ holds for any $w\in\mathbb{R}$. We also note that $\forall n\in10\,\forall w\in J[nw\in J]$ holds since $0\in J$ and the addition function is closed under $J$ as shown above. The rest of the proof is coming soon.
     \end{enumerate}
-    \item\underline{$\sin(x),e^x\in J$ whenever $x\in J$}. Coming soon.
+    \item\underline{$x\in J\rightarrow\sin(x),e^x\in J$}.
   \end{enumerate}
 \end{customthm}
 
