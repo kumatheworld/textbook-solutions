@@ -931,7 +931,7 @@
 \begin{customthm}{IV.4.14} (half-done)
   We first note that $J$ is well-defined as some numbers have two decimal expansions, where one could conceive that one expansion is computable and the other is not. Since such a number is rational, it is sufficient to show that any rational number is computable. For a given rational number, we consider its repeating decimal expansion $D=d_0d_1\cdots d_{k-1}\overline{d_kd_{k+1}\cdots d_{k+l-1}}$. It holds that $\langle n,d\rangle\in D$ iff $\bigvee_{i<k}[n=i\wedge d=d_i]\vee[n\geq k\wedge[\bigvee_{i<l}[l|(n-i)\wedge d=d_i]]]$, which is $\Delta_1$.
 
-  Furthermore, we call a decimal expansion is in normal form when it has no infinite consecutive repetition of $9$. Note that any decimal expansion has a unique normal form as the repeating $9$'s can be all replaced by $0$'s, incrementing the digit right before the first $9$ of the infinite repetition. Therefore, we may assume that any decimal expansion is in normal form throughout the exercise.
+  Furthermore, we may assume that no decimal expansion has an infinite consecutive repetition of $9$ since the repeating $9$'s of any such expansion can be all replaced by $0$'s, incrementing the digit right before the first $9$ of the infinite repetition.
 
   Below is the proof for each item.
   \begin{enumerate}
@@ -941,7 +941,7 @@
       \item\underline{$x\in J\rightarrow-x\in J$}. This is obvious since $x$ and $-x$ have the same decimal expansion.
       \item\underline{$x,y\in J\rightarrow x+y\in J$}. Coming soon.
       \item\underline{$1\in J$}. This is obvious since $1$ has the same decimal expansion as $0\in J$.
-      \item\underline{$x\in J\wedge x\neq0\rightarrow x^{-1}\in J$}. Coming soon.
+      \item\underline{$x\in J\wedge x\neq0\rightarrow x^{-1}\in J$}. Let $x,y\in J$. The decimal expansion of $x+y$ can be either the sum or the difference of the two decimal expansions of $x$ and $y$ depending on their signs, but this does not matter when considering the computability due to the following reason. For a given decimal expansion $D=(d_0,d_1,\ldots)$ of a computable real number, the reals that have the complementary decimal expansion $\overline{D}=(10-d_0,10-d_1,\ldots)$ are also computable as it holds that $\langle n,d\rangle\in\overline{D}$ iff $d<10\wedge\langle n,10\dot{-}d\rangle\in D$. Therefore, we may assume that the decimal expansion of $x+y$ is the sum of the two decimal expansions of $x$ and $y$. Let $(x_0,x_1,\ldots)$ and $(y_0,y_1,\ldots)$ be the decimal expansions of $x$ and $y$, respectively. Then it holds that $d$ is the $n$-th digit of $x+y$ iff $d<10\wedge[d\equiv x_n+y_n\vee d\equiv x_n+y_n+1]\wedge[d\equiv x_n+y_n\wedge\exists m[n<m\wedge\forall i<m[n<i\rightarrow x_i+y_i=9]\wedge x_m+y_m<9]]$, where $\equiv$ is the equivalence modulo $10$. This is $\Sigma_1$ and also $\Pi_1$ by Lemma IV.3.2 since any decimal expansion is a function. Hence $x+y\in J$.
       \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. (half-done) As the rational numbers are computable, we may assume that $x,y\in J$ and $x\cdot y$ is irrational. We may also assume that $|x|,|y|\in[0.1,1)$ since $w\in J\leftrightarrow 10w\in J$ holds for any $w\in\mathbb{R}$. We also note that $\forall n\in10\,\forall w\in J[nw\in J]$ holds since $0\in J$ and the addition function is closed under $J$ as shown above. The rest of the proof is coming soon.
     \end{enumerate}
     \item\underline{$x\in J\rightarrow\sin(x),e^x\in J$}.
