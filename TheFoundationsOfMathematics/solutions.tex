@@ -942,7 +942,13 @@
       \item\underline{$x,y\in J\rightarrow x+y\in J$}. Let $x,y\in J$. The decimal expansion of $x+y$ can be either the sum or the difference of the two decimal expansions of $x$ and $y$ depending on their signs, but this does not matter when considering the computability due to the following reason. For a given decimal expansion $D=(d_0,d_1,\ldots)$ of a computable real number, the reals that have the complementary decimal expansion $\overline{D}=(10-d_0,10-d_1,\ldots)$ are also computable as it holds that $\langle n,d\rangle\in\overline{D}$ iff $d<10\wedge\langle n,10\dot{-}d\rangle\in D$. Therefore, we may assume that the decimal expansion of $x+y$ is the sum of the two decimal expansions of $x$ and $y$. Let $(x_0,x_1,\ldots)$ and $(y_0,y_1,\ldots)$ be the decimal expansions of $x$ and $y$, respectively. Then it holds that $d$ is the $n$-th digit of $x+y$ iff $d<10\wedge[d\equiv x_n+y_n\vee d\equiv x_n+y_n+1]\wedge[d\equiv x_n+y_n\wedge\exists m[n<m\wedge\forall i<m[n<i\rightarrow x_i+y_i=9]\wedge x_m+y_m<9]]$, where $\equiv$ is the equivalence modulo $10$. This is $\Sigma_1$ and also $\Pi_1$ by Lemma IV.3.2 since any decimal expansion is a function. Hence $x+y\in J$.
       \item\underline{$1\in J$}. This is obvious since $1$ has the same decimal expansion as $0\in J$.
       \item\underline{$x\in J\wedge x\neq0\rightarrow x^{-1}\in J$}. Coming soon.
-      \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. (half-done) As the rational numbers are computable, we may assume that $x,y\in J$ and $x\cdot y$ is irrational. We may also assume that $|x|,|y|\in[0.1,1)$ since $w\in J\leftrightarrow 10w\in J$ holds for any $w\in\mathbb{R}$. We also note that $\forall n\in10\,\forall w\in J[nw\in J]$ holds since $0\in J$ and the addition function is closed under $J$ as shown above. The rest of the proof is coming soon.
+      \item\underline{$x,y\in J\rightarrow x\cdot y\in J$}. (half-done) Let $x,y\in J$. We show $x\cdot y\in J$ by gradually generalizing $y$ as follows.
+      \begin{enumerate}
+        \item\underline{$y\in10$}. It holds that $\forall n\in10\,\forall w\in J[nw\in J]$ since $0\in J$ and the addition function is closed under $J$ as shown above.
+        \item\underline{$y=d\cdot10^k$ for some $d\in10$ and $k\in\mathbb{Z}$}. It holds that $w\in J\leftrightarrow10w\in J$ since one is just the shifted one of the other. Apply this repeatedly to the previous case.
+        \item\underline{The decimal expansion of $y$ has finite length}. Decompose $y$ into the digits and reduce it to the previous case.
+        \item\underline{$y\in J$}. Coming soon.
+      \end{enumerate}
     \end{enumerate}
     \item\underline{$x\in J\rightarrow\sin(x),e^x\in J$}.
   \end{enumerate}
