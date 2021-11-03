@@ -425,7 +425,7 @@
 \begin{customthm}{I.15.10} (half-done)
   We first note that the set of all closed nowhere dense sets, which we denote by $C$ here, has cardinality $\mathfrak{c}=2^{\aleph_0}$. This is because the set of all singletons, which is a subset of $C$, has that cardinality and the set of all closed sets, which is a superset of $C$, has that cardinality too. Let $U$ be the set of all countable unions of $C$. We have $|U|=\mathfrak{c}^{\aleph_0}=\mathfrak{c}$ from the above. Therefore we can list $U$ as $U=\{B_\alpha:\alpha<2^{\omega}\}$. Now we well-order $\mathbb{R}$ and define a family of sets $\{X_\alpha:\alpha\leq2^{\omega}\}$ by $X_0=\emptyset$, $X_{\xi+1}=X_\xi\cup\min(\mathbb{R}\setminus\{X_\xi\cup\bigcup_{\eta<\xi}B_\eta\})$, and $X_{\alpha}=\bigcup_{\xi<\alpha}X_\xi$ for a limit ordinal $\alpha$. Then $X_{2^\omega}$ has cardinality $\mathfrak{c}$, which is uncountable. It has at most $\alpha$ elements from each $B_\alpha$, which is countable if we assume CH. Thus under CH, this $X_{2^\omega}$ is a Luzin set.
 
-  The rest of the exercise is skipped for now.
+  To prove that every Luzin set has Lebesgue measure $0$, we show that every set of positive measure has a first category subset of positive measure, which means that a Luzin set of positive measure would have an uncountable intersection with a first category subset, contradicting the definition of Luzin sets. The proof is coming soon.
 \end{customthm}
 
 \begin{customthm}{I.15.11}
