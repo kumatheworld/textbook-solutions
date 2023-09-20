@@ -42,15 +42,15 @@
 \end{customthm}
 
 \begin{customthm}{I.6.15}
-  Assume $\langle x',y'\rangle = \langle x,y\rangle$. Consider the following cases.
+  Assume $\langle x',y'\rangle=\langle x,y\rangle$. Consider the following cases.
   \begin{enumerate}
-    \item\underline{$x=y$}. Then it holds that $\langle x,y\rangle = \{\{x\}, \{x,y\}\} = \{\{x\}, \{x,x\}\} = \{\{x\}, \{x\}\} = \{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
-    \item\underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\} = \{x,y'\}$. Considering $y\in \{x,y'\}$ and $y\neq x$, we get $y=y'$.
+    \item\underline{$x=y$}. Then it holds that $\langle x,y\rangle=\{\{x\},\{x,y\}\}=\{\{x\},\{x,x\}\}=\{\{x\},\{x\}\}=\{\{x\}\}$. So $\{x',y'\}\in\langle x',y'\rangle$ has to be  identical to $\{x\}$ and we get $x'=y'=x=y$.
+    \item\underline{$x\neq y$}. Then $\{x,y\}$ is a doubleton and it has to be identical to $\{x',y'\}$. Since $\{x',y'\}$ is a doubleton, the 2 singletons $\{x\}$ and $\{x'\}$ have to be identical, which leads to $x=x'$. Now we have $\{x,y\}=\{x,y'\}$. Considering $y\in\{x,y'\}$ and $y\neq x$, we get $y=y'$.
   \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.6.17}
-  $\langle 0,1\rangle = \{\{0\}, \{0,1\}\} = \{1,2\}$. $\langle 1,0\rangle = \{\{1\}, \{1,0\}\} = \{\{1\}, 2\}$.
+  $\langle0,1\rangle=\{\{0\},\{0,1\}\}=\{1,2\}$. $\langle1,0\rangle=\{\{1\},\{1,0\}\}=\{\{1\},2\}$.
 \end{customthm}
 
 \begin{customthm}{I.6.20}
@@ -60,14 +60,14 @@
 \begin{customthm}{I.7.13}
   Let $<,\prec$ be strict total orderings of $S,T$ respectively and let $\triangleleft$ be the lexicographic product on $S\times T$. Check the following properties of $\triangleleft$ one by one.
   \begin{enumerate}
-    \item\underline{Transitivity}. Let $\langle s,t\rangle, \langle s',t'\rangle, \langle s'',t''\rangle \in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$. If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
-    \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle \leftrightarrow [s<s\vee[s=s\wedge t\prec t]] \leftrightarrow [\mathrm{F} \vee[\mathrm{T}\wedge \mathrm{F}]] \leftrightarrow \mathrm{F}$.
-    \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]] \leftrightarrow [s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]] \leftrightarrow [s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$. Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
+    \item\underline{Transitivity}. Let $\langle s,t\rangle,\langle s',t'\rangle,\langle s'',t''\rangle\in S\times T$ and assume $\langle s,t\rangle\triangleleft\langle s',t'\rangle$ and $\langle s',t'\rangle\triangleleft\langle s'',t''\rangle$. If $s<s'$ and $s'<s''$, then $s<s''$ holds from transitivity of $<$. If $s<s'$ and $s'=s''$, or, $s=s'$ and $s'<s''$, then it is obvious that $s<s''$. If $s=s'\wedge t\prec t'$ and $s'=s''\wedge t'\prec t''$, then $s=s''$ and $t\prec t''$ holds from transitivity of $=$ and $\prec$. Those exhaust all the possible cases, in each of which $\langle s,t\rangle\triangleleft\langle s'',t''\rangle$ holds.
+    \item\underline{Irreflexivity}. Since $<$ and $\prec$ are irreflexive, we get $\langle s,t\rangle\triangleleft\langle s,t\rangle\leftrightarrow[s<s\vee[s=s\wedge t\prec t]]\leftrightarrow[\mathrm{F}\vee[\mathrm{T}\wedge\mathrm{F}]]\leftrightarrow\mathrm{F}$.
+    \item\underline{Trichotomy}. Assume $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$. That is, $\neg[s<s'\vee[s=s'\wedge t\prec t']]\leftrightarrow[s'\leq s\wedge[s\neq s'\vee t'\preccurlyeq t]]\leftrightarrow[s'\leq s\wedge[s\neq s'\vee [s=s'\wedge t'\preccurlyeq t]]]\leftrightarrow[s'<s\vee[s=s'\wedge t'\preccurlyeq t]]$. Here trichotomies of $<$ and $\prec$ are used. Let us further assume $\langle s,t\rangle\neq\langle s',t'\rangle$, which is equivalent to $s=s'\rightarrow t\neq t'$. Combining this with the formula of $\langle s,t\rangle\not\triangleleft\langle s',t'\rangle$, we get $[s'<s\vee[s=s'\wedge t'\prec t]]$. This is nothing but $\langle s',t'\rangle\triangleleft\langle s,t\rangle$, which shows the trichotomy.
   \end{enumerate}
 \end{customthm}
 
 \begin{customthm}{I.7.16}
-  Let $R$ be a set. Since  $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x, y)]]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x, y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x, y)\in R]\}$ is proved in the same way.
+  Let $R$ be a set. Since $[(x,y)]=[(x',y')]\rightarrow x=x'$, the formula $\varphi(t,x)=\exists y\,[t=[(x,y)]]$ has the property that $\forall t\in R\,\exists!y\,\varphi(t,y)$. Then the set $\{x:\exists y\,[(x,y)\in R]\}$ exists by applying Replacement and Comprehension. The existence of the set $\{y:\exists x\,[(x,y)\in R]\}$ is proved in the same way.
 \end{customthm}
 
 \begin{customthm}{I.7.17}
@@ -87,7 +87,7 @@
 \end{customthm}
 
 \begin{customthm}{I.8.11}
-  Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq \alpha$ is obvious. Thus $\beta\subseteq\alpha\subseteq\alpha\cup\{\alpha\}=S(\alpha)$ holds in both cases, which proves $S(\alpha)$'s transitivity. To prove that $S(\alpha)$ is well-ordered, take a non-empty subset $X$ of $S(\alpha)$. If $X=\{\alpha\}$, then $\alpha$ is obviously the $\in$-least element of $X$. If not, $X\setminus\{\alpha\}$ is a non-empty subset of $\alpha$ and since $\alpha$ is well-ordered, $X\setminus\{\alpha\}$ has a $\in$-least element, which is also the least element of $X$. Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate when we replace "$<$" by "$\in$" and "$\leq$" by "$\in$" or "$=$".
+  Let $\alpha\in ON$. Every $\beta\in S(\alpha)=\alpha\cup\{\alpha\}$ is either in $\alpha$ or equal to $\alpha$. If $\beta\in\alpha$, $\beta\subseteq\alpha$ follows from transitivity of $\alpha$. If $\beta=\alpha$, then $\beta\subseteq\alpha$ is obvious. Thus $\beta\subseteq\alpha\subseteq\alpha\cup\{\alpha\}=S(\alpha)$ holds in both cases, which proves $S(\alpha)$'s transitivity. To prove that $S(\alpha)$ is well-ordered, take a non-empty subset $X$ of $S(\alpha)$. If $X=\{\alpha\}$, then $\alpha$ is obviously the $\in$-least element of $X$. If not, $X\setminus\{\alpha\}$ is a non-empty subset of $\alpha$ and since $\alpha$ is well-ordered, $X\setminus\{\alpha\}$ has a $\in$-least element, which is also the least element of $X$. Hence $S(\alpha)$ is well-ordered and $S(\alpha)\in ON$. The rest is immediate when we replace "$<$" by "$\in$" and "$\leq$" by "$\in$" or "$=$".
 \end{customthm}
 
 \begin{customthm}{I.8.13}
