@@ -205,9 +205,9 @@
 \end{customthm}
 
 \begin{customthm}{I.11.33}
-  We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma\,[\aleph_\xi\leq\gamma]$. Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds. $\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega\,[\delta_n<\aleph_{\delta_n}<\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
+  We first prove $\aleph_\gamma\leq\gamma$. Since $\gamma$ is a limit ordinal, $\aleph_\gamma=\sup\{\aleph_\xi:\xi<\gamma\}$ holds and $\aleph_\gamma\leq\gamma$ is equivalent to $\forall\xi<\gamma\,[\aleph_\xi\leq\gamma]$. Let $\xi<\gamma$ and $n\in\omega$ be one such that $\xi<\delta_n$. Then, since $\aleph$ is monotonic (Exercise I.11.31), we have $\aleph_\xi<\aleph_{\delta_n}=\delta_{n+1}<\gamma$. Hence $\aleph_\gamma\leq\gamma$ holds. $\gamma\leq\aleph_\gamma$ is clear from $\forall n\in\omega\,[\delta_n<\aleph_{\delta_n}\leq\aleph_\gamma]$, and we get $\aleph_\gamma=\gamma$.
 
-  Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic by Exercise I.11.32, we get $\forall n\in\omega\,[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
+  Let $\xi$ be an ordinal such that $\aleph_\xi=\xi$. Since $\aleph$ is monotonic, we get $\forall n\in\omega\,[\delta_n\leq\xi]$ by repeatedly applying $\aleph$ to the both side of $0\leq\xi$.  Hence $\gamma\leq\xi$ holds and $\gamma$ turns out to be the least fixed point of $\aleph$.
 \end{customthm}
 
 \begin{customthm}{I.11.34}
