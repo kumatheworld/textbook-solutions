@@ -426,19 +426,19 @@
   For the set $\mathcal{L}$ of Lebesgue measurable sets, $|\mathcal{L}|\leq2^{2^{\aleph_0}}$ is obvious from $\mathcal{L}\subseteq\mathcal{P}(\mathbb{R})$. To prove $\mathcal{L}\supseteq\mathcal{P}(\mathbb{R})$, we make use of the Cantor set, which is of cardinality $2^{\aleph_0}$ and has measure $0$. Since every subset of a null set is measurable, we have at least $2^{2^{\aleph_0}}$ measurable sets. Hence $|\mathcal{L}|=2^{2^{\aleph_0}}$ holds.
 \end{customthm}
 
-\begin{customthm}{I.15.10} (half-done)
+\begin{customthm}{I.15.10} (halfway)
   We first note that the set of all closed nowhere dense sets, which we denote by $C$ here, has cardinality $\mathfrak{c}=2^{\aleph_0}$. This is because the set of all singletons, which is a subset of $C$, has that cardinality and the set of all closed sets, which is a superset of $C$, has that cardinality too. Let $U$ be the set of all countable unions of $C$. We have $|U|=\mathfrak{c}^{\aleph_0}=\mathfrak{c}$ from the above. Therefore we can list $U$ as $U=\{B_\alpha:\alpha<2^{\omega}\}$. Now we well-order $\mathbb{R}$ and define $X_\alpha\subseteq\mathbb{R}$ for each $\alpha\leq2^{\omega}$ by $X_0=\emptyset$, $X_{\xi+1}=X_\xi\cup\{\min(\mathbb{R}\setminus\{X_\xi\cup\bigcup_{\eta<\xi}B_\eta\})\}$, and $X_{\alpha}=\bigcup_{\xi<\alpha}X_\xi$ for a limit ordinal $\alpha$. \textbf{This definition works if it holds $\forall\xi<2^\omega[\bigcup_{\eta<\xi}B_\eta\neq\mathbb{R}]$, which we currently do not provide a proof for}. Then $X_{2^\omega}$ has cardinality $\mathfrak{c}$, which is uncountable. It has at most $\alpha$ elements from each $B_\alpha$, which is countable if we assume CH. Thus under CH, this $X_{2^\omega}$ is a Luzin set.
 
   The rest of the exercise is skipped for now.
 \end{customthm}
 
-\begin{customthm}{I.15.11} (half-done)
+\begin{customthm}{I.15.11} (halfway)
   The existence of a Sierpiński set under CH is skipped for now.
 
   Let $X\subseteq\mathbb{R}$ be a Sierpiński set. To prove that $X$ cannot be measurable, we show that the measure of $X$ can be neither $0$ nor positive. It is clear that the measure cannot be 0 since $X$ would be countable and uncountable at the same time. To see that $X$ cannot have positive measure, we show that any set of positive measure has a null subset of the same cardinality. The proof is omitted for now.
 \end{customthm}
 
-\begin{customthm}{I.15.12} (half-done)
+\begin{customthm}{I.15.12} (halfway)
   Let $\mathfrak{B}\subseteq\mathcal{P}(\mathbb{R})$ be the set of perfect subsets of $\mathbb{R}$. It holds that $|\mathfrak{B}|=\mathfrak{c}$ because $\{{[x,x+1]:x\in\mathbb{R}}\}\subseteq\mathfrak{B}\subseteq\mathfrak{C}$, where $\mathfrak{C}$ is the set of closed subsets of $\mathbb{R}$, which has cardinality $\mathfrak{c}$. We well-order $\mathbb{R}$ and list $\mathfrak{B}$ as $\mathfrak{B}=\{B_\alpha:\alpha\in\mathfrak{c}\}$. For each $\alpha\leq\mathfrak{c}$, we define a pair of disjoint subsets $X_\alpha,Y_\alpha\subseteq\mathbb{R}$ by $X_0=Y_0=\emptyset$, $X_{\xi+1}=X_\xi\cup\min(\mathfrak{B}_\alpha\setminus(X_\xi\cup Y_\xi))$, $Y_{\xi+1}=Y_\xi\cup\min(\mathfrak{B}_\alpha\setminus(X_{\xi+1}\cup Y_\xi))$ and $X_{\alpha}=\bigcup_{\xi<\alpha}X_\xi$, $Y_{\alpha}=\bigcup_{\xi<\alpha}Y_\xi$ for a limit ordinal $\alpha$. Note that this definition works as we well-order $\mathbb{R}$ and the set we take the minimum element from is always non-empty. This is because every perfect set has cardinality $\mathfrak{c}$, which we do not provide a proof for. Then, $X_\mathfrak{c}$ is a Bernstein set as both it and its complement $\mathbb{R}\setminus X\supseteq Y_\mathfrak{c}$ meet every set in $\mathfrak{B}$.
 
   Let $X\subseteq\mathbb{R}$ be a Bernstein set. To prove that $X$ cannot be measurable, we show that any set of positive measure has a perfect subset. Once this is proved, it is easy to see that $X$ is not measurable because at least one of $X$ or $\mathbb{R}\setminus X$ would have a perfect subset, which does not intersect the complement, contradicting the definition of a Bernstein set. The proof is omitted for now.
@@ -871,7 +871,7 @@
   Skipped for now.
 \end{customthm}
 
-\begin{customthm}{II.18.16} (half-done)
+\begin{customthm}{II.18.16} (halfway)
   Below is the proof for each item.
   \begin{enumerate}
     \item We can prove that $\omega$ is a proper initial segment of $\mathrm{nat}^\mathfrak{A}$ just like we have done in Exercise II.16.8.1. $\mathrm{nat}^\mathfrak{A}\setminus\omega$ has no least element because $\forall x[\mathrm{nat}(x)\wedge x\neq0\rightarrow\exists w[\mathrm{nat}(w)\wedge w<x]]$ holds.
@@ -904,13 +904,13 @@
   Skipped for now.
 \end{customthm}
 
-\begin{customthm}{IV.3.31} (half-done)
+\begin{customthm}{IV.3.31} (halfway)
   We define a function $F$ recursively by $F(x)=\{F(v):v\in A\cap x\}$, let $T=\ran(F\upharpoonright A)$ and prove the following.
   \begin{enumerate}
     \item\underline{$F\upharpoonright A:A\rightarrow T$ is bijective}. It is obviously surjective to its range. We prove the injectivity by induction on $\in$. Let $X=\{x\in A:\exists y\in A[y\neq x\wedge F(y)=F(x)]\}$ and assume that $X\neq\emptyset$. Let $x$ be an $\in$-least element of $X$ and take $y\in A$ such that $F(y)=F(x)$. Since $F(x)\subseteq F(y)$, for any $u\in A\cap x$, there is $v\in A\cap y$ such that $F(v)=F(u)$. If $v\neq u$, then we have $u\in X$, contradicting the minimality of $x$. Thus $v=u$ holds and we have $A\cap x\subseteq A\cap y$. Likewise, since $F(y)\subseteq F(x)$, for any $v\in A\cap y$, there is $u\in A\cap x$ such that $u=v$, meaning that $A\cap y\subseteq A\cap x$. Thus we have $A\cap x=A\cap y$, which by Extensionality means $x=y$, contradicting our assumption of $x\neq y$. Hence $X=\emptyset$ holds, meaning that $F\upharpoonright A:A\rightarrow T$ is injective.
     \item\underline{$F\upharpoonright A:A\rightarrow T$ is isomorphic}. We have already seen above that $F\upharpoonright A$ is bijective. For $x,y\in A$, if $x\in y$, we have $F(x)\in\{F(v):v\in A\cap y\}=F(y)$. Conversely, if $F(x)\in F(y)$ holds for $x,y\in A$, we have $F(v)=F(x)$ for some $v\in A\cap y$, which by injectivity means that $v=x$ and hence $x\in y$. Thus $x\in y\leftrightarrow F(x)=F(y)$ holds for any $x,y\in A$, meaning that $F\upharpoonright A:A\rightarrow T$ is isomorphic.
     \item\underline{$F(x)=x$ for all $x\in A$ such that $\trcl(x)\subseteq A$}. We prove this by induction. Let $X=\{x\in A:\trcl(x)\subseteq A\wedge F(x)\neq x\}$, assume $X\neq\emptyset$ and take $x\in X$. Then we have $F(x)=\{F(v):v\in A\cap x\}=\{v:v\in A\cap x\}=x$, where $F(v)=v$ holds for $v\in A\cap x$ by the minimality of $x\in X$ since $\trcl(v)\subseteq\trcl(x)\subseteq A$. Note also that $\{v:v\in A\cap x\}=x$ holds by Extensionality. This $F(x)=x$ contradicts $x\in X$, meaning that $X=\emptyset$ and $F(x)=x$ holds for all $x\in A$ such that $\trcl(x)\subseteq A$.
-    \item\underline{There is a countable transitive model of $ZFC-P$ in which $\approx$ is not absolute}. (half-done). Let us assume that there exists a suitable cardinal $\kappa$ such that $\omega_1$ is definable in $H(\kappa)$. Note that $H(\kappa)$ is a model of $ZFC-P$. We take a countable transitive $A\preccurlyeq H(\kappa)$ using the Downward Löwenheim-Skolem-Tarski theorem and let $T=\ran(F\upharpoonright A)$ with $F$ defined above. Then $F(\omega)\approx F(\omega_1)$ holds in $V$ as both of them are countable, but $(F(\omega)\approx F(\omega_1))^T$ does not since $(\omega\approx\omega_1)^A$ is false. This shows that $\approx$ is not absolute for $T$.
+    \item\underline{There is a countable transitive model of $ZFC-P$ in which $\approx$ is not absolute}. (halfway) Let us assume that there exists a suitable cardinal $\kappa$ such that $\omega_1$ is definable in $H(\kappa)$. Note that $H(\kappa)$ is a model of $ZFC-P$. We take a countable transitive $A\preccurlyeq H(\kappa)$ using the Downward Löwenheim-Skolem-Tarski theorem and let $T=\ran(F\upharpoonright A)$ with $F$ defined above. Then $F(\omega)\approx F(\omega_1)$ holds in $V$ as both of them are countable, but $(F(\omega)\approx F(\omega_1))^T$ does not since $(\omega\approx\omega_1)^A$ is false. This shows that $\approx$ is not absolute for $T$.
   \end{enumerate}
 \end{customthm}
 
@@ -918,7 +918,7 @@
   Skipped for now.
 \end{customthm}
 
-\begin{customthm}{IV.3.33} (half-done)
+\begin{customthm}{IV.3.33} (halfway)
   If $\varphi(x,y)$ is a formula that defines $|x|=|y|$, then $\exists k\in n\,\varphi(k,n\setminus k)$ defines the set $E$ of even natural numbers. Here, the set difference function is $\Delta_0$ since it holds that $z=x\setminus y$ iff $\forall w\in z[w\in x\wedge w\not\in y]\wedge\forall w\in x[w\in y\vee w\in z]$. Nevertheless, I do not come up with any $\Delta_0$-looking formula that defines $E$. Once we have such a formula, we can conclude that $\varphi$ is not $\Delta_0$ since $E$ is not $\Delta_0$ by Lemma II.17.19.
 \end{customthm}
 
@@ -926,7 +926,7 @@
   Let $E\subset HF$ be $\Sigma_1$ and not $\Delta_1$, and let $E(x)\leftrightarrow\exists y\,A(x,y)$, where $A$ is $\Delta_1$. Then $F(x)=\mu y\, A(x,y)$ is partially computable by Lemma IV.4.6 but cannot be extended to a total computable function because $F=A\cap\overline{F}$ holds for any extension $\overline{F}$ of $F$, where the computability of $\overline{F}$ would make $F$ also computable.
 \end{customthm}
 
-\begin{customthm}{IV.4.13} (half-done)
+\begin{customthm}{IV.4.13} (halfway)
   We treat $X$ as its homeomorphic space $2^\omega$, which is the product space of countably many copies of the discrete space $2=\{0,1\}$. Let $p_n:2^\omega\rightarrow 2$ be the projection onto the $n$-th coordinate.
   \begin{enumerate}
     \item $S=\{p_n^{-1}(0):n\in\omega\}\cup\{p_n^{-1}(1):n\in\omega\}$ is a countable clopen subbase of $X$. Then, the base $B=\{O_1\cap\cdots\cap O_n:n\in\omega\wedge O_1,\ldots O_n\in S\}$ is also countable and clopen. Therefore, any open set of $X$ is a countable union of clopen sets in $X$. Now, let $U,V\subseteq X$ be open sets and let $(U_n)_{n\in\omega}$ and $(V_n)_{n\in\omega}$ be families of clopen sets such that $\bigcup_{n\in\omega}U_n=U$ and $\bigcup_{n\in\omega}V_n=V$. We define $(W_n)_{n\in\omega}$ by $W_{2n}=U_n$ and $W_{2n+1}=V_n$ for each $n\in\omega$ and further define $(K_n)_{n\in\omega}$ by $K_n=W_n\setminus\bigcup_{m<n}W_m$. Since this $(K_n)_{n\in\omega}$ is a family of disjoint open sets such that $K_{2n}\subseteq U$ and $K_{2n+1}\subseteq V$ for each $n\in\omega$, and $\bigcup_{n\in\omega}K_n=U\cup V$, we have $\hat{U}=\bigcup_{n\in\omega}K_{2n}$ and $\hat{V}=\bigcup_{n\in\omega}K_{2n+1}$ that satisfy $\hat{U}\subseteq U$, $\hat{V}\subseteq V$, $\hat{U}\cup\hat{V}=U\cup V$ and $\hat{U}\cap\hat{V}=\emptyset$.

@@ -192,7 +192,7 @@
   Then $B_\kappa$ is a basis of $A$. Indeed, $B_\alpha$ is linearly independent for $\alpha\leq\kappa$, and $a_\alpha\in\textrm{span}(B_{\alpha+1})$ holds for $\alpha<\kappa$.
 \end{customthm}
 
-\begin{customthm}{I.12.6} (half-done)
+\begin{customthm}{I.12.6} (halfway)
   We only prove that the Tychonov Theorem implies $AC$. Let $F=(X_i)_{i\in I}$ be a family of non-empty sets and let $\infty\not\in\bigcup F$. We consider $Y_i=X_i\cup\{\infty\}$ for each $i\in I$ and topologize it by defining the set of open sets by $\{\emptyset,\{\infty\},Y_i\}$. With this topology, each $Y_i$ becomes a compact space and $X_i\subseteq Y_i$ is a closed subset. Moreover, the product space $\prod_{i\in I}Y_i$ is compact by the Tychonov Theorem. Now consider the projection $\pi_i:\prod_{i\in I}Y_i\rightarrow Y_i$ for each $i\in I$. It is continuous since we consider the product topology for $\prod_{i\in I}Y_i$, and the inverse image $\pi_i^{-1}(X_i)$ is closed since $X_i$ is closed. Now consider a family $G=(\pi_i^{-1}(X_i))_{i\in I}$ of closed sets of $\prod_{i\in I}Y_i$. It has the finite intersection property since for a given finite subfamily $\{\pi_{i_0}^{-1}(X_{i_0}),\ldots,\pi_{i_{n-1}}^{-1}(X_{i_{n-1}})\}$, we have a function $f$ in the intersection defined by $f(i_j)=x_{i_j}$ for $j<n$ and $f(i)=\infty$ otherwise, where $x_{i_j}\in X_{i_j}$. Then by the compactness of $\prod_{i\in I}Y_i$, $\bigcap G\neq0$ holds. This $\bigcap G$ is nothing but $\prod_{i\in I}X_i=\prod F$, which proves $AC$.
 \end{customthm}
 
