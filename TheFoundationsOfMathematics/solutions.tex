@@ -309,7 +309,7 @@
     \item\underline{$|[\lambda]^\kappa|$=$\lambda^\kappa$}. (halfway)
     \begin{enumerate}
       \item\underline{$|[\lambda]^\kappa|\leq\lambda^\kappa$}. Consider the surjection $\ran:{}^\kappa\lambda\rightarrow[\lambda]^\kappa\cup[\lambda]^{<\kappa}$ that maps every function to its range. By Lemma I.12.12, there is an injection from $[\lambda]^\kappa\cup[\lambda]^{<\kappa}$ to ${}^\kappa\lambda$. Composing it with the inclusion $[\lambda]^\kappa\subseteq[\lambda]^\kappa\cup[\lambda]^{<\kappa}$, we get an injection $[\lambda]^\kappa\rightarrow{}^\kappa\lambda$.
-      \item\underline{$|[\lambda]^\kappa|\geq\lambda^\kappa$}. Skipped for now.
+      \item\underline{$\lambda^\kappa\leq|[\lambda]^\kappa|$}. (halfway) We prove that this holds when $\kappa<\cf(\lambda)$. We assume $\kappa<\cf(\lambda)$ and consider $F:{}^\kappa\lambda\rightarrow{}^\kappa\lambda$ defined recursively by $F(f)(\xi)=\sup_{\eta<\xi}F(f)(\eta)+1+f(\xi)$ for $\xi<\kappa$. It is well-defined under the assumption $\kappa<\cf(\lambda)$. It is also injective, which can be easily shown by induction and left-cancellability of $+$. Moreover, since $F(f)$ is strictly monotonic for each $f$, $\ran\circ F:{}^\kappa\lambda\rightarrow|[\lambda]^\kappa|$ is also injective. Thus, $\lambda^\kappa\leq|[\lambda]^\kappa|$ holds when $\kappa<\cf(\lambda)$.
     \end{enumerate}
     \item\underline{$|[\lambda]^{<\kappa}|=\sup\{\lambda^\theta:\theta=|\theta|<\kappa\}$}. Skipped for now.
   \end{enumerate}
