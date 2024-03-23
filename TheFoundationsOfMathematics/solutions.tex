@@ -12,7 +12,7 @@
 \maketitle
 
 \begin{customthm}{I.2.1}
-  Below is the table of the truth values.
+  Below is the truth table.
   \begin{center}
     \begin{tabular}{cc|cccc}
       & & \multicolumn{4}{c}{Axiom} \\
@@ -20,11 +20,34 @@
       \multirow{7}{*}{Example}
       & 1 & T & T & F & T \\
       & 2 & T & F & T & T \\
-      & 3 & T & T & F & F \\
-      & 4 & T & T & F & F \\
+      & 3 & T & T & F & T \\
+      & 4 & T & F & F & T \\
       & 5 & F & T & F & T \\
-      & 6 & T & T & F & F \\
-      & 7 & T & T & F & F \\
+      & 6 & T & T & F & T \\
+      & 7 & T & T & F & T \\
+    \end{tabular}
+  \end{center}
+  See the hint in the textbook for Axiom 1 (Extensionality) and Axiom 4 (Pairing). For Axiom 2 (Foundation), $a$ in Example 2 has no element that doesn't intersect itself. That is, the only element $a\in a$ intersects $a$ since they both contain $a$. Similarly, $c$ in Example is a counterexample. Axiom 5 (Union) holds for all the examples since there is a union for every element as shown below.
+  \begin{center}
+    \begin{tabular}{c|c|c}
+      Example & Element & Union \\ \hline
+      1 & a & a \\ \hline
+      2 & a & a \\ \hline
+      \multirow{2}{*}{3} & a & b \\
+                         & b & a \\ \hline
+      \multirow{3}{*}{4} & a & b \\
+                         & b & a \\
+                         & c & c \\ \hline
+      \multirow{3}{*}{5} & a & a \\
+                         & b & a \\
+                         & c & a \\ \hline
+      \multirow{4}{*}{6} & 0 & 0 \\
+                         & 1 & 0 \\
+                         & 2 & 1 \\
+                         & 3 & 2 \\ \hline
+      \multirow{3}{*}{7} & a & a \\
+                         & b & a \\
+                         & c & b \\
     \end{tabular}
   \end{center}
 \end{customthm}
