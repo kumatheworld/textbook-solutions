@@ -12,6 +12,7 @@ RUN apt update \
     lmodern \
     texlive \
     texlive-latex-extra \
+    texlive-fonts-extra \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mktexlsr && mkdir -p /app
