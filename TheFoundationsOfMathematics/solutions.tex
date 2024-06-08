@@ -1011,4 +1011,8 @@
   We define $\varphi(x,y,s)$ as $s\in HF^{<\omega}\wedge \mathrm{lh(s)}\neq0\wedge s(0)=x\wedge\forall i<\mathrm{lh}(s)\dot{-}1[s(i+1)=\mathrm{sd}(s(i))]\wedge s(\mathrm{lh}(s)\dot{-}1)=y$, which is $\Delta_1$ by Lemma IV.3.22. Then $f(x)=y$ is equivalent to the $\Sigma_1$ formula $\exists s\,\varphi(x,y,s)$, meaning that $f$ is partially computable.
 \end{customthm}
 
+\begin{customthm}{IV.5.2}
+  If $\Lambda=\emptyset$, it is trivially a $\Delta_1$ set of sentences of $\mathcal{L}$. Assume $\Lambda\neq\emptyset$ and let $\varphi:\omega\rightarrow HF$ be a computable function such that $\Lambda=\ran(\varphi)$. Let $\psi:\omega\rightarrow HF$ be another computable function defined by $\psi(n)=\wedge\cdots\wedge\varphi(n)\cdots\varphi(n)$ with the Polish notation. Let $\Omega=\ran(\psi)$. It is obvious that $\mathrm{Conseq}(\Lambda)=\mathrm{Conseq}(\Omega)$ as each $\psi(n)$ is equivalent to $\varphi(n)$. To see that $\Omega$ is $\Delta_1$, let $C(\chi)$ be the number of consecutive conjunction operators at the beginning of the given formula $\chi$. Let $C(\chi)=-1$ if $\chi$ is not a formula. $C$ is computable since it can be defined recursively by $C(\wedge\chi_1\chi_2)=1+C(\chi_1)$ and $C(\chi)=0$ if $\chi$ does not start with $\wedge$. Note that $C(\psi(n))=n+C(\varphi(n))\geq n$ holds. Now, $\chi\in\Omega$ is equivalent to $\exists m\leq C(\chi)[\psi(m)=\chi]$, which is $\Delta_1$.
+\end{customthm}
+
 \end{document}
