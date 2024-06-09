@@ -1015,4 +1015,8 @@
   If $\Lambda=\emptyset$, it is trivially a $\Delta_1$ set of sentences of $\mathcal{L}$. Assume $\Lambda\neq\emptyset$ and let $\varphi:\omega\rightarrow HF$ be a computable function such that $\Lambda=\ran(\varphi)$. Let $\psi:\omega\rightarrow HF$ be another computable function defined by $\psi(n)=\wedge\cdots\wedge\varphi(n)\cdots\varphi(n)$ with the Polish notation. Let $\Omega=\ran(\psi)$. It is obvious that $\mathrm{Conseq}(\Lambda)=\mathrm{Conseq}(\Omega)$ as each $\psi(n)$ is equivalent to $\varphi(n)$. To see that $\Omega$ is $\Delta_1$, let $C(\chi)$ be the number of consecutive conjunction operators at the beginning of the given formula $\chi$. Let $C(\chi)=-1$ if $\chi$ is not a formula. $C$ is computable since it can be defined recursively by $C(\wedge\chi_1\chi_2)=1+C(\chi_1)$ and $C(\chi)=0$ if $\chi$ does not start with $\wedge$. Note that $C(\psi(n))=n+C(\varphi(n))\geq n$ holds. Now, $\chi\in\Omega$ is equivalent to $\exists m\leq C(\chi)[\psi(m)=\chi]$, which is $\Delta_1$.
 \end{customthm}
 
+\begin{customthm}{IV.5.6}
+  Let $\varphi_l=\exists x\forall y[x\leq y]$ and $\varphi_r=\exists x\forall y[y\leq x]$. Let $\psi_0=\varphi_l\wedge(\neg\varphi_r)$, $\psi_1=(\neg\varphi_l)\wedge(\neg\varphi_r)$, $\psi_2=(\neg\varphi_l)\wedge\varphi_r$, and $\psi_3=\varphi_l\wedge\varphi_r$. Since $\psi_0\vee\psi_1\vee\psi_2\vee\psi_3$ is always true, $\Lambda\vdash\chi$ holds iff $\Lambda\cup\{\psi_i\}\vdash\chi$ for each $i\in4$. By Exercise II.13.10, each $\Lambda\cup\{\psi_i\}$ is complete, so each $\Lambda\cup\{\psi_i\}\vdash\chi$ has a $\Delta_1$ graph by Lemma IV.5.5, which shows the decidability of the conjunction $\Lambda\vdash\chi$.
+\end{customthm}
+
 \end{document}
